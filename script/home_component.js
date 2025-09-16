@@ -39,10 +39,7 @@ document.querySelectorAll(".faq-header").forEach(header => {
         }
     });
 });
-// Prevent Autoplay
-const video = document.getElementById("custMainVideo");
-video.autoplay = false;
-video.muted = false;
+
 
 // Trusted by Many Customer Slider with Content 
 document.addEventListener("DOMContentLoaded", () => {

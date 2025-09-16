@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/PHPMailer/src/Exception.php';
 require __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer/src/SMTP.php';
@@ -18,11 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (!empty($name) && !empty($email) && !empty($message)) {
         try {
-            // ✅ Database connection
-            $pdo = new PDO("mysql:host=localhost;dbname=u870396814_qonkar_contact;charset=utf8", "u870396814_Thalseemia	", "Thalseemia@1203");
+            // ✅ Database connection (check db exists in phpMyAdmin)
+            $pdo = new PDO(
+                "mysql:host=localhost;dbname=contact_from_db;charset=utf8",
+                "root", // default local username
+                ""      // default local password is empty in XAMPP/WAMP
+            );
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Save message
+            // Save message into DB
             $stmt = $pdo->prepare("
                 INSERT INTO messages (full_name, email, phone_number, subject, budget, message)
                 VALUES (:name, :email, :phone, :subject, :budget, :message)
@@ -44,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'huzaifaharis415@gmail.com'; // SMTP login
-            $mail->Password   = 'apmgxtyxeuhdsnho';          // App password
+            $mail->Password   = 'apmgxtyxeuhdsnho';          // Gmail App password
 
             $mail->setFrom('huzaifaharis415@gmail.com', 'Qonkar Technologies');
             $mail->addReplyTo('huzaifaharis415@gmail.com', 'Qonkar Technologies');
@@ -52,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Send to user who filled the form
             $mail->addAddress($email, $name);
 
-            // Also send a copy to you
+            // Also send a copy to your inbox
             $mail->addAddress('huzaifaharis773@gmail.com', 'Qonkar Technologies');
 
             $mail->Subject = "Thank you for contacting Qonkar Technologies";
@@ -61,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->Body = "
                 <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;'>
                     <div style='text-align: center; margin-bottom: 20px;'>
-                        <img src='../images/qonkar_logo.png' alt='Qonkar Logo' style='max-width: 200px; height: auto;'>
+                        <img src='https://qonkar.com/images/qonkar_logo.png' alt='Qonkar Logo' style='max-width: 200px; height: auto;'>
                     </div>
 
                     <h2 style='color: #132a13; border-bottom: 2px solid #90a955; padding-bottom: 10px;'>Hello, $name!</h2>
@@ -94,17 +97,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $mail->send();
 
-            echo "Thank you, $name! Your message has been received and we’ve sent a confirmation email.";
-        } catch (Exception $e) {
-            http_response_code(500);
-            echo "Mailer error: " . $mail->ErrorInfo;
+            echo "✅ Thank you, $name! Your message has been received and we’ve sent a confirmation email.";
         } catch (PDOException $e) {
             http_response_code(500);
-            echo "Database error: " . $e->getMessage();
+            echo "❌ Database error: " . $e->getMessage();
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo "❌ Mailer error: " . $mail->ErrorInfo;
         }
     } else {
         http_response_code(400);
-        echo "Please fill all required fields.";
+        echo "⚠️ Please fill all required fields.";
     }
 }
 ?>

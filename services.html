@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ✅ Basic SEO Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Qonkar - A leading IT company providing modern and innovative digital solutions." />
+    <meta name="keywords"
+        content="Qonkar, IT company, software solutions, web development, tech agency, digital services" />
+    <meta name="author" content="Qonkar" />
+
+    <!-- ✅ Open Graph (Social Media Preview) -->
+    <meta property="og:title" content="Qonkar - IT Solutions" />
+    <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qonkar.com" />
+    <meta property="og:image" content="https://qonkar.com/preview.png" />
+
+
+
+    <!-- ✅ Google ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- ✅ Title -->
+    <title>Qonkar Technologies</title>
+
+    <!-- ✅ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Script for the Case Studies Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ Theme & Reusable Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        :root {
+            --primary-color: #3F89C9;
+            --secondary-color: #2FADC3;
+            --tertiary-color: #85D55C;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+            --body-bg: #080808;
+        }
+
+
+        body {
+            background-color: var(--body-bg);
+            font-family: 'Lexend', sans-serif;
+            color: #fff;
+        }
+
+        .glass-border {
+            display: block;
+            border-radius: 40px;
+            padding: 1px;
+            /* 1px = border thickness */
+            background: linear-gradient(138deg,
+                    var(--primary-color),
+                    var(--secondary-color),
+                    var(--tertiary-color));
+            -webkit-mask: linear-gradient(#fff 0 0);
+        }
+
+        /* Dark background layer */
+        .glass-background {
+            border-radius: calc(40px - 1px);
+            /* match outer - border */
+            background-color: var(--body-bg);
+            overflow: hidden;
+        }
+
+        /* Frosted glass overlay */
+        .glass {
+            border-radius: calc(40px - 2px);
+            /* just inside background */
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.12);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            padding: 6px 20px;
+            /* adjust content padding */
+            color: white;
+            box-sizing: border-box;
+        }
+
+
+
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll-horizontal {
+            display: flex;
+            width: max-content;
+            /* make sure it stretches */
+            animation: scroll-horizontal 50s linear infinite;
+        }
+
+
+        .background-backdrop {
+            background-image: url(images/card_back_drop.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .background-backdrop-card {
+            position: relative;
+            background-image: url(images/card_back_drop.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-blend-mode: multiply;
+            overflow: hidden;
+        }
+
+        /* Glass overlay */
+        .background-backdrop-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            /* full coverage */
+            background: rgba(77, 74, 74, 0.1);
+            /* frosted transparent layer */
+            /* backdrop-filter: blur(0.5px); */
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2;
+            /* sits above background */
+            pointer-events: none;
+        }
+
+
+
+
+        #prevBtn:hover img,
+        #nextBtn:hover img {
+            filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+        }
+
+        #prevBtn:active img,
+        #nextBtn:active img {
+            filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(60%) contrast(90%);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        @media (max-width: 1250px) {
+            .right-section {
+                flex-direction: column;
+            }
+
+            .right-box {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .right-box:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.65rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 1rem;
+            background: #000;
+            /* Black background */
+
+
+        }
+
+        /* ✅ Glass Morphism Utility */
+
+        .badge-text {
+            background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* for Firefox/Chromium */
+            -webkit-text-fill-color: transparent;
+            /* for Safari */
+        }
+
+        /* < !-- Tailwind Animations --> */
+        .testimonial-card {
+            flex-shrink: 0;
+            width: 16rem;
+            height: 16rem;
+            background: #1F1F1F;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @keyframes infinite-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes infinite-scroll-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-infinite-scroll {
+            display: flex;
+            animation: infinite-scroll 40s linear infinite;
+        }
+
+        .animate-infinite-scroll-reverse {
+            display: flex;
+            animation: infinite-scroll-reverse 40s linear infinite;
+        }
+
+        .hero-pattern {
+            background-image: url("images/icons/hero_pattern.svg");
+            background-repeat: no-repeat;
+            /* only once */
+            background-size: cover;
+            /* scale to fill */
+            background-position: center center;
+            /* centered */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="sticky top-5 z-50">
+        <!-- ✅ Desktop Navbar -->
+        <nav class="glass hidden lg:flex 
+            w-[80%] mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
+            <div class="flex items-center">
+                <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto">
+            </div>
+            <ul class="flex gap-8 text-white font-medium">
+                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
+                <li><a href="services.html" class="text-[var(--primary-color)]">Services</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Insight</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
+            </ul>
+            <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
+       hover:bg-[var(--secondary-color)] transition">Contact Us</a>
+        </nav>
+
+        <!-- ✅ Mobile / Tablet Navbar -->
+        <nav class="glass flex lg:hidden 
+            items-center justify-between w-[90%] mx-auto px-5 py-2 rounded-full mt-2 relative">
+            <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-8 w-auto">
+
+            <button id="menu-btn" class="text-white focus:outline-none text-3xl transition" aria-expanded="false"
+                aria-controls="mobile-menu">
+                ☰
+            </button>
+
+            <!-- ✅ Mobile Menu DROPDOWN -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50
+             bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
+             transition-all duration-300 rounded-2xl overflow-hidden">
+
+                <a href="index.html"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="services.html"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Services</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Insight</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
+
+                <!-- ✅ CTA on smaller screens -->
+                <a href="contact-us.html"
+                    class="block w-full text-center py-4 bg-[var(--primary-color)] text-white font-semibold hover:bg-[var(--secondary-color)] transition">
+                    Contact Us
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero & Company logo -->
+    <div class="min-h-screen flex flex-col mt-2">
+
+        <!-- Hero Section -->
+        <section class="relative w-[95%] mx-auto min-h-[75vh] rounded-lg overflow-hidden flex items-center">
+            <!-- Gradient Background -->
+            <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
+
+            <!-- Pattern Overlay (single SVG, no repeat) -->
+            <div class="absolute inset-0 hero-pattern"></div>
+
+            <!-- Hero Content -->
+            <div
+                class="relative z-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full px-6 sm:px-10 lg:px-20 py-10">
+
+                <!-- Left Side: Text -->
+                <div class="text-left text-white space-y-6 order-1">
+                    <!-- Badge -->
+                    <div class="glass px-3 py-2 rounded-full text-xs sm:text-sm text-white 
+        inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center sm:text-left">
+
+                        <!-- Dot New -->
+                        <span class="px-3 py-0.5 rounded-full bg-white text-[var(--primary-color)] text-xs">
+                            &#9679; New
+                        </span>
+
+                        <!-- Text -->
+                        <span>
+                            Free your team from repetitive work with AI automation.
+                        </span>
+                    </div>
+
+
+
+                    <!-- Heading -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl leading-snug ">
+                        <b>Shopify</b> Experts for High-Performance<br class="hidden sm:block"> <b>E-commerce</b>
+                        Stores.
+                    </h1>
+
+                    <!-- Paragraph -->
+                    <p class="text-base sm:text-lg font-light leading-relaxed max-w-lg">
+                        At Qonkar Technologies, our Shopify experts turn your store into a scalable, mobile-first sales
+                        machine — optimized for performance, growth, and user experience.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <a href="#contact" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
+                hover:bg-[var(--secondary-color)] hover:text-white transition">
+                        Launch Your Store with us
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="flex justify-center md:justify-end order-2">
+                    <img src="images/service_hero.png" alt="Service Hero"
+                        class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Insurance Section (20%) -->
+        <section class="bg-[#02181B]  flex flex-col items-center justify-center h-[25vh] overflow-hidden relative mt-5">
+            <!-- Heading -->
+            <h2 class="text-white text-xl font-light mb-8 text-center">
+                We Accept Most Major Insurances
+            </h2>
+
+            <!-- Logos Container (Horizontal Scrolling) -->
+            <div class="relative overflow-hidden w-full">
+                <div class="flex animate-scroll-horizontal space-x-18 gap-20">
+                    <!-- Repeat logos -->
+                    <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 2" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 3" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 4" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 5" class="h-8 object-contain" />
+
+                    <!-- Duplicate for seamless loop -->
+                    <img src="/images/dummy_logo.png" alt="Insurance 6" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 7" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 8" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 9" class="h-8 object-contain" />
+                    <img src="/images/dummy_logo.png" alt="Insurance 10" class="h-8 object-contain" />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Our Client Section -->
+    <section class="bg-[var(--body-bg)] py-20 px-6">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <!-- ✅ Left Side Image (Appears First on Mobile) -->
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="images/hero_image.png" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+
+            <!-- ✅ Right Side Content -->
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+                <!-- Badge -->
+                <div class="glass-border w-[130px]  mx-auto lg:mx-0">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center">
+                            <p> &#9679; SERVICES </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-4xl  text-white">
+                    <b>Everything</b> You Need to <b>Build</b> a High-Performing Shopify Store
+                </h2>
+
+                <!-- Paragraph -->
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Whether you're launching a new store or enhancing an existing one, our Shopify services cover every
+                    touchpoint — from core development to revenue-focused optimization. At Qonkar, we build with purpose
+                    and precision. Explore our complete range of Shopify development services — all under one roof.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopify Services -->
+    <section class="w-[95%] mx-auto py-16 text-white">
+        <!-- Section Heading -->
+        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
+                bg-[url('images/background_curve.svg')] 
+                bg-[center_top_60px]">
+            <h2 class="text-sm uppercase font-light text-white mb-6">
+                Our Shopify Services Include:
+            </h2>
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OUR APPROACH</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                Our Shopify <b>Services</b>
+            </h2>
+            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
+                Launch faster. Scale smarter. At Qonkar, we build custom Shopify stores that are fast,
+                flexible, and built to grow. From setup and theme development to redesigns and backend enhancements,
+                we deliver responsive, high-performing storefronts engineered to convert.
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-[95%] md:w-[70%]">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-4">
+                <!-- Card 1 (big) -->
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+            bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <!-- Background Image + Overlay -->
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="images/icons/services/01.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <!-- Icon -->
+                    <img src="images/icons/services/01_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="images/icons/services/01_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <!-- Heading -->
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Shopify Store Setup & Customization
+                    </h3>
+
+                    <!-- Paragraph -->
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Launch faster. Scale smarter. At Qonkar, we build custom Shopify stores that are fast,
+                        flexible, and built to grow. From setup and theme development to redesigns and backend
+                        enhancements,
+                        we deliver responsive, high-performing storefronts engineered to convert.
+                    </p>
+                </div>
+
+                <!-- Card 2 (small) -->
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+            bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <!-- Background Image + Overlay -->
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="images/icons/services/03.jpg" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <!-- Icon -->
+                    <img src="images/icons/services/03_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="images/icons/services/03_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <!-- Heading -->
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Shopify Theme Development
+                    </h3>
+
+                    <!-- Paragraph -->
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Create a fast, fully custom store that reflects your brand and delivers seamless user
+                        experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex flex-col gap-4">
+                <!-- Card 3 (small) -->
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+            bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <!-- Background Image + Overlay -->
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="images/icons/services/02.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <!-- Icon -->
+                    <img src="images/icons/services/02_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="images/icons/services/02_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <!-- Heading -->
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Shopify Store Redesign
+                    </h3>
+
+                    <!-- Paragraph -->
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Outdated store? We transform it with modern design, mobile-first UX, and performance-driven
+                        upgrades.
+                    </p>
+                </div>
+
+                <!-- Card 4 (big) -->
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+            bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <!-- Background Image + Overlay -->
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="images/icons/services/04.jpg" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <!-- Icon -->
+                    <img src="images/icons/services/04_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="images/icons/services/04_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <!-- Heading -->
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Shopify Management & Maintenance
+                    </h3>
+
+                    <!-- Paragraph -->
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Stay focused on your business while we keep your store in peak condition. Our team handles
+                        updates,
+                        security, bug fixes, and performance improvements — ensuring uninterrupted operations and a
+                        flawless
+                        shopping experience.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Streamling and Advancement -->
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 space-y-16">
+
+            <!-- First Div (normal) -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <!-- Left Content -->
+                <div class="md:w-1/2 space-y-4">
+                    <!-- Badge -->
+                    <div class="glass-border inline-block mb-4">
+                        <div class="glass-background">
+                            <div class="glass text-sm font-light">
+                                <p>&#9679; &nbsp;STREAMLING</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        Performance & <b>Optimization</b>
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                        Built to Perform. Designed to Convert. At Qonkar, we don’t just build beautiful stores — we make
+                        them fast, frictionless, and fiercely effective. From site speed to conversion strategy, we
+                        optimize every element to maximize results and minimize drop-offs.
+                    </p>
+                </div>
+
+                <!-- Right Cards -->
+                <div class="md:w-1/2 flex flex-col gap-3">
+                    <!-- Card 1 -->
+                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
+                border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
+
+                        <!-- Background Image + Overlay (hidden until hover) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="images/icons/services/01.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                        </div>
+
+                        <!-- Icon -->
+                        <img src="images/icons/services/05_color.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
+                            alt="">
+                        <img src="images/icons/services/05_white.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
+                            alt="">
+
+                        <!-- Text Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-light mb-2 text-white">Site Speed Optimization</h3>
+                            <p class="text-sm font-light leading-relaxed text-white">
+                                We boost your store’s speed with clean code, compressed assets, and responsive
+                                design—reducing load times and bounce rates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
+                border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
+
+                        <!-- Background Image + Overlay -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="images/icons/services/02.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                        </div>
+
+                        <!-- Icon -->
+                        <img src="images/icons/services/07_color.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
+                            alt="">
+                        <img src="images/icons/services/07_white.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
+                            alt="">
+
+                        <!-- Text Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-light mb-2 text-white">Conversation Rate Optimization (CRO)</h3>
+                            <p class="text-sm font-light leading-relaxed text-white">
+                                We audit your store’s UX, analyze behavior, and run A/B tests to improve engagement and
+                                maximize conversions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Second Div (reverse) -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <!-- Right Content (swapped) -->
+                <div class="md:w-1/2 flex flex-col gap-3 order-2 md:order-1">
+                    <!-- Card 1 -->
+                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
+                border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
+
+                        <!-- Background Image + Overlay (hidden until hover) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="images/icons/services/01.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                        </div>
+
+                        <!-- Icon -->
+                        <img src="images/icons/services/05_color.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
+                            alt="">
+                        <img src="images/icons/services/05_white.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
+                            alt="">
+
+                        <!-- Text Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-light mb-2 text-white">Strategy & Growth</h3>
+                            <p class="text-sm font-light leading-relaxed text-white">
+                                Scalable strategies built to boost revenue through smart upsells, backend automation,
+                                and data-driven decisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
+                border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
+
+                        <!-- Background Image + Overlay -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="images/icons/services/02.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                        </div>
+
+                        <!-- Icon -->
+                        <img src="images/icons/services/06_color.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
+                            alt="">
+                        <img src="images/icons/services/06_white.svg"
+                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
+                            alt="">
+
+                        <!-- Text Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-light mb-2 text-white">Retention Marketing</h3>
+                            <p class="text-sm font-light leading-relaxed text-white">
+                                We turn buyers into loyal fans with automated emails, rewards, and personalized
+                                retention flows.
+                                Icon Suggestions:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Content -->
+                <div class="md:w-1/2 space-y-4 order-1 md:order-2">
+                    <!-- Badge -->
+                    <div class="glass-border inline-block mb-4">
+                        <div class="glass-background">
+                            <div class="glass text-sm font-light">
+                                <p>&#9679; &nbsp;ADVANCEMENT</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        <b>Strategy</b> Growth & Retention
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                        Build Once. Grow Always. At Qonkar, we believe real success begins after launch. Our Strategy,
+                        Growth & Retention services are designed to scale your Shopify store with intent and precision.
+                        From custom growth frameworks to powerful retention campaigns, we help you drive repeat
+                        purchases, build brand loyalty, and unlock sustainable long-term performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Case Studies -->
+    <section class="w-full py-20 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-8">
+                <!-- Badge + Heading -->
+                <div>
+                    <div class="glass-border inline-block mb-4">
+                        <div class="glass-background">
+                            <div class="glass text-sm font-light">
+                                <p>&#9679; &nbsp;STREAMLING</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        What we have <b>Built</b>
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                        Explore the impact we have created for real e-commerce brands.
+                    </p>
+
+                </div>
+                <!-- Cards (3 in column) -->
+                <div class="flex flex-col gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                        <!-- Top Image Section -->
+                        <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                            <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                        </div>
+
+                        <!-- Bottom Text Section with Gradient Background -->
+                        <div
+                            class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                            <!-- Inner container (black background inside the gradient border) -->
+                            <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <img src="images/icons/services/01.webp" alt="Hover BG"
+                                        class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-[#046362]/60"></div>
+                                </div>
+
+                                <!-- Text Content with Arrow -->
+                                <div class="relative z-10 p-6 flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                            Fashion Brand Growth
+                                        </h3>
+                                        <p
+                                            class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                            <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                                UX.</i>
+                                        </p>
+                                    </div>
+
+                                    <!-- Arrow Icon (changes on hover) -->
+                                    <div class="flex-shrink-0">
+                                        <img src="images/icons/arrrow_color.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                            alt="Arrow Icon">
+                                        <img src="images/icons/arrrow_white.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                            alt="Arrow Icon White">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                        <!-- Top Image Section -->
+                        <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                            <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                        </div>
+
+                        <!-- Bottom Text Section with Gradient Background -->
+                        <div
+                            class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                            <!-- Inner container (black background inside the gradient border) -->
+                            <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <img src="images/icons/services/01.webp" alt="Hover BG"
+                                        class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-[#046362]/60"></div>
+                                </div>
+
+                                <!-- Text Content with Arrow -->
+                                <div class="relative z-10 p-6 flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                            Fashion Brand Growth
+                                        </h3>
+                                        <p
+                                            class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                            <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                                UX.</i>
+                                        </p>
+                                    </div>
+
+                                    <!-- Arrow Icon (changes on hover) -->
+                                    <div class="flex-shrink-0">
+                                        <img src="images/icons/arrrow_color.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                            alt="Arrow Icon">
+                                        <img src="images/icons/arrrow_white.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                            alt="Arrow Icon White">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                        <!-- Top Image Section -->
+                        <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                            <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                        </div>
+
+                        <!-- Bottom Text Section with Gradient Background -->
+                        <div
+                            class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                            <!-- Inner container (black background inside the gradient border) -->
+                            <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <img src="images/icons/services/01.webp" alt="Hover BG"
+                                        class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-[#046362]/60"></div>
+                                </div>
+
+                                <!-- Text Content with Arrow -->
+                                <div class="relative z-10 p-6 flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                            Fashion Brand Growth
+                                        </h3>
+                                        <p
+                                            class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                            <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                                UX.</i>
+                                        </p>
+                                    </div>
+
+                                    <!-- Arrow Icon (changes on hover) -->
+                                    <div class="flex-shrink-0">
+                                        <img src="images/icons/arrrow_color.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                            alt="Arrow Icon">
+                                        <img src="images/icons/arrrow_white.svg"
+                                            class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                            alt="Arrow Icon White">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Only 3 Cards) -->
+            <div class="flex flex-col gap-8">
+                <!-- Card 4 -->
+                <div
+                    class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                    <!-- Top Image Section -->
+                    <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                        <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                    </div>
+
+                    <!-- Bottom Text Section with Gradient Background -->
+                    <div
+                        class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                        <!-- Inner container (black background inside the gradient border) -->
+                        <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <img src="images/icons/services/01.webp" alt="Hover BG"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            </div>
+
+                            <!-- Text Content with Arrow -->
+                            <div class="relative z-10 p-6 flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                        Fashion Brand Growth
+                                    </h3>
+                                    <p class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                        <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                            UX.</i>
+                                    </p>
+                                </div>
+
+                                <!-- Arrow Icon (changes on hover) -->
+                                <div class="flex-shrink-0">
+                                    <img src="images/icons/arrrow_color.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                        alt="Arrow Icon">
+                                    <img src="images/icons/arrrow_white.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                        alt="Arrow Icon White">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                    <!-- Top Image Section -->
+                    <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                        <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                    </div>
+
+                    <!-- Bottom Text Section with Gradient Background -->
+                    <div
+                        class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                        <!-- Inner container (black background inside the gradient border) -->
+                        <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <img src="images/icons/services/01.webp" alt="Hover BG"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            </div>
+
+                            <!-- Text Content with Arrow -->
+                            <div class="relative z-10 p-6 flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                        Fashion Brand Growth
+                                    </h3>
+                                    <p class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                        <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                            UX.</i>
+                                    </p>
+                                </div>
+
+                                <!-- Arrow Icon (changes on hover) -->
+                                <div class="flex-shrink-0">
+                                    <img src="images/icons/arrrow_color.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                        alt="Arrow Icon">
+                                    <img src="images/icons/arrrow_white.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                        alt="Arrow Icon White">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="w-full background-backdrop-card  rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
+
+                    <!-- Top Image Section -->
+                    <div class="w-full h-60 flex items-center justify-center bg-black/70 
+            border border-gray-900 rounded-t-[15px] border-b-0">
+                        <img src="images/case_studeis/01.png" alt="Case Study Image" class="w-[60%] object-contain">
+                    </div>
+
+                    <!-- Bottom Text Section with Gradient Background -->
+                    <div
+                        class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] 
+  p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                        <!-- Inner container (black background inside the gradient border) -->
+                        <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <img src="images/icons/services/01.webp" alt="Hover BG"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            </div>
+
+                            <!-- Text Content with Arrow -->
+                            <div class="relative z-10 p-6 flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
+                                        Fashion Brand Growth
+                                    </h3>
+                                    <p class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
+                                        <i>Boosted conversions by 40% with a Shopify redesign and improved mobile
+                                            UX.</i>
+                                    </p>
+                                </div>
+
+                                <!-- Arrow Icon (changes on hover) -->
+                                <div class="flex-shrink-0">
+                                    <img src="images/icons/arrrow_color.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 group-hover:hidden"
+                                        alt="Arrow Icon">
+                                    <img src="images/icons/arrrow_white.svg"
+                                        class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block"
+                                        alt="Arrow Icon White">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--  Our Process Section -->
+    <section class="relative py-10 px-6 text-center 
+                bg-no-repeat bg-[length:40%] 
+                bg-[url('images/background_curve.svg')] 
+                bg-[center_top_60px]">
+
+
+        <div class="container mx-auto flex flex-col items-center gap-3">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-2">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OUR PROCESS</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-light mb-2">
+                See How we <b>Work</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
+                From kickoff to post-launch, here’s how we build and scale high-performing Shopify stores — fast,
+                focused, and friction-free.
+            </p>
+
+            <!-- Process Cards -->
+            <div class="w-full mt-10">
+                <!-- Wrapper: flex on desktop, slider on mobile -->
+                <div class="flex gap-2 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory">
+
+                    <!-- Card 1-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">01</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Discovery & Strategy</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
+                                    We explore your goals and challenges, then build a clear, data-backed roadmap. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 2-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">02</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Design & Experience</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
+                                    We create intuitive, brand-aligned prototypes focused on user experience. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 3-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">03</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Build & Integrate</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
+                                    Our developers build powerful, scalable solutions with smart tech integrations. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 4-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">04</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Testing & Launch</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
+                                    Every feature is tested and optimized for speed, performance, and reliability. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 5-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">05</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Support & Growth</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
+                                    Post-launch, we monitor, improve, and scale your product for long-term success. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY QONKAR Section -->
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white ">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 ">
+
+            <!-- Centered wrapper: constrains width and centers text -->
+            <div class="w-full flex justify-center mb-4">
+                <div class="max-w-3xl w-full px-6 text-center">
+                    <!-- Badge (centered with mx-auto) -->
+                    <div class="mb-4">
+                        <div class="glass-border inline-block mb-2 mx-auto">
+                            <div class="glass-background">
+                                <div class="glass text-sm font-light px-4 py-1">
+                                    <p class="m-0">&#9679; &nbsp;OUR PROCESS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Heading -->
+                        <h2 class="text-3xl md:text-4xl font-light mb-2">
+                            What makes Qonkar <b>Different</b>
+                        </h2>
+
+                        <!-- Paragraph -->
+                        <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
+                            We don’t just launch. We build. We scale. We convert. We retain.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                <!-- LEFT: FAQs -->
+                <div class="space-y-8 max-w-2xl mx-auto relative text-white">
+
+                    <!-- FAQ 1 -->
+                    <div class="relative border rounded-tr-lg w-[90%] mx-auto">
+                        <!-- Outer black border layer -->
+                        <span
+                            class="absolute -left-10 -top-4 w-20 h-20 flex items-center justify-center rounded-full bg-black z-0"></span>
+                        <!-- Number Circle (inside) -->
+                        <span class="absolute -left-8 -top-2 w-16 h-16 flex items-center justify-center rounded-full border-4 border-[var(--secondary-color)] 
+        text-[var(--secondary-color)] font-bold text-2xl bg-black z-10">01</span>
+                        <!-- Question Row -->
+                        <button id="faq-btn-1" onclick="toggleFAQ(1)"
+                            class="w-full flex items-center justify-between p-2 text-left transition-colors duration-300">
+                            <span class="font-medium text-sm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How does
+                                Qonkar ensure project success?</span>
+                            <span id="icon-1" class="text-2xl font-bold transition-transform duration-300">+</span>
+                        </button>
+                        <!-- Answer Section -->
+                        <div id="faq-1" class="max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="p-4 text-gray-700 text-sm leading-relaxed">
+                                We follow structured processes, agile methods, and continuous feedback loops to
+                                guarantee success.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="relative border rounded-tr-lg w-[90%] mx-auto">
+                        <span
+                            class="absolute -left-10 -top-4 w-20 h-20 flex items-center justify-center rounded-full bg-black z-0"></span>
+                        <span class="absolute -left-8 -top-2 w-16 h-16 flex items-center justify-center rounded-full border-4 border-[var(--secondary-color)] 
+        text-[var(--secondary-color)] font-bold text-2xl bg-black z-10">02</span>
+                        <button id="faq-btn-2" onclick="toggleFAQ(2)"
+                            class="w-full flex items-center justify-between p-2 text-left transition-colors duration-300">
+                            <span class="font-medium text-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What
+                                services does Qonkar offer?</span>
+                            <span id="icon-2" class="text-2xl font-bold transition-transform duration-300">+</span>
+                        </button>
+                        <div id="faq-2" class="max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="p-4 text-gray-700 text-sm leading-relaxed">
+                                We offer project management, consulting, software development, and support services
+                                tailored to client needs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="relative border rounded-tr-lg w-[90%] mx-auto">
+                        <span
+                            class="absolute -left-10 -top-4 w-20 h-20 flex items-center justify-center rounded-full bg-black z-0"></span>
+                        <span class="absolute -left-8 -top-2 w-16 h-16 flex items-center justify-center rounded-full border-4 border-[var(--secondary-color)] 
+        text-[var(--secondary-color)] font-bold text-2xl bg-black z-10">03</span>
+                        <button id="faq-btn-3" onclick="toggleFAQ(3)"
+                            class="w-full flex items-center justify-between p-2 text-left transition-colors duration-300">
+                            <span class="font-medium text-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How does
+                                Qonkar handle project risks?</span>
+                            <span id="icon-3" class="text-2xl font-bold transition-transform duration-300">+</span>
+                        </button>
+                        <div id="faq-3" class="max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="p-4 text-gray-700 text-sm leading-relaxed">
+                                We identify, monitor, and mitigate risks through proactive planning and agile
+                                adjustments.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="relative border rounded-tr-lg w-[90%] mx-auto">
+                        <span
+                            class="absolute -left-10 -top-4 w-20 h-20 flex items-center justify-center rounded-full bg-black z-0"></span>
+                        <span class="absolute -left-8 -top-2 w-16 h-16 flex items-center justify-center rounded-full border-4 border-[var(--secondary-color)] 
+        text-[var(--secondary-color)] font-bold text-2xl bg-black z-10">04</span>
+                        <button id="faq-btn-4" onclick="toggleFAQ(4)"
+                            class="w-full flex items-center justify-between p-2 text-left transition-colors duration-300">
+                            <span class="font-medium text-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How long
+                                does a typical project take?</span>
+                            <span id="icon-4" class="text-2xl font-bold transition-transform duration-300">+</span>
+                        </button>
+                        <div id="faq-4" class="max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="p-4 text-gray-700 text-sm leading-relaxed">
+                                Project timelines vary, but we focus on delivering quality within agreed deadlines using
+                                agile sprints.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="relative border rounded-tr-lg w-[90%] mx-auto">
+                        <span
+                            class="absolute -left-10 -top-4 w-20 h-20 flex items-center justify-center rounded-full bg-black z-0"></span>
+                        <span class="absolute -left-8 -top-2 w-16 h-16 flex items-center justify-center rounded-full border-4 border-[var(--secondary-color)] 
+        text-[var(--secondary-color)] font-bold text-2xl bg-black z-10">05</span>
+                        <button id="faq-btn-5" onclick="toggleFAQ(5)"
+                            class="w-full flex items-center justify-between p-2 text-left transition-colors duration-300">
+                            <span class="font-medium text-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How can I
+                                contact Qonkar?</span>
+                            <span id="icon-5" class="text-2xl font-bold transition-transform duration-300">+</span>
+                        </button>
+                        <div id="faq-5" class="max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="p-4 text-gray-700 text-sm leading-relaxed">
+                                You can contact us via email, phone, or our online contact form on the Qonkar website.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: Image -->
+                <div class="flex justify-center">
+                    <img src="images/icons/services/FAQS.png" alt="Why Qonkar"
+                        class="w-full max-w-md rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Client Section -->
+    <section class="bg-[var(--body-bg)] py-12 px-6">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <!-- ✅ Left Side Image (Appears First on Mobile) -->
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="images/Our_Client_Image.png" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+
+            <!-- ✅ Right Side Content -->
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+                <!-- Badge -->
+                <div class="glass-border w-[120px]  mx-auto lg:mx-0">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center 
+            ">
+                            <p> &#9679; CLIENTS</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-4xl  text-white">
+                    Our <b>Client </b>
+                </h2>
+
+                <!-- Paragraph -->
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    At Qonkar, we’re proud to have collaborated with a diverse and forward-thinking clientele,
+                    ranging from innovative startups to well-established international enterprises.
+                    Our client base spans multiple industries including e-commerce, technology, retail,
+                    education, and B2B services. We’ve had the privilege of working with brands powered by
+                    platforms like Shopify, Microsoft, Mailchimp, and HubSpot—brands that trust us for our
+                    quality, creativity, and results-driven strategies. Each partnership is rooted in
+                    transparency, innovation, and measurable outcomes.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="#clients" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
+                hover:bg-[var(--primary-color)] hover:text-white transition w-fit mx-auto lg:mx-0">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--  Trusted by Many Customer  -->
+    <section class="w-full py-20 bg-[var(--body-bg)] text-white bg-no-repeat bg-[length:40%] 
+                bg-[url('images/background_curve.svg')] 
+                bg-[center_top_100px]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; TRUSTED BY MANY</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Hear it From <b>Our Partners</b>
+            </h2>
+            <p class="max-w-3xl mx-auto text-white mb-12 font-light sm:text-base">
+                Our work doesn’t just speak for itself, our clients do. These short videos give you a look into
+                their satisfaction, outcomes, and why they continue to choose Qonkar.
+            </p>
+
+            <!-- Carousel wrapper -->
+            <div class="relative flex flex-col items-center justify-center">
+
+                <!-- The carousel content -->
+                <div class="flex items-center justify-center gap-6 relative z-10 w-full max-w-[1000px]">
+
+                    <!-- Small Left -->
+                    <button id="custLeftSmall" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-40 w-12 border-2 rounded-md
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-xs font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Emily</span>
+                    </button>
+
+                    <!-- Big Left -->
+                    <button id="custLeftBig" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-60 w-16 border-2 rounded-lg
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Sarah Lee</span>
+                    </button>
+
+                    <!-- Main Video -->
+                    <div
+                        class="relative w-full md:w-[700px] h-[220px] sm:h-[300px] md:h-[400px] rounded-xl border-4 border-gray-800 overflow-hidden shadow-lg">
+                        <video id="custMainVideo" class="w-full h-full object-cover" controls controlsList="nodownload">
+                            <source src="customer1.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+
+                        <!-- Overlay Label -->
+                        <div id="custMainLabel"
+                            class="absolute top-1 left-1 bg-black/60 px-4 py-2 rounded-md text-left z-20">
+                            <h4 class="text-white font-semibold">John Doe</h4>
+                            <p class="text-gray-300 text-sm">CEO, Example Corp</p>
+                        </div>
+                    </div>
+
+                    <!-- Big Right -->
+                    <button id="custRightBig" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-60 w-16 border-2 rounded-lg
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Michael Chen</span>
+                    </button>
+
+                    <!-- Small Right -->
+                    <button id="custRightSmall" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-40 w-12 border-2 rounded-md
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-xs font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Emily</span>
+                    </button>
+                </div>
+
+                <!-- Arrows for Desktop (side absolute) -->
+                <button id="custPrevBtn" type="button"
+                    class="hidden md:flex absolute left-[50px] top-1/2 transform -translate-y-1/2 z-50 bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="custNextBtn" type="button"
+                    class="hidden md:flex absolute right-[50px] top-1/2 transform -translate-y-1/2 z-50 bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Arrows for Mobile/Tablet (below video) -->
+                <div class="flex md:hidden justify-center items-center gap-6 mt-4">
+                    <button id="custPrevBtnMobile" type="button"
+                        class="bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="custNextBtnMobile" type="button"
+                        class="bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Build Remarkable Banner  -->
+    <section class="w-full flex justify-center items-center py-4 px-4">
+        <div class="w-full max-w-6xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] shadow-lg" style="
+      border: 2px solid rgba(56, 228, 174, 0.53);
+      background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
+                  linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+      box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);
+    ">
+            <!-- Heading -->
+            <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
+                Ready to <strong>Build</strong> Something <strong>Remarkable</strong> ?
+            </h1>
+
+            <!-- Paragraph -->
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-white font-light">
+                Take the First Step toward Smarter Growth — No Pressure, Just a Quick Chat.
+            </p>
+
+            <!-- Button -->
+            <a href="#"
+                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                Why reach out ?
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="mx-6 mb-6">
+        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
+  via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16
+">
+            <!-- Wrapper -->
+            <div class="flex flex-col gap-0">
+                <!-- First Row: Logo -->
+                <div class="flex justify-center md:justify-start">
+                    <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40">
+                </div>
+
+                <!-- Second Row: Address + Social Icons -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <!-- Address -->
+                    <div class="flex items-center gap-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 12.414A4 4 0 1112 8a4 4 0 014.243 1.243l4.243 4.243a8 8 0 11-2.829 2.829z" />
+                        </svg>
+                        <span>Software Technology Park, QUEST Nawabshah</span>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
+
+            <!-- Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact with Us!</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+44) 7476451747</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+92) 305 8219445</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@qonkar.com</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> United Kingdom</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Website Design & Development</a></li>
+                        <li><a href="#">Shopify Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Services</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                        <li><a href="#">Landing Page Design</a></li>
+                        <li><a href="#">Custom Website Design</a></li>
+                        <li><a href="#">Shopify Theme Development</a></li>
+                        <li><a href="#">Shopify Store Setup</a></li>
+                    </ul>
+                </div>
+
+                <!-- About Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Qonkar Technologies (PVT) Ltd.</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blogs & News</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Services</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Trust and Safety</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trusted By Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li>Microsoft</li>
+                        <li>Shopify</li>
+                        <li>Upwork</li>
+                        <li>Fiverr</li>
+                        <li>Mailchimp</li>
+                        <li>HubSpot</li>
+                        <li>Google Ads</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
+
+            <!-- Bottom Row -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>© 2025 Qonkar Technologies</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Trusted by Many Customer Slider with Content 
+        document.addEventListener("DOMContentLoaded", () => {
+            const customers = [
+                { name: "John Doe", title: "CEO, Example Corp", video: "Videos/customer1.mp4" },
+                { name: "Sarah Lee", title: "CTO, Alpha Inc", video: "Videos/customer1.mp4" },
+                { name: "Michael Chen", title: "Founder, BetaTech", video: "Videos/customer1.mp4" },
+                { name: "Emily Carter", title: "CMO, Gamma Ltd", video: "Videos/customer1.mp4" }
+            ];
+
+            let currentIndex = 0;
+            const mainVideo = document.getElementById("custMainVideo");
+            const mainLabel = document.getElementById("custMainLabel");
+
+            const leftSmallBtn = document.getElementById("custLeftSmall");
+            const leftBigBtn = document.getElementById("custLeftBig");
+            const rightBigBtn = document.getElementById("custRightBig");
+            const rightSmallBtn = document.getElementById("custRightSmall");
+
+            const prevBtn = document.getElementById("custPrevBtn");
+            const nextBtn = document.getElementById("custNextBtn");
+            const prevBtnMobile = document.getElementById("custPrevBtnMobile");
+            const nextBtnMobile = document.getElementById("custNextBtnMobile");
+
+            function updateVideo(index) {
+                const customer = customers[index];
+                const sourceEl = mainVideo.querySelector("source");
+                sourceEl.src = customer.video;
+                mainVideo.load();
+                mainVideo.play().catch(() => { });
+                mainLabel.innerHTML = `
+        <h4 class="text-white font-semibold">${customer.name}</h4>
+        <p class="text-gray-300 text-sm">${customer.title}</p>
+      `;
+                currentIndex = index;
+                updateSideButtons();
+            }
+
+            function updateSideButtons() {
+                const leftSmallIndex = (currentIndex - 2 + customers.length) % customers.length;
+                const leftBigIndex = (currentIndex - 1 + customers.length) % customers.length;
+                const rightBigIndex = (currentIndex + 1) % customers.length;
+                const rightSmallIndex = (currentIndex + 2) % customers.length;
+
+                if (leftSmallBtn) leftSmallBtn.querySelector("span").textContent = customers[leftSmallIndex].name;
+                if (leftBigBtn) leftBigBtn.querySelector("span").textContent = customers[leftBigIndex].name;
+                if (rightBigBtn) rightBigBtn.querySelector("span").textContent = customers[rightBigIndex].name;
+                if (rightSmallBtn) rightSmallBtn.querySelector("span").textContent = customers[rightSmallIndex].name;
+
+                if (leftSmallBtn) leftSmallBtn.onclick = () => updateVideo(leftSmallIndex);
+                if (leftBigBtn) leftBigBtn.onclick = () => updateVideo(leftBigIndex);
+                if (rightBigBtn) rightBigBtn.onclick = () => updateVideo(rightBigIndex);
+                if (rightSmallBtn) rightSmallBtn.onclick = () => updateVideo(rightSmallIndex);
+            }
+
+            // Desktop arrows
+            if (prevBtn) prevBtn.addEventListener("click", () => {
+                updateVideo((currentIndex - 1 + customers.length) % customers.length);
+            });
+            if (nextBtn) nextBtn.addEventListener("click", () => {
+                updateVideo((currentIndex + 1) % customers.length);
+            });
+
+            // Mobile arrows
+            if (prevBtnMobile) prevBtnMobile.addEventListener("click", () => {
+                updateVideo((currentIndex - 1 + customers.length) % customers.length);
+            });
+            if (nextBtnMobile) nextBtnMobile.addEventListener("click", () => {
+                updateVideo((currentIndex + 1) % customers.length);
+            });
+
+            updateVideo(0);
+        });
+        // FAQ
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const btn = document.getElementById(`faq-btn-${id}`);
+
+            const isOpen = !faq.classList.contains("max-h-0");
+
+            if (isOpen) {
+                // Close FAQ
+                faq.classList.add("max-h-0");
+                faq.classList.remove("max-h-screen");
+                btn.classList.remove("bg-[var(--secondary-color)]", "text-white");
+                icon.textContent = "+";
+            } else {
+                // Open FAQ
+                faq.classList.remove("max-h-0");
+                faq.classList.add("max-h-screen");
+                btn.classList.add("bg-[var(--secondary-color)]", "text-white", "rounded-tr-lg");
+                icon.textContent = "−";
+            }
+        }
+        // Navbar
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            menuBtn.textContent = isOpen ? '✖' : '☰';
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    mobileMenu.classList.remove('scale-y-0');
+                    mobileMenu.classList.add('scale-y-80');
+                });
+            } else {
+                mobileMenu.classList.remove('scale-y-80');
+                mobileMenu.classList.add('scale-y-0');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

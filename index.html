@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ✅ Basic SEO Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Qonkar - A leading IT company providing modern and innovative digital solutions." />
+    <meta name="keywords"
+        content="Qonkar, IT company, software solutions, web development, tech agency, digital services" />
+    <meta name="author" content="Qonkar" />
+
+    <!-- ✅ Open Graph (Social Media Preview) -->
+    <meta property="og:title" content="Qonkar - IT Solutions" />
+    <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qonkar.com" />
+    <meta property="og:image" content="https://qonkar.com/preview.png" />
+
+
+
+    <!-- ✅ Google ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- ✅ Title -->
+    <title>Qonkar Technologies</title>
+
+    <!-- ✅ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Script for the Case Studies Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ Theme & Reusable Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+
+</head>
+
+<body>
+
+    <header class="sticky top-5 z-50">
+        <!-- ✅ Desktop Navbar -->
+        <nav class="glass hidden lg:flex 
+             max-w-7xl mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
+            <div class="flex items-center">
+                <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
+            </div>
+            <ul class="flex gap-8 text-white font-medium">
+                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
+                <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Insight</a></li>
+                <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
+            </ul>
+            <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
+       hover:bg-[var(--secondary-color)] transition">Contact Us</a>
+        </nav>
+
+        <!-- ✅ Mobile / Tablet Navbar -->
+        <nav class="glass flex lg:hidden 
+            items-center justify-between w-[90%] mx-auto px-5 py-2 rounded-full mt-2 relative">
+            <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-8 w-auto">
+
+            <button id="menu-btn" class="text-white focus:outline-none text-3xl transition" aria-expanded="false"
+                aria-controls="mobile-menu">
+                ☰
+            </button>
+
+            <!-- ✅ Mobile Menu DROPDOWN -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50
+             bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
+             transition-all duration-300 rounded-2xl overflow-hidden">
+
+                <a href="#"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Insight</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
+
+                <!-- ✅ CTA on smaller screens -->
+                <a href="contact-us.html"
+                    class="block w-full text-center py-4 bg-[var(--primary-color)] text-white font-semibold hover:bg-[var(--secondary-color)] transition">
+                    Contact Us
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!--  Hero Section -->
+    <section class="relative min-h-screen flex items-center px-4 py-12 
+    bg-no-repeat bg-[length:50%] bg-center md:bg-left md:bg-[length:50%] max-w-7xl mx-auto"
+        style="background-image: url('images/background_curve.svg');">
+
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto w-full">
+
+            <!-- Left Side: Content -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-6 max-w-xl">
+
+                <!-- Info Badge -->
+                <div
+                    class="glass px-3 py-2 rounded-full text-xs sm:text-sm text-white flex items-center gap-2 hero-badge">
+                    <span class="px-3 py-0.5 rounded-full bg-[var(--primary-color)] text-white text-xs">
+                        &#9679; New
+                    </span>
+                    <span class="leading-tight">
+                        Free your team from repetitive work with AI automation.
+                    </span>
+                </div>
+
+                <!-- Hero Title -->
+                <h1 class="text-2xl sm:text-3xl md:text-5xl font-light hero-title" style="line-height: 1.2;">
+                    An <b>IT Services</b> Company<br>
+                    Where <span class="bg-clip-text text-transparent font-bold"
+                        style="background-image: var(--gradient);">Dreams</span>
+                    Go <span class="bg-clip-text text-transparent font-bold"
+                        style="background-image: var(--gradient);">Digital</span>!
+                </h1>
+
+                <!-- Hero Paragraph -->
+                <p class="text-base md:text-sm text-white font-light leading-relaxed hero-text">
+                    Letting AI take the first pass allows junior engineers to focus on more complex tasks.
+                    This helps them learn faster and level up their skills efficiently.
+                    Leverage our unmatched fractional demand and creative team to optimize advertisements,
+                    launch creative campaigns, and transform reporting.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--primary-color)] text-white font-semibold 
+              hover:bg-[var(--secondary-color)] transition">
+                    Book a Strategy Call
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right Side: Hero Image -->
+            <div class="w-full md:w-1/2 hero-img flex justify-center">
+                <img src="images/hero_image.png" alt="Hero Image" class="w-5/6 h-auto">
+            </div>
+
+        </div>
+    </section>
+
+    <!--  Company Partner -->
+    <section class="bg-[#02181B] flex flex-col items-center justify-center h-[30vh] overflow-hidden relative">
+        <!-- Heading -->
+        <h2 class="text-white text-2xl font-light mb-10 text-center">
+            We Accept Most Major Insurances
+        </h2>
+
+        <!-- Logos Container (Horizontal Scrolling) -->
+        <div class="relative overflow-hidden w-full">
+            <div class="flex animate-scroll-horizontal space-x-18 gap-20 ">
+                <!-- Repeat logos -->
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+
+                <!-- Duplicate for seamless loop -->
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+                <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Client Section -->
+    <section class="bg-[var(--body-bg)] py-12  max-w7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <!-- ✅ Left Side Image (Appears First on Mobile) -->
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="images/Our_Client_Image.png" alt="Our Client" class="w-full max-w-xl h-auto">
+            </div>
+
+            <!-- ✅ Right Side Content -->
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+                <!-- Badge -->
+                <div class="glass-border w-[120px]  mx-auto lg:mx-0">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center 
+            ">
+                            <p> &#9679; CLIENTS</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-4xl  text-white">
+                    Our <b>Client </b>
+                </h2>
+
+                <!-- Paragraph -->
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    At Qonkar, we’re proud to have collaborated with a diverse and forward-thinking clientele,
+                    ranging from innovative startups to well-established international enterprises.
+                    Our client base spans multiple industries including e-commerce, technology, retail,
+                    education, and B2B services. We’ve had the privilege of working with brands powered by
+                    platforms like Shopify, Microsoft, Mailchimp, and HubSpot—brands that trust us for our
+                    quality, creativity, and results-driven strategies. Each partnership is rooted in
+                    transparency, innovation, and measurable outcomes.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="#clients" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
+                hover:bg-[var(--primary-color)] hover:text-white transition w-fit mx-auto lg:mx-0">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--  Our Approach Section -->
+    <section class="relative py-20 max-w-7xl mx-auto text-center 
+                ">
+
+
+        <div class="container mx-auto flex flex-col items-center gap-3">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OUR APPROACH</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Our Smart <b>Process</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
+                We follow a process that blends strategy with creativity. Every project starts with a strong foundation
+                and is built to deliver clarity, structure, and long-term growth.
+            </p>
+
+            <!-- Process Cards -->
+            <div class="w-full mt-10">
+                <!-- Wrapper: flex on desktop, slider on mobile -->
+                <div class="flex gap-2 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory">
+
+                    <!-- Card 1-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">01</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Discovery & Strategy</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500">
+                                    We explore your goals and challenges, then build a clear, data-backed roadmap.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 2-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">02</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Design & Experience</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> We create intuitive, brand-aligned prototypes
+                                    focused on user experience. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 3-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">03</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Build & Integrate</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Our developers build powerful, scalable solutions
+                                    with smart tech integrations. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 4-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">04</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Testing & Launch</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Every feature is tested and optimized for speed,
+                                    performance, and reliability. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 5-->
+                    <div class="flex flex-col p-6 h-[28rem] 
+    flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
+    text-white bg-[#227d8d]
+    transition-all duration-500 ease-in-out 
+    md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+
+                        <!-- Background Overlay (always visible on mobile) -->
+                        <div class="absolute inset-0 
+      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
+      bg-[url('images/hero_image.png')] bg-cover bg-center 
+      before:absolute before:inset-0 before:bg-gradient-to-tr 
+      before:from-[var(--primary-color)] before:to-black/60">
+                        </div>
+
+                        <!-- Top Section -->
+                        <div class="flex flex-col items-start flex-1 relative z-10 
+      transition-all duration-500 ease-in-out 
+      justify-start items-start md:group-hover:justify-end">
+
+                            <!-- Number -->
+                            <span class="text-6xl font-bold text-[#57EAE6]">05</span>
+
+                            <!-- Content -->
+                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
+                                <h3 class="text-lg text-left">Support & Growth</h3>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Post-launch, we monitor, improve, and scale your
+                                    product for long-term success. </p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow Icon -->
+                        <div class="flex justify-end mt-4 relative z-10">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full 
+        bg-white text-[var(--secondary-color)] 
+        transition-all duration-300 ease-in-out 
+        group-hover:bg-gray-600/60 group-hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
+                                    class="transition-colors duration-300" fill="currentColor">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  SERVICES Section -->
+    <section class="py-8 bg-[var(--body-bg)] text-white max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto  text-center ">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;SERVICES</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Service We <b>Provide</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-white font-light max-w-3xl mx-auto mb-10">
+                We specialize in offering tailored digital solutions designed to elevate your brand and grow your
+                business.
+                From strategy to execution, we’re your reliable partner in digital success.
+            </p>
+
+            <!-- Gradient Rounded Tab Buttons -->
+            <div class="flex justify-center mb-5 w-full">
+                <div class=" 
+        flex flex-wrap justify-center gap-2 py-2 px-3 rounded-full 
+        bg-none md:[background-image:var(--gradient)] backdrop-blur-md">
+
+                    <button
+                        class="tab-btn active px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-xs sm:text-sm transition"
+                        data-tab="service1">
+                        Shopify Development
+                    </button>
+                    <button
+                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-xs sm:text-sm transition"
+                        data-tab="service2">
+                        Web Design & Development
+                    </button>
+                    <button
+                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-xs sm:text-sm transition"
+                        data-tab="service3">
+                        Digital Marketing
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Service Content Wrapper -->
+            <div class="relative flex justify-center background-backdrop-card">
+                <div class="w-full p-8 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px]"
+                    style="background-color: rgba(0, 0, 0, 0.5);">
+
+                    <!-- Service 1 -->
+                    <div id="service1" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
+                        <div class="flex-1 text-left top-0 ">
+                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_264_1116)">
+                                        <path
+                                            d="M28 30H16V22H14V30H8V22H6V30C6 30.5304 6.21071 31.0391 6.58579 31.4142C6.96086 31.7893 7.46957 32 8 32H28C28.5304 32 29.0391 31.7893 29.4142 31.4142C29.7893 31.0391 30 30.5304 30 30V22H28V30Z"
+                                            fill="url(#paint0_linear_264_1116)" />
+                                        <path
+                                            d="M33.79 13.27L29.71 5.11C29.5444 4.77679 29.2892 4.49637 28.973 4.30028C28.6568 4.10419 28.2921 4.0002 27.92 4H8.08002C7.70793 4.0002 7.34328 4.10419 7.02706 4.30028C6.71084 4.49637 6.45559 4.77679 6.29002 5.11L2.21002 13.27C2.07071 13.5495 1.99879 13.8577 2.00002 14.17V17.25C1.9991 17.7173 2.16185 18.1702 2.46002 18.53C2.90067 19.0351 3.44491 19.4395 4.05575 19.7156C4.66658 19.9916 5.32969 20.133 6.00002 20.13C7.09379 20.1317 8.1542 19.7535 9.00002 19.06C9.84582 19.7539 10.906 20.1331 12 20.1331C13.094 20.1331 14.1542 19.7539 15 19.06C15.8458 19.7539 16.906 20.1331 18 20.1331C19.094 20.1331 20.1542 19.7539 21 19.06C21.8458 19.7539 22.906 20.1331 24 20.1331C25.094 20.1331 26.1542 19.7539 27 19.06C27.9442 19.8352 29.1521 20.2142 30.3699 20.1172C31.5877 20.0202 32.7204 19.4549 33.53 18.54C33.8318 18.1816 33.9981 17.7285 34 17.26V14.17C34.0012 13.8577 33.9293 13.5495 33.79 13.27ZM15 14.4V15.92L14.18 17C13.9283 17.3431 13.5993 17.6221 13.2197 17.8144C12.8401 18.0067 12.4206 18.1069 11.995 18.1069C11.5695 18.1069 11.1499 18.0067 10.7703 17.8144C10.3907 17.6221 10.0617 17.3431 9.81002 17L9.00002 15.88V14.4L11.59 6H16L15 14.4ZM27 15.88L26.19 17C25.9383 17.3431 25.6093 17.6221 25.2297 17.8144C24.8501 18.0067 24.4305 18.1069 24.005 18.1069C23.5795 18.1069 23.1599 18.0067 22.7803 17.8144C22.4007 17.6221 22.0717 17.3431 21.82 17L21 15.88V14.4L20 6H24.45L27 14.4V15.88Z"
+                                            fill="url(#paint1_linear_264_1116)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_264_1116" x1="9.576" y1="23.5108" x2="19.517"
+                                            y2="23.7684" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_264_1116" x1="6.768" y1="6.43738" x2="20.0255"
+                                            y2="6.72127" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_264_1116">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </h3>
+
+                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Business analysis
+                                    & research</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Competitor
+                                    benchmarking</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Tailored growth
+                                    strategies</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    ROI-focused
+                                    planning</li>
+                            </ul>
+                            <a href="#contact"
+                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="flex-1 flex justify-center">
+                            <img src="images/Our_Client_Image.png" alt="Strategy Service"
+                                class="w-[90%] rounded-xl shadow-lg" />
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div id="service2" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
+                        <div class="flex-1 text-left top-0 ">
+                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_264_1116)">
+                                        <path
+                                            d="M28 30H16V22H14V30H8V22H6V30C6 30.5304 6.21071 31.0391 6.58579 31.4142C6.96086 31.7893 7.46957 32 8 32H28C28.5304 32 29.0391 31.7893 29.4142 31.4142C29.7893 31.0391 30 30.5304 30 30V22H28V30Z"
+                                            fill="url(#paint0_linear_264_1116)" />
+                                        <path
+                                            d="M33.79 13.27L29.71 5.11C29.5444 4.77679 29.2892 4.49637 28.973 4.30028C28.6568 4.10419 28.2921 4.0002 27.92 4H8.08002C7.70793 4.0002 7.34328 4.10419 7.02706 4.30028C6.71084 4.49637 6.45559 4.77679 6.29002 5.11L2.21002 13.27C2.07071 13.5495 1.99879 13.8577 2.00002 14.17V17.25C1.9991 17.7173 2.16185 18.1702 2.46002 18.53C2.90067 19.0351 3.44491 19.4395 4.05575 19.7156C4.66658 19.9916 5.32969 20.133 6.00002 20.13C7.09379 20.1317 8.1542 19.7535 9.00002 19.06C9.84582 19.7539 10.906 20.1331 12 20.1331C13.094 20.1331 14.1542 19.7539 15 19.06C15.8458 19.7539 16.906 20.1331 18 20.1331C19.094 20.1331 20.1542 19.7539 21 19.06C21.8458 19.7539 22.906 20.1331 24 20.1331C25.094 20.1331 26.1542 19.7539 27 19.06C27.9442 19.8352 29.1521 20.2142 30.3699 20.1172C31.5877 20.0202 32.7204 19.4549 33.53 18.54C33.8318 18.1816 33.9981 17.7285 34 17.26V14.17C34.0012 13.8577 33.9293 13.5495 33.79 13.27ZM15 14.4V15.92L14.18 17C13.9283 17.3431 13.5993 17.6221 13.2197 17.8144C12.8401 18.0067 12.4206 18.1069 11.995 18.1069C11.5695 18.1069 11.1499 18.0067 10.7703 17.8144C10.3907 17.6221 10.0617 17.3431 9.81002 17L9.00002 15.88V14.4L11.59 6H16L15 14.4ZM27 15.88L26.19 17C25.9383 17.3431 25.6093 17.6221 25.2297 17.8144C24.8501 18.0067 24.4305 18.1069 24.005 18.1069C23.5795 18.1069 23.1599 18.0067 22.7803 17.8144C22.4007 17.6221 22.0717 17.3431 21.82 17L21 15.88V14.4L20 6H24.45L27 14.4V15.88Z"
+                                            fill="url(#paint1_linear_264_1116)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_264_1116" x1="9.576" y1="23.5108" x2="19.517"
+                                            y2="23.7684" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_264_1116" x1="6.768" y1="6.43738" x2="20.0255"
+                                            y2="6.72127" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_264_1116">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </h3>
+
+                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Business analysis
+                                    & research</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Competitor
+                                    benchmarking</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Tailored growth
+                                    strategies</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    ROI-focused
+                                    planning</li>
+                            </ul>
+                            <a href="#contact"
+                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="flex-1 flex justify-center">
+                            <img src="images/Our_Client_Image.png" alt="Strategy Service"
+                                class="w-[90%] rounded-xl shadow-lg" />
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div id="service3" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
+                        <div class="flex-1 text-left top-0 ">
+                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_264_1116)">
+                                        <path
+                                            d="M28 30H16V22H14V30H8V22H6V30C6 30.5304 6.21071 31.0391 6.58579 31.4142C6.96086 31.7893 7.46957 32 8 32H28C28.5304 32 29.0391 31.7893 29.4142 31.4142C29.7893 31.0391 30 30.5304 30 30V22H28V30Z"
+                                            fill="url(#paint0_linear_264_1116)" />
+                                        <path
+                                            d="M33.79 13.27L29.71 5.11C29.5444 4.77679 29.2892 4.49637 28.973 4.30028C28.6568 4.10419 28.2921 4.0002 27.92 4H8.08002C7.70793 4.0002 7.34328 4.10419 7.02706 4.30028C6.71084 4.49637 6.45559 4.77679 6.29002 5.11L2.21002 13.27C2.07071 13.5495 1.99879 13.8577 2.00002 14.17V17.25C1.9991 17.7173 2.16185 18.1702 2.46002 18.53C2.90067 19.0351 3.44491 19.4395 4.05575 19.7156C4.66658 19.9916 5.32969 20.133 6.00002 20.13C7.09379 20.1317 8.1542 19.7535 9.00002 19.06C9.84582 19.7539 10.906 20.1331 12 20.1331C13.094 20.1331 14.1542 19.7539 15 19.06C15.8458 19.7539 16.906 20.1331 18 20.1331C19.094 20.1331 20.1542 19.7539 21 19.06C21.8458 19.7539 22.906 20.1331 24 20.1331C25.094 20.1331 26.1542 19.7539 27 19.06C27.9442 19.8352 29.1521 20.2142 30.3699 20.1172C31.5877 20.0202 32.7204 19.4549 33.53 18.54C33.8318 18.1816 33.9981 17.7285 34 17.26V14.17C34.0012 13.8577 33.9293 13.5495 33.79 13.27ZM15 14.4V15.92L14.18 17C13.9283 17.3431 13.5993 17.6221 13.2197 17.8144C12.8401 18.0067 12.4206 18.1069 11.995 18.1069C11.5695 18.1069 11.1499 18.0067 10.7703 17.8144C10.3907 17.6221 10.0617 17.3431 9.81002 17L9.00002 15.88V14.4L11.59 6H16L15 14.4ZM27 15.88L26.19 17C25.9383 17.3431 25.6093 17.6221 25.2297 17.8144C24.8501 18.0067 24.4305 18.1069 24.005 18.1069C23.5795 18.1069 23.1599 18.0067 22.7803 17.8144C22.4007 17.6221 22.0717 17.3431 21.82 17L21 15.88V14.4L20 6H24.45L27 14.4V15.88Z"
+                                            fill="url(#paint1_linear_264_1116)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_264_1116" x1="9.576" y1="23.5108" x2="19.517"
+                                            y2="23.7684" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_264_1116" x1="6.768" y1="6.43738" x2="20.0255"
+                                            y2="6.72127" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3F89C9" />
+                                            <stop offset="0.259615" stop-color="#2FADC3" />
+                                            <stop offset="0.625" stop-color="#2AB9C1" />
+                                            <stop offset="1" stop-color="#99CD4A" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_264_1116">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </h3>
+
+                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Business analysis
+                                    & research</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Competitor
+                                    benchmarking</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Tailored growth
+                                    strategies</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    ROI-focused
+                                    planning</li>
+                            </ul>
+                            <a href="#contact"
+                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="flex-1 flex justify-center">
+                            <img src="images/Our_Client_Image.png" alt="Strategy Service"
+                                class="w-[90%] rounded-xl shadow-lg" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  WHY CHOOSE US Section -->
+    <section class="py-8 bg-[var(--body-bg)] text-white ">
+        <div class="max-w-7xl mx-auto  text-center">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; WHY CHOOSE US?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Why <b>Qonkar?</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class=" text-white font-light max-w-2xl mx-auto mb-10">
+                We’re not just another agency, we’re your growth partner. Our team combines strategic thinking with
+                data-driven execution to deliver real, measurable impact.
+            </p>
+
+            <!-- Cards Wrapper -->
+            <div class="relative">
+                <!-- Desktop/Tablet Grid -->
+                <!-- <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6"> -->
+                <!-- <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block"> icon gradient -->
+
+
+                <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!--  Card  1-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/strategy.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-200 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">100% Results-driven Strategy</h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            We focus on what matters — performance. Every campaign is built to meet specific KPIs and
+                            business goals,
+                            ensuring your marketing budget delivers maximum ROI.
+                        </p>
+                    </div>
+                    <!--  Card  2-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/repoting.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">100% Results-driven Strategy</h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            We focus on what matters — performance. Every campaign is built to meet specific KPIs and
+                            business goals,
+                            ensuring your marketing budget delivers maximum ROI.
+                        </p>
+                    </div>
+                    <!--  Card  3-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/account_manager.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            Get personal attention with a dedicated expert who understands your brand, goals, and
+                            campaign history —
+                            always just one message away.
+                        </p>
+                    </div>
+
+                    <!--  Card  4-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/customer_solution.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">Customized Solutions </h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            Your business is unique — and so is our approach. We craft tailored strategies that align
+                            with your
+                            industry, audience, and objectives.
+                        </p>
+                    </div>
+                    <!--  Card  5-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/track_record.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">Proven Track Record Across Multiple Niches</h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            From fashion and food to SaaS and real estate, we’ve driven success for brands across
+                            diverse industries —
+                            and we’re ready to do the same for you.
+                        </p>
+                    </div>
+                    <!--  Card  6-->
+                    <div
+                        class="rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px] p-6 text-left shadow-lg background-backdrop-card">
+                        <div class="flex justify-between items-start">
+                            <!-- Top-left: gradient rounded square -->
+                            <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                    <img src="images/icons/Bolt.svg" alt="">
+                                </span>
+                            </span>
+
+                            <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                            <button aria-label="next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out  hover:text-white">
+                                <img src="images/icons/arrow.svg" width="18" alt="">
+                            </button>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-light">Fast, Agile & Always Evolving</h3>
+                        <div
+                            class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                        </div>
+
+                        <p class="text-sm text-white-300 font-light">
+                            The digital world moves fast, and so do we. Our agile team adapts quickly to trends,
+                            platforms, and
+                            algorithms to keep your brand ahead.
+                        </p>
+                    </div>
+                    <!-- Duplicate more cards here (total 6) -->
+                </div>
+
+                <!-- Mobile Slider -->
+                <div class="md:hidden relative">
+                    <div id="cardSlider"
+                        class="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory no-scrollbar">
+
+                        <!-- Card 1 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div
+                            class="w-[90%] mx-auto flex-shrink-0 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/0.1 backdrop-blur-[20px] p-6 text-left shadow-lg snap-center background-backdrop-card">
+
+                            <div class="flex justify-between items-start">
+                                <!-- Top-left: gradient rounded square -->
+                                <span
+                                    class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white text-xl">
+                                        <img src="images/icons/strategy.svg" alt="">
+                                    </span>
+                                </span>
+
+                                <!-- Top-right: circle, initial -45deg -> hover 0deg -->
+                                <button aria-label="next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-gray-400 transform -rotate-45 hover:rotate-0 transition-transform duration-300 ease-in-out hover:text-white">
+                                    <img src="images/icons/arrow.svg" width="15" alt="">
+                                </button>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-light">Dedicated Account Managers</h3>
+                            <div
+                                class="my-3 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-[#D6FC5F]/40 to-transparent">
+                            </div>
+
+                            <p class="text-sm text-white-300 font-light">
+                                We focus on what matters — performance. Every campaign is built to meet specific KPIs.
+                            </p>
+                        </div>
+
+                        <!-- Repeat more cards -->
+                    </div>
+
+                    <!-- Navigation (Arrows + Dots below) -->
+                    <div class="flex flex-col items-center mt-6 gap-4">
+                        <div class="flex gap-4">
+
+                            <div class="flex gap-3">
+                                <!-- Prev Button -->
+                                <button id="prevBtn" class="w-10 h-10 flex items-center justify-center rounded-full 
+           border border-[var(--secondary-color)] text-[var(--secondary-color)] 
+           hover:bg-[var(--secondary-color)] hover:text-[#333] 
+           active:bg-[var(--secondary-color)] active:text-[#333] 
+           transition transform rotate-180">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 8"
+                                        fill="currentColor">
+                                        <path
+                                            d="M0.645091 3.54523C0.421492 3.54523 0.240234 3.72649 0.240234 3.95009C0.240234 4.17369 0.421492 4.35494 0.645091 4.35494V3.54523ZM7.41708 4.23636C7.57519 4.07826 7.57519 3.82191 7.41708 3.66381L4.84058 1.08733C4.68247 0.929223 4.42613 0.929224 4.26802 1.08733C4.10992 1.24543 4.10992 1.50178 4.26802 1.65988L6.55825 3.95009L4.26802 6.2403C4.10992 6.39841 4.10992 6.65471 4.26802 6.81282C4.42613 6.97093 4.68247 6.97093 4.84058 6.81282L7.41708 4.23636ZM0.645091 4.35494H7.13077V3.54523H0.645091V4.35494Z" />
+                                    </svg>
+                                </button>
+
+                                <!-- Next Button -->
+                                <button id="nextBtn" class="w-10 h-10 flex items-center justify-center rounded-full 
+           border border-[var(--secondary-color)] text-[var(--secondary-color)] 
+           hover:bg-[var(--secondary-color)] hover:text-[#333] 
+           active:bg-[var(--secondary-color)] active:text-[#333] 
+           transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 8"
+                                        fill="currentColor">
+                                        <path
+                                            d="M0.645091 3.54523C0.421492 3.54523 0.240234 3.72649 0.240234 3.95009C0.240234 4.17369 0.421492 4.35494 0.645091 4.35494V3.54523ZM7.41708 4.23636C7.57519 4.07826 7.57519 3.82191 7.41708 3.66381L4.84058 1.08733C4.68247 0.929223 4.42613 0.929224 4.26802 1.08733C4.10992 1.24543 4.10992 1.50178 4.26802 1.65988L6.55825 3.95009L4.26802 6.2403C4.10992 6.39841 4.10992 6.65471 4.26802 6.81282C4.42613 6.97093 4.68247 6.97093 4.84058 6.81282L7.41708 4.23636ZM0.645091 4.35494H7.13077V3.54523H0.645091V4.35494Z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- Dots -->
+                        <div id="sliderDots" class="flex justify-center gap-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR EXPERTS Section -->
+    <section class="py-8  bg-[var(--body-bg)] text-white relative ">
+        <div class="max-w-7xl mx-auto 0 text-center">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; OUR EXPERTS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Industry <b>Experts</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="mt-2 text-white max-w-2xl mx-auto font-light">
+                From health to hospitality, we speak your industry’s language, so your project resonates from day one.
+            </p>
+        </div>
+
+        <!-- Slider Wrapper -->
+        <div class="relative mt-10 mx-6">
+            <div id="experts-track"
+                class="flex gap-6 transition-transform duration-500 overflow-x-auto scroll-smooth no-scrollbar px-14 ">
+
+                <!-- Card 1-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Card 4-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6-->
+                <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+    rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+  bg-white/1 backdrop-blur-[100px] p-6 text-center shadow-lg 
+  flex flex-col items-center justify-center space-y-4 h-[320px]
+  group overflow-hidden transition-all duration-500
+  hover:backdrop-blur-[200px] hover:space-y-0 hover:border hover:border-[#12A2A0]">
+
+
+                    <!-- Background (image + overlay) -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition duration-500"
+                        style="background-image: url('images/hero_image.png');">
+                        <!-- Overlay with primary color -->
+                        <div class="absolute inset-0 bg-[#12A2A0]/30"></div>
+                    </div>
+
+                    <!-- Title (hidden on hover) -->
+                    <h3 class="text-xl font-semibold relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Healthcare
+                    </h3>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <!-- Outer circle (hidden on hover) -->
+                        <div
+                            class="w-[104px] h-[104px] rounded-full bg-[#85D55C]/10 flex items-center justify-center transition duration-500 group-hover:hidden">
+                            <div
+                                class="w-[80px] h-[80px] rounded-full bg-[#85D55C]/15 flex items-center justify-center transition duration-500 group-hover:hidden">
+                                <div class="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-500"
+                                    style="background: var(--gradient);">
+                                    <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hover version of inner circle with border -->
+                        <div class="hidden group-hover:flex w-[60px] h-[60px] rounded-full border-2 border-white flex items-center justify-center transition-all duration-500"
+                            style="background: var(--gradient);">
+                            <img src="images/icons/Bolt.svg" alt="icon" class="w-8 h-8 text-white">
+                        </div>
+                    </div>
+
+                    <!-- Paragraph (hidden on hover) -->
+                    <p class="text-sm text-white-300 font-light relative z-10 group-hover:hidden 
+  transition-all duration-500 ease-in-out">
+                        Building patient-first portals that simplify care and keep sensitive data secure.
+                    </p>
+
+                    <!-- White box with heading + paragraph (only on hover) -->
+                    <div class="hidden group-hover:flex relative z-10 flex-col items-center justify-center 
+ px-6 py-4 border border-[#12A2A0] rounded-md bg-[#12A2A0]/80 
+ text-center space-y-2 transition-all duration-500 ease-in-out">
+                        <span class="text-white font-semibold text-lg transition-all duration-500 ease-in-out">
+                            Healthcare
+                        </span>
+                        <p class="text-white text-sm font-light transition-all duration-500 ease-in-out">
+                            Building patient-first portals that simplify care and keep sensitive data secure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- More cards (if you need) -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="experts-btn-prev"
+                class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-black transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M12.8216 17.2591C12.667 17.2591 12.5156 17.2269 12.3675 17.1625C12.2193 17.0981 12.1001 17.0208 12.01 16.9306L6.28972 11.133C6.0836 10.9269 5.98062 10.6338 5.98062 10.2537C5.98062 9.87365 6.0836 9.58055 6.28972 9.37442L12.01 3.17103C12.1517 3.02925 12.2837 2.92628 12.4061 2.86186C12.5285 2.79743 12.667 2.76523 12.8216 2.76523C13.1952 2.76523 13.4916 2.87462 13.7106 3.09364C13.8266 3.20959 13.9232 3.34805 14.0005 3.50911C14.0778 3.67016 14.1164 3.82795 14.1164 3.98255C14.1164 4.35617 13.9811 4.64598 13.7106 4.85211L8.802 10.2627L13.7106 15.326C13.9167 15.5321 14.0197 15.7769 14.0197 16.0601C14.0197 16.4337 13.9167 16.7235 13.7106 16.9296C13.5431 17.0584 13.3949 17.1453 13.2661 17.1904C13.1373 17.2355 12.9891 17.2591 12.8216 17.2591Z" />
+                </svg>
+            </button>
+
+            <button id="experts-btn-next"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-black transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M7.17838 2.7409C7.33298 2.7409 7.48436 2.77311 7.63252 2.83753C7.78069 2.90195 7.89986 2.97925 7.99004 3.06943L13.7103 8.86702C13.9165 9.07315 14.0195 9.36625 14.0195 9.74632C14.0195 10.1264 13.9165 10.4195 13.7103 10.6256L7.99004 16.829C7.84832 16.9708 7.71627 17.0738 7.59387 17.1382C7.47148 17.2027 7.33298 17.2349 7.17838 17.2349C6.80476 17.2349 6.50844 17.1254 6.28942 16.9063C6.17347 16.7904 6.07684 16.6519 5.99954 16.4908C5.92224 16.3298 5.88359 16.172 5.88359 16.0174C5.88359 15.6437 6.01886 15.3539 6.28942 15.1477L11.198 9.73665L6.28942 4.67343C6.08328 4.46729 5.98021 4.22251 5.98021 3.93907C5.98021 3.56545 6.08328 3.27557 6.28942 3.06943C6.4569 2.9406 6.60506 2.85363 6.7339 2.80854C6.86273 2.76345 7.01089 2.7409 7.17838 2.7409Z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="mt-8 text-center">
+            <p class="text-white font-light">
+                Ready to partner with experts who “get” your industry?
+            </p>
+            <button
+                class="mt-4 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 hover:bg-[var(--secondary-color)] hover:text-white transition">
+                Let’s Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </button>
+        </div>
+
+    </section>
+
+    <!--  OUR WORK Section -->
+    <section class=" py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 text-center relative bg-no-repeat bg-[length:50%] 
+                bg-[url('images/background_curve.svg')] 
+                bg-[center_top_80px]" x-data="tabsComponent()" x-init="checkScreen()"
+        x-on:resize.window="checkScreen()">
+
+        <!-- Badge -->
+        <div class="glass-border inline-block mb-4">
+            <div class="glass-background">
+                <div class="glass text-sm font-light">
+                    <p>&#9679; &nbsp; OUR WORK</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-light mb-4">
+            Case <b>Studies</b>
+        </h2>
+
+        <!-- Paragraph -->
+        <p class="text-white font-light max-w-2xl mx-auto mb-10">
+            We’re not just another agency, we’re your growth partner. Our team combines strategic thinking with
+            data-driven execution to deliver real, measurable impact.
+        </p>
+        <div class="w-full rounded-xl shadow-xl overflow-hidden border border-gray-700 p-1 relative "
+            style="background: linear-gradient(135deg, #3F89C9, #2FADC3, #85D55C); ">
+
+            <!-- Case Stuedties Content  -->
+            <div class="flex flex-col md:flex-row w-full gap-4">
+
+                <!-- Left section (content) -->
+                <div class="w-full md:w-[96%] p-6 text-white rounded-xl relative overflow-hidden text-left">
+                    <!-- Background image -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                        <div class="w-[300px] h-[300px] bg-no-repeat bg-center bg-contain"
+                            :style="`background-image: url('${tabs[activeTab].image}')`"></div>
+                    </div>
+
+                    <div class="relative z-10 case-content" x-ref="caseContent">
+                        <!-- Brand name and work -->
+                        <h2 class="text-3xl md:text-3xl font-bold mb-1">
+                            <span x-text="tabs[activeTab].brand"></span>:
+                            <span class="font-semibold" x-text="tabs[activeTab].work"></span>
+                        </h2>
+
+                        <!-- Challenges section -->
+                        <div class="mt-6">
+                            <span class="badge mb-2">Challenges</span>
+                            <p class="mb-4 opacity-90 text-lg " x-text="tabs[activeTab].challenges"></p>
+                        </div>
+
+                        <!-- Solution section -->
+                        <div class="mt-6">
+                            <span class="badge mb-2">Our Solution</span>
+                            <p class="mb-4 opacity-90 text-lg" x-text="tabs[activeTab].solution"></p>
+                        </div>
+
+                        <!-- Outcome section -->
+                        <div class="mt-6">
+                            <span class="badge mb-2">Outcome</span>
+                            <p class="mb-4 opacity-90 text-lg" x-text="tabs[activeTab].outcome"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right section (buttons) -->
+                <div class="right-section w-full md:w-[40%] md:flex rounded-xl gap-0.5">
+                    <template x-for="(tab, index) in tabs" :key="index">
+                        <button @click="activeTab = index; $nextTick(() => animateContent())"
+                            class="right-box w-[90px] h-[425px] flex items-end justify-center text-center pb-6 transition-colors"
+                            :class="[ activeTab === index ? 'bg-[var(--tertiary-color)]' : 'bg-black', index === tabs.length - 1 ? 'rounded-tr-lg rounded-br-lg' : 'rounded-none' ]">
+
+                            <!-- Gradient text when inactive, white when active -->
+                            <p class="text-xl font-bold [writing-mode:vertical-rl] rotate-180" :class="activeTab === index 
+                   ? 'text-white' 
+                   : 'bg-gradient-to-b from-[#3F89C9] via-[#2FADC3] to-[#85D55C] bg-clip-text text-transparent'">
+                                <span x-text="tab.label"></span>
+                            </p>
+                        </button>
+                    </template>
+                </div>
+            </div>
+
+
+            <!-- Accordion -->
+            <div class="accordion space-y-1 " x-show="isAccordion">
+                <template x-for="(tab, index) in tabs" :key="index">
+                    <div class="rounded-lg overflow-hidden">
+                        <!-- Accordion Button -->
+                        <button @click="activeTab === index ? activeTab = null : activeTab = index"
+                            class="w-full flex justify-between items-center p-4 font-bold transition-colors" :class="activeTab === index 
+    ? 'bg-[var(--tertiary-color)] text-white' 
+    : 'bg-black text-white'">
+
+                            <!-- Gradient text when inactive, white when active -->
+                            <span :class="activeTab === index 
+      ? 'text-white' 
+      : 'bg-gradient-to-r from-[#3F89C9] via-[#2FADC3] to-[#85D55C] bg-clip-text text-transparent'">
+                                <span x-text="tab.label"></span>
+                            </span>
+
+                            <!-- Circle Arrow Icon -->
+                            <div class="w-8 h-8 flex items-center justify-center rounded-full border transition-transform duration-300"
+                                :class="activeTab === index 
+      ? 'border-white text-white rotate-180' 
+      : 'border-[var(--primary-color)] text-[var(--primary-color)] rotate-0'">
+
+                                <!-- Arrow Down Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+
+
+                        <!-- Accordion Content -->
+                        <div x-show="activeTab === index" x-collapse
+                            x-transition:enter="transition ease-out duration-500"
+                            x-transition:enter-start="opacity-0 translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-in duration-400"
+                            x-transition:leave-start="opacity-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 translate-y-2"
+                            class="relative p-4 text-white rounded-b-lg overflow-hidden">
+                            <!-- Smaller Background Image -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                                <div class="w-[250px] h-[250px] bg-no-repeat bg-center bg-contain"
+                                    :style="`background-image: url('${tab.image}')`"></div>
+                            </div>
+
+                            <div class="relative z-10">
+                                <!-- Brand name and work -->
+                                <h2 class="text-xl font-bold mb-1">
+                                    <span x-text="tab.brand"></span>:
+                                    <span class="font-semibold" x-text="tab.work"></span>
+                                </h2>
+
+                                <!-- Challenges section -->
+                                <div class="mt-4">
+                                    <span class="badge mb-2">Challenges</span>
+                                    <p class="mb-3 opacity-90" x-text="tab.challenges"></p>
+                                </div>
+
+                                <!-- Solution section -->
+                                <div class="mt-4">
+                                    <span class="badge mb-2">Our Solution</span>
+                                    <p class="mb-3 opacity-90" x-text="tab.solution"></p>
+                                </div>
+
+                                <!-- Outcome section -->
+                                <div class="mt-4">
+                                    <span class="badge mb-2">Outcome</span>
+                                    <p class="mb-3 opacity-90" x-text="tab.outcome"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!--  Testimonial Section -->
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white relative  bg-no-repeat bg-[length:50%] 
+                bg-[url('images/background_curve.svg')] 
+                bg-[center_top_80px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 text-center relative">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; TESTIMONIALS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                What our <b>Client Says</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-white font-light max-w-2xl mx-auto mb-12">
+                Real feedback from the people who’ve grown with us.
+            </p>
+        </div>
+        <!-- Row 1-->
+        <div class="relative overflow-x-auto sm:overflow-hidden sm:block">
+            <!-- Left and right fade shadows (only show on sm and above) -->
+            <div class="hidden sm:flex pointer-events-none absolute inset-0 z-50">
+                <div class="w-16 h-full bg-gradient-to-r from-[#080808] to-transparent"></div>
+                <div class="flex-1"></div>
+                <div class="w-16 h-full bg-gradient-to-l from-[#080808] to-transparent"></div>
+            </div>
+
+            <!-- Cards container -->
+            <div class="flex gap-6 animate-infinite-scroll snap-x sm:snap-none">
+                <!-- Testimonial Card 1 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)] ">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 4 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 5 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Duplicate Above Card for Inifinite Scroll -->
+                <!-- Testimonial Card 1 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 4 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 5 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+        rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+        bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+        flex flex-col items-start justify-between h-[300px] snap-center">
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i>
+                    </p>
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- animate-infinite-scroll-reverse -->
+        <!-- Row 2-->
+        <div class="hidden sm:block relative overflow-hidden mt-10">
+            <div
+                class="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-[#0D0D0D] to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-[#0D0D0D] to-transparent z-10 pointer-events-none">
+            </div>
+
+            <div class="flex gap-6 animate-infinite-scroll-reverse">
+                <!-- Testimonial Card 1 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 4 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 5 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate of the Above -->
+                <!-- Testimonial Card 1 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 4 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 5 -->
+                <div class="flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
+            rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 
+            bg-white/1 backdrop-blur-[100px] p-8 shadow-lg background-backdrop-card
+            flex flex-col items-start justify-between h-[300px]">
+
+                    <!-- Quotation Mark -->
+                    <div class="text-7xl font-black mb-0">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--tertiary-color)]">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- User Review -->
+                    <p class="text-sm md:text-base leading-relaxed break-words font-light mt-1 mb-2">
+                        <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</i>
+                    </p>
+
+                    <!-- User Info -->
+                    <div class="flex items-center gap-2 mt-auto">
+                        <img src="images/dummy_logo.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold text-sm md:text-base leading-tight">John Doe</h4>
+                            <p class="text-xs text-gray-400 leading-tight">CEO, Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!--  Awards Section -->
+    <section class="max-w-7xl mx-auto py-16 bg-[var(--body-bg)] text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; AWARDS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Awards & <b>Recognition</b>
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="max-w-4xl mx-auto font-light text-white mb-12">
+                We build with purpose and lead with precision. Our approach to smart design, strategic development,
+                and measurable outcomes has earned recognition from trusted platforms that value real impact
+                over surface-level features.
+            </p>
+
+            <!-- Logo Cards (flex layout for center alignment) -->
+            <div class="flex flex-wrap justify-center gap-0">
+
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+                <!-- Card -->
+                <div class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/6 p-6 bg-transparent border-2
+              [border-image:linear-gradient(to_right,var(--primary-color),var(--secondary-color))1]
+              flex flex-col items-center justify-center text-center">
+                    <img src="images/icons/customer_solution.svg" alt="Brand 1" class="w-16 h-16 mb-4 object-contain">
+                    <h3 class="text-lg font-semibold">Brand One</h3>
+                    <p class="text-sm text-gray-400">Excellence in Innovation</p>
+                </div>
+
+            </div>
+    </section>
+
+    <!--  Build Remarkable Banner  -->
+    <section class="w-full flex justify-center items-center py-4 px-4">
+        <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] shadow-lg" style="
+      border: 2px solid rgba(56, 228, 174, 0.53);
+      background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
+                  linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+      box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);
+    ">
+            <!-- Heading -->
+            <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
+                Ready to <strong>Build</strong> Something <strong>Remarkable</strong> ?
+            </h1>
+
+            <!-- Paragraph -->
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-white font-light">
+                Take the First Step toward Smarter Growth — No Pressure, Just a Quick Chat.
+            </p>
+
+            <!-- Button -->
+            <a href="#"
+                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                Why reach out ?
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!--  Trusted by Many Customer  -->
+    <section class="w-full py-20 bg-[var(--body-bg)] text-white ">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp; TRUSTED BY MANY</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Hear it From <b>Our Partners</b>
+            </h2>
+            <p class="max-w-3xl mx-auto text-white mb-12 font-light sm:text-base">
+                Our work doesn’t just speak for itself, our clients do. These short videos give you a look into
+                their satisfaction, outcomes, and why they continue to choose Qonkar.
+            </p>
+
+            <!-- Carousel wrapper -->
+            <div class="relative flex flex-col items-center justify-center">
+
+                <!-- The carousel content -->
+                <div class="flex items-center justify-center gap-6 relative z-10 w-full max-w-[1000px]">
+
+                    <!-- Small Left -->
+                    <button id="custLeftSmall" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-40 w-12 border-2 rounded-md
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-xs font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Emily</span>
+                    </button>
+
+                    <!-- Big Left -->
+                    <button id="custLeftBig" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-60 w-16 border-2 rounded-lg
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Sarah Lee</span>
+                    </button>
+
+                    <!-- Main Video -->
+                    <div
+                        class="relative w-full md:w-[700px] h-[220px] sm:h-[300px] md:h-[400px] rounded-xl border-4 border-gray-800 overflow-hidden shadow-lg">
+                        <video id="custMainVideo" class="w-full h-full object-cover" controls controlsList="nodownload">
+                            <source src="customer1.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <!-- Overlay Label -->
+                        <div id="custMainLabel"
+                            class="absolute top-1 left-1 bg-black/60 px-4 py-2 rounded-md text-left z-20">
+                            <h4 class="text-white font-semibold">John Doe</h4>
+                            <p class="text-gray-300 text-sm">CEO, Example Corp</p>
+                        </div>
+                    </div>
+
+                    <!-- Big Right -->
+                    <button id="custRightBig" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-60 w-16 border-2 rounded-lg
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Michael Chen</span>
+                    </button>
+
+                    <!-- Small Right -->
+                    <button id="custRightSmall" type="button"
+                        class="hidden md:inline-flex justify-center items-center h-40 w-12 border-2 rounded-md
+          [border-image:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)1]
+          text-white text-xs font-semibold transition-all duration-300 hover:bg-gradient-to-b hover:from-[rgba(56,228,174,0.20)] hover:to-[rgba(7,151,172,0.80)]">
+                        <span class="-rotate-90 whitespace-nowrap">Emily</span>
+                    </button>
+                </div>
+
+                <!-- Arrows for Desktop (side absolute) -->
+                <button id="custPrevBtn" type="button"
+                    class="hidden md:flex absolute left-[50px] top-1/2 transform -translate-y-1/2 z-50 bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="custNextBtn" type="button"
+                    class="hidden md:flex absolute right-[50px] top-1/2 transform -translate-y-1/2 z-50 bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Arrows for Mobile/Tablet (below video) -->
+                <div class="flex md:hidden justify-center items-center gap-6 mt-4">
+                    <button id="custPrevBtnMobile" type="button"
+                        class="bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="custNextBtnMobile" type="button"
+                        class="bg-gray-800 text-white rounded-full p-3 hover:bg-[var(--secondary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The People Behind Qonkar -->
+    <section class="max-w-7xl mx-auto py-10 bg-[var(--body-bg)] text-white ">
+        <div class="max-w-7xl mx-auto  text-center">
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;The People Behind Qonkar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Meet <b>Our Team</b>
+            </h2>
+
+            <p class="max-w-3xl mx-auto text-gray-300 mb-12 text-sm sm:text-base">
+                From design to strategy, every member plays a key role in your digital success.
+            </p>
+
+            <!-- Team Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+
+                <!-- Card 1 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="relative rounded-xl border border-[var(--secondary-color)]">
+                    <!-- Inner with backdrop fill -->
+                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
+              flex flex-col items-center text-left p-4 relative z-10">
+
+                        <!-- Team Member Image -->
+                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                            <img src="images/team/01.jpg" alt="Team Member"
+                                class="w-full h-full object-cover rounded-md">
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
+                            <p class="text-white text-sm">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- You can duplicate more cards, they will auto-wrap to new row -->
+            </div>
+            <!-- Button -->
+            <div class="text-center">
+                <button class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white 
+           bg-[var(--secondary-color)] transition hover:bg-white hover:text-[var(--secondary-color)]">
+                    View all Members
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-7xl mx-auto py-10 bg-[var(--body-bg)] text-white ">
+        <div class="max-w-7xl mx-auto ">
+            <!-- Badge -->
+            <div class="text-center mb-10">
+                <!-- Badge -->
+                <div class="glass-border inline-block mb-4">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light">
+                            <p>&#9679; &nbsp;QUESTIONS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-4xl font-light mb-4">
+                    Frequently Ask <b>Questions</b>
+                </h2>
+                <p class="mt-2 text-white">
+                    Find quick, clear answers—or chat with our AI assistant for instant help.
+                </p>
+            </div>
+
+            <!-- FAQ Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Column 1 -->
+                <div class="space-y-4">
+
+                    <!-- Question 1 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>What is your refund policy?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                We offer a 30-day refund policy on all purchases if you’re not satisfied.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>How can I contact support?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                You can reach our support team 24/7 via email or live chat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>What is your refund policy?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                We offer a 30-day refund policy on all purchases if you’re not satisfied.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>How can I contact support?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                You can reach our support team 24/7 via email or live chat.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-4">
+                    <!-- Question 1 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>Do you offer team plans?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                Yes, we have flexible team plans designed for businesses of all sizes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>Can I upgrade my plan later?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                Absolutely! You can upgrade anytime and only pay the difference.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Question 5 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>Do you offer team plans?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                Yes, we have flexible team plans designed for businesses of all sizes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
+                        <button
+                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
+                            <span>Can I upgrade my plan later?</span>
+                            <div
+                                class="faq-icon w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 transition">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
+                            <p class="px-6 py-4 text-gray-300">
+                                Absolutely! You can upgrade anytime and only pay the difference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="mx-6 mb-6">
+        <div class="max-w-7xl mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
+  via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16
+">
+            <!-- Wrapper -->
+            <div class="flex flex-col gap-0">
+                <!-- First Row: Logo -->
+                <div class="flex justify-center md:justify-start">
+                    <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40">
+                </div>
+
+                <!-- Second Row: Address + Social Icons -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <!-- Address -->
+                    <div class="flex items-center gap-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 12.414A4 4 0 1112 8a4 4 0 014.243 1.243l4.243 4.243a8 8 0 11-2.829 2.829z" />
+                        </svg>
+                        <span>Software Technology Park, QUEST Nawabshah</span>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
+
+            <!-- Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact with Us!</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+44) 7476451747</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+92) 305 8219445</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@qonkar.com</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> United Kingdom</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Website Design & Development</a></li>
+                        <li><a href="#">Shopify Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Services</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                        <li><a href="#">Landing Page Design</a></li>
+                        <li><a href="#">Custom Website Design</a></li>
+                        <li><a href="#">Shopify Theme Development</a></li>
+                        <li><a href="#">Shopify Store Setup</a></li>
+                    </ul>
+                </div>
+
+                <!-- About Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Qonkar Technologies (PVT) Ltd.</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blogs & News</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Services</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Trust and Safety</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trusted By Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li>Microsoft</li>
+                        <li>Shopify</li>
+                        <li>Upwork</li>
+                        <li>Fiverr</li>
+                        <li>Mailchimp</li>
+                        <li>HubSpot</li>
+                        <li>Google Ads</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
+
+            <!-- Bottom Row -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>© 2025 Qonkar Technologies</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="script/home_GSAP.js"></script>
+    <script src="script/home_component.js"></script>
+
+</body>
+
+</html>

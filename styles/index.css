@@ -1,0 +1,215 @@
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        :root {
+            --primary-color: #3F89C9;
+            --secondary-color: #2FADC3;
+            --tertiary-color: #85D55C;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+            --body-bg: #080808;
+        }
+
+
+        body {
+            background-color: var(--body-bg);
+            font-family: 'Lexend', sans-serif;
+            color: #fff;
+        }
+
+        .glass-border {
+            display: block;
+            border-radius: 40px;
+            padding: 1px;
+            /* 1px = border thickness */
+            background: linear-gradient(138deg,
+                    var(--primary-color),
+                    var(--secondary-color),
+                    var(--tertiary-color));
+            -webkit-mask: linear-gradient(#fff 0 0);
+        }
+
+        /* Dark background layer */
+        .glass-background {
+            border-radius: calc(40px - 1px);
+            /* match outer - border */
+            background-color: var(--body-bg);
+            overflow: hidden;
+        }
+
+        /* Frosted glass overlay */
+        .glass {
+            border-radius: calc(40px - 2px);
+            /* just inside background */
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.12);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            padding: 6px 20px;
+            /* adjust content padding */
+            color: white;
+            box-sizing: border-box;
+        }
+
+
+
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll-horizontal {
+            display: flex;
+            width: max-content;
+            /* make sure it stretches */
+            animation: scroll-horizontal 50s linear infinite;
+        }
+
+
+        .background-backdrop {
+            background-image: url(images/card_back_drop.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .background-backdrop-card {
+            position: relative;
+            background-image: url(images/card_back_drop.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-blend-mode: multiply;
+            overflow: hidden;
+        }
+
+        /* Glass overlay */
+        .background-backdrop-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            /* full coverage */
+            background: rgba(77, 74, 74, 0.1);
+            /* frosted transparent layer */
+            /* backdrop-filter: blur(0.5px); */
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2;
+            /* sits above background */
+            pointer-events: none;
+        }
+
+
+
+
+        #prevBtn:hover img,
+        #nextBtn:hover img {
+            filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+        }
+
+        #prevBtn:active img,
+        #nextBtn:active img {
+            filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(60%) contrast(90%);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        @media (max-width: 1250px) {
+            .right-section {
+                flex-direction: column;
+            }
+
+            .right-box {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .right-box:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.65rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 1rem;
+            background: #000;
+            /* Black background */
+
+
+        }
+
+        /* ✅ Glass Morphism Utility */
+
+        .badge-text {
+            background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* for Firefox/Chromium */
+            -webkit-text-fill-color: transparent;
+            /* for Safari */
+        }
+
+        /* < !-- Tailwind Animations --> */
+        .testimonial-card {
+            flex-shrink: 0;
+            width: 16rem;
+            height: 16rem;
+            background: #1F1F1F;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @keyframes infinite-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes infinite-scroll-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-infinite-scroll {
+            display: flex;
+            animation: infinite-scroll 40s linear infinite;
+        }
+
+        .animate-infinite-scroll-reverse {
+            display: flex;
+            animation: infinite-scroll-reverse 40s linear infinite;
+        }

@@ -97,9 +97,50 @@ try {
     $mail->Subject = "Thank you for contacting Qonkar Technologies";
     $mail->isHTML(true);
 
-    $mail->Body = "
-        <div>... your HTML body here ...</div>
-    ";
+   $mail->Body = "
+    <div style='font-family: Arial, sans-serif; color: #333; line-height:1.6;'>
+        <h2 style='color:#0d6efd;'>Thank you for contacting Qonkar Technologies</h2>
+        <p>Hi <strong>{$name}</strong>,</p>
+        <p>We have received your message and will get back to you shortly.  
+        Here are the details you submitted:</p>
+        
+        <table style='width:100%; border-collapse: collapse;'>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Full Name</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$name}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Email</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$email}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Phone</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$phone}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Subject</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$subject}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Budget</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$budget}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Message</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$message}</td>
+            </tr>
+        </table>
+
+        <p style='margin-top:20px;'>We appreciate you reaching out to us.  
+        Our team will review your request and respond as soon as possible.</p>
+
+        <p style='margin-top:20px;'>
+            Best regards,<br>
+            <strong>Qonkar Technologies Team</strong>
+        </p>
+    </div>
+";
+
 
     $mail->send();
 

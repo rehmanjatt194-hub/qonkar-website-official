@@ -271,16 +271,15 @@
     <header class="sticky top-5 z-50">
         <!-- ✅ Desktop Navbar -->
         <nav class="glass hidden lg:flex 
-            w-[80%] mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
+             max-w-7xl mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
             <div class="flex items-center">
-                <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto">
+                <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
             </div>
             <ul class="flex gap-8 text-white font-medium">
-                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
-                <li><a href="services.html" class="text-[var(--primary-color)]">Services</a></li>
+                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
+                <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Insight</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
             </ul>
             <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
@@ -302,16 +301,14 @@
              bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
              transition-all duration-300 rounded-2xl overflow-hidden">
 
-                <a href="index.html"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-                <a href="services.html"
-                    class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Services</a>
+                <a href="#"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="#"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="#"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Insight</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
 
@@ -328,7 +325,7 @@
     <div class="min-h-screen flex flex-col mt-2">
 
         <!-- Hero Section -->
-        <section class="relative w-[95%] mx-auto min-h-[75vh] rounded-lg overflow-hidden flex items-center">
+        <section class="relative max-w-7xl mx-auto min-h-[75vh] rounded-lg overflow-hidden flex items-center">
             <!-- Gradient Background -->
             <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
 
@@ -392,35 +389,52 @@
 
 
         <!-- Insurance Section (20%) -->
-        <section class="bg-[#02181B]  flex flex-col items-center justify-center h-[25vh] overflow-hidden relative mt-5">
+        <!--  Company Partner -->
+        <section class="mt-4 bg-[#02181B] flex flex-col items-center justify-center h-[30vh] overflow-hidden relative">
             <!-- Heading -->
-            <h2 class="text-white text-xl font-light mb-8 text-center">
-                We Accept Most Major Insurances
-            </h2>
+            <h2 class="text-white text-2xl font-light mb-10 text-center">
+                Top Brand Who Trusted On Us </h2>
 
             <!-- Logos Container (Horizontal Scrolling) -->
             <div class="relative overflow-hidden w-full">
-                <div class="flex animate-scroll-horizontal space-x-18 gap-20">
+                <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 ">
                     <!-- Repeat logos -->
-                    <img src="/images/dummy_logo.png" alt="Insurance 1" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 2" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 3" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 4" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 5" class="h-8 object-contain" />
+                    <img src="images/company-logos/CAINTE.png" alt="Cainte Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/CENTRA.png" alt="Centra Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/derma-space.png" alt="Derma Space Insurance"
+                        class="h-8 object-contain" />
+                    <img src="images/company-logos/govt-sindh.png" alt="Government of Sindh" class="w-14 ">
+                    <img src="images/company-logos/MICROSOFT.png" alt="Microsoft Partner" class="h-8 object-contain" />
+                    <img src="images/company-logos/power-culture.png" alt="Power Culture Insurance"
+                        class="h-8 object-contain" />
+                    <img src="images/company-logos/THALASEMIA.png" alt="Thalassemia Foundation"
+                        class="w-14 object-contain" />
+                    <img src="images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/earsound.png" alt="Earsound Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/upwork.png" alt="Upwork Partner" class="h-8 object-contain" />
 
                     <!-- Duplicate for seamless loop -->
-                    <img src="/images/dummy_logo.png" alt="Insurance 6" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 7" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 8" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 9" class="h-8 object-contain" />
-                    <img src="/images/dummy_logo.png" alt="Insurance 10" class="h-8 object-contain" />
+                    <img src="images/company-logos/CAINTE.png" alt="Cainte Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/CENTRA.png" alt="Centra Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/derma-space.png" alt="Derma Space Insurance"
+                        class="h-8 object-contain" />
+                    <img src="images/company-logos/govt-sindh.png" alt="Government of Sindh" class="w-14 ">
+                    <img src="images/company-logos/MICROSOFT.png" alt="Microsoft Partner" class="h-8 object-contain" />
+                    <img src="images/company-logos/power-culture.png" alt="Power Culture Insurance"
+                        class="h-8 object-contain" />
+                    <img src="images/company-logos/THALASEMIA.png" alt="Thalassemia Foundation"
+                        class="w-14 object-contain" />
+                    <img src="images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/earsound.png" alt="Earsound Insurance" class="h-8 object-contain" />
+                    <img src="images/company-logos/upwork.png" alt="Upwork Partner" class="h-8 object-contain" />
                 </div>
+
             </div>
         </section>
     </div>
 
     <!-- Our Client Section -->
-    <section class="bg-[var(--body-bg)] py-20 px-6">
+    <section class="bg-[var(--body-bg)] py-20 px-6 max-w-7xl mx-auto">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <!-- ✅ Left Side Image (Appears First on Mobile) -->
@@ -458,7 +472,7 @@
     </section>
 
     <!-- Shopify Services -->
-    <section class="w-[95%] mx-auto py-16 text-white">
+    <section class="max-w-7xl mx-auto py-16 text-white">
         <!-- Section Heading -->
         <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
                 bg-[url('images/background_curve.svg')] 
@@ -576,7 +590,9 @@
                     <!-- Paragraph -->
                     <p class="leading-relaxed text-white font-light text-left relative z-10">
                         Outdated store? We transform it with modern design, mobile-first UX, and performance-driven
-                        upgrades.
+                        upgrades.<span class="text-transparent"> Outdated store? We transform it with modern design,
+                            mobile-first
+                        </span>
                     </p>
                 </div>
 
@@ -789,8 +805,8 @@
         </div>
     </section>
     <!-- Case Studies -->
-    <section class="w-full py-20 bg-[var(--body-bg)] text-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <section class="max-w-7xl mx-auto py-20 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-0 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Left Column -->
             <div class="flex flex-col gap-8">
                 <!-- Badge + Heading -->
@@ -1155,16 +1171,14 @@
     </section>
 
     <!--  Our Process Section -->
-    <section class="relative py-10 px-6 text-center 
-                bg-no-repeat bg-[length:40%] 
-                bg-[url('images/background_curve.svg')] 
-                bg-[center_top_60px]">
+    <section class="relative py-20 max-w-7xl mx-auto text-center 
+                ">
 
 
         <div class="container mx-auto flex flex-col items-center gap-3">
 
             <!-- Badge -->
-            <div class="glass-border inline-block mb-2">
+            <div class="glass-border inline-block mb-4">
                 <div class="glass-background">
                     <div class="glass text-sm font-light">
                         <p>&#9679; &nbsp;OUR PROCESS</p>
@@ -1172,14 +1186,14 @@
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-2">
-                See How we <b>Work</b>
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                See How <b>We Work</b>
             </h2>
 
             <!-- Paragraph -->
             <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
-                From kickoff to post-launch, here’s how we build and scale high-performing Shopify stores — fast,
-                focused, and friction-free.
+                We follow a process that blends strategy with creativity. Every project starts with a strong foundation
+                and is built to deliver clarity, structure, and long-term growth.
             </p>
 
             <!-- Process Cards -->
@@ -1188,7 +1202,7 @@
                 <div class="flex gap-2 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory">
 
                     <!-- Card 1-->
-                    <div class="flex flex-col p-6 h-[28rem] 
+                    <div class="flex flex-col p-6 h-[20rem] 
     flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
     text-white bg-[#227d8d]
     transition-all duration-500 ease-in-out 
@@ -1196,10 +1210,10 @@
 
                         <!-- Background Overlay (always visible on mobile) -->
                         <div class="absolute inset-0 
-      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
-      bg-[url('images/hero_image.png')] bg-cover bg-center 
-      before:absolute before:inset-0 before:bg-gradient-to-tr 
-      before:from-[var(--primary-color)] before:to-black/60">
+    opacity-100 transition-opacity duration-500 
+    bg-[url('images/process-images/Discover_strategy.jpg')] bg-cover bg-center 
+    before:absolute before:inset-0 before:bg-gradient-to-tr 
+    before:from-[var(--primary-color)] before:to-black/60">
                         </div>
 
                         <!-- Top Section -->
@@ -1213,8 +1227,10 @@
                             <!-- Content -->
                             <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
                                 <h3 class="text-lg text-left">Discovery & Strategy</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
-                                    We explore your goals and challenges, then build a clear, data-backed roadmap. </p>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500">
+                                    We explore your goals and challenges, then build a clear, data-backed roadmap.
+                                </p>
                             </div>
                         </div>
 
@@ -1232,7 +1248,7 @@
                         </div>
                     </div>
                     <!-- Card 2-->
-                    <div class="flex flex-col p-6 h-[28rem] 
+                    <div class="flex flex-col p-6 h-[20rem]  
     flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
     text-white bg-[#227d8d]
     transition-all duration-500 ease-in-out 
@@ -1240,10 +1256,10 @@
 
                         <!-- Background Overlay (always visible on mobile) -->
                         <div class="absolute inset-0 
-      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
-      bg-[url('images/hero_image.png')] bg-cover bg-center 
-      before:absolute before:inset-0 before:bg-gradient-to-tr 
-      before:from-[var(--primary-color)] before:to-black/60">
+    opacity-100 transition-opacity duration-500 
+    bg-[url('images/process-images/Design_expreience.jpg')] bg-cover bg-center 
+    before:absolute before:inset-0 before:bg-gradient-to-tr 
+    before:from-[var(--primary-color)] before:to-black/60">
                         </div>
 
                         <!-- Top Section -->
@@ -1257,8 +1273,9 @@
                             <!-- Content -->
                             <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
                                 <h3 class="text-lg text-left">Design & Experience</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
-                                    We create intuitive, brand-aligned prototypes focused on user experience. </p>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> We create intuitive, brand-aligned prototypes
+                                    focused on user experience. </p>
                             </div>
                         </div>
 
@@ -1276,7 +1293,7 @@
                         </div>
                     </div>
                     <!-- Card 3-->
-                    <div class="flex flex-col p-6 h-[28rem] 
+                    <div class="flex flex-col p-6 h-[20rem]  
     flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
     text-white bg-[#227d8d]
     transition-all duration-500 ease-in-out 
@@ -1284,10 +1301,10 @@
 
                         <!-- Background Overlay (always visible on mobile) -->
                         <div class="absolute inset-0 
-      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
-      bg-[url('images/hero_image.png')] bg-cover bg-center 
-      before:absolute before:inset-0 before:bg-gradient-to-tr 
-      before:from-[var(--primary-color)] before:to-black/60">
+    opacity-100 transition-opacity duration-500 
+    bg-[url('images/process-images/Integration.webp')] bg-cover bg-center 
+    before:absolute before:inset-0 before:bg-gradient-to-tr 
+    before:from-[var(--primary-color)] before:to-black/60">
                         </div>
 
                         <!-- Top Section -->
@@ -1301,8 +1318,9 @@
                             <!-- Content -->
                             <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
                                 <h3 class="text-lg text-left">Build & Integrate</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
-                                    Our developers build powerful, scalable solutions with smart tech integrations. </p>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Our developers build powerful, scalable solutions
+                                    with smart tech integrations. </p>
                             </div>
                         </div>
 
@@ -1320,7 +1338,7 @@
                         </div>
                     </div>
                     <!-- Card 4-->
-                    <div class="flex flex-col p-6 h-[28rem] 
+                    <div class="flex flex-col p-6 h-[20rem]  
     flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
     text-white bg-[#227d8d]
     transition-all duration-500 ease-in-out 
@@ -1328,10 +1346,10 @@
 
                         <!-- Background Overlay (always visible on mobile) -->
                         <div class="absolute inset-0 
-      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
-      bg-[url('images/hero_image.png')] bg-cover bg-center 
-      before:absolute before:inset-0 before:bg-gradient-to-tr 
-      before:from-[var(--primary-color)] before:to-black/60">
+    opacity-100 transition-opacity duration-500 
+    bg-[url('images/process-images/testing.jpg')] bg-cover bg-center 
+    before:absolute before:inset-0 before:bg-gradient-to-tr 
+    before:from-[var(--primary-color)] before:to-black/60">
                         </div>
 
                         <!-- Top Section -->
@@ -1345,8 +1363,9 @@
                             <!-- Content -->
                             <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
                                 <h3 class="text-lg text-left">Testing & Launch</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
-                                    Every feature is tested and optimized for speed, performance, and reliability. </p>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Every feature is tested and optimized for speed,
+                                    performance, and reliability. </p>
                             </div>
                         </div>
 
@@ -1364,7 +1383,7 @@
                         </div>
                     </div>
                     <!-- Card 5-->
-                    <div class="flex flex-col p-6 h-[28rem] 
+                    <div class="flex flex-col p-6 h-[20rem]  
     flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] 
     text-white bg-[#227d8d]
     transition-all duration-500 ease-in-out 
@@ -1372,10 +1391,10 @@
 
                         <!-- Background Overlay (always visible on mobile) -->
                         <div class="absolute inset-0 
-      opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 
-      bg-[url('images/hero_image.png')] bg-cover bg-center 
-      before:absolute before:inset-0 before:bg-gradient-to-tr 
-      before:from-[var(--primary-color)] before:to-black/60">
+    opacity-100 transition-opacity duration-500 
+    bg-[url('images/process-images/growth.avif')] bg-cover bg-center 
+    before:absolute before:inset-0 before:bg-gradient-to-tr 
+    before:from-[var(--primary-color)] before:to-black/60">
                         </div>
 
                         <!-- Top Section -->
@@ -1389,8 +1408,9 @@
                             <!-- Content -->
                             <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
                                 <h3 class="text-lg text-left">Support & Growth</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left">
-                                    Post-launch, we monitor, improve, and scale your product for long-term success. </p>
+                                <p class="mt-2 text-sm font-light text-gray-100 text-left
+   block md:hidden md:group-hover:block transition-all duration-500"> Post-launch, we monitor, improve, and scale your
+                                    product for long-term success. </p>
                             </div>
                         </div>
 

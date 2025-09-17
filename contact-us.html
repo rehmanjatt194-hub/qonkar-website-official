@@ -51,36 +51,39 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const responseBox = document.querySelector("#formResponse");
+            const form = document.querySelector("#contactForm");
 
-            document.querySelector("#contactForm").addEventListener("submit", function (e) {
-                e.preventDefault(); // Stop normal page reload
-
-                let form = this;
-                let formData = new FormData(form);
-
-                // Show the box + "sending..." message
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
                 responseBox.classList.remove("hidden");
                 responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
 
-                let ajax_request = new XMLHttpRequest();
-                ajax_request.onreadystatechange = function () {
-                    if (ajax_request.readyState === 4) {
-                        if (ajax_request.status === 200) {
-                            responseBox.innerHTML =
-                                `<span class="text-white">✅ ${ajax_request.responseText}</span>`;
-                            form.reset();
-                        } else {
-                            responseBox.innerHTML =
-                                `<span class="text-red-400">❌ Something went wrong</span>`;
-                        }
-                    }
-                };
+                try {
+                    const formData = new FormData(form);
+                    const res = await fetch("process.php", { method: "POST", body: formData });
+                    const contentType = res.headers.get("content-type") || "";
 
-                ajax_request.open("POST", "process.php", true);
-                ajax_request.send(formData);
+                    let data;
+                    if (contentType.includes("application/json")) {
+                        data = await res.json();
+                    } else {
+                        data = { message: await res.text() };
+                    }
+
+                    if (res.ok) {
+                        responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
+                        form.reset();
+                    } else {
+                        const msg = data.error || data.message || res.statusText;
+                        responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
+                    }
+                } catch (err) {
+                    responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
+                }
             });
         });
     </script>
+
 </head>
 
 <body>
@@ -88,16 +91,15 @@
     <header class="sticky top-5 z-50">
         <!-- ✅ Desktop Navbar -->
         <nav class="glass hidden lg:flex 
-            w-[80%] mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
+             max-w-7xl mx-auto items-center justify-between px-2 py-2 rounded-full mt-4">
             <div class="flex items-center">
-                <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto">
+                <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
             </div>
             <ul class="flex gap-8 text-white font-medium">
-                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
+                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
                 <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Insight</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
             </ul>
             <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
@@ -119,16 +121,14 @@
              bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
              transition-all duration-300 rounded-2xl overflow-hidden">
 
-                <a href="index.html"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-                <a href="services.html"
+                <a href="#"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="#"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Insight</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
 
@@ -142,7 +142,7 @@
     </header>
 
     <section
-        class=" mt-4 relative w-[95%] mx-auto min-h-[50vh] rounded-lg overflow-hidden flex items-center justify-center">
+        class=" mt-4 relative max-w-7xl mx-auto min-h-[50vh] rounded-lg overflow-hidden flex items-center justify-center">
         <!-- Gradient Background -->
         <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
 
@@ -181,10 +181,10 @@
     </section>
 
 
-    <section id="contact" class="relative background-backdrop w-full md:w-[85%] mt-8 mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-20 
+    <section id="contact" class="relative background-backdrop max-w-7xl mt-8 mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-20 
            bg-gradient-to-b from-[#0F0F0F]/40 to-[#0E1414]/40 rounded-lg border border-gray-900">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start relative w-fll">
             <!-- Left Side: Contact Info -->
             <div class="space-y-6 text-white pr-6 md:pr-10">
                 <!-- Badge -->
@@ -322,14 +322,12 @@
         </div>
     </section>
 
-
-
-    <footer class="mt-8 mx-6 mb-8">
+    <footer class="mx-6 mb-6">
         <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
   via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16
 ">
             <!-- Wrapper -->
-            <div class="flex flex-col gap-0">
+            <div class="flex flex-col gap-0 max-w-7xl">
                 <!-- First Row: Logo -->
                 <div class="flex justify-center md:justify-start">
                     <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40">
@@ -441,6 +439,7 @@
             </div>
         </div>
     </footer>
+
     <script>
 
         // Navbar

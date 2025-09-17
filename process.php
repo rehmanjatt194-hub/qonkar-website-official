@@ -1,113 +1,118 @@
 <?php
-require __DIR__ . '/PHPMailer/src/Exception.php';
-require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer/src/SMTP.php';
+// DEBUG (remove in production)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+header('Content-Type: application/json; charset=utf-8');
+
+// Use composer autoload if possible (recommended)
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+} else {
+    // Fallback if you didn't use composer -- make sure these paths are correct
+    require __DIR__ . '/PHPMailer/src/Exception.php';
+    require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+    require __DIR__ . '/PHPMailer/src/SMTP.php';
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Collect form data
-    $name    = $_POST['full_name'] ?? '';
-    $email   = $_POST['email'] ?? '';
-    $phone   = $_POST['phone_number'] ?? '';
-    $subject = $_POST['subject'] ?? '';
-    $budget  = $_POST['budget'] ?? '';
-    $message = $_POST['message'] ?? '';
-
-    if (!empty($name) && !empty($email) && !empty($message)) {
-        try {
-            // ✅ Database connection (check db exists in phpMyAdmin)
-            $pdo = new PDO(
-                "mysql:host=localhost;dbname=contact_from_db;charset=utf8",
-                "root", // default local username
-                ""      // default local password is empty in XAMPP/WAMP
-            );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // Save message into DB
-            $stmt = $pdo->prepare("
-                INSERT INTO messages (full_name, email, phone_number, subject, budget, message)
-                VALUES (:name, :email, :phone, :subject, :budget, :message)
-            ");
-            $stmt->execute([
-                ":name"    => $name,
-                ":email"   => $email,
-                ":phone"   => $phone,
-                ":subject" => $subject,
-                ":budget"  => $budget,
-                ":message" => $message
-            ]);
-
-            // ✅ Email sending with PHPMailer
-            $mail = new PHPMailer(true);
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->Port       = 587;
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'huzaifaharis415@gmail.com'; // SMTP login
-            $mail->Password   = 'apmgxtyxeuhdsnho';          // Gmail App password
-
-            $mail->setFrom('huzaifaharis415@gmail.com', 'Qonkar Technologies');
-            $mail->addReplyTo('huzaifaharis415@gmail.com', 'Qonkar Technologies');
-
-            // Send to user who filled the form
-            $mail->addAddress($email, $name);
-
-            // Also send a copy to your inbox
-            $mail->addAddress('huzaifaharis773@gmail.com', 'Qonkar Technologies');
-
-            $mail->Subject = "Thank you for contacting Qonkar Technologies";
-
-            $mail->isHTML(true);
-            $mail->Body = "
-                <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;'>
-                    <div style='text-align: center; margin-bottom: 20px;'>
-                        <img src='https://qonkar.com/images/qonkar_logo.png' alt='Qonkar Logo' style='max-width: 200px; height: auto;'>
-                    </div>
-
-                    <h2 style='color: #132a13; border-bottom: 2px solid #90a955; padding-bottom: 10px;'>Hello, $name!</h2>
-
-                    <p>Thank you for reaching out to <strong style='color: #132a13;'>Qonkar Technologies</strong>. We have received your message and our team will get back to you shortly.</p>
-
-                    <div style='background-color: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin: 20px 0;'>
-                        <h3 style='color: #132a13; margin-top: 0;'>Your Submitted Details</h3>
-                        <p><strong>Name:</strong> $name</p>
-                        <p><strong>Email:</strong> $email</p>
-                        <p><strong>Phone:</strong> $phone</p>
-                        <p><strong>Subject:</strong> $subject</p>
-                        <p><strong>Budget:</strong> $budget</p>
-                        <p><strong>Message:</strong> $message</p>
-                    </div>
-
-                    <h3 style='color: #132a13;'>What’s Next?</h3>
-                    <ul style='padding-left: 20px;'>
-                        <li>Our team will review your request soon</li>
-                        <li>Expect a follow-up email or phone call</li>
-                        <li>Meanwhile, explore our <a href='https://qonkar.com' style='color: #90a955;'>website</a></li>
-                    </ul>
-
-                    <div style='border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 14px; color: #666;'>
-                        <p>Need help? Contact our support team at 
-                        <a href='mailto:support@qonkar.com' style='color: #90a955;'>support@qonkar.com</a></p>
-                        <p>Best regards,<br>The Qonkar Technologies Team</p>
-                    </div>
-                </div>";
-
-            $mail->send();
-
-            echo "✅ Thank you, $name! Your message has been received and we’ve sent a confirmation email.";
-        } catch (PDOException $e) {
-            http_response_code(500);
-            echo "❌ Database error: " . $e->getMessage();
-        } catch (Exception $e) {
-            http_response_code(500);
-            echo "❌ Mailer error: " . $mail->ErrorInfo;
-        }
-    } else {
-        http_response_code(400);
-        echo "⚠️ Please fill all required fields.";
-    }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit;
 }
-?>
+
+// sanitize
+$name    = trim($_POST['full_name'] ?? '');
+$email   = trim($_POST['email'] ?? '');
+$phone   = trim($_POST['phone_number'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$budget  = trim($_POST['budget'] ?? '');
+$message = trim($_POST['message'] ?? '');
+
+if ($name === '' || $email === '' || $message === '') {
+    http_response_code(400);
+    echo json_encode(['error' => 'Please fill all required fields.']);
+    exit;
+}
+
+try {
+    // DB connection - use env vars in production
+    $dbHost = getenv('DB_HOST') ?: 'localhost';
+    $dbName = getenv('DB_NAME') ?: 'contact_from_db';
+    $dbUser = getenv('DB_USER') ?: 'root';
+    $dbPass = getenv('DB_PASS') ?: '';
+
+//    $pdo = new PDO("mysql:host={$dbHost};dbname={$dbName};charset=utf8", $dbUser, $dbPass); // For the Local System
+    $pdo = new PDO(
+    "mysql:host=localhost;dbname=u870396814_qonkar;charset=utf8", "u870396814_qonkar","01_Qonkar_tech"); // For Hostisnger
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $stmt = $pdo->prepare("
+        INSERT INTO messages (full_name, email, phone_number, subject, budget, message)
+        VALUES (:name, :email, :phone, :subject, :budget, :message)
+    ");
+    $stmt->execute([
+        ':name' => $name,
+        ':email' => $email,
+        ':phone' => $phone,
+        ':subject' => $subject,
+        ':budget' => $budget,
+        ':message' => $message
+    ]);
+
+} catch (PDOException $e) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Database error', 'detail' => $e->getMessage()]);
+    exit;
+}
+
+// Email sending
+try {
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host       = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = getenv('SMTP_USER') ?: 'huzaifaharis415@gmail.com'; // replace with env var
+    $mail->Password   = getenv('SMTP_PASS') ?: 'apmgxtyxeuhdsnho';          // replace with env var
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = getenv('SMTP_PORT') ?: 587;
+
+    // Optional debug (comment out in production)
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+    $mail->setFrom($mail->Username, 'Qonkar Technologies');
+    $mail->addReplyTo($mail->Username, 'Qonkar Technologies');
+
+    // send to the submitter
+    $mail->addAddress($email, $name);
+
+    // also send copy to admin
+    $adminEmail = getenv('ADMIN_EMAIL') ?: 'huzaifaharis773@gmail.com';
+    $mail->addAddress($adminEmail, 'Qonkar Technologies');
+
+    $mail->Subject = "Thank you for contacting Qonkar Technologies";
+    $mail->isHTML(true);
+
+    $mail->Body = "
+        <div>... your HTML body here ...</div>
+    ";
+
+    $mail->send();
+
+    http_response_code(200);
+    echo json_encode(['success' => true, 'message' => "Thank you, {$name}! Your message has been received and we’ve sent a confirmation email."]);
+    exit;
+
+} catch (PHPMailerException $e) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Mailer error', 'detail' => $e->getMessage()]);
+    exit;
+} catch (\Exception $e) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Server error', 'detail' => $e->getMessage()]);
+    exit;
+}

@@ -38,6 +38,56 @@
     <!-- ✅ Theme & Reusable Styles -->
     <link rel="stylesheet" href="styles/index.css">
 
+    <style>
+        @keyframes infinite-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes infinite-scroll-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-infinite-scroll {
+            display: flex;
+            animation: infinite-scroll 10s linear infinite;
+        }
+
+        .animate-infinite-scroll-reverse {
+            display: flex;
+            animation: infinite-scroll-reverse 10s linear infinite;
+        }
+
+        /* ✅ Pause animation on hover */
+        .animate-infinite-scroll:hover,
+        .animate-infinite-scroll-reverse:hover {
+            animation-play-state: paused;
+        }
+
+        /* 📱 Mobile screens: 3x faster */
+        @media (max-width: 768px) {
+            .animate-infinite-scroll {
+                animation-duration: 4s;
+                /* 10s ÷ 3 */
+            }
+
+            .animate-infinite-scroll-reverse {
+                animation-duration: 4s;
+                /* 10s ÷ 3 */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -200,22 +250,24 @@
     </section>
 
     <!-- Our Client Section -->
-    <section class="bg-[var(--body-bg)] py-20 px-6 max-w-7xl mx-auto">
+    <section class="bg-[var(--body-bg)] py-12 px-3  max-w7xl ">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <!-- ✅ Left Side Image (Appears First on Mobile) -->
             <div class="order-2 lg:order-1 flex justify-center">
-                <img src="images/hero_image.png" alt="Our Client" class="w-full max-w-md h-auto">
+                <img src="images/Our_Client_Image.png" alt="Our Client" class="w-full max-w-xl h-auto">
             </div>
 
             <!-- ✅ Right Side Content -->
             <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
 
                 <!-- Badge -->
-                <div class="glass-border w-[130px]  mx-auto lg:mx-0">
+                <div class="glass-border w-[120px]  mx-auto lg:mx-0">
                     <div class="glass-background">
-                        <div class="glass text-sm font-light text-center">
-                            <p> &#9679; SERVICES </p>
+                        <div class="glass text-sm font-light text-center 
+            ">
+                            <p> &#9679; QONKAR
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -223,22 +275,33 @@
 
                 <!-- Heading -->
                 <h2 class="text-3xl md:text-4xl  text-white">
-                    <b>Everything</b> You Need to <b>Build</b> a High-Performing Shopify Store
+                    About <b>Qonkar </b>
                 </h2>
 
                 <!-- Paragraph -->
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Whether you're launching a new store or enhancing an existing one, our Shopify services cover every
-                    touchpoint — from core development to revenue-focused optimization. At Qonkar, we build with purpose
-                    and precision. Explore our complete range of Shopify development services — all under one roof.
+                    Qonkar turns vision into digital experiences that sell. Whether it’s a Shopify store, site
+                    optimization, or a steady stream of content and social media, we design and develop with purpose. By
+                    pairing thoughtful creative with reliable engineering, we make your message clear, your site faster,
+                    and your revenue easier to scale.
                 </p>
 
+                <!-- CTA Button -->
+                <a href="about-us.html" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
+                hover:bg-[var(--primary-color)] hover:text-white transition w-fit mx-auto lg:mx-0">
+                    Know More About us
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!--  Our Approach Section -->
-    <section class="relative py-20 max-w-7xl mx-auto text-center 
+    <section class="relative py-20 px-3 max-w-7xl mx-auto text-center 
                 ">
         <div class="container mx-auto flex flex-col items-center gap-3">
 
@@ -498,9 +561,8 @@
     </section>
 
     <!--  SERVICES Section -->
-    <section class="py-8 bg-[var(--body-bg)] text-white max-w-7xl mx-auto">
+    <section class="py-8 px-3 bg-[var(--body-bg)] text-white max-w-7xl mx-auto">
         <div class="max-w-7xl mx-auto  text-center ">
-
             <!-- Badge -->
             <div class="glass-border inline-block mb-4">
                 <div class="glass-background">
@@ -509,7 +571,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- Heading -->
             <h2 class="text-3xl md:text-4xl font-light mb-4">
@@ -529,35 +590,37 @@
         bg-none md:[background-image:var(--gradient)] backdrop-blur-md">
 
                     <button
-                        class="tab-btn active px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-xs sm:text-sm transition"
+                        class="tab-btn active px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-sm sm:text-sm transition"
                         data-tab="service1">
                         Shopify
                     </button>
                     <button
-                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-xs sm:text-sm transition"
+                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-sm sm:text-sm transition"
                         data-tab="service2">
                         Software Development
                     </button>
                     <button
-                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-xs sm:text-sm transition"
+                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-sm sm:text-sm transition"
                         data-tab="service3">
                         Branding & Performance Marketing
                     </button>
                 </div>
             </div>
 
-
             <!-- Service Content Wrapper -->
             <div class="relative flex justify-center background-backdrop-card">
-                <div class="w-full p-8 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px]"
+                <div class="w-full p-4 sm:p-6 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px]"
                     style="background-color: rgba(0, 0, 0, 0.5);">
-
                     <!-- Service 1 -->
-                    <div id="service1" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
-                        <div class="flex-1 text-left top-0 ">
-                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                    <div id="service1" class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row  gap-5">
+                        <div class="flex-1 text-left top-0">
+                            <!-- ✅ Responsive Heading -->
+                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex items-center gap-2">
+                                Shopify Theme Development
                             </h3>
-                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+
+                            <!-- ✅ Responsive List -->
+                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
                                     Shopify Theme Development</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
@@ -567,87 +630,94 @@
                                     Management & Maintenance
                                 </li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Email, Whats App, & Social Media Marketing
+                                    Email, WhatsApp, & Social Media Marketing
                                 </li>
                             </ul>
+
+                            <!-- Button -->
                             <a href="contact-us.html"
                                 class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
                                 Get Started
                             </a>
                         </div>
-                        <div class="flex-1 flex justify-center">
+
+                        <!-- ✅ Image Full Width on Mobile -->
+                        <div class="flex-1 flex justify-center w-[110%]">
                             <img src="images/Our_Client_Image.png" alt="Strategy Service"
-                                class="w-[90%] rounded-xl shadow-lg" />
+                                class="w-full  rounded-xl shadow-lg" />
                         </div>
                     </div>
-
                     <!-- Service 2 -->
-                    <div id="service2" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
-                        <div class="flex-1 text-left top-0 ">
-                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                    <div id="service2" class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row  gap-5">
+                        <div class="flex-1 text-left top-0">
+
+                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex gap-2">
+                                Software Development
                             </h3>
 
-
-                            Digital Products (SaaS)
-
-                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+                            <!-- ✅ Responsive List (fixed extra text issue) -->
+                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Web Applications </li>
+                                    Digital Products (SaaS)</li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Web Applications</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
                                     ERP Solutions</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    CRM Solutions
-                                </li>
+                                    CRM Solutions</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    CMS Solution
-                                </li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Digital Products (SaaS)
-                                </li>
+                                    CMS Solutions</li>
                             </ul>
+
+                            <!-- Button -->
                             <a href="contact-us.html"
                                 class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
                                 Get Started
                             </a>
                         </div>
-                        <div class="flex-1 flex justify-center">
+
+                        <!-- ✅ Image Full Width on Mobile -->
+                        <div class="flex-1 flex justify-center w-[110%]">
                             <img src="images/Our_Client_Image.png" alt="Strategy Service"
-                                class="w-[90%] rounded-xl shadow-lg" />
+                                class="w-full rounded-xl shadow-lg" />
                         </div>
                     </div>
                     <!-- Service 3 -->
-                    <div id="service3" class=" px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
-                        <div class="flex-1 text-left top-0 ">
-                            <h3 class="text-3xl font-semibold mb-2 flex items-center gap-2"> Shopify Theme Development
+                    <div id="service3" class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row items-center gap-5">
+                        <div class="flex-1 text-left top-0">
+
+                            <!-- ✅ Responsive Heading -->
+                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex items-center gap-2">
+                                Branding & Performance Marketing
                             </h3>
-                            <ul class="space-y-2 mb-6 text-xl leading-relaxed">
+
+                            <!-- ✅ Consistent List -->
+                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Brand Strategy & Identity
-                                </li>
+                                    Brand Strategy & Identity</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Creative & Content Production
-                                </li>
+                                    Creative & Content Production</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Social Media Management
-                                </li>
+                                    Social Media Management</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Performance Ads (Meta, TikTok, Google)
-                                </li>
+                                    Performance Ads (Meta, TikTok, Google)</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Email, SMS, & WhatsApp Marketing
-                                </li>
+                                    Email, SMS, & WhatsApp Marketing</li>
                                 <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    SEO & Content for Commerce
-                                </li>
+                                    SEO & Content for Commerce</li>
                             </ul>
+
+                            <!-- ✅ Consistent Button -->
                             <a href="contact-us.html"
                                 class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
                                 Get Started
                             </a>
                         </div>
-                        <div class="flex-1 flex justify-center">
-                            <img src="images/Our_Client_Image.png" alt="Strategy Service"
-                                class="w-[90%] rounded-xl shadow-lg" />
+
+                        <!-- ✅ Image Full Width on Mobile -->
+                        <div class="flex-1 flex justify-center w-[110%]">
+                            <img src="images/Our_Client_Image.png" alt="Branding & Marketing Service"
+                                class="w-full rounded-xl shadow-lg" />
                         </div>
                     </div>
 
@@ -657,7 +727,7 @@
     </section>
 
     <!--  WHY CHOOSE US Section -->
-    <section class="py-8 bg-[var(--body-bg)] text-white ">
+    <section class="py-8 bg-[var(--body-bg)] text-white px-3">
         <div class="max-w-7xl mx-auto  text-center">
 
             <!-- Badge -->
@@ -683,8 +753,6 @@
             <!-- Cards Wrapper -->
             <div class="relative">
                 <!-- Desktop/Tablet Grid -->
-                <!-- <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6"> -->
-                <!-- <span class="p-[2px] rounded-lg bg-gradient-to-b from-[#000000] to-[#028F8E] inline-block"> icon gradient -->
 
 
                 <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1101,7 +1169,7 @@
 
                         </div>
                         <!-- Dots -->
-                        <div id="sliderDots" class="flex justify-center gap-2"></div>
+                        <div id="sliderDots" class="flex justify-center gap-2 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -1127,7 +1195,7 @@
             </h2>
 
             <!-- Paragraph -->
-            <p class="mt-2 text-white max-w-2xl mx-auto font-light">
+            <p class="mt-2 text-white max-w-2xl mx-auto font-light px-3">
                 From health to hospitality, we speak your industry’s language, so your project resonates from day one.
             </p>
         </div>
@@ -1135,7 +1203,7 @@
         <!-- Slider Wrapper -->
         <div class="relative mt-10 mx-6">
             <div id="experts-track"
-                class="flex gap-6 transition-transform duration-500 overflow-x-auto scroll-smooth no-scrollbar px-14 ">
+                class="flex gap-6 transition-transform duration-500 overflow-x-auto scroll-smooth no-scrollbar pl-0">
 
                 <!-- Card 1-->
                 <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
@@ -1322,7 +1390,6 @@
                             student. </p>
                     </div>
                 </div>
-
 
                 <!-- Card 4-->
                 <div class="background-backdrop-card card relative flex-shrink-0 w-[70vw] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
@@ -1512,7 +1579,6 @@
                     </div>
                 </div>
 
-                <!-- More cards (if you need) -->
             </div>
 
             <!-- Navigation Buttons -->
@@ -2615,7 +2681,7 @@
     </section>
 
     <!-- The People Behind Qonkar -->
-    <section class="max-w-7xl mx-auto py-10 bg-[var(--body-bg)] text-white ">
+    <section class="max-w-7xl mx-auto py-10 px-3 bg-[var(--body-bg)] text-white ">
         <div class="max-w-7xl mx-auto  text-center">
             <!-- Badge -->
             <div class="glass-border inline-block mb-4">
@@ -2642,13 +2708,15 @@
                 <div class="relative rounded-xl border border-[var(--secondary-color)]">
                     <!-- Inner with backdrop fill -->
                     <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
+        flex flex-col items-start text-left p-4 relative z-10">
 
                         <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
+                        <div class="w-full h-70 overflow-hidden rounded-md mb-4">
                             <img src="images/staff/M-Owais.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
+                                class="w-full h-full object-cover object-top rounded-md">
                         </div>
+
+
 
                         <!-- Text Content -->
                         <div class="w-full">
@@ -2657,6 +2725,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Card 2 -->
                 <div class="relative rounded-xl border border-[var(--secondary-color)]">
                     <!-- Inner with backdrop fill -->
@@ -2666,13 +2735,13 @@
                         <!-- Team Member Image -->
                         <div class="w-full h-64 overflow-hidden rounded-md mb-4">
                             <img src="images/staff/arsalan.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
+                                class="w-full h-full object-cover object-top rounded-md">
                         </div>
 
                         <!-- Text Content -->
                         <div class="w-full">
                             <h3 class="text-xl font-semibold text-[var(--secondary-color)]">Muhammad Arslan</h3>
-                            <p class="text-white text-sm">CEOO</p>
+                            <p class="text-white text-sm">COO</p>
                         </div>
                     </div>
                 </div>
@@ -2684,112 +2753,20 @@
 
                         <!-- Team Member Image -->
                         <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
+                            <img src="images/staff/adeel.jpg" alt="Team Member"
+                                class="w-full h-full object-cover object-top rounded-md">
                         </div>
 
                         <!-- Text Content -->
                         <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
+                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">Adeel
+
+                                Data Analyst</h3>
+                            <p class="text-white text-sm">Data Analyst</p>
                         </div>
                     </div>
                 </div>
-                <!-- Card 4 -->
-                <div class="relative rounded-xl border border-[var(--secondary-color)]">
-                    <!-- Inner with backdrop fill -->
-                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
 
-                        <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="relative rounded-xl border border-[var(--secondary-color)]">
-                    <!-- Inner with backdrop fill -->
-                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
-
-                        <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="relative rounded-xl border border-[var(--secondary-color)]">
-                    <!-- Inner with backdrop fill -->
-                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
-
-                        <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 7 -->
-                <div class="relative rounded-xl border border-[var(--secondary-color)]">
-                    <!-- Inner with backdrop fill -->
-                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
-
-                        <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 8 -->
-                <div class="relative rounded-xl border border-[var(--secondary-color)]">
-                    <!-- Inner with backdrop fill -->
-                    <div class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all 
-              flex flex-col items-center text-left p-4 relative z-10">
-
-                        <!-- Team Member Image -->
-                        <div class="w-full h-64 overflow-hidden rounded-md mb-4">
-                            <img src="images/team/01.jpg" alt="Team Member"
-                                class="w-full h-full object-cover rounded-md">
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-[var(--secondary-color)]">John Smith</h3>
-                            <p class="text-white text-sm">CEO</p>
-                        </div>
-                    </div>
-                </div>
                 <!-- You can duplicate more cards, they will auto-wrap to new row -->
             </div>
             <!-- Button -->
@@ -2809,7 +2786,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="max-w-7xl mx-auto py-10 bg-[var(--body-bg)] text-white ">
+    <section class="max-w-7xl mx-auto py-10 px-3 bg-[var(--body-bg)] text-white ">
         <div class="max-w-7xl mx-auto ">
             <!-- Badge -->
             <div class="text-center mb-10">
@@ -3010,7 +2987,9 @@
             </div>
         </div>
     </section>
-    <footer class="mx-6 mb-6">
+
+
+    <footer class="sm:mx-6 sm:mb-6">
         <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
     via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16">
             <!-- Main Wrapper limited to max-w-7xl -->

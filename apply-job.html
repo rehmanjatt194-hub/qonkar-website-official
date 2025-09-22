@@ -143,7 +143,7 @@
             <div class="relative px-8 py-10 rounded-[18px] bg-black/90 backdrop-blur-[600px] text-white">
 
                 <!-- Heading -->
-                <h2 class="text-3xl font-bold text-center mb-8">Job Application Form</h2>
+                <h2 class="text-3xl  text-center mb-8">Job Application Form</h2>
 
                 <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6">
 
@@ -210,6 +210,9 @@
 
                     <!-- Portfolio Link -->
                     <input type="url" placeholder="Portfolio Link (Optional)"
+                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                    <!-- LinkedIn Link -->
+                    <input type="url" placeholder="LinkedIn Link (Optional)"
                         class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
 
                     <!-- Message -->
@@ -351,7 +354,18 @@
         (async function () {
             const countrySelect = document.getElementById('countrySelect');
             const citySelect = document.getElementById('citySelect');
-            let countriesData = []; // [{ country: 'Name', cities: ['A','B',...] }, ...]
+            let countriesData = []; // This will store the list of countries with their ISO codes.
+
+            // ⚠️ IMPORTANT: Replace 'YOUR_API_KEY_HERE' with your actual key from countrystatecity.in
+            const API_KEY = "NmZxRkVRNlJ0UTRpVkZ3SEp0eWdndkZVYWxod2JGd2lpOTUxZUQ5cw==";
+
+            const requestOptions = {
+                method: 'GET',
+                headers: {
+                    "X-CSCAPI-KEY": API_KEY
+                },
+                redirect: 'follow'
+            };
 
             // Populate country <select>
             function populateCountries(list) {
@@ -364,69 +378,64 @@
                 });
             }
 
-            // Populate city <select> from cached countriesData
-            function populateCitiesFor(countryName) {
+            // Fetch all cities for a given country and populate the city select box.
+            async function populateCitiesFor(countryName) {
                 citySelect.innerHTML = '<option value="">Loading cities...</option>';
                 if (!countryName) {
                     citySelect.innerHTML = '<option value="">Select City / State</option>';
                     return;
                 }
-                const entry = countriesData.find(c => c.country === countryName);
-                if (entry && Array.isArray(entry.cities) && entry.cities.length) {
-                    citySelect.innerHTML = '<option value="">Select City / State</option>';
-                    entry.cities.forEach(city => {
-                        const o = document.createElement('option');
-                        o.value = city;
-                        o.textContent = city;
-                        citySelect.appendChild(o);
-                    });
-                } else {
-                    citySelect.innerHTML = '<option value="">No cities available</option>';
+
+                const country = countriesData.find(c => c.name === countryName);
+                if (!country) {
+                    citySelect.innerHTML = '<option value="">Country data not found</option>';
+                    return;
                 }
-            }
 
-            // 1) Try CountriesNow (returns country + cities)
-            async function fetchFromCountriesNow() {
-                const res = await fetch('https://countriesnow.space/api/v0.1/countries');
-                if (!res.ok) throw new Error('CountriesNow fetch failed');
-                const json = await res.json();
-                if (!json || !Array.isArray(json.data)) throw new Error('Bad payload from CountriesNow');
-                // normalize to expected shape
-                countriesData = json.data.map(item => ({
-                    country: item.country || item.name || '',
-                    cities: item.cities || []
-                }));
-                populateCountries(countriesData.map(c => c.country));
-            }
-
-            // 2) Fallback: restcountries for names only
-            async function fetchFromRestCountries() {
-                const res = await fetch('https://restcountries.com/v3.1/all');
-                if (!res.ok) throw new Error('RestCountries fetch failed');
-                const json = await res.json();
-                const names = json.map(c => c?.name?.common).filter(Boolean).sort((a, b) => a.localeCompare(b));
-                countriesData = names.map(n => ({ country: n, cities: [] }));
-                populateCountries(names);
-            }
-
-            // Boot sequence with graceful fallbacks
-            try {
-                await fetchFromCountriesNow();
-            } catch (err) {
-                console.warn('CountriesNow failed, trying restcountries...', err);
                 try {
-                    await fetchFromRestCountries();
-                } catch (err2) {
-                    console.warn('RestCountries failed, using small fallback list', err2);
-                    const fallback = ['Pakistan', 'United States', 'United Kingdom', 'Canada', 'India'];
-                    countriesData = fallback.map(c => ({ country: c, cities: [] }));
-                    populateCountries(fallback);
+                    // Fetch cities using the country's ISO2 code
+                    const citiesRes = await fetch(`https://api.countrystatecity.in/v1/countries/${country.iso2}/cities`, requestOptions);
+                    const citiesJson = await citiesRes.json();
+
+                    if (citiesRes.ok && Array.isArray(citiesJson)) {
+                        citySelect.innerHTML = '<option value="">Select City / State</option>';
+                        citiesJson.forEach(city => {
+                            const o = document.createElement('option');
+                            o.value = city.name;
+                            o.textContent = city.name;
+                            citySelect.appendChild(o);
+                        });
+                    } else {
+                        citySelect.innerHTML = '<option value="">No cities available</option>';
+                    }
+                } catch (error) {
+                    console.error('Failed to fetch cities:', error);
+                    citySelect.innerHTML = '<option value="">Failed to load cities</option>';
                 }
             }
 
-            // when country changes, populate cities from cached data
+            // Initial fetch to get all countries
+            async function fetchAllCountries() {
+                try {
+                    const res = await fetch('https://api.countrystatecity.in/v1/countries', requestOptions);
+                    if (!res.ok) throw new Error('Failed to fetch countries');
+                    const json = await res.json();
+                    countriesData = json; // Cache the country data for later use
+                    populateCountries(countriesData.map(c => c.name));
+                } catch (err) {
+                    console.error('Error fetching countries:', err);
+                    countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
+                }
+            }
+
+            // Run the initial setup
+            await fetchAllCountries();
+
+            // Add the event listener to handle country changes
             countrySelect.addEventListener('change', (e) => populateCitiesFor(e.target.value));
+
         })();
+
         // Navbar
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');

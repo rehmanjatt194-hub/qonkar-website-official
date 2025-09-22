@@ -99,7 +99,7 @@
 
 
     <!-- ✅ Hero Section -->
-    <section class="relative mt-4 mx-4 h-screen flex flex-col justify-center 
+    <section class="relative mt-4 mx-4 max-w-7xl mx-auto h-screen flex flex-col justify-center 
     rounded-2xl overflow-hidden">
 
         <!-- Background Video -->
@@ -117,12 +117,22 @@
             class="relative z-10 flex flex-col items-center justify-center text-center text-white space-y-6 max-w-3xl mx-auto px-6 sm:px-12 lg:px-20 flex-grow">
 
             <!-- Badge -->
-            <div class="glass px-2 py-2 rounded-full text-xs sm:text-sm text-white flex items-center gap-2 hero-badge">
+            <div class="glass px-2 py-2 rounded-md sm:rounded-full text-xs sm:text-sm text-white 
+            flex flex-col sm:flex-row items-center sm:items-center 
+            justify-center gap-2 hero-badge text-center sm:text-left">
+
+                <!-- Dot -->
                 <span class="px-3 py-0.5 rounded-full bg-[var(--primary-color)] text-white text-xs">
                     &#9679; CASE STUDY
                 </span>
-                <span class="leading-tight">Turning tradition into digital impact.</span>
+
+                <!-- Text -->
+                <span class="leading-tight">
+                    Turning tradition into digital impact.
+                </span>
             </div>
+
+
 
             <!-- Heading -->
             <h1 class="text-3xl sm:text-5xl font-bold">HavanaShoes</h1>
@@ -142,7 +152,7 @@
         </div>
 
         <!-- Stars Block at Bottom -->
-        <div class="relative z-10 bg-[var(--body-bg)] w-[300px] mx-auto py-4 px-2 flex justify-center items-center gap-2
+        <div class="relative  z-10 bg-[var(--body-bg)] w-[300px] mx-auto py-4 px-2 flex justify-center items-center gap-2
           rounded-t-2xl">
             <!-- 5 Yellow Stars -->
             <div class="flex text-yellow-400 text-xl">
@@ -189,6 +199,7 @@
         </div>
     </section>
 
+    <!-- Challenges -->
     <section class="relative p-[2px] w-[85%] mx-auto border border-transparent rounded-md" style="border-image:linear-gradient(138deg,
         rgba(56,228,174,0.20) 12.07%,
         rgba(56,228,174,0.66) 39.55%,
@@ -197,15 +208,15 @@
 
         <!-- Inner Content -->
         <div
-            class="bg-black/90 rounded-md p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-white relative">
+            class="bg-black/50 rounded-md p-6 sm:p-10 grid grid-cols-1 md:grid-cols-[65%_35%] gap-16 items-center text-white relative">
 
-            <!-- ✅ Divider (hidden on small screens, visible from md and up) -->
-            <div class="hidden md:block absolute left-1/2 top-0 transform -translate-x-1/2 h-full w-[2px] 
-                bg-gradient-to-b from-transparent via-[var(--secondary-color)] to-transparent"></div>
+            <!-- ✅ Divider -->
+            <div class="hidden md:block absolute left-[65%] top-0 transform -translate-x-1/2 h-full w-[1px] 
+            bg-gradient-to-b from-transparent via-[var(--secondary-color)] to-transparent"></div>
 
-            <!-- ✅ Left Side -->
-            <div>
-                <p class="text-gray-300 leading-relaxed">
+            <!-- ✅ Paragraph (last on mobile, left on desktop) -->
+            <div class="order-2 md:order-1">
+                <p class="text-white leading-relaxed">
                     The previous site was visually outdated and structurally limited.
                     It lacked intuitive navigation, had slow page load speeds, and wasn't
                     optimized for mobile — despite most users browsing from phones.
@@ -214,10 +225,10 @@
                 </p>
             </div>
 
-            <!-- ✅ Right Side -->
-            <div class="flex flex-col items-center md:items-start">
+            <!-- ✅ Challenges (first on mobile, right on desktop) -->
+            <div class="flex flex-col items-center md:items-start order-1 md:order-2">
                 <!-- Badge -->
-                <div class="glass-border w-[120px] mb-4">
+                <div class="glass-border w-[150px] mb-4">
                     <div class="glass-background">
                         <div class="glass text-sm font-light text-center">
                             <p>&#9679; CHALLENGES</p>
@@ -232,6 +243,52 @@
             </div>
         </div>
     </section>
+
+    <!-- Approach -->
+    <section class=" mt-14 relative p-[2px] w-[85%] mx-auto border border-transparent rounded-md" style="border-image:linear-gradient(138deg,
+        rgba(56,228,174,0.20) 12.07%,
+        rgba(56,228,174,0.66) 39.55%,
+        rgba(7,151,172,0.80) 63.36%,
+        rgba(7,151,172,0.28) 92.67%) 1">
+
+        <!-- Inner Content -->
+        <div
+            class="bg-black/50 rounded-md p-6 sm:p-10 grid grid-cols-1 md:grid-cols-[35%_65%] gap-6 items-center text-white relative">
+
+            <!-- ✅ Divider now at 35% -->
+            <div class="hidden md:block absolute left-[35%] top-0 transform -translate-x-1/2 h-full w-[1px] 
+            bg-gradient-to-b from-transparent via-[var(--secondary-color)] to-transparent"></div>
+
+            <!-- ✅ Text Content (now right, 65%) -->
+            <div class="order-2">
+                <p class="text-white leading-relaxed">
+                    The previous site was visually outdated and structurally limited.
+                    It lacked intuitive navigation, had slow page load speeds, and wasn't
+                    optimized for mobile — despite most users browsing from phones.
+                    Havanna needed a complete overhaul: design, structure, performance,
+                    and UX — all while keeping Shopify as the core platform.
+                </p>
+            </div>
+
+            <!-- ✅ Challenges Section (now left, 35%) -->
+            <div class="flex flex-col items-center md:items-start order-1">
+                <!-- Badge -->
+                <div class="glass-border w-[150px] mb-4">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center">
+                            <p>&#9679; CHALLENGES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-2xl md:text-3xl font-bold">
+                    The Challenges
+                </h2>
+            </div>
+        </div>
+    </section>
+
 
 
 

@@ -50,11 +50,11 @@
                 <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
             </div>
             <ul class="flex gap-8 text-white font-medium">
-                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
+                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
                 <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
+                <li><a href="portfolio.php" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+                <li><a href="career.php" class="text-[var(--primary-color)]">Careers</a></li>
             </ul>
             <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
        hover:bg-[var(--secondary-color)] transition">Contact Us</a>
@@ -75,16 +75,16 @@
              bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
              transition-all duration-300 rounded-2xl overflow-hidden">
 
-                <a href="#"
-                    class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-                <a href="#"
+                <a href="index.html"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="services.html"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
-                <a href="#"
+                <a href="portfolio.php"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="#"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
+                <a href="career.php"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Careers</a>
 
                 <!-- ✅ CTA on smaller screens -->
                 <a href="contact-us.html"
@@ -94,7 +94,6 @@
             </div>
         </nav>
     </header>
-
 
     <!-- Hero Section -->
     <section
@@ -137,7 +136,7 @@
 
 
     <!-- Career Opportunities Section -->
-    <section class="relative max-w-7xl mx-auto py-20 ">
+    <section class="relative max-w-7xl mx-auto py-20 px-3">
         <!-- Section Intro -->
         <div class="text-center mb-14">
             <!-- Badge -->
@@ -153,7 +152,7 @@
             <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
                 We're <b>Hiring</b>
             </h2>
-            <p class=" font-light leading-relaxed text-white w-[50%] mx-auto">
+            <p class=" font-light leading-relaxed text-white  mx-auto">
                 At Qonkar, every role is an opportunity to innovate and grow. Explore our job listings
                 and take the first step toward your career journey.
             </p>
@@ -184,15 +183,17 @@
                         <!-- Top Row: Icon + Title + Badge -->
                         <div class="flex items-center justify-between w-full mb-4">
                             <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 flex items-center justify-center rounded-full [background:linear-gradient(135deg,var(--primary-color),var(--secondary-color),var(--tertiary-color))]">
-                                    <img src="images/icons/Job-Icon.svg" alt="Job Icon" class="w-10">
+                                <div class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full 
+                    [background:linear-gradient(135deg,var(--primary-color),var(--secondary-color),var(--tertiary-color))]">
+                                    <img src="images/icons/Job-Icon.svg" alt="Job Icon" class="w-8 h-8">
                                 </div>
-                                <h3 class="text-xl font-semibold"><?php echo $jobTitle; ?></h3>
+                                <h3 class="text-xl"><?php echo $jobTitle; ?></h3>
                             </div>
-                            <span class="px-4 py-2 text-sm font-medium rounded-lg bg-[var(--secondary-color)] text-white">
+                            <span class="px-4 py-2 text-xs sm:text-sm rounded-lg bg-[var(--secondary-color)] text-white">
                                 <?php echo $remoteType; ?>
                             </span>
                         </div>
+
 
 
                         <!-- Location -->
@@ -201,12 +202,12 @@
                         <!-- Buttons -->
                         <div class="flex gap-4">
                             <button onclick="document.getElementById('jobModal<?php echo $jobId; ?>').classList.remove('hidden')"
-                                class="px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-medium hover:bg-white transition">
+                                class="px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] text-xs sm:text-sm hover:bg-white transition">
                                 Job Details
                             </button>
 
                             <a href="apply-job.php" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] 
-                      text-[var(--secondary-color)] font-semibold transition hover:bg-[var(--secondary-color)] hover:text-white">
+                      text-[var(--secondary-color)] transition hover:bg-[var(--secondary-color)] hover:text-white text-xs sm:text-sm">
                                 Apply Now
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
@@ -257,19 +258,15 @@
             <div class="flex flex-col gap-0">
                 <!-- First Row: Logo -->
                 <div class="flex justify-center md:justify-start">
-                    <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40">
+                    <img src="images/Logo_White_Color.png" alt="Qonkar Logo" class="w-48">
                 </div>
 
                 <!-- Second Row: Address + Social Icons -->
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <!-- Address -->
                     <div class="flex items-center gap-2 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 12.414A4 4 0 1112 8a4 4 0 014.243 1.243l4.243 4.243a8 8 0 11-2.829 2.829z" />
-                        </svg>
-                        <span>Software Technology Park, QUEST Nawabshah</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rashid Minhas Road,Karachi</span>
                     </div>
 
                     <!-- Social Icons -->

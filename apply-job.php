@@ -52,11 +52,11 @@ require_once("admin/database_config.php");
                 <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
             </div>
             <ul class="flex gap-8 text-white font-medium">
-                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
+                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
                 <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
+                <li><a href="portfolio.php" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+                <li><a href="career.php" class="text-[var(--primary-color)]">Careers</a></li>
             </ul>
             <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
        hover:bg-[var(--secondary-color)] transition">Contact Us</a>
@@ -77,16 +77,16 @@ require_once("admin/database_config.php");
              bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
              transition-all duration-300 rounded-2xl overflow-hidden">
 
-                <a href="#"
-                    class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-                <a href="#"
+                <a href="index.html"
+                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+                <a href="services.html"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
-                <a href="#"
+                <a href="portfolio.php"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="#"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
+                <a href="career.php"
+                    class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Careers</a>
 
                 <!-- ✅ CTA on smaller screens -->
                 <a href="contact-us.html"
@@ -242,24 +242,20 @@ require_once("admin/database_config.php");
     </section>
 
     <footer class="mx-6 mb-6">
-        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16">
+        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16 ">
             <!-- Wrapper -->
             <div class="flex flex-col gap-0">
                 <!-- First Row: Logo -->
                 <div class="flex justify-center md:justify-start">
-                    <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40">
+                    <img src="images/Logo_White_Color.png" alt="Qonkar Logo" class="w-48">
                 </div>
 
                 <!-- Second Row: Address + Social Icons -->
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <!-- Address -->
                     <div class="flex items-center gap-2 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 12.414A4 4 0 1112 8a4 4 0 014.243 1.243l4.243 4.243a8 8 0 11-2.829 2.829z" />
-                        </svg>
-                        <span>Software Technology Park, QUEST Nawabshah</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rashid Minhas Road,Karachi</span>
                     </div>
 
                     <!-- Social Icons -->

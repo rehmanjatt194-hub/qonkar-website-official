@@ -49,25 +49,30 @@
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const responseBox = document.querySelector("#formResponse");
             const form = document.querySelector("#contactForm");
 
-            form.addEventListener("submit", async function (e) {
+            form.addEventListener("submit", async function(e) {
                 e.preventDefault();
                 responseBox.classList.remove("hidden");
                 responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
 
                 try {
                     const formData = new FormData(form);
-                    const res = await fetch("process.php", { method: "POST", body: formData });
+                    const res = await fetch("process.php", {
+                        method: "POST",
+                        body: formData
+                    });
                     const contentType = res.headers.get("content-type") || "";
 
                     let data;
                     if (contentType.includes("application/json")) {
                         data = await res.json();
                     } else {
-                        data = { message: await res.text() };
+                        data = {
+                            message: await res.text()
+                        };
                     }
 
                     if (res.ok) {
@@ -96,11 +101,11 @@
                 <a href="index.html"><img src="images/qonkar_logo.png" alt="Qonkar Logo" class="h-9 w-auto"></a>
             </div>
             <ul class="flex gap-8 text-white font-medium">
-                <li><a href="index.html" class="text-[var(--primary-color)]">Home</a></li>
+                <li><a href="index.html" class="hover:text-[var(--primary-color)]">Home</a></li>
                 <li><a href="services.html" class="hover:text-[var(--primary-color)]">Services</a></li>
                 <li><a href="#" class="hover:text-[var(--primary-color)]">Industries</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[var(--primary-color)]">Careers</a></li>
+                <li><a href="portfolio.php" class="text-[var(--primary-color)]">Portfolio</a></li>
+                <li><a href="career.php" class="hover:text-[var(--primary-color)]">Careers</a></li>
             </ul>
             <a href="contact-us.html" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white  
        hover:bg-[var(--secondary-color)] transition">Contact Us</a>
@@ -121,15 +126,15 @@
              bg-[rgba(8,8,8,0.95)] backdrop-blur-md flex-col transform scale-y-0 origin-top
              transition-all duration-300 rounded-2xl overflow-hidden">
 
-                <a href="#"
+                <a href="index.html"
                     class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-                <a href="#"
+                <a href="services.html"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Services</a>
                 <a href="#"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Industries</a>
-                <a href="#"
+                <a href="portfolio.php"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="#"
+                <a href="career.php"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Careers</a>
 
                 <!-- ✅ CTA on smaller screens -->
@@ -411,19 +416,25 @@
         function checkScroll() {
             scrollLeft.style.display = tabContainer.scrollLeft > 0 ? "block" : "none";
             scrollRight.style.display =
-                tabContainer.scrollWidth > tabContainer.clientWidth + tabContainer.scrollLeft
-                    ? "block"
-                    : "none";
+                tabContainer.scrollWidth > tabContainer.clientWidth + tabContainer.scrollLeft ?
+                "block" :
+                "none";
         }
         tabContainer.addEventListener("scroll", checkScroll);
         window.addEventListener("resize", checkScroll);
         checkScroll();
 
         scrollLeft.addEventListener("click", () => {
-            tabContainer.scrollBy({ left: -150, behavior: "smooth" });
+            tabContainer.scrollBy({
+                left: -150,
+                behavior: "smooth"
+            });
         });
         scrollRight.addEventListener("click", () => {
-            tabContainer.scrollBy({ left: 150, behavior: "smooth" });
+            tabContainer.scrollBy({
+                left: 150,
+                behavior: "smooth"
+            });
         });
 
         // Tab Filter
@@ -444,9 +455,9 @@
 
                 cards.forEach(card => {
                     card.style.display =
-                        category === "all" || card.dataset.category === category
-                            ? "flex"
-                            : "none";
+                        category === "all" || card.dataset.category === category ?
+                        "flex" :
+                        "none";
                 });
             });
         });
@@ -455,25 +466,20 @@
 
 
     <footer class="mx-6 mb-6">
-        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
-    via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16">
-            <!-- Main Wrapper limited to max-w-7xl -->
-            <div class="max-w-7xl mx-auto">
+        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16 ">
+            <!-- Wrapper -->
+            <div class="flex flex-col gap-0">
                 <!-- First Row: Logo -->
                 <div class="flex justify-center md:justify-start">
-                    <img src="images/qonkar_logo.png" alt="Qonkar Logo" class="w-40" />
+                    <img src="images/Logo_White_Color.png" alt="Qonkar Logo" class="w-48">
                 </div>
 
                 <!-- Second Row: Address + Social Icons -->
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <!-- Address -->
                     <div class="flex items-center gap-2 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 12.414A4 4 0 1112 8a4 4 0 014.243 1.243l4.243 4.243a8 8 0 11-2.829 2.829z" />
-                        </svg>
-                        <span>Software Technology Park, QUEST Nawabshah</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rashid Minhas Road,Karachi</span>
                     </div>
 
                     <!-- Social Icons -->
@@ -489,89 +495,88 @@
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Divider -->
-                <div class="border-t border-white/30 my-8"></div>
 
-                <!-- Columns -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <!-- Contact Column -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Contact with Us!</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+44) 7476451747</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+92) 305 8219445</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@qonkar.com</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> United Kingdom
-                            </li>
-                            <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        </ul>
-                    </div>
 
-                    <!-- Services Column -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Services</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li><a href="#">Website Design & Development</a></li>
-                            <li><a href="#">Shopify Development</a></li>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">SEO Services</a></li>
-                            <li><a href="#">Paid Advertising</a></li>
-                            <li><a href="#">Landing Page Design</a></li>
-                            <li><a href="#">Custom Website Design</a></li>
-                            <li><a href="#">Shopify Theme Development</a></li>
-                            <li><a href="#">Shopify Store Setup</a></li>
-                        </ul>
-                    </div>
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
 
-                    <!-- About Column -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">About</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li><a href="#">Qonkar Technologies (PVT) Ltd.</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Blogs & News</a></li>
-                            <li><a href="#">Partnerships</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Services</a></li>
-                            <li><a href="#">Help & Support</a></li>
-                            <li><a href="#">Trust and Safety</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Trusted By Column -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>Microsoft</li>
-                            <li>Shopify</li>
-                            <li>Upwork</li>
-                            <li>Fiverr</li>
-                            <li>Mailchimp</li>
-                            <li>HubSpot</li>
-                            <li>Google Ads</li>
-                        </ul>
-                    </div>
+            <!-- Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact with Us!</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+44) 7476451747</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone"></i> (+92) 305 8219445</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@qonkar.com</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> United Kingdom</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                    </ul>
                 </div>
 
-                <!-- Divider -->
-                <div class="border-t border-white/30 my-8"></div>
+                <!-- Services Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Website Design & Development</a></li>
+                        <li><a href="#">Shopify Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Services</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                        <li><a href="#">Landing Page Design</a></li>
+                        <li><a href="#">Custom Website Design</a></li>
+                        <li><a href="#">Shopify Theme Development</a></li>
+                        <li><a href="#">Shopify Store Setup</a></li>
+                    </ul>
+                </div>
 
-                <!-- Bottom Row -->
-                <div class="flex flex-col md:flex-row justify-between items-center text-sm">
-                    <p>© 2025 Qonkar Technologies</p>
-                    <div class="flex gap-4 mt-2 md:mt-0">
-                        <a href="#">Terms of Services</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
+                <!-- About Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#">Qonkar Technologies (PVT) Ltd.</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blogs & News</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Services</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Trust and Safety</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trusted By Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li>Microsoft</li>
+                        <li>Shopify</li>
+                        <li>Upwork</li>
+                        <li>Fiverr</li>
+                        <li>Mailchimp</li>
+                        <li>HubSpot</li>
+                        <li>Google Ads</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- Divider -->
+            <div class="border-t border-white/30 my-8"></div>
+
+            <!-- Bottom Row -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>© 2025 Qonkar Technologies</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
         </div>
     </footer>
     <script>
-
         // Navbar
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');

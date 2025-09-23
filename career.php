@@ -19,6 +19,7 @@
     <meta property="og:image" content="https://qonkar.com/preview.png" />
 
 
+
     <!-- ✅ Google ICONS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -112,7 +113,7 @@
 
             <!-- Heading -->
             <h1 class="text-2xl sm:text-3xl md:text-4xl leading-snug font-bold">
-                Your Next Journey Start Here !
+                Join Our Team at Qonkar
             </h1>
 
             <!-- Paragraph -->
@@ -134,108 +135,124 @@
         </div>
     </section>
 
-    <!-- Job Application Form -->
-    <section class="my-16">
-        <div class="group relative p-[2px] 
-        [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)] 
-        rounded-[20px] overflow-hidden shadow-lg max-w-4xl mx-auto">
 
-            <div class="relative px-8 py-10 rounded-[18px] bg-black/90 backdrop-blur-[600px] text-white">
-
-                <!-- Heading -->
-                <h2 class="text-3xl  text-center mb-8">Job Application Form</h2>
-
-                <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6">
-
-                    <!-- Full Name & Email -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Full Name"
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
-
-                        <input type="email" placeholder="Email"
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+    <!-- Career Opportunities Section -->
+    <section class="relative max-w-7xl mx-auto py-20 ">
+        <!-- Section Intro -->
+        <div class="text-center mb-14">
+            <!-- Badge -->
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OPPORTUNITES</p>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Phone & Country -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Phone Number"
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                We're <b>Hiring</b>
+            </h2>
+            <p class=" font-light leading-relaxed text-white w-[50%] mx-auto">
+                At Qonkar, every role is an opportunity to innovate and grow. Explore our job listings
+                and take the first step toward your career journey.
+            </p>
 
-                        <select id="countrySelect"
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
-                            <option value="">Select Country</option>
-                        </select>
-                    </div>
+        </div>
 
-                    <!-- City & Job Post -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <select id="citySelect"
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
-                            <option value="">Select City / State</option>
-                        </select>
+        <!-- Jobs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <?php
+            $conn = new mysqli("localhost", "root", "", "qonkar_db");
+            if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
-                        <select
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
-                            <option value="">Select Job Post</option>
-                            <option>Frontend Developer</option>
-                            <option>Backend Developer</option>
-                            <option>UI/UX Designer</option>
-                        </select>
-                    </div>
+            // Fetch only open jobs
+            $result = $conn->query("SELECT * FROM jobs WHERE job_status='open' ORDER BY created_at DESC");
 
-                    <!-- Resume Upload -->
-                    <div>
-                        <div onclick="document.getElementById('resumeInput').click()"
-                            class="w-full flex items-center gap-4 px-4 py-3 border-2 border-gray-500 rounded-md cursor-pointer">
+            while ($row = $result->fetch_assoc()) {
+                $jobTitle = htmlspecialchars($row['job_title']);
+                // $jobType = htmlspecialchars($row['job_type']);
+                $jobDescription = nl2br(htmlspecialchars($row['job_description']));
+                $jobLocation = htmlspecialchars($row['location']); // Or add a `location` column to jobs table
+                $remoteType =  htmlspecialchars($row['job_type']); // Example static value, or add column if dynamic
+                $jobId = $row['job_id'];
+            ?>
 
-                            <!-- Upload Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-[var(--secondary-color)]"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V4m0 8l-3-3m3 3l3-3" />
-                            </svg>
-
-                            <!-- Texts -->
-                            <div class="flex flex-col">
-                                <span id="resumeText" class="text-gray-300">Upload your Resume</span>
-                                <p class="text-sm text-gray-400 mt-0.5">DOC, DOCX, PDF</p>
+                <!-- Job Card -->
+                <div class="group relative p-[2px] [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)] rounded-[20px] overflow-hidden shadow-lg">
+                    <div class="relative flex flex-col px-8 py-8 rounded-[18px] bg-black/90 backdrop-blur-[600px] text-white">
+                        <!-- Top Row: Icon + Title + Badge -->
+                        <div class="flex items-center justify-between w-full mb-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 flex items-center justify-center rounded-full [background:linear-gradient(135deg,var(--primary-color),var(--secondary-color),var(--tertiary-color))]">
+                                    <img src="images/icons/Job-Icon.svg" alt="Job Icon" class="w-10">
+                                </div>
+                                <h3 class="text-xl font-semibold"><?php echo $jobTitle; ?></h3>
                             </div>
+                            <span class="px-4 py-2 text-sm font-medium rounded-lg bg-[var(--secondary-color)] text-white">
+                                <?php echo $remoteType; ?>
+                            </span>
+                        </div>
 
-                            <!-- Hidden Input -->
-                            <input type="file" id="resumeInput" class="hidden"
-                                onchange="document.getElementById('resumeText').textContent = this.files[0]?.name || 'Upload your Resume'">
+
+                        <!-- Location -->
+                        <p class="text-white mb-6"><?php echo $jobLocation; ?></p>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-4">
+                            <button onclick="document.getElementById('jobModal<?php echo $jobId; ?>').classList.remove('hidden')"
+                                class="px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-medium hover:bg-white transition">
+                                Job Details
+                            </button>
+
+                            <a href="apply-job.php" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] 
+                      text-[var(--secondary-color)] font-semibold transition hover:bg-[var(--secondary-color)] hover:text-white">
+                                Apply Now
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-
-
-                    <!-- Portfolio Link -->
-                    <input type="url" placeholder="Portfolio Link (Optional)"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
-                    <!-- LinkedIn Link -->
-                    <input type="url" placeholder="LinkedIn Link (Optional)"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
-
-                    <!-- Message -->
-                    <textarea rows="4" placeholder="Tell us why you’re a great fit for this role"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none"></textarea>
-
-                    <!-- Submit Button -->
-                    <div class="flex justify-center">
-                        <button type="submit"
-                            class="px-8 py-3 rounded-full border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-semibold transition hover:bg-[var(--secondary-color)] hover:text-white">
-                            Submit Application
+                </div>
+                <!-- Job Decription Modal -->
+                <div id="jobModal<?php echo $jobId; ?>" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+                    <div class="bg-white rounded-lg w-full max-w-lg p-6 relative text-black">
+                        <!-- Close icon top-right -->
+                        <button onclick="document.getElementById('jobModal<?php echo $jobId; ?>').classList.add('hidden')"
+                            class="absolute top-4 right-4 text-gray-500 hover:text-black text-xl font-bold">
+                            &times;
                         </button>
-                    </div>
 
-                </form>
-            </div>
+                        <h2 class="text-2xl font-bold mb-4"><?php echo $jobTitle; ?></h2>
+                        <p class="mb-6"><strong>Responsibilities:</strong><br><?php echo $jobDescription; ?></p>
+
+                        <!-- Apply Now button at bottom center -->
+                        <div class="flex justify-center mt-6">
+                            <a href="apply-job.php?job_id=<?php echo $jobId; ?>"
+                                class="px-6 py-3 rounded-full border-2 border-[var(--secondary-color)] 
+                      bg-[var(--secondary-color)] text-white font-semibold 
+                      hover:bg-white hover:text-[var(--secondary-color)] transition">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            <?php
+            }
+            $conn->close();
+            ?>
         </div>
+
+
     </section>
 
+
+
     <footer class="mx-6 mb-6">
-        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)]
-  via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16
-">
+        <div class="w-full mx-auto rounded-lg bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-14 py-16 ">
             <!-- Wrapper -->
             <div class="flex flex-col gap-0">
                 <!-- First Row: Logo -->
@@ -350,92 +367,6 @@
         </div>
     </footer>
     <script>
-        // Fetch Counties and Their Cities
-        (async function () {
-            const countrySelect = document.getElementById('countrySelect');
-            const citySelect = document.getElementById('citySelect');
-            let countriesData = []; // This will store the list of countries with their ISO codes.
-
-            // ⚠️ IMPORTANT: Replace 'YOUR_API_KEY_HERE' with your actual key from countrystatecity.in
-            const API_KEY = "NmZxRkVRNlJ0UTRpVkZ3SEp0eWdndkZVYWxod2JGd2lpOTUxZUQ5cw==";
-
-            const requestOptions = {
-                method: 'GET',
-                headers: {
-                    "X-CSCAPI-KEY": API_KEY
-                },
-                redirect: 'follow'
-            };
-
-            // Populate country <select>
-            function populateCountries(list) {
-                countrySelect.innerHTML = '<option value="">Select Country</option>';
-                list.sort((a, b) => a.localeCompare(b)).forEach(name => {
-                    const opt = document.createElement('option');
-                    opt.value = name;
-                    opt.textContent = name;
-                    countrySelect.appendChild(opt);
-                });
-            }
-
-            // Fetch all cities for a given country and populate the city select box.
-            async function populateCitiesFor(countryName) {
-                citySelect.innerHTML = '<option value="">Loading cities...</option>';
-                if (!countryName) {
-                    citySelect.innerHTML = '<option value="">Select City / State</option>';
-                    return;
-                }
-
-                const country = countriesData.find(c => c.name === countryName);
-                if (!country) {
-                    citySelect.innerHTML = '<option value="">Country data not found</option>';
-                    return;
-                }
-
-                try {
-                    // Fetch cities using the country's ISO2 code
-                    const citiesRes = await fetch(`https://api.countrystatecity.in/v1/countries/${country.iso2}/cities`, requestOptions);
-                    const citiesJson = await citiesRes.json();
-
-                    if (citiesRes.ok && Array.isArray(citiesJson)) {
-                        citySelect.innerHTML = '<option value="">Select City / State</option>';
-                        citiesJson.forEach(city => {
-                            const o = document.createElement('option');
-                            o.value = city.name;
-                            o.textContent = city.name;
-                            citySelect.appendChild(o);
-                        });
-                    } else {
-                        citySelect.innerHTML = '<option value="">No cities available</option>';
-                    }
-                } catch (error) {
-                    console.error('Failed to fetch cities:', error);
-                    citySelect.innerHTML = '<option value="">Failed to load cities</option>';
-                }
-            }
-
-            // Initial fetch to get all countries
-            async function fetchAllCountries() {
-                try {
-                    const res = await fetch('https://api.countrystatecity.in/v1/countries', requestOptions);
-                    if (!res.ok) throw new Error('Failed to fetch countries');
-                    const json = await res.json();
-                    countriesData = json; // Cache the country data for later use
-                    populateCountries(countriesData.map(c => c.name));
-                } catch (err) {
-                    console.error('Error fetching countries:', err);
-                    countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
-                }
-            }
-
-            // Run the initial setup
-            await fetchAllCountries();
-
-            // Add the event listener to handle country changes
-            countrySelect.addEventListener('change', (e) => populateCitiesFor(e.target.value));
-
-        })();
-
         // Navbar
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');

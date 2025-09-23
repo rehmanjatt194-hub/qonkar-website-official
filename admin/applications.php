@@ -18,11 +18,23 @@ if (!isset($_SESSION['user_id'])) {
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
+    <!-- jQuery + DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <!-- Buttons extension -->
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
+    <!-- JSZip (needed for CSV export) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
 
     <style>
@@ -62,6 +74,7 @@ if (!isset($_SESSION['user_id'])) {
     <script>
         // Status toggle (Active <-> Inactive)
         document.addEventListener("click", function(e) {
+            // ✅ Existing job status toggle
             if (e.target && e.target.classList.contains("status-btn")) {
                 e.preventDefault();
 
@@ -83,7 +96,31 @@ if (!isset($_SESSION['user_id'])) {
                             location.reload();
                         } else {
                             alert("❌ Error updating job status");
+                        }
+                    })
+                    .catch(error => console.error("⚠️ Fetch Error:", error));
+            }
+
+            // ✅ New: Handle application status update (Shortlist / Reject)
+            if (e.target && (e.target.classList.contains("shortlist-btn") || e.target.classList.contains("reject-btn"))) {
+                e.preventDefault();
+
+                let appId = e.target.getAttribute("data-id");
+                let newStatus = e.target.classList.contains("shortlist-btn") ? "shortlist" : "reject";
+
+                fetch("process.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded"
+                        },
+                        body: "action=update_application_status&id=" + appId + "&status=" + newStatus
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
                             location.reload();
+                        } else {
+                            alert("❌ Error updating application status");
                         }
                     })
                     .catch(error => console.error("⚠️ Fetch Error:", error));
@@ -199,81 +236,163 @@ if (!isset($_SESSION['user_id'])) {
                     class="w-12 h-12 rounded-full object-cover border-2 border-[var(--secondary-color)]">
             </div>
         </div>
-
-        <!-- User Dashboard Content -->
+        <!-- Appliations Table -->
         <div class="p-8">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">Jobs Management</h2>
-                <!-- Button to open modal -->
-                <button onclick="openJobModal()"
-                    class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">
-                    + Add New Job
-                </button>
+                <h2 class="text-2xl font-bold">Job Applications</h2>
+
+
             </div>
-            <div id="jobMessage" class="hidden mb-4 p-2 rounded text-sm"></div>
+
             <div class="overflow-x-auto">
-                <table id="jobs_table" class="display cell-border stripe hover w-full">
+                <table id="applications_table" class="display cell-border stripe hover w-full">
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Applicant Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
                             <th>Job Title</th>
-                            <th>Type</th>
-                            <th>Description</th>
                             <th>Status</th>
-                            <th>Created At</th>
-                            <th>Updated At</th>
+                            <th>Resume</th>
+                            <th>Applied On</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $conn = new mysqli("localhost", "root", "", "qonkar_db");
-                        if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
-                        $result = $conn->query("SELECT * FROM jobs ORDER BY job_id DESC");
+
+                        $result = $conn->query("SELECT * FROM job_applications ORDER BY id DESC");
                         while ($row = $result->fetch_assoc()) {
-                            $statusClass = $row['job_status'] === 'open'
-                                ? 'bg-green-600 hover:bg-green-700'
-                                : 'bg-red-600 hover:bg-red-700';
-                            $statusText = ucfirst($row['job_status']);
+                            $statusText = ucfirst($row['status']);
+                            $statusHTML = "";
 
-                            $statusBtn = "<button class='status-btn px-3 py-1 rounded text-white $statusClass' 
-                        data-id='{$row['job_id']}' 
-                        data-status='{$row['job_status']}'>$statusText</button>";
+                            if ($row['status'] === 'pending') {
+                                // Show Pending badge + two action buttons
+                                $statusHTML = "
+    <div class='flex flex-col items-center justify-center'>
+        <span class='px-3 py-1 rounded text-white bg-yellow-600 hover:bg-yellow-700 mb-2'>
+            Pending
+        </span>
+        <div class='flex gap-2'>
+            <button class='shortlist-btn bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded'
+                    data-id='{$row['id']}'>
+                Shortlist
+            </button>
+            <button class='reject-btn bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded'
+                    data-id='{$row['id']}'>
+                Reject
+            </button>
+        </div>
+    </div>
+";
+                            } elseif ($row['status'] === 'shortlist') {
+                                $statusHTML = "
+    <div class='flex items-center justify-center'>
+        <span class='px-3 py-1 rounded text-white bg-green-600 hover:bg-green-700'>
+            {$statusText}
+        </span>
+    </div>";
+                            } elseif ($row['status'] === 'reject') {
+                                $statusHTML = "
+    <div class='flex items-center justify-center'>
+        <span class='px-3 py-1 rounded text-white bg-red-600 hover:bg-red-700'>
+            {$statusText}
+        </span>
+    </div>";
+                            }
 
-                            echo "<tr>
-                        <td>{$row['job_id']}</td>
-                        <td>" . htmlspecialchars($row['job_title']) . "</td>
-                        <td>" . htmlspecialchars($row['job_type']) . "</td>
-                        <td>" . nl2br(htmlspecialchars($row['job_description'])) . "</td>
-                        <td>{$statusBtn}</td>
-                        <td>{$row['created_at']}</td>
-                        <td>{$row['updated_at']}</td>
-                    </tr>";
+                            $resumeBtn = "<a href='../" . htmlspecialchars($row['resume']) . "' 
+                     download 
+                     class=' hover:bg-blue-600 text-white px-3 py-1 rounded'>
+                     📃
+                  </a>";
+
+                            echo "<tr class='app-row cursor-pointer' 
+            data-details='" . json_encode($row, JSON_HEX_APOS | JSON_HEX_QUOT) . "'>
+            <td>{$row['id']}</td>
+            <td>" . htmlspecialchars($row['name']) . "</td>
+            <td>" . htmlspecialchars($row['email']) . "</td>
+            <td>" . htmlspecialchars($row['phone_number']) . "</td>
+            <td>" . htmlspecialchars($row['job_title']) . "</td>
+            <td>{$statusHTML}</td>
+            <td>{$resumeBtn}</td>
+            <td>{$row['created_at']}</td>
+        </tr>";
                         }
                         $conn->close();
                         ?>
                     </tbody>
+
                 </table>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div id="appModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 text-black">
+            <div class="bg-white rounded shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+                <!-- Close button -->
+                <button id="closeAppModal" class="absolute top-2 right-2 text-gray-600 hover:text-black">&times;</button>
+
+                <h2 class="text-xl font-semibold mb-4">Application Details</h2>
+                <div id="modalContent" class="space-y-2"></div>
+            </div>
+        </div>
+
+
+
+
 
     </main>
 
 
     <script>
-        // Data Table
         $(document).ready(function() {
-            $('#jobs_table').DataTable({
+            $('#applications_table').DataTable({
                 "pageLength": 5,
                 "order": [
                     [0, "desc"]
                 ],
                 "language": {
-                    "search": "Search Jobs:",
+                    "search": "Search Applications:",
                     "lengthMenu": "Show _MENU_ entries"
-                }
+                },
+                dom: 'Bfrtip', // enable buttons section
+                buttons: [{
+                    extend: 'csv',
+                    text: '⬇ Download CSV',
+                    className: 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded'
+                }]
+            });
+
+            // Open modal on row click
+            $(document).on("click", ".app-row", function() {
+                let data = $(this).data("details");
+                let content = `
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Phone:</strong> ${data.phone_number}</p>
+            <p><strong>Country:</strong> ${data.country ?? ''}</p>
+            <p><strong>City:</strong> ${data.city ?? ''}</p>
+            <p><strong>Job Title:</strong> ${data.job_title}</p>
+            <p><strong>Portfolio:</strong> <a href="${data.portfolio_link}" target="_blank">${data.portfolio_link}</a></p>
+            <p><strong>LinkedIn:</strong> <a href="${data.linkedin}" target="_blank">${data.linkedin}</a></p>
+            <p><strong>Message:</strong><br>${data.message ?? ''}</p>
+            <p><strong>Status:</strong> ${data.status}</p>
+            <p><strong>Applied On:</strong> ${data.created_at}</p>
+        `;
+                $("#modalContent").html(content);
+                $("#appModal").removeClass("hidden").addClass("flex");
+            });
+
+            // Close modal
+            $("#closeAppModal").on("click", function() {
+                $("#appModal").addClass("hidden").removeClass("flex");
             });
         });
+
+
+
 
 
         // SideBar

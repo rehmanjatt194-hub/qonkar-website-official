@@ -31,6 +31,7 @@ CREATE TABLE `jobs` (
   `job_id` INT(11) NOT NULL AUTO_INCREMENT,
   `job_title` VARCHAR(150) NOT NULL,
   `job_type` VARCHAR(100) NOT NULL,
+  `location` VARCHAR(150) NOT NULL,
   `job_description` TEXT NOT NULL,
   `job_status` ENUM('open','closed') DEFAULT 'open',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

@@ -60,30 +60,28 @@ if (!isset($_SESSION['user_id'])) {
     </style>
 
     <script>
-        // Status toggle (Active <-> Inactive)
         document.addEventListener("click", function(e) {
             if (e.target && e.target.classList.contains("status-btn")) {
-                e.preventDefault(); // still prevent unwanted default
+                e.preventDefault();
 
-                let userId = e.target.getAttribute("data-id");
+                let msgId = e.target.getAttribute("data-id");
                 let currentStatus = e.target.getAttribute("data-status");
 
                 // Toggle status
-                let newStatus = currentStatus === "active" ? "inactive" : "active";
+                let newStatus = currentStatus === "read" ? "unread" : "read";
 
                 fetch("process.php", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/x-www-form-urlencoded"
                         },
-                        body: "action=toggle_status&id=" + userId + "&status=" + newStatus
+                        body: "action=toggle_message_status&id=" + msgId + "&status=" + newStatus
                     })
                     .then(data => {
                         if (data.success) {
-                            location.reload(); // 🚀 reload the page after update
+                            location.reload(); // Refresh after update
                         } else {
-                            alert("❌ Error: ");
-                            location.reload(); // 🚀 reload the page after update
+                            location.reload(); // Refresh after update
 
                         }
                     })
@@ -91,10 +89,12 @@ if (!isset($_SESSION['user_id'])) {
             }
         });
     </script>
+
 </head>
 
 <body>
-    <!-- Side Bar -->
+
+    <!-- Sidebar -->
     <aside id="sidebar" class="sidebar w-64 h-screen fixed bg-[#202020] text-white flex flex-col transition-all border-r border-[#595959]">
 
         <!-- Logo -->
@@ -204,52 +204,64 @@ if (!isset($_SESSION['user_id'])) {
         <!-- User Dashboard Content -->
         <div class="p-8">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">Users Management</h2>
-                <!-- Button to open modal -->
-                <button onclick="openUserModal()"
-                    class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">
-                    + Add New User
-                </button>
+                <h2 class="text-2xl font-bold">Messages</h2>
             </div>
-            <div id="userMessage" class="hidden mb-4 p-2 rounded text-sm"></div>
+            <div id="messageAlert" class="hidden mb-4 p-2 rounded text-sm"></div>
             <div class="overflow-x-auto">
-                <table id="users_table" class="display cell-border stripe hover w-full">
+                <table id="messages_table" class="display cell-border stripe hover w-full">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Picture</th>
-                            <th>Username</th>
+                            <th>Full Name</th>
                             <th>Email</th>
+                            <th>Phone</th>
+                            <th>Subject</th>
+                            <th>Budget</th>
+                            <th>Message</th>
                             <th>Status</th>
                             <th>Created At</th>
-                            <th>Updated At</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $conn = new mysqli("localhost", "root", "", "qonkar_db");
-                        if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
-                        $result = $conn->query("SELECT * FROM users ORDER BY id DESC");
+
+                        $result = $conn->query("SELECT * FROM messages ORDER BY created_at DESC"); // fetch newest first
+
                         while ($row = $result->fetch_assoc()) {
-                            $statusClass = $row['status'] === 'active' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700';
-                            $statusText = ucfirst($row['status']);
+                            $status = $row['status'];
+                            $statusOrder = ($status === 'unread') ? 0 : 1;            // unread -> 0 (comes first)
+                            $createdTs = strtotime($row['created_at']);              // numeric timestamp for reliable sorting
 
-                            $statusBtn = "<button class='status-btn px-3 py-1 rounded text-white $statusClass' 
-                data-id='{$row['id']}' 
-                data-status='{$row['status']}'>$statusText</button>";
+                            $statusClass = $status === 'read'
+                                ? 'bg-green-600 hover:bg-green-700'
+                                : 'bg-yellow-600 hover:bg-yellow-700';
+                            $statusText = ucfirst($status);
 
-                            $picture = !empty($row['picture']) ? $row['picture'] : "../images/default_avatar.png";
+                            $statusBtn = "<button class='status-btn px-3 py-1 rounded text-white {$statusClass}' 
+        data-id='{$row['id']}' data-status='{$row['status']}'>$statusText</button>";
 
-                            echo "<tr>
-                            <td>{$row['id']}</td>
-                            <td><img src='{$picture}' class='w-10 h-10 rounded-full object-cover'></td>
-                            <td>" . htmlspecialchars($row['username']) . "</td>
-                            <td>" . htmlspecialchars($row['email']) . "</td>
-                            <td  >{$statusBtn}</td>
-                            <td>{$row['created_at']}</td>
-                            <td>{$row['updated_at']}</td>
-                          </tr>";
+                            echo "<tr class='message-row cursor-pointer'
+    data-id='{$row['id']}'
+    data-name='" . htmlspecialchars($row['full_name']) . "'
+    data-email='" . htmlspecialchars($row['email']) . "'
+    data-phone='" . htmlspecialchars($row['phone_number']) . "'
+    data-subject='" . htmlspecialchars($row['subject']) . "'
+    data-budget='" . htmlspecialchars($row['budget']) . "'
+    data-message='" . htmlspecialchars($row['message']) . "'
+    data-created='" . htmlspecialchars($row['created_at']) . "'
+    data-status='{$row['status']}'
+>
+    <td>" . intval($row['id']) . "</td>
+    <td>" . htmlspecialchars($row['full_name']) . "</td>
+    <td>" . htmlspecialchars($row['email']) . "</td>
+    <td>" . htmlspecialchars($row['phone_number']) . "</td>
+    <td>" . htmlspecialchars($row['subject']) . "</td>
+    <td>" . htmlspecialchars($row['budget']) . "</td>
+    <td>" . nl2br(htmlspecialchars($row['message'])) . "</td>
+    <td data-order='{$statusOrder}'>" . $statusBtn . "</td>
+    <td data-order='{$createdTs}'>" . htmlspecialchars($row['created_at']) . "</td>
+</tr>";
                         }
                         $conn->close();
                         ?>
@@ -257,93 +269,110 @@ if (!isset($_SESSION['user_id'])) {
                 </table>
             </div>
         </div>
+        <!-- Message Modal -->
+        <div id="messageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-white text-black rounded shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+                <!-- Close button -->
+                <button id="closeModal" class="absolute top-2 right-2 text-gray-600 hover:text-black">&times;</button>
+
+                <h2 class="text-xl font-semibold mb-4">Message Details</h2>
+                <div id="modalContent" class="space-y-2">
+                    <!-- Content will be injected here -->
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
 
-    <!-- User Modal for New Registration -->
-    <div id="userModal"
-        class="fixed inset-0 bg-black/50 flex items-center justify-center hidden transition-opacity duration-300">
-
-        <!-- Modal Content -->
-        <div id="userModalContent"
-            class="bg-[#202020] p-6 rounded-lg shadow-lg w-full max-w-md text-white relative transform transition-all duration-300 scale-95 opacity-0">
-
-            <h2 class="text-xl font-bold mb-4">Register New User</h2>
-            <form id="userForm" method="POST" action="process.php" enctype="multipart/form-data" class="space-y-4">
-                <div>
-                    <label class="block mb-1">Username</label>
-                    <input type="text" name="username" required class="w-full p-2 rounded bg-gray-800 border border-gray-600">
-                </div>
-                <div>
-                    <label class="block mb-1">Email</label>
-                    <input type="email" name="email" required class="w-full p-2 rounded bg-gray-800 border border-gray-600">
-                </div>
-                <div>
-                    <label class="block mb-1">Password</label>
-                    <input type="password" name="password" required class="w-full p-2 rounded bg-gray-800 border border-gray-600">
-                </div>
-                <div>
-                    <label class="block mb-1">Picture</label>
-                    <input type="file" name="picture" accept="image/*" class="w-full p-2 rounded bg-gray-800 border border-gray-600">
-                </div>
-                <div>
-                    <label class="block mb-1">Status</label>
-                    <select name="status" class="w-full p-2 rounded bg-gray-800 border border-gray-600">
-                        <option value="active" selected>Active</option>
-                        <option value="inactive">Inactive</option>
-                    </select>
-                </div>
-                <input type="hidden" name="user" value="new_user">
-
-                <div class="flex justify-end gap-3 mt-4">
-                    <button type="button" class="px-4 py-2 bg-gray-600 rounded">Cancel</button>
-                    <button type="submit" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded">Save</button>
-                </div>
-            </form>
-
-            <!-- Close button -->
-            <button onclick="closeUserModal()" class="absolute top-2 right-2 text-gray-400 hover:text-white">✕</button>
-        </div>
-    </div>
 
 
     <script>
-        //Modal
-        function openUserModal() {
-            const modal = document.getElementById("userModal");
-            const content = document.getElementById("userModalContent");
+        // Message Modal
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("messageModal");
+            const closeModal = document.getElementById("closeModal");
+            const modalContent = document.getElementById("modalContent");
 
-            modal.classList.remove("hidden");
+            // When row clicked
+            document.querySelectorAll(".message-row").forEach(row => {
+                row.addEventListener("click", function() {
+                    const id = this.dataset.id;
+                    const name = this.dataset.name;
+                    const email = this.dataset.email;
+                    const phone = this.dataset.phone;
+                    const subject = this.dataset.subject;
+                    const budget = this.dataset.budget;
+                    const message = this.dataset.message;
+                    const created = this.dataset.created;
+                    const status = this.dataset.status;
 
-            setTimeout(() => {
-                content.classList.remove("opacity-0", "scale-95");
-                content.classList.add("opacity-100", "scale-100");
-            }, 50);
-        }
+                    modalContent.innerHTML = `
+                <p><strong>ID:</strong> ${id}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Subject:</strong> ${subject}</p>
+                <p><strong>Budget:</strong> ${budget}</p>
+                <p><strong>Message:</strong><br>${message}</p>
+                <p><strong>Status:</strong> ${status}</p>
+            `;
 
-        function closeUserModal() {
-            const modal = document.getElementById("userModal");
-            const content = document.getElementById("userModalContent");
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
 
-            content.classList.remove("opacity-100", "scale-100");
-            content.classList.add("opacity-0", "scale-95");
+                    // Optional: Ajax call to mark as "read"
+                    if (status === "unread") {
+                        fetch("mark_read.php", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/x-www-form-urlencoded"
+                            },
+                            body: "id=" + id
+                        });
+                        this.dataset.status = "read"; // update local row data
+                    }
+                });
+            });
 
-            setTimeout(() => {
+            // Close modal
+            closeModal.addEventListener("click", () => {
                 modal.classList.add("hidden");
-            }, 300); // match duration-300
-        }
+                modal.classList.remove("flex");
+            });
 
-
+            // Close when clicking outside content
+            modal.addEventListener("click", e => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                }
+            });
+        });
         // Data Table
         $(document).ready(function() {
-            $('#users_table').DataTable({
-                "pageLength": 5,
-                "order": [
+            $('#messages_table').DataTable({
+                responsive: true,
+                pageLength: 10,
+                order: [
                     [0, "desc"]
+                ], // Sort by ID (latest first)
+                columnDefs: [{
+                        targets: [6],
+                        orderable: false
+                    }, // Disable sorting for "Message"
+                    {
+                        targets: [7],
+                        orderable: false
+                    } // Disable sorting for "Status"
                 ],
-                "language": {
-                    "search": "Search Users:",
-                    "lengthMenu": "Show _MENU_ entries"
+                language: {
+                    search: "🔍 Search:",
+                    lengthMenu: "Show _MENU_ entries per page",
+                    info: "Showing _START_ to _END_ of _TOTAL_ messages",
+                    infoEmpty: "No messages available",
+                    zeroRecords: "No matching messages found"
                 }
             });
         });

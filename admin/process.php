@@ -91,4 +91,26 @@
             echo json_encode(["success" => false, "error" => $conn->error]);
         }
         exit;
-    }
+    } else // Toggle Job Application Status
+        if (isset($_POST['action']) && $_POST['action'] === "update_application_status") {
+            $id = intval($_POST['id']);
+            $status = $_POST['status'];
+
+            $allowed = ['shortlist', 'reject']; // only valid updates
+            if (!in_array($status, $allowed)) {
+                echo json_encode(["success" => false, "error" => "Invalid status"]);
+                exit;
+            }
+
+            $stmt = $conn->prepare("UPDATE job_applications SET status = ? WHERE id = ?");
+            $stmt->bind_param("si", $status, $id);
+
+            if ($stmt->execute()) {
+                echo json_encode(["success" => true]);
+            } else {
+                echo json_encode(["success" => false, "error" => $conn->error]);
+            }
+
+            $stmt->close();
+            exit();
+        }

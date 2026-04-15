@@ -1,23 +1,12 @@
 <?php
-// DEBUG (remove in production)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+require_once 'db-path.php';
+require_once ADMIN_URL . '/database_config.php';
+
 header('Content-Type: application/json; charset=utf-8');
 
-// Use composer autoload if possible (recommended)
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
-} else {
-    // Fallback if you didn't use composer -- make sure these paths are correct
-    require __DIR__ . '/PHPMailer/src/Exception.php';
-    require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-    require __DIR__ . '/PHPMailer/src/SMTP.php';
-}
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception as PHPMailerException;
+// Production Error Handling
+ini_set('display_errors', 0);
+error_reporting(0);
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -39,50 +28,49 @@ if ($name === '' || $email === '' || $message === '') {
     exit;
 }
 
-try {
-    // DB connection - use env vars in production
-    $dbHost = getenv('DB_HOST') ?: 'localhost';
-    $dbName = getenv('DB_NAME') ?: 'contact_from_db';
-    $dbUser = getenv('DB_USER') ?: 'root';
-    $dbPass = getenv('DB_PASS') ?: '';
+// 4. Database Insert (Unified MySQLi)
+$stmt = $conn->prepare("
+    INSERT INTO messages (full_name, email, phone_number, subject, budget, message)
+    VALUES (?, ?, ?, ?, ?, ?)
+");
 
-//    $pdo = new PDO("mysql:host={$dbHost};dbname={$dbName};charset=utf8", $dbUser, $dbPass); // For the Local System
-    $pdo = new PDO(
-    "mysql:host=localhost;dbname=u870396814_qonkar;charset=utf8", "u870396814_qonkar","01_Qonkar_tech"); // For Hostisnger
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if (!$stmt) {
+     http_response_code(500);
+     echo json_encode(['error' => 'System error. Please try again later.']);
+     exit;
+}
 
-    $stmt = $pdo->prepare("
-        INSERT INTO messages (full_name, email, phone_number, subject, budget, message)
-        VALUES (:name, :email, :phone, :subject, :budget, :message)
-    ");
-    $stmt->execute([
-        ':name' => $name,
-        ':email' => $email,
-        ':phone' => $phone,
-        ':subject' => $subject,
-        ':budget' => $budget,
-        ':message' => $message
-    ]);
+$stmt->bind_param("ssssss", $name, $email, $phone, $subject, $budget, $message);
 
-} catch (PDOException $e) {
+if (!$stmt->execute()) {
     http_response_code(500);
-    echo json_encode(['error' => 'Database error', 'detail' => $e->getMessage()]);
+    echo json_encode(['error' => 'Database error. Your request could not be saved at this time.']);
     exit;
 }
 
-// Email sending
+// 5. PHPMailer Inclusion (Unified with other scripts)
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+} else {
+    require __DIR__ . '/PHPMailer/src/Exception.php';
+    require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+    require __DIR__ . '/PHPMailer/src/SMTP.php';
+}
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
+
+// 6. Email sending
 try {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host       = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = getenv('SMTP_USER') ?: 'huzaifaharis415@gmail.com'; // replace with env var
-    $mail->Password   = getenv('SMTP_PASS') ?: 'apmgxtyxeuhdsnho';          // replace with env var
+    $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
+    $mail->Password   = 'lupzifxtcclmvwgr';          
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = getenv('SMTP_PORT') ?: 587;
-
-    // Optional debug (comment out in production)
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->Port       = 587;
 
     $mail->setFrom($mail->Username, 'Qonkar Technologies');
     $mail->addReplyTo($mail->Username, 'Qonkar Technologies');
@@ -91,13 +79,13 @@ try {
     $mail->addAddress($email, $name);
 
     // also send copy to admin
-    $adminEmail = getenv('ADMIN_EMAIL') ?: 'huzaifaharis773@gmail.com';
+    $adminEmail = 'devmuhammadarslan@gmail.com';
     $mail->addAddress($adminEmail, 'Qonkar Technologies');
 
     $mail->Subject = "Thank you for contacting Qonkar Technologies";
     $mail->isHTML(true);
 
-   $mail->Body = "
+    $mail->Body = "
     <div style='font-family: Arial, sans-serif; color: #333; line-height:1.6;'>
         <h2 style='color:#0d6efd;'>Thank you for contacting Qonkar Technologies</h2>
         <p>Hi <strong>{$name}</strong>,</p>
@@ -141,19 +129,17 @@ try {
     </div>
 ";
 
-
     $mail->send();
 
     http_response_code(200);
-    echo json_encode(['success' => true, 'message' => "Thank you, {$name}! Your message has been received and we’ve sent a confirmation email."]);
+    echo json_encode(['success' => true, 'message' => "Thank you, {$name}! Your message has been received."]);
     exit;
-
 } catch (PHPMailerException $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Mailer error', 'detail' => $e->getMessage()]);
+    echo json_encode(['error' => 'Message could not be sent.']);
     exit;
 } catch (\Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Server error', 'detail' => $e->getMessage()]);
+    echo json_encode(['error' => 'An internal server error occurred.']);
     exit;
 }

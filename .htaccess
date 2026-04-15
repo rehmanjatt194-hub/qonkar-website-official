@@ -1,6 +1,41 @@
-Options -MultiViews
+# --- SECTION 0: BASIC SETUP ---
+ErrorDocument 404 /404.php
+Options -Indexes -MultiViews
 RewriteEngine On
+RewriteBase /
 
-# Remove .html extension
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+# --- SECTION 1: EXTERNAL REDIRECTS (Consolidated) ---
+# 1. Force HTTPS, No-WWW, and Strip .php in one pass
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://qonkar.com/$1 [L,R=301,NE]
+
+# 2. Redirect index.php and home to root
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(index\.php|home|index)(\s|\?) [NC]
+RewriteRule ^ / [R=301,L]
+
+# 3. Clean .php extension (Preventing loops)
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{REQUEST_URI} !^/system-core-portal-admin-dashboard/
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# --- SECTION 2: INTERNAL REWRITES ---
+# 4. Explicit rule for Portfolio (Prevents loops/404)
+RewriteRule ^portfolio$ portfolio.php [L]
+
+# 5. Blog & Job Slugs
+RewriteRule ^blog/([^/]+)/?$ blog-details.php?slug=$1 [L,QSA]
+RewriteRule ^apply/([^/]+)/?$ apply-job.php?slug=$1 [L,QSA]
+
+# 6. Specific rule for Services
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/services/$1.php -f
+RewriteRule ^services/(.*)$ services/$1.php [L]
+
+# 7. Global Clean URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+)$ $1.php [L]

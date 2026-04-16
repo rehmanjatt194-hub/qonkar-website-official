@@ -7,17 +7,6 @@ ini_set('display_errors', 0);
 error_reporting(0);
 
 // Load PHPMailer classes
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
-} else {
-    require __DIR__ . '/PHPMailer/src/Exception.php';
-    require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-    require __DIR__ . '/PHPMailer/src/SMTP.php';
-}
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception as PHPMailerException;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 1. Collect and Sanitize Data
@@ -68,30 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     if ($stmt->execute()) {
-        try {
-            $mail = new PHPMailer(true);
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'qonkartechnologiespvtltd@gmail.com';
-            $mail->Password   = 'lupzifxtcclmvwgr'; 
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
-
-            $mail->setFrom($mail->Username, 'Qonkar Technologies');
-            $mail->addReplyTo($mail->Username, 'Qonkar Technologies');
-            $mail->addAddress($email, $name);
-            $mail->addAddress('devmuhammadarslan@gmail.com', 'Admin Notification');
-
-            $mail->Subject = "Job Application Received: Qonkar Technologies";
-            $mail->isHTML(true);
-            $mail->Body = "<div style='font-family: Arial, sans-serif; color: #333;'>
-                <h2 style='color:#067888;'>Application Received</h2>
-                <p>Hi {$name}, thank you for applying. We have received your application and will review it soon.</p>
-            </div>";
-            $mail->send();
-        } catch (Exception $e) { error_log("Mail Error: " . $e->getMessage()); }
-
         echo "<script>alert('✅ Application submitted successfully!'); window.location='apply-job.php';</script>";
     } else {
         error_log("Database Error: " . $stmt->error);

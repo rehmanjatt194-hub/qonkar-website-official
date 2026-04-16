@@ -64,6 +64,12 @@ use PHPMailer\PHPMailer\Exception as PHPMailerException;
 // 6. Email sending
 try {
     $mail = new PHPMailer(true);
+    
+    // SMTP Debugging
+    $mail->SMTPDebug = 2; // Enable verbose debug output
+    // PHPMailer's SMTPDebug echoes directly. We'll need to catch it if we want clean JSON, 
+    // but the user wants to see it on screen, so we'll let it echo.
+
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
@@ -72,8 +78,16 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
+    // SSL Verification Options
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
+
     // Sender and Reply-To
-    // Note: Gmail requires the 'From' address to match the authenticated account.
     $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Qonkar Website Contact Form');
     $mail->addReplyTo($email, $name);
 

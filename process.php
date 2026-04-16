@@ -68,22 +68,9 @@ try {
     // SMTP Debugging (Set to 0 for production)
     $mail->SMTPDebug = 0; 
 
-    $mail->isSMTP();
-    $mail->Host       = 'mail.qonkar.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'hr@qonkar.com'; 
-    $mail->Password   = 'Qonkar3972@';          
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    // SSL Verification Options (Bypass for local certificate issues)
-    $mail->SMTPOptions = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-        )
-    );
+    // Use Local Sendmail instead of SMTP
+    $mail->isSendmail();
+    // (SMTP settings like Host, Username, etc. are ignored when using isSendmail)
 
     // Sender and Reply-To
     $mail->setFrom('hr@qonkar.com', 'Qonkar Website Contact Form');

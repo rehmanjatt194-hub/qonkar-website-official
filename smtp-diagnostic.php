@@ -16,6 +16,22 @@ echo "<h2>1. Server Environment</h2>";
 $allow_url_fopen = ini_get('allow_url_fopen');
 echo "allow_url_fopen: " . ($allow_url_fopen ? "<span style='color:green;'>ENABLED</span>" : "<span style='color:red;'>DISABLED</span>") . "<br>";
 
+$sendmail_path = ini_get('sendmail_path');
+echo "sendmail_path: " . ($sendmail_path ? "<span style='color:green;'>$sendmail_path</span>" : "<span style='color:red;'>NOT CONFIGURED</span>") . "<br>";
+
+// 1b. Test Native mail()
+echo "<h2>1b. Native mail() Test</h2>";
+$to = 'mowaisrehmani@gmail.com';
+$subject = 'Native mail() Test';
+$message = 'Testing native PHP mail() function.';
+$headers = 'From: hr@qonkar.com' . "\r\n" . 'Reply-To: hr@qonkar.com' . "\r\n";
+
+if (@mail($to, $subject, $message, $headers)) {
+    echo "<span style='color:green;'>SUCCESS:</span> Native mail() function reported success.<br>";
+} else {
+    echo "<span style='color:red;'>FAILED:</span> Native mail() function returned false.<br>";
+}
+
 // 2. Check Port 587 Connection
 echo "<h2>2. Port 587 Connection Test</h2>";
 $host = 'smtp.gmail.com';

@@ -19,7 +19,7 @@ echo "allow_url_fopen: " . ($allow_url_fopen ? "<span style='color:green;'>ENABL
 // 2. Check Port 587 Connection
 echo "<h2>2. Port 587 Connection Test</h2>";
 $host = 'smtp.gmail.com';
-$port = 587;
+$port = 465;
 $timeout = 5;
 
 $connection = @fsockopen($host, $port, $errno, $errstr, $timeout);
@@ -31,7 +31,7 @@ if ($connection) {
     echo "<span style='color:red;'>FAILED:</span> Could not connect to $host on port $port.<br>";
     echo "Error Number: $errno<br>";
     echo "Error Message: $errstr<br>";
-    echo "<em>Note: If this fails, your hosting provider is likely blocking outgoing connections on port 587.</em><br>";
+    echo "<em>Note: If this fails, your hosting provider is likely blocking outgoing connections on port 465.</em><br>";
 }
 
 // 3. PHPMailer Full Debug Test
@@ -63,8 +63,8 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
     $mail->Password   = 'mpac iiuj uicf naqs'; 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
     // SSL Options (Bypass cert verification)
     $mail->SMTPOptions = array(

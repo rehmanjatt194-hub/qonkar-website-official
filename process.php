@@ -75,8 +75,8 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
     $mail->Password   = 'mpac iiuj uicf naqs';          
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
     // SSL Verification Options
     $mail->SMTPOptions = array(

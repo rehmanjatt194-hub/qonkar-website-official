@@ -64,72 +64,68 @@ use PHPMailer\PHPMailer\Exception as PHPMailerException;
 // 6. Email sending
 try {
     $mail = new PHPMailer(true);
-    
-    // SMTP Debugging (Set to 0 for production)
-    $mail->SMTPDebug = 0; 
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
+    $mail->Password   = 'lupzifxtcclmvwgr';          
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-    // Use Local Sendmail instead of SMTP
-    $mail->isSendmail();
-    // (SMTP settings like Host, Username, etc. are ignored when using isSendmail)
+    $mail->setFrom($mail->Username, 'Qonkar Technologies');
+    $mail->addReplyTo($mail->Username, 'Qonkar Technologies');
 
-    // Sender and Reply-To
-    $mail->setFrom('hr@qonkar.com', 'Qonkar Website Contact Form');
-    $mail->addReplyTo($email, $name);
+    // send to the submitter
+    $mail->addAddress($email, $name);
 
-    // Recipients
-    $mail->addAddress('mowaisrehmani@gmail.com', 'M. Owais Rehmani (CEO)');
-    $mail->addCC('rehmanjatt194@gmail.com', 'HR');
-    $mail->addCC('m.arslanarain786@gmail.com', 'COO');
+    // also send copy to admin
+    $adminEmail = 'devmuhammadarslan@gmail.com';
+    $mail->addAddress($adminEmail, 'Qonkar Technologies');
 
-    // Content
+    $mail->Subject = "Thank you for contacting Qonkar Technologies";
     $mail->isHTML(true);
-    $mail->Subject = "Urgent: New Client Inquiry from $name";
 
-    // Clean HTML Template
     $mail->Body = "
-    <div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; color: #333;'>
-        <div style='background-color: #0d1117; padding: 20px; text-align: center; color: #ffffff;'>
-            <h1 style='margin: 0; font-size: 24px;'>New Client Inquiry</h1>
-            <p style='margin: 5px 0 0; opacity: 0.8;'>Qonkar Technologies Notification System</p>
-        </div>
-        <div style='padding: 30px; background-color: #ffffff;'>
-            <p style='font-size: 16px; line-height: 1.5;'>You have received a new message from the contact form on your website. Details are as follows:</p>
-            
-            <table style='width: 100%; border-collapse: collapse; margin-top: 20px;'>
-                <tr>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0; font-weight: bold; width: 30%;'>Client Name:</td>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0;'>{$name}</td>
-                </tr>
-                <tr>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0; font-weight: bold;'>Email Address:</td>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0;'><a href='mailto:{$email}' style='color: #007bff; text-decoration: none;'>{$email}</a></td>
-                </tr>
-                <tr>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0; font-weight: bold;'>Phone Number:</td>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0;'>{$phone}</td>
-                </tr>
-                <tr>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0; font-weight: bold;'>Subject:</td>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0;'>{$subject}</td>
-                </tr>
-                <tr>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0; font-weight: bold;'>Project Budget:</td>
-                    <td style='padding: 10px; border-bottom: 1px solid #f0f0f0;'>{$budget}</td>
-                </tr>
-            </table>
+    <div style='font-family: Arial, sans-serif; color: #333; line-height:1.6;'>
+        <h2 style='color:#0d6efd;'>Thank you for contacting Qonkar Technologies</h2>
+        <p>Hi <strong>{$name}</strong>,</p>
+        <p>We have received your message and will get back to you shortly.  
+        Here are the details you submitted:</p>
+        
+        <table style='width:100%; border-collapse: collapse;'>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Full Name</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$name}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Email</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$email}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Phone</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$phone}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Subject</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$subject}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Budget</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$budget}</td>
+            </tr>
+            <tr>
+                <td style='border:1px solid #ddd; padding:8px;'><strong>Message</strong></td>
+                <td style='border:1px solid #ddd; padding:8px;'>{$message}</td>
+            </tr>
+        </table>
 
-            <div style='margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-left: 4px solid #0d1117;'>
-                <h3 style='margin-top: 0; font-size: 18px;'>Client Message:</h3>
-                <p style='font-style: italic; white-space: pre-wrap;'>{$message}</p>
-            </div>
+        <p style='margin-top:20px;'>We appreciate you reaching out to us.  
+        Our team will review your request and respond as soon as possible.</p>
 
-            <div style='margin-top: 30px; text-align: center;'>
-                <a href='mailto:{$email}' style='display: inline-block; padding: 12px 25px; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 5px; font-weight: bold;'>Reply Directly to Client</a>
-            </div>
-        </div>
-        <div style='background-color: #f4f4f4; padding: 15px; text-align: center; font-size: 12px; color: #777;'>
-            This is an automated notification from the Qonkar Technologies website.
-        </div>
+        <p style='margin-top:20px;'>
+            Best regards,<br>
+            <strong>Qonkar Technologies Team</strong>
+        </p>
     </div>
 ";
 
@@ -140,10 +136,10 @@ try {
     exit;
 } catch (PHPMailerException $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo]);
+    echo json_encode(['error' => 'Message could not be sent.']);
     exit;
 } catch (\Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'An internal server error occurred. Error: ' . $e->getMessage()]);
+    echo json_encode(['error' => 'An internal server error occurred.']);
     exit;
 }

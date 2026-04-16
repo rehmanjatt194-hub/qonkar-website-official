@@ -65,20 +65,18 @@ use PHPMailer\PHPMailer\Exception as PHPMailerException;
 try {
     $mail = new PHPMailer(true);
     
-    // SMTP Debugging
-    $mail->SMTPDebug = 2; // Enable verbose debug output
-    // PHPMailer's SMTPDebug echoes directly. We'll need to catch it if we want clean JSON, 
-    // but the user wants to see it on screen, so we'll let it echo.
+    // SMTP Debugging (Set to 0 for production)
+    $mail->SMTPDebug = 0; 
 
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+    $mail->Host       = 'mail.qonkar.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
-    $mail->Password   = 'mpac iiuj uicf naqs';          
+    $mail->Username   = 'hr@qonkar.com'; 
+    $mail->Password   = 'Qonkar3972@';          
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
-    // SSL Verification Options
+    // SSL Verification Options (Bypass for local certificate issues)
     $mail->SMTPOptions = array(
         'ssl' => array(
             'verify_peer' => false,
@@ -88,7 +86,7 @@ try {
     );
 
     // Sender and Reply-To
-    $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Qonkar Website Contact Form');
+    $mail->setFrom('hr@qonkar.com', 'Qonkar Website Contact Form');
     $mail->addReplyTo($email, $name);
 
     // Recipients

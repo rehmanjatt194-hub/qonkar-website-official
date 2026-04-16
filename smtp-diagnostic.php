@@ -59,10 +59,10 @@ try {
     
     // Server settings
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+    $mail->Host       = 'mail.qonkar.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
-    $mail->Password   = 'mpac iiuj uicf naqs'; 
+    $mail->Username   = 'hr@qonkar.com'; 
+    $mail->Password   = 'Qonkar3972@'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
@@ -76,7 +76,7 @@ try {
     );
 
     // Recipients
-    $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Diagnostic Test');
+    $mail->setFrom('hr@qonkar.com', 'Diagnostic Test');
     $mail->addAddress('mowaisrehmani@gmail.com', 'M. Owais Rehmani (CEO)');
 
     // Content

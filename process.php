@@ -67,14 +67,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'Qonkar_mail'; 
-    $mail->Password   = 'hdhc yfdc ntnf ukze';          
+    $mail->Username   = 'qonkartechnologiespvtltd@gmail.com'; 
+    $mail->Password   = 'mpac iiuj uicf naqs';          
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Sender and Reply-To
-    // Note: Gmail often requires the 'From' address to be the same as the authenticated user.
-    // However, we will set Reply-To to the client's email so leadership can reply directly.
+    // Note: Gmail requires the 'From' address to match the authenticated account.
     $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Qonkar Website Contact Form');
     $mail->addReplyTo($email, $name);
 
@@ -142,10 +141,10 @@ try {
     exit;
 } catch (PHPMailerException $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Message could not be sent.']);
+    echo json_encode(['error' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo]);
     exit;
 } catch (\Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'An internal server error occurred.']);
+    echo json_encode(['error' => 'An internal server error occurred. Error: ' . $e->getMessage()]);
     exit;
 }

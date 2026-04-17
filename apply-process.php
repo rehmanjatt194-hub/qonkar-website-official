@@ -57,6 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
 
+
+        /*
         // ── Silent email notification (fire-and-forget) ───────────────────────
         // @ suppresses any error if hosting blocks mail() — DB save already done.
         $to         = 'mowaisrehmani@gmail.com';
@@ -78,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         @mail($to, $mailSubject, $mailBody, $headers);
         // ─────────────────────────────────────────────────────────────────────
+        */
 
         echo "<script>alert('✅ Application submitted successfully!'); window.location='/career';</script>";
 

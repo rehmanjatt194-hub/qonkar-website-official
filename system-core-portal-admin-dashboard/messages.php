@@ -364,6 +364,7 @@ if (!isset($_SESSION['user_id'])) {
             $('#messages_table').DataTable({
                 responsive: true,
                 pageLength: 10,
+                lengthMenu: [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
                 order: [
                     [0, "desc"]
                 ], // Sort by ID (latest first)
@@ -377,8 +378,8 @@ if (!isset($_SESSION['user_id'])) {
                     } // Disable sorting for "Status"
                 ],
                 language: {
-                    search: "🔍 Search:",
-                    lengthMenu: "Show _MENU_ entries per page",
+                    search: "🔍 Search Messages:",
+                    lengthMenu: "Show _MENU_ entries",
                     info: "Showing _START_ to _END_ of _TOTAL_ messages",
                     infoEmpty: "No messages available",
                     zeroRecords: "No matching messages found"

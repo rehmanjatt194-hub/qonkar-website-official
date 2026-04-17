@@ -345,12 +345,13 @@ if (!isset($_SESSION['user_id'])) {
         // Data Table
         $(document).ready(function() {
             $('#users_table').DataTable({
-                "pageLength": 5,
+                "pageLength": 10,
+                "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
                 "order": [
                     [0, "desc"]
                 ],
                 "language": {
-                    "search": "Search Users:",
+                    "search": "🔍 Search Users:",
                     "lengthMenu": "Show _MENU_ entries"
                 }
             });

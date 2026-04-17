@@ -375,7 +375,8 @@ if (!isset($_SESSION['user_id'])) {
         });
         $(document).ready(function() {
             $('#applications_table').DataTable({
-                "pageLength": 5,
+                "pageLength": 10,
+                "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
                 "order": [
                     [0, "desc"]
                 ],
@@ -383,7 +384,7 @@ if (!isset($_SESSION['user_id'])) {
                     "search": "Search Applications:",
                     "lengthMenu": "Show _MENU_ entries"
                 },
-                dom: 'Bfrtip', // enable buttons section
+                dom: 'Blfrtip', // Added 'l' to show length menu
                 buttons: [{
                     extend: 'csv',
                     text: '⬇ Download CSV',

@@ -243,7 +243,15 @@ if (!isset($_SESSION['user_id'])) {
     <script src="https://cdn.tiny.cloud/1/ryvk1usfyqderw2txs0dou9amtl85uai8kcrcsdrksjhv432/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            $('#jobs_table').DataTable({ "order": [[0, "desc"]] });
+            $('#jobs_table').DataTable({ 
+                "pageLength": 10,
+                "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
+                "order": [[0, "desc"]],
+                "language": {
+                    "search": "🔍 Search Jobs:",
+                    "lengthMenu": "Show _MENU_ entries"
+                }
+            });
             tinymce.init({ selector: 'textarea#job_description', menubar: false });
             feather.replace();
 

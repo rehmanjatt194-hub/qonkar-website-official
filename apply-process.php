@@ -15,7 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email          = $conn->real_escape_string($_POST['email'] ?? '');
     $phone_number   = $conn->real_escape_string($_POST['phone_number'] ?? '');
     $country        = $conn->real_escape_string($_POST['country'] ?? '');
+    $state          = $conn->real_escape_string($_POST['state'] ?? '');
     $city           = $conn->real_escape_string($_POST['city'] ?? '');
+    
+    // Combine state and city for storage if state is provided
+    $display_city   = !empty($state) ? "$city, $state" : $city;
+
     $job_id         = intval($_POST['job_post'] ?? 0);
     $portfolio_link = $conn->real_escape_string($_POST['portfolio_link'] ?? '');
     $linkedin       = $conn->real_escape_string($_POST['linkedin'] ?? '');
@@ -56,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ");
 
     $stmt->bind_param("sssssissss",
-        $name, $email, $phone_number, $country, $city,
+        $name, $email, $phone_number, $country, $display_city,
         $job_id, $resumePath, $portfolio_link, $linkedin, $message_text
     );
 

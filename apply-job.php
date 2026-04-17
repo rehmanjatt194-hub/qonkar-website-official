@@ -191,11 +191,23 @@ if (!empty($job_slug)) {
       html {
         scroll-behavior: smooth;
       }
+      /* Loading Overlay Style */
+      #loaderOverlay {
+          transition: opacity 0.3s ease-in-out;
+      }
     </style>
     
 </head>
 
 <body>
+
+<!-- Screen Loader Overlay -->
+<div id="loaderOverlay" class="fixed inset-0 z-[100] hidden opacity-0 flex items-center justify-center bg-black/70 backdrop-blur-sm pointer-events-none">
+    <div class="flex flex-col items-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[var(--secondary-color)]"></div>
+        <p class="text-white mt-4 font-medium">Submitting application...</p>
+    </div>
+</div>
 
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
@@ -361,7 +373,7 @@ if (!empty($job_slug)) {
                 <h2 class="text-3xl text-center mb-6">Job Application Form</h2>
             <?php endif; ?>
 
-<form action="/apply-process" method="POST" enctype="multipart/form-data" class="space-y-6">
+<form id="jobApplicationForm" action="/apply-process" method="POST" enctype="multipart/form-data" class="space-y-6">
     <?php if ($selected_job_id > 0): ?>
         <input type="hidden" name="job_id" value="<?php echo $selected_job_id; ?>">
     <?php endif; ?>
@@ -676,6 +688,44 @@ if (!empty($job_slug)) {
             await fetchAllCountries();
             countrySelect.addEventListener('change', (e) => populateCitiesFor(e.target.value));
         })();
+    </script>
+
+    <script>
+        document.getElementById('jobApplicationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const loader = document.getElementById('loaderOverlay');
+            loader.classList.remove('hidden');
+            setTimeout(() => loader.classList.remove('opacity-0'), 10);
+            loader.classList.add('pointer-events-auto');
+
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch('/apply-process.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert('✅ ' + data.message);
+                    window.location.href = '/career';
+                } else {
+                    alert('❌ ' + (data.error || 'Failed to submit application.'));
+                    loader.classList.add('opacity-0');
+                    setTimeout(() => loader.classList.add('hidden'), 300);
+                    loader.classList.remove('pointer-events-auto');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('❌ A network error occurred. Please try again.');
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.classList.add('hidden'), 300);
+                loader.classList.remove('pointer-events-auto');
+            }
+        });
     </script>
 
     <script src="/script/navbar.js"></script>

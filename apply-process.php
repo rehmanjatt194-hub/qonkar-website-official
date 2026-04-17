@@ -2,6 +2,8 @@
 require_once 'db-path.php';
 require_once ADMIN_URL . '/database_config.php';
 
+header('Content-Type: application/json; charset=utf-8');
+
 // Production Error Handling
 ini_set('display_errors', 0);
 error_reporting(0);
@@ -21,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // 2. Validation
     if ($job_id <= 0) {
-        echo "<script>alert('❌ Please select a job position.'); window.history.back();</script>";
+        http_response_code(400);
+        echo json_encode(['error' => 'Please select a job position.']);
         exit;
     }
 
@@ -31,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $ext     = strtolower(pathinfo($_FILES['resume']['name'], PATHINFO_EXTENSION));
         $allowed = ['pdf', 'doc', 'docx'];
         if (!in_array($ext, $allowed)) {
-            echo "<script>alert('❌ Invalid file type. PDF, DOC, and DOCX only.'); window.history.back();</script>";
+            http_response_code(400);
+            echo json_encode(['error' => 'Invalid file type. PDF, DOC, and DOCX only.']);
             exit;
         }
         $resumeDir = 'uploads/resumes/';
@@ -39,7 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $resumePath = $resumeDir . uniqid('resume_') . '.' . $ext;
         move_uploaded_file($_FILES['resume']['tmp_name'], $resumePath);
     } else {
-        echo "<script>alert('❌ Resume is required.'); window.history.back();</script>";
+        http_response_code(400);
+        echo json_encode(['error' => 'Resume is required.']);
         exit;
     }
 
@@ -56,40 +61,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     if ($stmt->execute()) {
-
-
-        /*
-        // ── Silent email notification (fire-and-forget) ───────────────────────
-        // @ suppresses any error if hosting blocks mail() — DB save already done.
-        $to         = 'mowaisrehmani@gmail.com';
-        $mailSubject = "New Job Application from {$name}";
-        $mailBody   = "A new job application has been submitted:\n\n"
-                    . "Name:      {$name}\n"
-                    . "Email:     {$email}\n"
-                    . "Phone:     {$phone_number}\n"
-                    . "Country:   {$country}\n"
-                    . "City:      {$city}\n"
-                    . "Job ID:    {$job_id}\n"
-                    . "Portfolio: {$portfolio_link}\n"
-                    . "LinkedIn:  {$linkedin}\n\n"
-                    . "Message:\n{$message_text}\n\n"
-                    . "Resume: {$resumePath}\n";
-        $headers    = "From: noreply@qonkar.com\r\n"
-                    . "Reply-To: {$email}\r\n"
-                    . "X-Mailer: PHP/" . PHP_VERSION;
-
-        @mail($to, $mailSubject, $mailBody, $headers);
-        // ─────────────────────────────────────────────────────────────────────
-        */
-
-        echo "<script>alert('✅ Application submitted successfully!'); window.location='/career';</script>";
-
+        echo json_encode(['success' => true, 'message' => 'Application submitted successfully!']);
     } else {
         error_log("Database Error: " . $stmt->error);
-        echo "<script>alert('❌ A technical error occurred. Please try again later.'); window.history.back();</script>";
+        http_response_code(500);
+        echo json_encode(['error' => 'A technical error occurred while saving your application.']);
     }
 
     $stmt->close();
+} else {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
 }
 
 $conn->close();

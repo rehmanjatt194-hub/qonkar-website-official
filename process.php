@@ -78,9 +78,9 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'qonkartechnologiespvtltd@gmail.com';
-    $mail->Password = 'enpuhcufdrodtwuz';
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Username = 'rehmanjatt194@gmail.com';
+    $mail->Password = 'bgtqzsutqprpskek';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL for Port 465
     $mail->Port = 465;
     $mail->Timeout = 60; // seconds
     $mail->SMTPOptions = array(
@@ -98,14 +98,14 @@ try {
         $debugLog .= $str . "\n";
     };
 
-    $mail->setFrom($mail->Username, 'Qonkar Technologies');
-    $mail->addReplyTo($mail->Username, 'Qonkar Technologies');
+    $mail->setFrom('rehmanjatt194@gmail.com', 'Qonkar Technologies');
+    $mail->addReplyTo('rehmanjatt194@gmail.com', 'Qonkar Technologies');
 
     // send to the submitter
     $mail->addAddress($email, $name);
 
     // also send copy to admin
-    $adminEmail = 'mowaisrehmani@gmail.com';
+    $adminEmail = 'rehmanjatt194@gmail.com';
     $mail->addAddress($adminEmail, 'Qonkar Technologies Admin');
 
     $mail->Subject = "Thank you for contacting Qonkar Technologies";
@@ -163,7 +163,7 @@ try {
     exit;
 } catch (PHPMailerException $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Mailer error', 'detail' => $e->getMessage(), 'debug' => $debugLog]);
+    echo json_encode(['error' => 'Mailer error', 'detail' => $mail->ErrorInfo, 'debug' => $debugLog]);
     exit;
 } catch (\Exception $e) {
     http_response_code(500);

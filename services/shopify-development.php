@@ -461,6 +461,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                     <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance"
                         class="h-8 object-contain" />
                     <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
+                    <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
 
                     <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-8 object-contain" />
                     <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-8 object-contain" />
@@ -473,6 +474,17 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                         class="w-20 object-contain" />
                     <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan"
                         class="w-20 object-contain" />
+                    <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner"
+                        class="h-8 object-contain" />
+                    <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
+                        class="h-8 object-contain" />
+                    <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation"
+                        class="w-14 object-contain" />
+                    <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
+                    <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance"
+                        class="h-8 object-contain" />
+                    <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
+                    <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
                     <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner"
                         class="h-8 object-contain" />
                     <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
@@ -1585,10 +1597,8 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
 
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-
-
-
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                    
                     <div class="flex flex-col md:items-start md:text-left mb-8">
                         <h2 class="text-xl font-bold mb-2">Location</h2>
                         <div class="flex flex-wrap justify-start gap-4 font-light">
@@ -1605,22 +1615,31 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                             <p class="break-all">info@qonkar.com</p>
                         </div>
                     </div>
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                        <div class="flex items-center space-x-18 gap-10 ">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board"
-                                    class="w-14 object-contain" />
-                            </a>
 
-                            <a href="https://www.secp.gov.pk/" target="_blank">
-                                <img src="/images/company-logos/SECP.webp"
-                                    alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                            </a>
+                    <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-20">
+                        <div class="flex flex-col md:items-start md:text-left mb-8">
+                            <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                            <div class="flex items-center gap-10 h-20">
+                                <a href="https://techdestination.com/" target="_blank">
+                                    <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                                </a>
+                                
+                                <a href="https://www.secp.gov.pk/" target="_blank">
+                                    <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                                </a>
+                            </div>
                         </div>
 
+                        <div class="flex flex-col md:items-start md:text-left mb-8">
+                            <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                            <div class="flex items-center h-20">
+                                <a href="https://techdestination.com/" target="_blank">
+                                    <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
+                
                 </div>
 
                 <div

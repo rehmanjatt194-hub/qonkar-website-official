@@ -1569,90 +1569,135 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                         <h3 class="font-bold text-lg mb-4">Trusted by</h3>
                         <ul class="space-y-2 text-sm font-light">
                             <li>
-                                <a href="https://www.microsoft.com/en-us" class="hover:underline"
-                                    target="_blank">Microsoft</a>
-                            </li>
-                            <li>
-                                <a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a>
-                            </li>
-                            <li>
-                                <a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a>
-                            </li>
-                            <li>
-                                <a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a>
-                            </li>
-                            <li>
-                                <a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a>
-                            </li>
-                            <li>
-                                <a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a>
-                            </li>
-                            <li>
-                                <a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
-                    
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Location</h2>
-                        <div class="flex flex-wrap justify-start gap-4 font-light">
-                            <p>UK</p>
-                            <p class="text-white/30">|</p>
-                            <p>Pakistan</p>
-                        </div>
-                        <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
-                        <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                            <p>(+92) 305 8214945</p>
-                            <p class="text-white/30 sm:block">|</p>
-                            <p>(+44) 7476451747</p>
-                            <p class="text-white/30 hidden sm:block">|</p>
-                            <p class="break-all">info@qonkar.com</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-20">
-                        <div class="flex flex-col md:items-start md:text-left mb-8">
-                            <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                            <div class="flex items-center gap-10 h-20">
-                                <a href="https://techdestination.com/" target="_blank">
-                                    <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
-                                </a>
-                                
-                                <a href="https://www.secp.gov.pk/" target="_blank">
-                                    <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:items-start md:text-left mb-8">
-                            <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                            <div class="flex items-center h-20">
-                                <a href="https://techdestination.com/" target="_blank">
-                                    <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <footer class="bg-[#0b0b0b] text-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col gap-12">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 
+                <div class="flex flex-col gap-4">
+                    <img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-10 w-fit">
+                    <p class="text-sm font-light leading-relaxed">
+                        We build digital empires. Scalable, secure, and high-performance solutions for ambitious brands.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/company/qonkar-technologies/" target="_blank" class="hover:text-[var(--primary-color)] transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/qonkartechnologies/" target="_blank" class="hover:text-[var(--primary-color)] transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/qonkartechnologies" target="_blank" class="hover:text-[var(--primary-color)] transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div
-                    class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                    <p class="text-sm">© Qonkar 2026. All rights reserved</p>
-                    <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
-                        <a href="/contact-us" class="hover:underline">Contact Us</a>
-                    </div>
+                
+                <div class="flex flex-col gap-4 text-sm">
+                    <h3 class="font-bold">Services</h3>
+                    <ul class="flex flex-col gap-2 font-light">
+                        <li><a href="/services/shopify-development" class="hover:underline">Shopify Development</a></li>
+                        <li><a href="/services/shopify-theme-design" class="hover:underline">Shopify Theme Design</a></li>
+                        <li><a href="/services/shopify-store-setup" class="hover:underline">Shopify Store Setup</a></li>
+                        <li><a href="/services/web-design-and-development" class="hover:underline">Web Design & Development</a></li>
+                        <li><a href="/services/saas-product-development" class="hover:underline">SaaS product development</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="flex flex-col gap-4 text-sm">
+                    <h3 class="font-bold">Company</h3>
+                    <ul class="flex flex-col gap-2 font-light">
+                        <li><a href="/about-us" class="hover:underline">About Us</a></li>
+                        <li><a href="/career" class="hover:underline">Career</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/contact-us" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="flex flex-col gap-4 text-sm">
+                    <h3 class="font-bold">Partners</h3>
+                    <ul class="flex flex-col gap-2 font-light">
+                        <li>
+                            <a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a>
+                        </li>
+                        <li>
+                            <a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a>
+                        </li>
+                        <li>
+                            <a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a>
+                        </li>
+                        <li>
+                            <a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a>
+                        </li>
+                        <li>
+                            <a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
+
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Location</h2>
+                    <div class="flex flex-wrap justify-start gap-4 font-light">
+                        <p>UK</p>
+                        <p class="text-white/30">|</p>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
+                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
+                        <p>(+92) 305 8214945</p>
+                        <p class="text-white/30 sm:block">|</p>
+                        <p>(+44) 7476451747</p>
+                        <p class="text-white/30 hidden sm:block">|</p>
+                        <p class="break-all">info@qonkar.com</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-20">
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                        <div class="flex items-center gap-10 h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                            </a>
+                            
+                            <a href="https://www.secp.gov.pk/" target="_blank">
+                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                        <div class="flex items-center h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
+                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
+                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
+                    <a href="/contact-us" class="hover:underline">Contact Us</a>
+                </div>
+            </div>
+
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="/script/FAQ.js"></script>
     <script src="/script/navbar.js"></script>

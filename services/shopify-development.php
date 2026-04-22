@@ -730,8 +730,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -774,8 +773,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -813,8 +811,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -850,8 +847,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -886,8 +882,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -929,8 +924,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
 
         <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div
-                class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
@@ -974,8 +968,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                         d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
             </a>
-            <p class="mt-6 text-gray-500 text-sm font-light">Free technical audit • NDA protected • No commitment
-                required</p>
+
         </div>
     </section>
 

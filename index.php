@@ -551,11 +551,7 @@ require_once ADMIN_URL.'/database_config.php';
                         data-tab="service2">
                         Custom Software Development
                     </button>
-                    <button
-                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-sm sm:text-sm transition"
-                        data-tab="service3">
-                        Branding & Performance Marketing
-                    </button>
+
                 </div>
             </div>
 
@@ -625,39 +621,7 @@ require_once ADMIN_URL.'/database_config.php';
                                 class="w-full rounded-xl shadow-lg" />
                         </div>
                     </div>
-                    <div id="service3"
-                        class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row justify-center items-center items-center gap-5">
-                        <div class="flex-1 text-left top-0">
 
-                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex items-center gap-2">
-                                Digital Branding & ROI-Driven Marketing
-                            </h3>
-
-                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Brand Identity, Logo & UI/UX Design</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Content Strategy & Lead Generation</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    SEO & Google Ads Management (PPC)</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Social Media Marketing (Facebook/Instagram)</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Email, SMS, & WhatsApp Marketing</li>
-                            
-                            </ul>
-
-                            <a href="/contact-us"
-                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
-                               Get a Quote
-                            </a>
-                        </div>
-
-                        <div class="flex-1 flex justify-center w-[110%]">
-                            <img src="/images/qonkar-digital-marketing-roi-growth-results.webp" alt="High return on investment (ROI) and business growth statistics achieved through Qonkar digital marketing strategies"
-                                class="w-full rounded-xl shadow-lg" />
-                        </div>
-                    </div>
 
                 </div>
             </div>

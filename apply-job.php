@@ -471,13 +471,13 @@ if (!empty($job_slug)) {
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <select id="stateSelect" name="state" required
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
+                        <select id="stateSelect" name="state" required disabled
+                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none disabled:opacity-50">
                             <option value="">Select State</option>
                         </select>
 
-                        <select id="citySelect" name="city" required
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
+                        <select id="citySelect" name="city" required disabled
+                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none disabled:opacity-50">
                             <option value="">Select City</option>
                         </select>
                     </div>
@@ -718,7 +718,7 @@ if (!empty($job_slug)) {
 
     <script>
         // Fetch Countries, States, and Cities
-        (async function () {
+        window.addEventListener('DOMContentLoaded', async function () {
             const countrySelect = document.getElementById('countrySelect');
             const stateSelect = document.getElementById('stateSelect');
             const citySelect = document.getElementById('citySelect');
@@ -747,7 +747,9 @@ if (!empty($job_slug)) {
 
             async function populateStatesFor(countryIso) {
                 stateSelect.innerHTML = '<option value="">Loading states...</option>';
+                stateSelect.disabled = true;
                 citySelect.innerHTML = '<option value="">Select City</option>';
+                citySelect.disabled = true;
                 
                 if (!countryIso) {
                     stateSelect.innerHTML = '<option value="">Select State</option>';
@@ -760,17 +762,21 @@ if (!empty($job_slug)) {
 
                     if (res.ok && Array.isArray(statesData)) {
                         populateSelect(stateSelect, statesData, 'Select State');
+                        stateSelect.disabled = false;
                     } else {
                         stateSelect.innerHTML = '<option value="">No states available</option>';
+                        stateSelect.disabled = true;
                     }
                 } catch (error) {
                     console.error('States fetch error:', error);
                     stateSelect.innerHTML = '<option value="">Error loading states</option>';
+                    stateSelect.disabled = true;
                 }
             }
 
             async function populateCitiesFor(countryIso, stateIso) {
                 citySelect.innerHTML = '<option value="">Loading cities...</option>';
+                citySelect.disabled = true;
                 
                 if (!stateIso) {
                     citySelect.innerHTML = '<option value="">Select City</option>';
@@ -783,12 +789,15 @@ if (!empty($job_slug)) {
 
                     if (res.ok && Array.isArray(citiesData)) {
                         populateSelect(citySelect, citiesData, 'Select City');
+                        citySelect.disabled = false;
                     } else {
                         citySelect.innerHTML = '<option value="">No cities available</option>';
+                        citySelect.disabled = true;
                     }
                 } catch (error) {
                     console.error('Cities fetch error:', error);
                     citySelect.innerHTML = '<option value="">Error loading cities</option>';
+                    citySelect.disabled = true;
                 }
             }
 
@@ -798,6 +807,13 @@ if (!empty($job_slug)) {
                     if (!res.ok) throw new Error('Failed to fetch countries');
                     countriesData = await res.json();
                     populateSelect(countrySelect, countriesData, 'Select Country');
+
+                    // Pre-fill Pakistan as default
+                    const pakistan = countriesData.find(c => c.name === "Pakistan" || c.iso2 === "PK");
+                    if (pakistan) {
+                        countrySelect.value = pakistan.name;
+                        populateStatesFor(pakistan.iso2);
+                    }
                 } catch (err) {
                     console.error('Countries fetch error:', err);
                     countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
@@ -807,15 +823,31 @@ if (!empty($job_slug)) {
             await fetchAllCountries();
 
             countrySelect.addEventListener('change', (e) => {
-                const iso = e.target.options[e.target.selectedIndex].dataset.iso;
-                populateStatesFor(iso);
+                const selectedOption = e.target.options[e.target.selectedIndex];
+                const iso = selectedOption ? selectedOption.dataset.iso : null;
+                
+                if (iso) {
+                    populateStatesFor(iso);
+                } else {
+                    stateSelect.innerHTML = '<option value="">Select State</option>';
+                    stateSelect.disabled = true;
+                    citySelect.innerHTML = '<option value="">Select City</option>';
+                    citySelect.disabled = true;
+                }
             });
+
             stateSelect.addEventListener('change', (e) => {
                 const countryIso = countrySelect.options[countrySelect.selectedIndex].dataset.iso;
                 const stateIso = e.target.options[e.target.selectedIndex].dataset.iso;
-                populateCitiesFor(countryIso, stateIso);
+                
+                if (stateIso) {
+                    populateCitiesFor(countryIso, stateIso);
+                } else {
+                    citySelect.innerHTML = '<option value="">Select City</option>';
+                    citySelect.disabled = true;
+                }
             });
-        })();
+        });
     </script>
 
     <script>

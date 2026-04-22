@@ -3370,10 +3370,10 @@ require_once ADMIN_URL.'/database_config.php';
                     </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-10 md:gap-20">
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-20">
                     <div class="flex flex-col md:items-start md:text-left mb-8">
                         <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                        <div class="flex items-center gap-10">
+                        <div class="flex items-center gap-10 h-20">
                             <a href="https://techdestination.com/" target="_blank">
                                 <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
                             </a>
@@ -3386,9 +3386,9 @@ require_once ADMIN_URL.'/database_config.php';
 
                     <div class="flex flex-col md:items-start md:text-left mb-8">
                         <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                        <div class="flex items-center">
+                        <div class="flex items-center h-20">
                             <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
+                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
                             </a>
                         </div>
                     </div>

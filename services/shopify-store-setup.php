@@ -461,206 +461,267 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-    <div class="container mx-auto flex flex-col items-center gap-3">
-    <div class="glass-border inline-block mb-2">
+    <section
+        class="relative bg-[var(--body-bg)] text-white py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+        <div class="relative text-center mb-24 z-10">
+            <div class="glass-border inline-flex items-center gap-3 mb-8">
                 <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;OUR Services</p>
+                    <div class="glass flex items-center gap-3 text-sm font-light uppercase tracking-wide">
+                        &#9679; &nbsp; Qonkar E-Commerce Excellence
                     </div>
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Our <b>Development Strategies</b>
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">
+                End-to-End <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] font-bold">Shopify
+                    Solutions</span>
             </h2>
-            </div>
-    <!--Service Section No.1-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Professional Shopify Store Creation Services for New Businesses
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Starting an online business is exciting, but the technical setup can be overwhelming. As a premier provider of Shopify store setup services, Qonkar takes the stress out of launching your brand. We don't just create a page; we build a fully functional business environment. Our team ensures that your Shopify website setup services include everything from proper 
-                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
-                    theme installation
-                  </a> 
-                  to the fine-tuning of your store’s internal logic, making sure you are ready for your first customer.
-                </p>
-
-            </div>
+            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light">From custom theme architecture to
+                complex headless integrations, we build e-commerce ecosystems that dominate the market.</p>
         </div>
-    </section>
-    
-    
-    <!--Service Section No.2-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Complete Shopify Store Setup and Configuration Service
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  A successful store needs more than just products; it needs a solid foundation. Our Shopify store setup and configuration service covers the essential "behind the scenes" work that many beginners overlook. We handle your tax settings, shipping zones, and legal policy pages to ensure your business stays compliant and professional. By trusting 
-                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify store setup experts
-                  </a>, 
-                  you avoid common mistakes that could lead to lost sales or payment processing issues down the road.
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Shopify Theme Development"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Bespoke <b>Storefront Architecture</b>
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">Shopify
+                        development partner</a>,
+                    we translate your brand identity into a high-converting digital experience.
                 </p>
-
-            </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-        </div>
-    </section>
-    
-    <!--Service Section No.3-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Why Choose Qonkar for Your Shopify Ecommerce Setup?
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Many people try to build their own stores but get stuck on the technical details. When you choose Qonkar for your Shopify ecommerce setup, you get a store that is optimized for performance. We focus on "Launch Readiness," which means we test every button, link, and checkout step before we hand over the keys. Our 
-                  <a href="https://qonkar.com/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify store creation services
-                  </a> 
-                  are designed to give you a "Turnkey" solution, so you can focus on marketing and growth while we handle the technology.
-                </p>
-
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Service Section No.4-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Secure Payment and Shipping Integration
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  One of the most critical parts of Shopify website setup services is making sure you can actually get paid. We help you connect secure payment gateways like Shopify Payments, PayPal, or Stripe. Additionally, we configure your shipping rates, whether they are flat rates, free shipping tiers, or weight-based calculations. Our goal as 
-                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify store setup experts
-                  </a> 
-                  is to make the buying process as smooth as possible for your customers, which directly helps in increasing your sales.
-                </p>
-
-            </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-        </div>
-    </section>
-    
-    <!--Service Section No.5-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Launch Your Brand with Shopify Store Creation Services
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Your journey from an idea to a live store should be smooth and fast. Qonkar’s Shopify store creation services follow a proven roadmap to get you online quickly without sacrificing quality. We help with domain registration, email notification setup, and basic SEO settings so your store is visible to search engines from the moment it goes live. Investing in a professional 
-                  <a href="https://qonkar.com/services/migration-services" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify store setup and configuration service
-                  </a> 
-                  is the best way to ensure your brand starts on the right foot.
-                </p>
-
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Service Section No.6-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Why a Professional Setup is Better than DIY?
-                </h2>
-<div>
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  While many agencies focus solely on aesthetics, 
-                  <a href="https://qonkar.com/" class="underline hover:text-blue-500 transition-colors duration-300">Qonkar</a> 
-                  prioritizes 
-                  <a href="https://qonkar.com/services/speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
-                    technical Shopify development services
-                  </a>. 
-                  Investing in high-end technical development offers several key advantages:
-                </p>
-                
-                <ul class="leading-relaxed mt-2 font-light text-white max-w-xl mx-auto lg:mx-0">
-                  <li class="flex items-start gap-2 mb-2">
-                    <span class="text-[var(--tertiary-color)]">✔</span>
-                    <span>Custom Functionality: Get the exact features your specific business model requires to succeed.</span>
-                  </li>
-                  <li class="flex items-start gap-2 mb-2">
-                    <span class="text-[var(--tertiary-color)]">✔</span>
-                    <span>Security: We write secure code that protects sensitive customer data and payment gateways.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[var(--tertiary-color)]">✔</span>
-                    <span>Scalability: As your business grows, our scalable architecture ensures your store never crashes under pressure.</span>
-                  </li>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Pixel-Perfect Figma to Liquid</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Mobile-First Responsive Design</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Advanced Filtering & Search Setup</li>
                 </ul>
-</div>
-                
+            </div>
+        </div>
 
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Shopify Plus Enterprise"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Enterprise <b>Shopify Plus</b> Experts
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Scale without limits. Our
+                    <a href="/contact-us"
+                        class="text-[var(--primary-color)] font-medium border-b border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] transition-colors pb-0.5">Enterprise
+                        developers</a>
+                    leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout
+                    extensibility.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            10k+</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Orders Per Minute</p>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            99.9%</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Server Uptime</p>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Custom Shopify Apps"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Private & <b>Custom App</b> Development
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Bridge functionality gaps with custom-coded apps. Whether it’s complex ERP syncing, specialized
+                    product builders, or unique loyalty programs, our
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">engineering
+                        team</a>
+                    has you covered.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Node.js</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">React
+                        / Polaris</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">GraphQL
+                        API</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Laravel</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="E-Commerce Migration"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Zero-Downtime <b>Migrations</b></h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so
+                    you don't lose a single customer or ranking during the transition.
+                </p>
+                <div class="bg-black/30 p-5 rounded-2xl border border-white/5 flex items-center justify-between">
+                    <div class="text-white/90 font-semibold text-sm">Magento / Woo</div>
+                    <div class="flex-1 px-4 flex items-center justify-center">
+                        <div
+                            class="h-[2px] w-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--secondary-color)] relative">
+                            <svg class="w-6 h-6 text-[var(--secondary-color)] absolute right-[-5px] top-1/2 -translate-y-1/2"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-bold py-1.5 px-4 rounded-lg text-sm">
+                        Shopify Plus</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Speed Optimization"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Speed <b>Optimization & CRO</b></h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and
+                    restructure Liquid logic to deliver blazing-fast loading speeds.
+                </p>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Performance Score</span>
+                            <span class="text-[var(--secondary-color)]">98/100</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Conversion Rate Uplift</span>
+                            <span class="text-[var(--primary-color)]">+35%</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 85%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Headless Commerce"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Future-Proof <b>Headless Commerce</b>
+                </h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    Decouple your front-end from the backend. We build lightning-fast, highly customizable headless
+                    experiences using <span class="text-white font-semibold">Hydrogen & Next.js</span> while keeping
+                    Shopify as your powerful engine.
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg> Omnichannel Selling Power</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg> Complete Design Freedom</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-16 relative z-10">
+            <a href="/contact-us"
+                class="hero-btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--primary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white shadow-none">
+                Discuss Your Project With Us
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+
         </div>
     </section>
     

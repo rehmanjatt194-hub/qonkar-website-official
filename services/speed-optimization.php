@@ -454,172 +454,267 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-    <div class="container mx-auto flex flex-col items-center gap-3">
-    <div class="glass-border inline-block mb-2">
+    <section
+        class="relative bg-[var(--body-bg)] text-white py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+        <div class="relative text-center mb-24 z-10">
+            <div class="glass-border inline-flex items-center gap-3 mb-8">
                 <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;OUR Services</p>
+                    <div class="glass flex items-center gap-3 text-sm font-light uppercase tracking-wide">
+                        &#9679; &nbsp; Qonkar E-Commerce Excellence
                     </div>
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Optimize Your <b>Shopify Store Speed</b>
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">
+                End-to-End <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] font-bold">Shopify
+                    Solutions</span>
             </h2>
+            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light">From custom theme architecture to
+                complex headless integrations, we build e-commerce ecosystems that dominate the market.</p>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Shopify Theme Development"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-    <!--Service Section No.1-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/Boost Your Store Performance with Shopify Speed Optimization Service.webp" alt="A professional shopify speed optimization service dashboard showing a high performance score of 95 on a mobile device for an e-commerce store." class="rounded-xl w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Fast Stores Sell More: Expert Shopify Speed Optimization Service
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  In the world of online shopping, every second counts. If your store takes more than three seconds to load, you are likely losing half of your potential customers. As a leading Shopify speed optimization service, Qonkar helps you reclaim those lost sales by making your storefront faster than ever. We focus on 
-                  <a href="https://qonkar.com/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
-                    technical excellence
-                  </a> 
-                  to ensure that your business provides the smooth experience that modern shoppers expect. Whether you are a small boutique or a large brand, our goal is to make your site "lightning-fast."
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Bespoke <b>Storefront Architecture</b>
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">Shopify
+                        development partner</a>,
+                    we translate your brand identity into a high-converting digital experience.
                 </p>
-
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Pixel-Perfect Figma to Liquid</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Mobile-First Responsive Design</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Advanced Filtering & Search Setup</li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-    
-    <!--Service Section No.2-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Why You Need a Shopify Website Speed Optimization Expert
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  A slow website isn't just annoying for users; it also hurts your ranking on search engines like Google. When you work with a 
-                  <a href="https://qonkar.com/services/shopify-speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify website speed optimization expert
-                  </a> 
-                  from Qonkar, we look deep into your store's performance. We analyze your apps, theme code, and large image files that might be dragging your speed down. By fixing these hidden issues, we help you improve your conversion rates and ensure that your marketing budget isn't wasted on a slow-loading site.
-                </p>
-
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Shopify Plus Enterprise"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/Optimize Your App for the Shopify Apps Store - Speed and Performance Metrics.webp" alt="A performance dashboard for the shopify apps store showing high speed scores and an average load time of 1.3s with a rocket icon." class="rounded-xl w-full max-w-md h-auto">
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Enterprise <b>Shopify Plus</b> Experts
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Scale without limits. Our
+                    <a href="/contact-us"
+                        class="text-[var(--primary-color)] font-medium border-b border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] transition-colors pb-0.5">Enterprise
+                        developers</a>
+                    leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout
+                    extensibility.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            10k+</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Orders Per Minute</p>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            99.9%</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Server Uptime</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <!--Service Section No.3-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/Professional Shopify Speed Optimization Service for Better Store Performance.webp" alt="A laptop displaying a website speed optimization service dashboard with a performance gauge showing 90 percent loading speed alongside Shopify analytics." class="rounded-xl w-full max-w-md h-auto">
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Custom Shopify Apps"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Scaling with Shopify Plus Page Speed Optimization
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Enterprise-level stores often face unique speed challenges due to complex apps and high traffic. Our Shopify plus page speed optimization is designed specifically for high-volume merchants who cannot afford even a millisecond of delay. We implement advanced techniques like lazy loading, script minification, and critical CSS prioritization. These steps ensure that even the most feature-rich Shopify Plus stores remain fast and responsive, providing a premium experience to every visitor.
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Private & <b>Custom App</b> Development
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Bridge functionality gaps with custom-coded apps. Whether it’s complex ERP syncing, specialized
+                    product builders, or unique loyalty programs, our
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">engineering
+                        team</a>
+                    has you covered.
                 </p>
-
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Node.js</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">React
+                        / Polaris</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">GraphQL
+                        API</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Laravel</span>
+                </div>
             </div>
         </div>
-    </section>
-    
-    
-    <!--Service Section No.4-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    The Secret to Better Rankings: Shopify Page Speed Optimization
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Google now uses "Core Web Vitals" as a major factor in determining where your site appears in search results. This means that Shopify page speed optimization is no longer optional, it is a necessity for SEO. We focus on optimizing your "Largest Contentful Paint" (LCP) and "Cumulative Layout Shift" (CLS) so that your store meets Google's strict standards. A faster store is a more visible store, and our technical team is here to make sure you stay ahead of the competition.
-                </p>
-
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="E-Commerce Migration"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/Achieve 99 Plus Performance with Professional Shopify Speed Optimization Service.webp" alt="A laptop screen displaying a 99 percent performance score and loading fast text, representing a high-quality shopify speed optimization service for e-commerce stores." class="rounded-xl w-full max-w-md h-auto">
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Zero-Downtime <b>Migrations</b></h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so
+                    you don't lose a single customer or ranking during the transition.
+                </p>
+                <div class="bg-black/30 p-5 rounded-2xl border border-white/5 flex items-center justify-between">
+                    <div class="text-white/90 font-semibold text-sm">Magento / Woo</div>
+                    <div class="flex-1 px-4 flex items-center justify-center">
+                        <div
+                            class="h-[2px] w-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--secondary-color)] relative">
+                            <svg class="w-6 h-6 text-[var(--secondary-color)] absolute right-[-5px] top-1/2 -translate-y-1/2"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-bold py-1.5 px-4 rounded-lg text-sm">
+                        Shopify Plus</div>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <!--Service Section No.5-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/Scale Your E-commerce Business with Shopify Speed Optimization Service.webp" alt="A smiling professional pointing to a laptop showing a fast-loading Shopify store, representing a reliable shopify speed optimization service for various e-commerce platforms." class="rounded-xl w-[60%] max-w-md h-auto">
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Speed Optimization"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 min-h-[400px] rounded-3xl">
             </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    How We Optimize Shopify Store Speed
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Our process is thorough and data-driven. When we optimize Shopify store speed, we start with a full audit of your current performance. We remove unused app code, compress high-resolution images without losing quality, and optimize your Liquid templates. This holistic approach ensures that the improvements are long-lasting. By the time we are finished, your store will not only feel faster to your customers but will also score significantly higher on tools like Google PageSpeed Insights.
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Speed <b>Optimization & CRO</b></h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and
+                    restructure Liquid logic to deliver blazing-fast loading speeds.
                 </p>
-
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Performance Score</span>
+                            <span class="text-[var(--secondary-color)]">98/100</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Conversion Rate Uplift</span>
+                            <span class="text-[var(--primary-color)]">+35%</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 85%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    
-    
-    <!--Service Section No.6-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Is Your Mobile Speed Holding You Back?
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                 Most Shopify customers shop using their mobile phones, where internet speeds can be inconsistent. Our Shopify speed optimization service prioritizes mobile performance to ensure your store loads instantly on any device. By reducing the weight of your pages and optimizing how scripts load, we ensure that mobile shoppers stay on your site and complete their purchases without frustration.</p>
-
-                
-
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Headless Commerce"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/Innovative Shopify Theme Design and Layout Customization Services.webp" alt="A digital representation of multiple creative e-commerce layouts emerging from a tablet, highlighting professional shopify theme design and web development." class="rounded-xl w-full max-w-md h-auto">
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Future-Proof <b>Headless Commerce</b>
+                </h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    Decouple your front-end from the backend. We build lightning-fast, highly customizable headless
+                    experiences using <span class="text-white font-semibold">Hydrogen & Next.js</span> while keeping
+                    Shopify as your powerful engine.
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg> Omnichannel Selling Power</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg> Complete Design Freedom</li>
+                </ul>
             </div>
+        </div>
+
+        <div class="text-center mt-16 relative z-10">
+            <a href="/contact-us"
+                class="hero-btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--primary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white shadow-none">
+                Discuss Your Project With Us
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+
         </div>
     </section>
     

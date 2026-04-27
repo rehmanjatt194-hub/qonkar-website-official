@@ -80,7 +80,7 @@
             <li class="group py-2">
                 <button class="flex items-center gap-1 hover:text-[var(--primary-color)] focus:outline-none transition-colors">
                     Services
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>_more</span>
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
                 </button>
                 
                 <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[95vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10" 
@@ -158,7 +158,7 @@
             <div class="border-b border-white/10">
                 <button id="mobile-services-btn" class="w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold flex justify-center items-center gap-1">
                     Services
-                    <span id="mobile-arrow" class="material-symbols-outlined text-sm transition-transform text-lg font-bold">expand_more</span>
+                    <span id="mobile-arrow" class="material-symbols-outlined text-sm transition-transform text-lg font-bold"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
                 </button>
                 <div id="mobile-services-menu" class="hidden flex-col bg-white/5 pb-4">
                     <div class="py-2 border-b border-white/10">
@@ -275,8 +275,8 @@
                 <a href="https://qonkar.com/services/branding-and-performance-marketing" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Branding and Marketing
                 </a>
-                <a href="https://qonkar.com/portfolio" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
-                    Our Portfolio
+                <a href="https://qonkar.com/projects" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                    Our Projects
                 </a>
                 <a href="https://qonkar.com/blogs" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Blogs

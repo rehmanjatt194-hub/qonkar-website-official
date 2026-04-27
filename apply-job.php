@@ -298,7 +298,6 @@ if (!empty($job_slug)) {
                     </div>
                 </li>
 
-                <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
                 <li><a href="/projects" class="hover:text-[var(--primary-color)]">Projects</a></li>
                 <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
                 <li><a href="/career" class="text-[var(--primary-color)]">Career</a></li>
@@ -376,10 +375,7 @@ if (!empty($job_slug)) {
                     </div>
                 </div>
 
-                <a href="/portfolio"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-                <a href="/projects"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Projects</a>
+                <a href="/projects" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Projects</a>
                 <a href="/blogs"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
                 <a href="/career"

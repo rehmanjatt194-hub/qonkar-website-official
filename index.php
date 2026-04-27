@@ -888,9 +888,9 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
 
 
-        <a href="/portfolio"
+        <a href="/projects"
             class="mt-12 w-fit py-3 px-6 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[var(--secondary-color)] hover:text-white transition">
-            View More Case Studies
+            View More Projects
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

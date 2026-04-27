@@ -410,7 +410,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <div class="border-t border-white/30 my-8"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-4">
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
@@ -431,16 +431,6 @@ require_once ADMIN_URL.'/database_config.php';
                         <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
                         <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
                         <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Branding & Performance</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/branding-and-digital-marketing" class="hover:underline">Branding And Digital Marketing</a></li>
-                        <li><a href="/services/seo-services" class="hover:underline">Seo Services</a></li>
-                        <li><a href="/services/ppc-and-paid-advertising" class="hover:underline">PPC & Paid Advertising</a></li>
-                        <li><a href="/services/organic-content-strategy" class="hover:underline">Organic Content Strategy</a></li>
                     </ul>
                 </div>
 
@@ -516,7 +506,7 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
+                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
                 <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
@@ -532,4 +522,7 @@ require_once ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
+
+
+
 

@@ -52,3 +52,6 @@ try {
     echo json_encode(['error' => 'Database error', 'detail' => $e->getMessage()]);
     exit;
 }
+
+
+

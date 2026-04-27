@@ -318,6 +318,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
+            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
             <li><a href="/projects" class="hover:text-[var(--primary-color)]">Projects</a></li>
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
@@ -362,6 +363,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
+            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
             <a href="/projects" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Projects</a>
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
@@ -888,9 +890,9 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
 
 
-        <a href="/projects"
+        <a href="/portfolio"
             class="mt-12 w-fit py-3 px-6 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[var(--secondary-color)] hover:text-white transition">
-            View More Projects
+            View More Case Studies
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -3267,6 +3269,9 @@ require_once ADMIN_URL.'/database_config.php';
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
+                                <a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a>
+                            </li>
+                            <li>
                                 <a href="https://qonkar.com/projects" class="hover:underline">Projects</a>
                             </li>
                             <li>
@@ -3386,3 +3391,5 @@ require_once ADMIN_URL.'/database_config.php';
 
 </html>
 </html>
+
+

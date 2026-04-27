@@ -112,3 +112,6 @@ if ($result->num_rows > 0) {
     echo "<div class='text-white text-center py-10 w-full'><h3 class='text-xl'>No blogs found</h3></div>";
 }
 ?>
+
+
+

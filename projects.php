@@ -128,10 +128,38 @@ require_once ADMIN_URL.'/database_config.php';
   "@graph": [
     {
       "@type": "ItemList",
-      "name": "Qonkar Technologies Projects",
-      "description": "Discover the digital solutions we’ve designed and developed — a showcase of our high-quality custom software projects.",
-      "url": "https://qonkar.com/projects",
-      "itemListElement": []
+      "name": "Qonkar Technologies Case Studies & Portfolio",
+      "description": "Discover the digital solutions we’ve designed and developed — a showcase of our high-quality Shopify stores and custom software projects.",
+      "url": "https://qonkar.com/#case-studies",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "E-Commerce Project Portfolio",
+            "description": "Custom designed and developed high-converting Shopify stores with mobile-first architecture.",
+            "image": "https://qonkar.com/images/case-studies/background.webp",
+            "provider": {
+              "@type": "Organization",
+              "name": "Qonkar Technologies"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Custom Software Solutions",
+            "description": "Scalable enterprise platforms and SaaS products engineered for measurable business growth.",
+            "author": {
+              "@type": "Organization",
+              "name": "Qonkar Technologies"
+            }
+          }
+        }
+      ]
     }
   ]
 }
@@ -197,6 +225,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
+            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
             <li><a href="/projects" class="text-[var(--primary-color)]">Projects</a></li>
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
@@ -241,6 +270,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
+            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
             <a href="/projects" class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Projects</a>
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
@@ -252,8 +282,6 @@ require_once ADMIN_URL.'/database_config.php';
         <div id="google_translate_element"></div>
     </div>
 </header>
-
-
     <!-- Hero Section -->
     <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] rounded-lg overflow-hidden mt-4 mb-4 flex items-center">
         <!-- Gradient Background -->
@@ -264,34 +292,91 @@ require_once ADMIN_URL.'/database_config.php';
 
         <!-- Hero Content -->
         <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-start w-full px-10 sm:px-10 lg:px-9 py-10">
-
             <!-- Left Side: Text -->
             <div class="text-left text-white space-y-6 order-1">
-                <!-- Heading -->
                 <h1 class="text-3xl sm:text-4xl md:text-5xl leading-snug">
                     Explore Our <b>Innovative</b> Projects<br class="hidden sm:block"> and <b>Success</b> Stories.
                 </h1>
-
-                <!-- Paragraph -->
                 <p class="text-base sm:text-lg font-light leading-relaxed max-w-lg">
                     Discover how Qonkar Technologies helps businesses thrive through custom-built solutions, from advanced e-commerce platforms to scalable software architectures.
                 </p>
-
-                <!-- CTA Button -->
                 <a href="/contact-us" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] hover:text-white transition">
-                    Launch Your Store with us
+                    Work With Us
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </a>
             </div>
-
             <!-- Right Side: Image -->
             <div class="flex justify-center md:justify-end order-2">
-                <img src="images/case-study-hero.webp" alt="Service Hero" class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
+                <img src="images/case-study-hero.webp" alt="Projects Hero" class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
             </div>
         </div>
     </section>
+
+     <!-- Case Study -->
+    <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <!-- Badge -->
+        <div class="glass-border inline-block mb-4">
+            <div class="glass-background">
+                <div class="glass text-sm font-light">
+                    <p>&#9679; &nbsp;PROJECTS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-light mb-4">
+            What We <b>Build</b>
+        </h2>
+
+        <!-- Paragraph -->
+        <p class="text-white font-light max-w-3xl mx-auto mb-10">
+            Discover the solutions we’ve designed and developed — each project reflects our commitment to quality and
+            creativity.
+        </p>
+
+        <!-- Category Tabs with Scroll (Disable) -->
+        <div class="relative mb-10 w-fit mx-auto">
+            <!-- Scroll Buttons -->
+            <button id="scrollLeft"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
+                &#10094;
+            </button>
+            <button id="scrollRight"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
+                &#10095;
+            </button>
+
+            <!-- Scrollable Categories -->
+            <div id="tabContainer" class="flex overflow-x-auto no-scrollbar gap-4 px-2 py-2 rounded-full 
+               justify-start md:justify-center md:[background-image:var(--gradient)] backdrop-blur-md">
+
+                <button
+                    class="tab-btn active px-8 py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-xs"
+                    data-tab="all">All</button>
+
+
+                <?php
+                $sql = "SELECT category_name FROM case_study_categories WHERE status = 'active'";
+                $result = $conn->query($sql);
+
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Convert category name into a slug for `data-tab`
+                        $slug = strtolower(str_replace(' ', '-', $row['category_name']));
+                        echo '<button class="tab-btn px-4 py-2 rounded-full text-white font-semibold text-xs sm:text-sm" data-tab="' . $slug . '">' . $row['category_name'] . '</button>';
+                    }
+                } else {
+                    echo "<p>No categories found.</p>";
+                }
+
+                ?>
+
+            </div>
+        </div>
+
 
 
 <footer>
@@ -356,6 +441,9 @@ require_once ADMIN_URL.'/database_config.php';
                         <ul class="space-y-2 text-sm font-light">
                             <li>
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
+                            </li>
+                            <li>
+                                <a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a>
                             </li>
                             <li>
                                 <a href="https://qonkar.com/projects" class="hover:underline">Projects</a>
@@ -467,8 +555,11 @@ require_once ADMIN_URL.'/database_config.php';
     </div>
 </footer>
     <script src="script/navbar.js"></script>
+    <script src="script/portfolio.js"></script>
 
 
 </body>
 
 </html>
+
+

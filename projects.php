@@ -1,7 +1,13 @@
+<?php
+require_once 'db-path.php'; // path relative to current file
+
+require_once ADMIN_URL.'/database_config.php';
+?>
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
+    
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ6XTSKG0W"></script>
@@ -12,7 +18,8 @@
 
   gtag('config', 'G-NZ6XTSKG0W');
 </script>
-    
+
+
     <!-- ✅ Basic SEO Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +34,7 @@
     <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com" />
-    <meta property="og:image" content="https://qonkar.com/preview.png" />
+    <meta property="og:image" content="https://qonkar.com/preview.webp" />
 
 
 
@@ -37,8 +44,9 @@
 
     <!-- ✅ Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <!-- ✅ Title -->
-    <title>Terms of Services | Qonkar Technologies</title>
+    <title>Projects | Qonkar Technologies</title>
 
     <!-- ✅ Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,15 +56,114 @@
 
     <!-- ✅ Theme & Reusable Styles -->
     <link rel="stylesheet" href="styles/index.css">
+    <style>
+        select option {
+            background-color: #000;
+            color: #fff;
+        }
+
+        select option:disabled {
+            color: #9ca3af;
+            /* Tailwind's gray-400 for placeholder */
+        }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const responseBox = document.querySelector("#formResponse");
+            const form = document.querySelector("#contactForm");
+
+            form.addEventListener("submit", async function(e) {
+                e.preventDefault();
+                responseBox.classList.remove("hidden");
+                responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
+
+                try {
+                    const formData = new FormData(form);
+                    const res = await fetch("process.php", {
+                        method: "POST",
+                        body: formData
+                    });
+                    const contentType = res.headers.get("content-type") || "";
+
+                    let data;
+                    if (contentType.includes("application/json")) {
+                        data = await res.json();
+                    } else {
+                        data = {
+                            message: await res.text()
+                        };
+                    }
+
+                    if (res.ok) {
+                        responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
+                        form.reset();
+                    } else {
+                        const msg = data.error || data.message || res.statusText;
+                        responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
+                    }
+                } catch (err) {
+                    responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
+                }
+            });
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ6VFPLL90"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-HJ6VFPLL90');
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "Qonkar Technologies Case Studies & Portfolio",
+      "description": "Discover the digital solutions we’ve designed and developed — a showcase of our high-quality Shopify stores and custom software projects.",
+      "url": "https://qonkar.com/#case-studies",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "E-Commerce Project Portfolio",
+            "description": "Custom designed and developed high-converting Shopify stores with mobile-first architecture.",
+            "image": "https://qonkar.com/images/case-studies/background.webp",
+            "provider": {
+              "@type": "Organization",
+              "name": "Qonkar Technologies"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Custom Software Solutions",
+            "description": "Scalable enterprise platforms and SaaS products engineered for measurable business growth.",
+            "author": {
+              "@type": "Organization",
+              "name": "Qonkar Technologies"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -119,7 +226,7 @@
             </li>
 
             <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-            <li><a href="/projects" class="hover:text-[var(--primary-color)]">Projects</a></li>
+            <li><a href="/projects" class="text-[var(--primary-color)]">Projects</a></li>
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
             <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
@@ -164,7 +271,7 @@
             </div>
 
             <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-            <a href="/projects" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Projects</a>
+            <a href="/projects" class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Projects</a>
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
             <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
@@ -175,147 +282,209 @@
         <div id="google_translate_element"></div>
     </div>
 </header>
+    <!-- Hero Section -->
+    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] rounded-lg overflow-hidden mt-4 mb-4 flex items-center">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 rounded-lg bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
 
-    <!-- Hero / Intro Section -->
-    <section
-        class="mt-4 relative max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] rounded-lg overflow-hidden flex items-center justify-center">
-        <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
-        <div class="absolute inset-0 bg-[url('images/hero-section/privacy‑bg.jpg')] bg-center bg-cover opacity-40">
-        </div>
-        <div class="absolute inset-0 hero-pattern"></div>
+        <!-- Pattern Overlay (single SVG, no repeat) -->
+        <div class="absolute inset-0 rounded-lg hero-pattern"></div>
 
-        <div class="relative z-20 text-center text-white px-6 sm:px-10 lg:px-20 py-10 space-y-6 max-w-3xl mx-auto">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl leading-snug font-bold">Terms of Services</h1>
-            <p class="text-base font-light leading-relaxed">
-                Welcome to Qonkar! These Terms of Service outline your rights, responsibilities, and obligations when
-                using our website and services. Please read them carefully before using our platform.
+        <!-- Hero Content -->
+                 <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-start w-full px-10 sm:px-10 lg:px-9 py-10">
 
-            </p>
+            <!-- Left Side: Text -->
+            <div class="text-left text-white space-y-6 order-1">
+                <!-- Badge -->
+                <div class="hidden glass px-3 py-2 rounded-full text-xs sm:text-sm text-white 
+                inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center sm:text-left">
+
+                    <!-- Dot New -->
+                    <span class="px-3 py-0.5 rounded-full bg-white text-[var(--primary-color)] text-xs">
+                        &#9679; New
+                    </span>
+
+                    <!-- Text -->
+                    <span>
+                        Free your team from repetitive work with AI automation.
+                    </span>
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl leading-snug">
+                    Explore Our <b>Innovative</b> Projects<br class="hidden sm:block"> and <b>Success</b> Stories.
+                </h1>
+
+                <!-- Paragraph -->
+                <p class="text-base sm:text-lg font-light leading-relaxed max-w-lg">
+                    Discover how Qonkar Technologies helps businesses thrive through custom-built solutions, from advanced e-commerce platforms to scalable software architectures.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="/contact-us" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
+                hover:bg-[var(--secondary-color)] hover:text-white transition">
+                    Launch Your Store with us
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="flex justify-center md:justify-end order-2">
+                <img src="images/case-study-hero.webp" alt="Service Hero"
+                    class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
+            </div>
         </div>
     </section>
-<!-- Main Terms of Service Content -->
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
 
-    <!-- Acceptance of Terms -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Acceptance of Terms
+     <!-- Case Study -->
+    <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <!-- Badge -->
+        <div class="glass-border inline-block mb-4">
+            <div class="glass-background">
+                <div class="glass text-sm font-light">
+                    <p>&#9679; &nbsp;PROJECTS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-light mb-4">
+            What We <b>Build</b>
         </h2>
-        <p class="leading-relaxed">
-            By accessing or using Qonkar.com, you agree to comply with and be bound by these Terms of Service and our Privacy Policy. If you do not agree with any part of these terms, please do not use our website or services. Continued use constitutes acceptance of the updated terms.
+
+        <!-- Paragraph -->
+        <p class="text-white font-light max-w-3xl mx-auto mb-10">
+            Discover the solutions we’ve designed and developed — each project reflects our commitment to quality and
+            creativity.
         </p>
-    </div>
 
-    <!-- Eligibility -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Eligibility
-        </h2>
-        <p class="leading-relaxed">
-            Our services are intended for individuals who are at least 18 years old or have the legal capacity to enter into a binding agreement. By using our services, you confirm that you meet these eligibility requirements. If you are under 18, you may only use our services with the involvement of a parent or guardian.
-        </p>
-    </div>
+        <!-- Category Tabs with Scroll (Disable) -->
+        <div class="relative mb-10 w-fit mx-auto">
+            <!-- Scroll Buttons -->
+            <button id="scrollLeft"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
+                &#10094;
+            </button>
+            <button id="scrollRight"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
+                &#10095;
+            </button>
 
+            <!-- Scrollable Categories -->
+            <div id="tabContainer" class="flex overflow-x-auto no-scrollbar gap-4 px-2 py-2 rounded-full 
+               justify-start md:justify-center md:[background-image:var(--gradient)] backdrop-blur-md">
 
-    <!-- Use of Service -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Use of Service
-        </h2>
-        <p class="leading-relaxed">
-            You agree to use Qonkar.com responsibly and in compliance with all applicable laws and regulations. You shall not use the website for any unlawful purposes, and you must follow any posted rules or instructions. Unauthorized use or attempts to disrupt the website’s functionality are strictly prohibited.
-        </p>
-    </div>
-
-    <!-- Prohibited Activities -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Prohibited Activities
-        </h2>
-        <ul class="list-disc list-outside pl-4 space-y-2 leading-relaxed">
-            <li>Uploading or transmitting any content that is illegal, harmful, or infringes on third-party rights.</li>
-            <li>Engaging in spam, phishing, or other deceptive practices.</li>
-            <li>Attempting to gain unauthorized access to our systems, servers, or other users’ accounts.</li>
-            <li>Interfering with the security or functionality of the website in any way.</li>
-        </ul>
-    </div>
-
-    <!-- Intellectual Property -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Intellectual Property
-        </h2>
-        <p class="leading-relaxed">
-            All content, design, graphics, logos, and other materials on Qonkar.com are the intellectual property of Qonkar or its licensors. You may not copy, modify, distribute, or use any content without explicit permission. Unauthorized use may result in legal action.
-        </p>
-    </div>
-
-    <!-- Third-Party Links -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Third-Party Links
-        </h2>
-        <p class="leading-relaxed">
-            Our website may contain links to third-party websites. Qonkar is not responsible for the content, privacy practices, or policies of these external sites. We encourage you to review their terms and policies when visiting.
-        </p>
-    </div>
-
-    <!-- Disclaimers & Limitation of Liability -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Disclaimers & Limitation of Liability
-        </h2>
-        <p class="leading-relaxed">
-            Qonkar provides the website and services “as is” without warranties of any kind. We do not guarantee uninterrupted access or accuracy of information. To the maximum extent permitted by law, Qonkar is not liable for any direct, indirect, incidental, or consequential damages arising from your use of the site or services.
-        </p>
-    </div>
-
-    <!-- Changes to Terms -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Changes to Terms
-        </h2>
-        <p class="leading-relaxed">
-            We reserve the right to update or modify these Terms of Service at any time. Changes will be posted on this page with the “Last Updated” date. Your continued use of the website after updates constitutes acceptance of the revised terms.
-        </p>
-    </div>
-
-    <!-- Governing Law -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Governing Law
-        </h2>
-        <p class="leading-relaxed">
-            These Terms of Service are governed by and construed in accordance with the laws of Pakistan. Any disputes arising from your use of Qonkar.com shall be subject to the exclusive jurisdiction of the courts in Pakistan.
-        </p>
-    </div>
-
-    <!-- Contact Information -->
-    <div class="px-6 py-2 sm:px-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-        <h2 class="flex items-center text-xl sm:text-2xl font-semibold mb-4">
-            <span class="w-1 h-6 bg-gradient-to-b from-[#067888] to-[#42F8BF] mr-3 rounded"></span>
-            Contact Information
-        </h2>
-        <p class="leading-relaxed">
-            For any questions or concerns regarding these Terms of Service, please contact us: <br>
-            Email: <span class="text-[#067888] underline">info@qonkar.com</span><br>
-            Phone: +92‑305‑8214945<br>
-            We are committed to responding promptly and ensuring that your concerns are addressed professionally.
-        </p>
-    </div>
-
-</section>
+                <button
+                    class="tab-btn active px-8 py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-xs"
+                    data-tab="all">All</button>
 
 
+                <?php
+                $sql = "SELECT category_name FROM case_study_categories WHERE status = 'active'";
+                $result = $conn->query($sql);
+
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Convert category name into a slug for `data-tab`
+                        $slug = strtolower(str_replace(' ', '-', $row['category_name']));
+                        echo '<button class="tab-btn px-4 py-2 rounded-full text-white font-semibold text-xs sm:text-sm" data-tab="' . $slug . '">' . $row['category_name'] . '</button>';
+                    }
+                } else {
+                    echo "<p>No categories found.</p>";
+                }
+
+                ?>
+
+            </div>
+        </div>
+
+        <!-- Case Study Cards Grid -->
+        <div id="caseStudiesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+            <?php
+            $sql = "SELECT cs.id, cs.mockup_image, cs.background_image, cs.brand_name, cs.short_description, cs.link_of_case_study,
+                   GROUP_CONCAT(csc.category_name SEPARATOR ', ') AS categories
+            FROM case_studies cs
+            LEFT JOIN case_study_category_bridge bridge ON cs.id = bridge.case_study_id
+            LEFT JOIN case_study_categories csc ON bridge.category_id = csc.id
+            WHERE cs.status = 'active'
+            GROUP BY cs.id
+            ORDER BY cs.created_at DESC";
+
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // ✅ Replace underscores with spaces in categories
+                    $categories = str_replace('_', ' ', $row['categories']);
+
+                    // ✅ Convert categories for filtering (data attribute)
+                    $dataCategory = strtolower(str_replace(' ', '-', $categories));
+
+                    // ✅ Conditional Arrow (only show if link exists)
+                    $arrow = !empty($row['link_of_case_study']) ? '
+                <div class="flex-shrink-0">
+                    <a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank">
+                        <img src="images/icons/arrrow_color.svg" class="w-8 h-8 transition-opacity duration-300 group-hover:hidden" alt="Arrow Icon">
+                        <img src="images/icons/arrrow_white.svg" class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block" alt="Arrow Icon White">
+                    </a>
+                </div>
+            ' : '';
+
+                    echo '
+            <div class="w-full background-backdrop-card rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col"
+                data-category="' . htmlspecialchars($dataCategory) . '">
+
+                <!-- Top Image Section -->
+                <div class="w-full h-80 flex items-center justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0">
+                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full object-contain">
+                </div>
+
+                <!-- Bottom Text Section -->
+                <div class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] p-[2px]
+                    [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
+
+                    <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="' . htmlspecialchars($row['background_image']) . '" alt="Hover BG" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                        </div>
+
+                        <!-- Text Content -->
+                        <div class="relative z-10 p-6 flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg sm:text-xl md:text-2xl text-left font-light mb-2">'
+                        . htmlspecialchars($row['brand_name']) . '
+                                </h3>
+                                <p class="text-sm md:text-base font-light text-left text-gray-200"><i>'
+                        . htmlspecialchars(mb_strimwidth($row['short_description'], 0, 100, '...')) .
+                        ' </i></p>
+                            </div>
+                            ' . $arrow . '
+                        </div>
+                    </div>
+                </div>
+            </div>';
+                }
+            } else {
+                echo "<p class='text-gray-400 text-center'>No case studies found.</p>";
+            }
+
+            $conn->close();
+            ?>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center mt-10 gap-2 flex-wrap"></div>
+        <span id="pageInfo" class="text-white text-sm flex items-center"></span>
+        </div>
+
+    </section>
 
 <footer>
     <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
@@ -492,9 +661,10 @@
         </div>
     </div>
 </footer>
-
-
     <script src="script/navbar.js"></script>
+    <script src="script/portfolio.js"></script>
+
+
 </body>
 
 </html>

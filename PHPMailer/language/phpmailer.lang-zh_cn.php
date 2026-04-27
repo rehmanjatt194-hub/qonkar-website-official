@@ -28,3 +28,4 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP服务器出错：';
 $PHPMAILER_LANG['variable_set']         = '无法设置或重置变量：';
 $PHPMAILER_LANG['extension_missing']    = '丢失模块 Extension：';
 
+

@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'Fahadisoana tamin\'ny server SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Tsy azo atao ny mametraka na mamerina ny variable: ';
 $PHPMAILER_LANG['extension_missing']    = 'Tsy hita ny ampahany: ';
 
+

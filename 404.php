@@ -427,7 +427,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
+                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
                 <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
@@ -441,4 +441,5 @@
 </body>
 
 </html>
+
 

@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'Błąd SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Nie można ustawić lub zmodyfikować zmiennej: ';
 $PHPMAILER_LANG['extension_missing']    = 'Brakujące rozszerzenie: ';
 
+

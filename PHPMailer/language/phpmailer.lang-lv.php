@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP servera kļūda: ';
 $PHPMAILER_LANG['variable_set']         = 'Nevar piešķirt mainīgā vērtību: ';
 //$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';
 
+

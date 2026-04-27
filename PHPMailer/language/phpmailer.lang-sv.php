@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP serverfel: ';
 $PHPMAILER_LANG['variable_set']         = 'Kunde inte definiera eller återställa variabel: ';
 $PHPMAILER_LANG['extension_missing']    = 'Tillägg ej tillgängligt: ';
 
+

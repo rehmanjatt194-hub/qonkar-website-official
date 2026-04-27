@@ -30,3 +30,4 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP sunucu hatası: ';
 $PHPMAILER_LANG['variable_set']         = 'Değişken ayarlanamadı ya da sıfırlanamadı: ';
 $PHPMAILER_LANG['extension_missing']    = 'Eklenti bulunamadı: ';
 
+

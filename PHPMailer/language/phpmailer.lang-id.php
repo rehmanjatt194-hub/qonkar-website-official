@@ -30,3 +30,4 @@ $PHPMAILER_LANG['smtp_error']           = 'Kesalahan pada pelayan SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Tidak dapat mengatur atau mengatur ulang variabel: ';
 $PHPMAILER_LANG['extension_missing']    = 'Ekstensi PHP tidak tersedia: ';
 
+

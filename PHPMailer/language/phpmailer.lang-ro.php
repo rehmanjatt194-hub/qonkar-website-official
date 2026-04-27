@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'Eroare server SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Nu se poate seta/reseta variabila. ';
 $PHPMAILER_LANG['extension_missing']    = 'Lipsește extensia: ';
 
+

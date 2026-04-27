@@ -26,3 +26,4 @@ $PHPMAILER_LANG['recipients_failed']    = 'SMTP Feilur: Fylgjandi móttakarar mi
 //$PHPMAILER_LANG['variable_set']         = 'Cannot set or reset variable: ';
 //$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';
 
+

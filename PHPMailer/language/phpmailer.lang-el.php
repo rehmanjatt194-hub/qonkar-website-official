@@ -25,3 +25,4 @@ $PHPMAILER_LANG['smtp_error']           = 'Σφάλμα από τον SMTP Serve
 $PHPMAILER_LANG['variable_set']         = 'Αδυναμία ορισμού ή αρχικοποίησης μεταβλητής: ';
 //$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';
 
+

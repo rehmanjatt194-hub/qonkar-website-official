@@ -26,3 +26,4 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP serveri xətası: ';
 $PHPMAILER_LANG['variable_set']         = 'Dəyişənin quraşdırılması uğursuz oldu: ';
 //$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';
 
+

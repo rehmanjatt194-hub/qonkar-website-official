@@ -27,3 +27,4 @@ $PHPMAILER_LANG['smtp_error']           = 'خطا در SMTP Server: ';
 $PHPMAILER_LANG['variable_set']         = 'امکان ارسال یا ارسال مجدد متغیر‌ها وجود ندارد: ';
 $PHPMAILER_LANG['extension_missing']    = 'افزونه موجود نیست: ';
 
+

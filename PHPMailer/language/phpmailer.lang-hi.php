@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP सर्वर त्रुट�
 $PHPMAILER_LANG['variable_set']         = 'चर को बना या संशोधित नहीं किया जा सकता। ';
 $PHPMAILER_LANG['extension_missing']    = 'एक्सटेन्षन गायब है: ';
 
-
-

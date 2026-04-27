@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP greška: ';
 $PHPMAILER_LANG['variable_set']         = 'Nije moguće postaviti varijablu ili je vratiti nazad: ';
 $PHPMAILER_LANG['extension_missing']    = 'Nedostaje ekstenzija: ';
 
-
-

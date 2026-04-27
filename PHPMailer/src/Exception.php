@@ -39,5 +39,3 @@ class Exception extends \Exception
     }
 }
 
-
-

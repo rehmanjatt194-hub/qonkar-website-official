@@ -27,5 +27,3 @@ $PHPMAILER_LANG['recipients_failed']    = 'SMTPエラー: 次の受信者アド�
 //$PHPMAILER_LANG['variable_set']         = 'Cannot set or reset variable: ';
 //$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';
 
-
-

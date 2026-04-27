@@ -28,5 +28,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP server fejl: ';
 $PHPMAILER_LANG['variable_set']         = 'Kunne ikke definere eller nulstille variablen: ';
 $PHPMAILER_LANG['extension_missing']    = 'Udvidelse mangler: ';
 
-
-

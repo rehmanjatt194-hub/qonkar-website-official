@@ -27,5 +27,3 @@ $PHPMAILER_LANG['smtp_error']           = 'خطأ على مستوى الخادم
 $PHPMAILER_LANG['variable_set']         = 'لا يمكن تعيين أو إعادة تعيين متغير: ';
 $PHPMAILER_LANG['extension_missing']    = 'الإضافة غير موجودة: ';
 
-
-

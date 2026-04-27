@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP 서버 오류: ';
 $PHPMAILER_LANG['variable_set']         = '변수 설정 및 초기화 불가: ';
 $PHPMAILER_LANG['extension_missing']    = '확장자 없음: ';
 
-
-

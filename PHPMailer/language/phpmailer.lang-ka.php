@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP სერვერის შე�
 $PHPMAILER_LANG['variable_set']         = 'შეუძლებელია შემდეგი ცვლადის შექმნა ან შეცვლა: ';
 $PHPMAILER_LANG['extension_missing']    = 'ბიბლიოთეკა არ არსებობს: ';
 
-
-

@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'Erro de servidor SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Não foi possível definir ou redefinir a variável: ';
 $PHPMAILER_LANG['extension_missing']    = 'Extensão em falta: ';
 
-
-

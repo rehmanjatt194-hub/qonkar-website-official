@@ -26,5 +26,3 @@ if (ini_get("session.use_cookies")) {
 header("Location: index.php");
 exit();
 
-
-

@@ -114,8 +114,8 @@
                                     <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
                                     <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
                                     <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automative Apps </a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare and HIPPA Apps </a></li>
+                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps </a></li>
+                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                         <a href="/services/web-design-and-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Web Design & Development</a>
                         <a href="/services/landing-pages-design" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Landing Pages Design</a>
                         <a href="/services/saas-product-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Saas Product Development</a>
-                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automative App </a>
+                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automotive App </a>
                         <a href="/services/healthcare-and-hippa-apps" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Healthcare & HIPPA App </a>                        
 
                     </div>
@@ -321,7 +321,7 @@
 
             <div class="border-t border-white/30 my-8"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
@@ -340,8 +340,8 @@
                         <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
                         <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
                         <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automative App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And Hippa Apps</a></li>
+                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
+                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
                     </ul>
                 </div>
 
@@ -356,86 +356,78 @@
                 </div>
 
                 <div>
-                        <h3 class="font-bold text-lg mb-4">About</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/projects" class="hover:underline">Projects</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
+                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="https://qonkar.com/projects" class="hover:underline">Projects</a></li>
+                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
+                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                    </ul>
+                </div>
 
-
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://www.microsoft.com/en-us" class="hover:underline"
-                                    target="_blank">Microsoft</a>
-                            </li>
-                            <li>
-                                <a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a>
-                            </li>
-                            <li>
-                                <a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a>
-                            </li>
-                            <li>
-                                <a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a>
-                            </li>
-                            <li>
-                                <a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a>
-                            </li>
-                            <li>
-                                <a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a>
-                            </li>
-                            <li>
-                                <a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="https://www.microsoft.com/en-us" class="hover:underline" target="_blank">Microsoft</a></li>
+                        <li><a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a></li>
+                        <li><a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a></li>
+                        <li><a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a></li>
+                        <li><a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a></li>
+                        <li><a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a></li>
+                        <li><a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a></li>
+                    </ul>
+                </div>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Location</h2>
+                    <div class="flex flex-wrap justify-start gap-4 font-light">
+                        <p>UK</p>
+                        <p class="text-white/30">|</p>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
+                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
+                        <p>(+92) 305 8214945</p>
+                        <p class="text-white/30 sm:block">|</p>
+                        <p>(+44) 7476451747</p>
+                        <p class="text-white/30 hidden sm:block">|</p>
+                        <p class="break-all">info@qonkar.com</p>
+                    </div>
+                </div>
 
-            <div class="flex flex-col md:items-start md:text-left mb-8">
-                <h2 class="text-xl font-bold mb-2">Location</h2>
-                <div class="flex flex-wrap justify-start gap-4 font-light">
-                    <p>UK</p>
-                    <p class="text-white/30">|</p>
-                    <p>Pakistan</p>
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                    <div class="flex items-center gap-10 h-20">
+                        <a href="https://techdestination.com/" target="_blank">
+                            <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                        </a>
+                        
+                        <a href="https://www.secp.gov.pk/" target="_blank">
+                            <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                        </a>
+                    </div>
                 </div>
-                <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
-                <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                    <p>(+92) 305 8214945</p>
-                    <p class="text-white/30 sm:block">|</p>
-                    <p>(+44) 7476451747</p>
-                    <p class="text-white/30 hidden sm:block">|</p>
-                    <p class="break-all">info@qonkar.com</p>
+
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                    <div class="flex items-center h-20">
+                        <a href="https://techdestination.com/" target="_blank">
+                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                        </a>
+                    </div>
                 </div>
+            
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">Â© Qonkar 2025. All rights reserved</p>
+                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
                 <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
@@ -449,8 +441,4 @@
 </body>
 
 </html>
-
-
-
-
 

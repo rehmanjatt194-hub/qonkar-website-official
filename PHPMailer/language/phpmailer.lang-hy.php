@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'SMTP սերվերի սխալ: ';
 $PHPMAILER_LANG['variable_set']         = 'Չի հաջողվում ստեղծել կամ վերափոխել փոփոխականը: ';
 $PHPMAILER_LANG['extension_missing']    = 'Հավելվածը բացակայում է: ';
 
-
-

@@ -4880,5 +4880,3 @@ class PHPMailer
     }
 }
 
-
-

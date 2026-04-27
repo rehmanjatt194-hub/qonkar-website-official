@@ -145,5 +145,3 @@ if (!isset($_GET['code'])) {
     echo 'Refresh Token: ', $token->getRefreshToken();
 }
 
-
-

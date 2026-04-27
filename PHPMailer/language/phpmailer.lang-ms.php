@@ -26,5 +26,3 @@ $PHPMAILER_LANG['smtp_error']           = 'Ralat pada pelayan SMTP: ';
 $PHPMAILER_LANG['variable_set']         = 'Tidak boleh menetapkan atau menetapkan semula pembolehubah: ';
 $PHPMAILER_LANG['extension_missing']    = 'Sambungan hilang: ';
 
-
-

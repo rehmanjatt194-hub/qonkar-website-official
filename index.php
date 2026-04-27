@@ -318,7 +318,6 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
-            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
             <li><a href="/projects" class="hover:text-[var(--primary-color)]">Projects</a></li>
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
@@ -363,7 +362,6 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
             <a href="/projects" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Projects</a>
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
@@ -3267,9 +3265,6 @@ require_once ADMIN_URL.'/database_config.php';
                         <ul class="space-y-2 text-sm font-light">
                             <li>
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a>
                             </li>
                             <li>
                                 <a href="https://qonkar.com/projects" class="hover:underline">Projects</a>

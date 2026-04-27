@@ -225,7 +225,6 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
-            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
             <li><a href="/projects" class="text-[var(--primary-color)]">Projects</a></li>
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
@@ -270,7 +269,6 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
             <a href="/projects" class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Projects</a>
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
@@ -282,63 +280,9 @@ require_once ADMIN_URL.'/database_config.php';
         <div id="google_translate_element"></div>
     </div>
 </header>
-    <!-- Hero Section -->
-    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] rounded-lg overflow-hidden mt-4 mb-4 flex items-center">
-        <!-- Gradient Background -->
-        <div class="absolute inset-0 rounded-lg bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
-
-        <!-- Pattern Overlay (single SVG, no repeat) -->
-        <div class="absolute inset-0 rounded-lg hero-pattern"></div>
-
-        <!-- Hero Content -->
-                 <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-start w-full px-10 sm:px-10 lg:px-9 py-10">
-
-            <!-- Left Side: Text -->
-            <div class="text-left text-white space-y-6 order-1">
-                <!-- Badge -->
-                <div class="hidden glass px-3 py-2 rounded-full text-xs sm:text-sm text-white 
-                inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center sm:text-left">
-
-                    <!-- Dot New -->
-                    <span class="px-3 py-0.5 rounded-full bg-white text-[var(--primary-color)] text-xs">
-                        &#9679; New
-                    </span>
-
-                    <!-- Text -->
-                    <span>
-                        Free your team from repetitive work with AI automation.
-                    </span>
-                </div>
-
-                <!-- Heading -->
-                <h1 class="text-3xl sm:text-4xl md:text-5xl leading-snug">
-                    Explore Our <b>Innovative</b> Projects<br class="hidden sm:block"> and <b>Success</b> Stories.
-                </h1>
-
-                <!-- Paragraph -->
-                <p class="text-base sm:text-lg font-light leading-relaxed max-w-lg">
-                    Discover how Qonkar Technologies helps businesses thrive through custom-built solutions, from advanced e-commerce platforms to scalable software architectures.
-                </p>
-
-                <!-- CTA Button -->
-                <a href="/contact-us" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
-                hover:bg-[var(--secondary-color)] hover:text-white transition">
-                    Launch Your Store with us
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Right Side: Image -->
-            <div class="flex justify-center md:justify-end order-2">
-                <img src="images/case-study-hero.webp" alt="Service Hero"
-                    class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
-            </div>
-        </div>
-    </section>
+    <main class="min-h-[60vh] flex flex-col items-center justify-center text-white">
+        <h2 class="text-3xl font-light mt-20">Project details will be added here soon.</h2>
+    </main>
 
      <!-- Case Study -->
     <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -403,88 +347,7 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
         </div>
 
-        <!-- Case Study Cards Grid -->
-        <div id="caseStudiesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
-            <?php
-            $sql = "SELECT cs.id, cs.mockup_image, cs.background_image, cs.brand_name, cs.short_description, cs.link_of_case_study,
-                   GROUP_CONCAT(csc.category_name SEPARATOR ', ') AS categories
-            FROM case_studies cs
-            LEFT JOIN case_study_category_bridge bridge ON cs.id = bridge.case_study_id
-            LEFT JOIN case_study_categories csc ON bridge.category_id = csc.id
-            WHERE cs.status = 'active'
-            GROUP BY cs.id
-            ORDER BY cs.created_at DESC";
 
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    // ✅ Replace underscores with spaces in categories
-                    $categories = str_replace('_', ' ', $row['categories']);
-
-                    // ✅ Convert categories for filtering (data attribute)
-                    $dataCategory = strtolower(str_replace(' ', '-', $categories));
-
-                    // ✅ Conditional Arrow (only show if link exists)
-                    $arrow = !empty($row['link_of_case_study']) ? '
-                <div class="flex-shrink-0">
-                    <a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank">
-                        <img src="images/icons/arrrow_color.svg" class="w-8 h-8 transition-opacity duration-300 group-hover:hidden" alt="Arrow Icon">
-                        <img src="images/icons/arrrow_white.svg" class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block" alt="Arrow Icon White">
-                    </a>
-                </div>
-            ' : '';
-
-                    echo '
-            <div class="w-full background-backdrop-card rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col"
-                data-category="' . htmlspecialchars($dataCategory) . '">
-
-                <!-- Top Image Section -->
-                <div class="w-full h-80 flex items-center justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0">
-                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full object-contain">
-                </div>
-
-                <!-- Bottom Text Section -->
-                <div class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] p-[2px]
-                    [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
-
-                    <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
-                        <!-- Hover Overlay -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="' . htmlspecialchars($row['background_image']) . '" alt="Hover BG" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="relative z-10 p-6 flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl md:text-2xl text-left font-light mb-2">'
-                        . htmlspecialchars($row['brand_name']) . '
-                                </h3>
-                                <p class="text-sm md:text-base font-light text-left text-gray-200"><i>'
-                        . htmlspecialchars(mb_strimwidth($row['short_description'], 0, 100, '...')) .
-                        ' </i></p>
-                            </div>
-                            ' . $arrow . '
-                        </div>
-                    </div>
-                </div>
-            </div>';
-                }
-            } else {
-                echo "<p class='text-gray-400 text-center'>No case studies found.</p>";
-            }
-
-            $conn->close();
-            ?>
-        </div>
-
-        <!-- Pagination -->
-        <div id="pagination" class="flex justify-center mt-10 gap-2 flex-wrap"></div>
-        <span id="pageInfo" class="text-white text-sm flex items-center"></span>
-        </div>
-
-    </section>
 
 <footer>
     <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">

@@ -617,9 +617,6 @@ if (!empty($job_slug)) {
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a>
-                            </li>
-                            <li>
                                 <a href="https://qonkar.com/projects" class="hover:underline">Projects</a>
                             </li>
                             <li>

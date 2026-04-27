@@ -448,7 +448,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-20">
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
                     <div class="flex flex-col md:items-start md:text-left mb-8">
                         <h2 class="text-xl font-bold mb-2">Registered By</h2>
                         <div class="flex items-center gap-10 h-20">

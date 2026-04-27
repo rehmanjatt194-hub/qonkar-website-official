@@ -1233,12 +1233,12 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                     <p class="break-all">info@qonkar.com</p>
                 </div>
             </div>
-            <div class="grid grid-cols-2 mx-8 mt-8 ">
+            <div class="flex flex-col sm:flex-row mx-8 mt-8 gap-10 md:gap-12 ">
             <div class="flex flex-col md:items-start md:text-left mb-8">
                 <h2 class="text-xl font-bold mb-2">Registered By</h2>
             <div class="flex items-center space-x-18 gap-10 ">
                 <a href="https://techdestination.com/" target="_blank">
-                    <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-20 object-contain" />
+                    <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
                 </a>
                 
                 <a href="https://www.secp.gov.pk/" target="_blank">

@@ -244,6 +244,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                 <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
                 <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
                 <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
                 <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
                 <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
                     class="h-8 object-contain" />
@@ -261,6 +262,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                 <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
                 <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
                 <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
                 <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
                 <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
                     class="h-8 object-contain" />
@@ -1180,6 +1182,31 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                         <li><a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="flex flex-col sm:flex-row mx-8 mt-8 gap-10 md:gap-12 ">
+            <div class="flex flex-col md:items-start md:text-left mb-8">
+                <h2 class="text-xl font-bold mb-2">Registered By</h2>
+            <div class="flex items-center space-x-18 gap-10 ">
+                <a href="https://techdestination.com/" target="_blank">
+                    <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                </a>
+                
+                <a href="https://www.secp.gov.pk/" target="_blank">
+                    <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                </a>
+            </div>
+                
+            </div>
+            <div class="flex flex-col md:items-start md:text-left mb-8">
+                <h2 class="text-xl font-bold mb-2">Collaboration By</h2>
+            <div class="flex items-center space-x-18 gap-10 ">
+                <a href="https://szabistzabed.org/shaheed-benazirabad/" target="_blank">
+                  <img src="/images/company-logos/szabist.webp" alt="SZABIST Logo" class="w-24 object-contain" />
+                </a>
+                
+                <a href="https://mistyrose-lion-403927.hostingersite.com/" target="_blank">
+                    <img src="/images/company-logos/thalassemia-logo.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

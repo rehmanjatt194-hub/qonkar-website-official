@@ -116,8 +116,8 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                                     <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
                                     <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
                                     <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automative Apps </a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare and HIPPA Apps </a></li>
+                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps </a></li>
+                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -127,7 +127,9 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
+            
             <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+            
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
             <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
@@ -163,7 +165,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                         <a href="/services/web-design-and-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Web Design & Development</a>
                         <a href="/services/landing-pages-design" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Landing Pages Design</a>
                         <a href="/services/saas-product-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Saas Product Development</a>
-                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automative App </a>
+                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automotive App </a>
                         <a href="/services/healthcare-and-hippa-apps" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Healthcare & HIPPA App </a>                        
 
                     </div>
@@ -171,7 +173,8 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
+            
+            
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
             <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
@@ -1139,12 +1142,20 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                         <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
                         <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
                         <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automative App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And Hippa Apps</a></li>
+                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
+                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
                     </ul>
                 </div>
 
-
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Branding & Performance</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="/services/branding-and-digital-marketing" class="hover:underline">Branding And Digital Marketing</a></li>
+                        <li><a href="/services/seo-services" class="hover:underline">Seo Services</a></li>
+                        <li><a href="/services/ppc-and-paid-advertising" class="hover:underline">PPC & Paid Advertising</a></li>
+                        <li><a href="/services/organic-content-strategy" class="hover:underline">Organic Content Strategy</a></li>
+                    </ul>
+                </div>
 
                 <div>
                         <h3 class="font-bold text-lg mb-4">About</h3>
@@ -1249,7 +1260,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
+                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
                 <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
@@ -1269,4 +1280,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
-</html>
+
+
+
+

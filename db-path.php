@@ -9,3 +9,5 @@ define('ADMIN_PATH', __DIR__ . '/system-core-portal-admin-dashboard');
 
 // adjust if db-path.php is not in root
 ?>
+
+

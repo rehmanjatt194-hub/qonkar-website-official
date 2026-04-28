@@ -252,8 +252,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
                                     <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
                                     <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automative Apps </a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare and HIPPA Apps </a></li>
+                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps </a></li>
+                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -263,7 +263,9 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 </div>
             </li>
 
+            
             <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
+            
             <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
             <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
             <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
@@ -299,7 +301,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                         <a href="/services/web-design-and-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Web Design & Development</a>
                         <a href="/services/landing-pages-design" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Landing Pages Design</a>
                         <a href="/services/saas-product-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Saas Product Development</a>
-                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automative App </a>
+                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automotive App </a>
                         <a href="/services/healthcare-and-hippa-apps" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Healthcare & HIPPA App </a>                        
 
                     </div>
@@ -307,7 +309,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
+            
+            
             <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
             <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
             <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
@@ -592,267 +595,209 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-    <section
-        class="relative bg-[var(--body-bg)] text-white py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
-
-        <div class="relative text-center mb-24 z-10">
-            <div class="glass-border inline-flex items-center gap-3 mb-8">
+    <div class="container mx-auto flex flex-col items-center gap-3">
+    <div class="glass-border inline-block mb-2">
                 <div class="glass-background">
-                    <div class="glass flex items-center gap-3 text-sm font-light uppercase tracking-wide">
-                        &#9679; &nbsp; Qonkar E-Commerce Excellence
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OUR Services</p>
                     </div>
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">
-                End-to-End <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] font-bold">Shopify
-                    Solutions</span>
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Global <b>Shopify Development</b>
             </h2>
-            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light">From custom theme architecture to
-                complex headless integrations, we build e-commerce ecosystems that dominate the market.</p>
-        </div>
-
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Shopify Theme Development"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Bespoke <b>Storefront Architecture</b>
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
-                    <a href="/contact-us"
-                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">Shopify
-                        development partner</a>,
-                    we translate your brand identity into a high-converting digital experience.
+    <!--Service Section No.1-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/premium-shopify-theme-design-and-customization-portfolio.webp" alt="A showcase of professional shopify website design and theme development services by Qonkar Technologies, featuring modern and responsive e-commerce layouts." class="rounded-xl w-[60%] h-auto">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Best Shopify Website Design Agency for High-Converting Stores
+                </h2>
+
+                
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  In today’s competitive e-commerce landscape, aesthetics alone aren’t enough to win customers. You need a storefront that tells your brand story while providing a seamless user journey. As the 
+                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
+                    best Shopify website design agency
+                  </a>, 
+                  Qonkar specializes in creating visually stunning and technically superior online stores. Our approach to 
+                  <a href="https://qonkar.com/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
+                    custom Shopify theme development
+                  </a> 
+                  ensures that your store is not just a digital catalog, but a high-performance sales engine designed for the global market.
                 </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Pixel-Perfect Figma to Liquid</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Mobile-First Responsive Design</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Advanced Filtering & Search Setup</li>
-                </ul>
+
             </div>
         </div>
+    </section>
+    
+    
+    <!--Service Section No.2-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Shopify Plus Enterprise"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Enterprise <b>Shopify Plus</b> Experts
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Scale without limits. Our
-                    <a href="/contact-us"
-                        class="text-[var(--primary-color)] font-medium border-b border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] transition-colors pb-0.5">Enterprise
-                        developers</a>
-                    leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout
-                    extensibility.
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Expert Shopify Store Design Services
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Generic themes often come with unnecessary code that slows down your site and limits your brand’s potential. Our 
+                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
+                    Shopify store design services
+                  </a> 
+                  focus on building a unique identity for your business. We understand that every niche requires a different UI/UX strategy. From high-fashion boutiques to complex industrial equipment stores, we tailor every pixel to match your target audience's expectations. By prioritizing user experience, we help you reduce bounce rates and increase the average order value.
                 </p>
-                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
-                    <div>
-                        <h4
-                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
-                            10k+</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Orders Per Minute</p>
-                    </div>
-                    <div>
-                        <h4
-                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
-                            99.9%</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Server Uptime</p>
-                    </div>
-                </div>
+
+            </div>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/custom-shopify-theme-design-for-fashion-and-lifestyle-brands.webp" alt="High-end fashion and jewelry store layouts created through shopify custom theme development by Qonkar Technologies." class="rounded-xl w-[50%] max-w-md h-auto">
             </div>
         </div>
+    </section>
+    
+    <!--Service Section No.3-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Custom Shopify Apps"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/expert-shopify-theme-customization-for-lifestyle-brands.webp" alt="Qonkar Technologies is among the best design firms for customizing shopify theme, showcasing elegant fashion and lifestyle brand layouts." class="rounded-xl w-full max-w-md h-auto">
             </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Private & <b>Custom App</b> Development
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Bridge functionality gaps with custom-coded apps. Whether it’s complex ERP syncing, specialized
-                    product builders, or unique loyalty programs, our
-                    <a href="/contact-us"
-                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">engineering
-                        team</a>
-                    has you covered.
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Why Hire a Shopify Theme Developer from Qonkar?
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  When you 
+                  <a href="https://qonkar.com/career" class="underline hover:text-blue-500 transition-colors duration-300">
+                    hire a Shopify theme developer
+                  </a> 
+                  from our team, you gain access to a technical strategist who understands the balance between beauty and performance. We don’t just "install" themes; we engineer them. Our developers are experts in Liquid, Shopify’s native templating language, allowing us to build features that off-the-shelf templates simply cannot offer. Whether it is advanced product filtering, custom cart drawers, or interactive lookbooks, we bring your most ambitious design ideas to life with clean, bug-free code.
                 </p>
-                <div class="flex flex-wrap gap-3 mt-4">
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Node.js</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">React
-                        / Polaris</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">GraphQL
-                        API</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Laravel</span>
-                </div>
+
             </div>
         </div>
+    </section>
+    
+    
+    <!--Service Section No.4-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="E-Commerce Migration"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Zero-Downtime <b>Migrations</b></h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so
-                    you don't lose a single customer or ranking during the transition.
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Performance-Driven Shopify Custom Theme Development
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  A beautiful store is useless if it doesn't rank or takes too long to load. Our Shopify custom theme development process is rooted in SEO best practices and 
+                  <a href="https://qonkar.com/services/speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
+                    speed optimization
+                  </a>. 
+                  We ensure that your custom design is fully responsive, meaning it looks and functions perfectly on smartphones, tablets, and desktops. By utilizing modern web standards and minimizing heavy scripts, we ensure your 
+                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
+                    Shopify website design services
+                  </a> 
+                  result in a store that passes Google’s Core Web Vitals with flying colors.
                 </p>
-                <div class="bg-black/30 p-5 rounded-2xl border border-white/5 flex items-center justify-between">
-                    <div class="text-white/90 font-semibold text-sm">Magento / Woo</div>
-                    <div class="flex-1 px-4 flex items-center justify-center">
-                        <div
-                            class="h-[2px] w-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--secondary-color)] relative">
-                            <svg class="w-6 h-6 text-[var(--secondary-color)] absolute right-[-5px] top-1/2 -translate-y-1/2"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-bold py-1.5 px-4 rounded-lg text-sm">
-                        Shopify Plus</div>
-                </div>
+
+            </div>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/high-converting-shopify-landing-page-design-mockup.webp" alt="Our Client" class="rounded-xl w-[70%] h-auto">
             </div>
         </div>
+    </section>
+    
+    <!--Service Section No.5-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Speed Optimization"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 min-h-[400px] rounded-3xl">
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/minimalist-shopify-theme-design-for-beauty-and-skincare-brands.webp" alt="Clean and modern skin care store layouts showcasing premium shopify theme design" class="rounded-xl w-full max-w-md h-auto">
             </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Speed <b>Optimization & CRO</b></h3>
-                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
-                    A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and
-                    restructure Liquid logic to deliver blazing-fast loading speeds.
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Scaling Your Brand with Bespoke Design
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Your e-commerce store is the digital face of your brand. Investing in custom Shopify theme development is an investment in your brand’s credibility. At 
+                  <a href="https://qonkar.com/" class="underline hover:text-blue-500 transition-colors duration-300">
+                    Qonkar
+                  </a>, 
+                  we move away from the "one-size-fits-all" mentality. We conduct deep market research to understand your competitors and your customers' pain points before we even start the design phase. This strategic approach ensures that your store isn't just another Shopify site, it’s a market leader in your category.
                 </p>
-                <div class="space-y-5">
-                    <div>
-                        <div class="flex justify-between text-sm font-semibold mb-2">
-                            <span class="text-gray-300 font-light">Performance Score</span>
-                            <span class="text-[var(--secondary-color)]">98/100</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
-                                style="width: 98%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-sm font-semibold mb-2">
-                            <span class="text-gray-300 font-light">Conversion Rate Uplift</span>
-                            <span class="text-[var(--primary-color)]">+35%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
-                                style="width: 85%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
+    </section>
+    
+    
+    <!--Service Section No.6-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Headless Commerce"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                   Why Design Matters for Your Technical Success?
+                </h2>
+<div>
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+  Many businesses overlook the fact that design and development are two sides of the same coin. Quality design directly impacts:
+</p>
+
+<ul class="leading-relaxed mt-2 font-light text-white max-w-xl mx-auto lg:mx-0">
+  <li class="flex items-start gap-2 mb-2">
+    <span class="text-[var(--tertiary-color)]">✔</span>
+    <span><strong>Conversion Rates:</strong> A clear, intuitive path to purchase makes it easier for customers to buy.</span>
+  </li>
+  <li class="flex items-start gap-2 mb-2">
+    <span class="text-[var(--tertiary-color)]">✔</span>
+    <span><strong>Brand Trust:</strong> Professional, bespoke designs make your business look established and reliable.</span>
+  </li>
+  <li class="flex items-start gap-2">
+    <span class="text-[var(--tertiary-color)]">✔</span>
+    <span><strong>Customer Retention:</strong> An enjoyable shopping experience encourages customers to return to your store.</span>
+  </li>
+</ul>
+</div>
+                
+
             </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Future-Proof <b>Headless Commerce</b>
-                </h3>
-                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
-                    Decouple your front-end from the backend. We build lightning-fast, highly customizable headless
-                    experiences using <span class="text-white font-semibold">Hydrogen & Next.js</span> while keeping
-                    Shopify as your powerful engine.
-                </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg> Omnichannel Selling Power</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg> Complete Design Freedom</li>
-                </ul>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/premium-food-brand-shopify-theme-customization-portfolio.webp" alt="A professional display of food and beverage website layouts created by expert shopify theme designers for the official shopify theme store." class="rounded-xl w-full max-w-md h-auto">
             </div>
-        </div>
-
-        <div class="text-center mt-16 relative z-10">
-            <a href="/contact-us"
-                class="hero-btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--primary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white shadow-none">
-                Discuss Your Project With Us
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
-
         </div>
     </section>
     
@@ -1305,7 +1250,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
 
             <div class="border-t border-white/30 my-8"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
@@ -1324,71 +1269,49 @@ require_once "../".ADMIN_URL.'/database_config.php';
                         <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
                         <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
                         <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automative App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And Hippa Apps</a></li>
+                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
+                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
                     </ul>
                 </div>
 
-
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Branding & Performance</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="/services/branding-and-digital-marketing" class="hover:underline">Branding And Digital Marketing</a></li>
+                        <li><a href="/services/seo-services" class="hover:underline">Seo Services</a></li>
+                        <li><a href="/services/ppc-and-paid-advertising" class="hover:underline">PPC & Paid Advertising</a></li>
+                        <li><a href="/services/organic-content-strategy" class="hover:underline">Organic Content Strategy</a></li>
+                    </ul>
+                </div>
 
                 <div>
-                        <h3 class="font-bold text-lg mb-4">About</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
-                            </li>
-                            <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
+                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
+                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                    </ul>
+                </div>
 
-
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://www.microsoft.com/en-us" class="hover:underline"
-                                    target="_blank">Microsoft</a>
-                            </li>
-                            <li>
-                                <a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a>
-                            </li>
-                            <li>
-                                <a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a>
-                            </li>
-                            <li>
-                                <a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a>
-                            </li>
-                            <li>
-                                <a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a>
-                            </li>
-                            <li>
-                                <a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a>
-                            </li>
-                            <li>
-                                <a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="https://www.microsoft.com/en-us" class="hover:underline" target="_blank">Microsoft</a></li>
+                        <li><a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a></li>
+                        <li><a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a></li>
+                        <li><a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a></li>
+                        <li><a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a></li>
+                        <li><a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a></li>
+                        <li><a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a></li>
+                    </ul>
+                </div>
             </div>
 
-
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                 
                 <div class="flex flex-col md:items-start md:text-left mb-8">
                     <h2 class="text-xl font-bold mb-2">Location</h2>
@@ -1397,7 +1320,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                         <p class="text-white/30">|</p>
                         <p>Pakistan</p>
                     </div>
-                    <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
                     <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
                         <p>(+92) 305 8214945</p>
                         <p class="text-white/30 sm:block">|</p>
@@ -1420,21 +1343,21 @@ require_once "../".ADMIN_URL.'/database_config.php';
                             </a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                        <div class="flex items-center h-20">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
-                            </a>
-                        </div>
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                    <div class="flex items-center h-20">
+                        <a href="https://techdestination.com/" target="_blank">
+                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                        </a>
                     </div>
                 </div>
             
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
+                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
                 <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>

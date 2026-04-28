@@ -443,6 +443,7 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </div>
 </footer>
+
     <script>
         function closeJobModal(id) {
             document.getElementById('jobModal' + id).classList.add('hidden');

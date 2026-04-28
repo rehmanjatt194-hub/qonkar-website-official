@@ -1232,6 +1232,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
         </div>
     </div>
 </footer>
+
     
     <script src="/script/FAQ.js"></script>
     <script src="/script/navbar.js"></script>

@@ -1120,7 +1120,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
             <div class="border-t border-white/30 my-8"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-4">
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
@@ -1169,17 +1169,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Collaboration</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="/collaborations/szabist-zabtech" class="hover:underline">SZABIST ZABTECH</a>
-                            </li>
-                            <li>
-                                <a href="" class="hover:underline">Thalassemia Nawabshah</a>
-                            </li>
-                        </ul>
-                    </div>
+
 
                     <div>
                         <h3 class="font-bold text-lg mb-4">Trusted by</h3>
@@ -1213,55 +1203,48 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
 
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
                 
-                
-            
-            <div class="flex flex-col md:items-start md:text-left mb-8">
-                <h2 class="text-xl font-bold mb-2">Location</h2>
-                <div class="flex flex-wrap justify-start gap-4 font-light">
-                    <p>UK</p>
-                    <p class="text-white/30">|</p>
-                    <p>Pakistan</p>
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Location</h2>
+                    <div class="flex flex-wrap justify-start gap-4 font-light">
+                        <p>UK</p>
+                        <p class="text-white/30">|</p>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
+                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
+                        <p>(+92) 305 8214945</p>
+                        <p class="text-white/30 sm:block">|</p>
+                        <p>(+44) 7476451747</p>
+                        <p class="text-white/30 hidden sm:block">|</p>
+                        <p class="break-all">info@qonkar.com</p>
+                    </div>
                 </div>
-                <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
-                <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                    <p>(+92) 305 8214945</p>
-                    <p class="text-white/30 sm:block">|</p>
-                    <p>(+44) 7476451747</p>
-                    <p class="text-white/30 hidden sm:block">|</p>
-                    <p class="break-all">info@qonkar.com</p>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row mx-8 mt-8 gap-10 md:gap-12 ">
-            <div class="flex flex-col md:items-start md:text-left mb-8">
-                <h2 class="text-xl font-bold mb-2">Registered By</h2>
-            <div class="flex items-center space-x-18 gap-10 ">
-                <a href="https://techdestination.com/" target="_blank">
-                    <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
-                </a>
-                
-                <a href="https://www.secp.gov.pk/" target="_blank">
-                    <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                </a>
-            </div>
-                
-            </div>
-            <div class="flex flex-col md:items-start md:text-left mb-8">
-                <h2 class="text-xl font-bold mb-2">Collaboration By</h2>
-            <div class="flex items-center space-x-18 gap-10 ">
-                <a href="https://szabistzabed.org/shaheed-benazirabad/" target="_blank">
-                  <img src="/images/company-logos/szabist.webp" alt="SZABIST Logo" class="w-24 object-contain" />
-                </a>
-                
-                <a href="https://mistyrose-lion-403927.hostingersite.com/" target="_blank">
-                    <img src="/images/company-logos/thalassemia-logo.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                </a>
-            </div>
 
-            </div>
-            </div>
-            
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                        <div class="flex items-center gap-10 h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                            </a>
+                            
+                            <a href="https://www.secp.gov.pk/" target="_blank">
+                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                        <div class="flex items-center h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             
             </div>
 
@@ -1275,6 +1258,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
         </div>
     </div>
 </footer>
+
 </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

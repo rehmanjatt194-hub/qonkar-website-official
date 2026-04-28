@@ -1488,6 +1488,7 @@ require_once ADMIN_URL.'/database_config.php';
 </footer>
 
 
+
     <script src="script/navbar.js"></script>
     <script src="script/FAQ.js"></script>
       

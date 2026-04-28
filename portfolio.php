@@ -655,6 +655,7 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </div>
 </footer>
+
     <script src="script/navbar.js"></script>
     <script src="script/portfolio.js"></script>
 

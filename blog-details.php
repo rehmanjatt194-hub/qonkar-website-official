@@ -546,6 +546,7 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
 </footer>
 
 
+
     <script src="script/navbar.js"></script>
     <script>
         document.getElementById("copyLinkBtn").addEventListener("click", () => {

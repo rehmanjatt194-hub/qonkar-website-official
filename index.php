@@ -3372,6 +3372,7 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </div>
 </footer>
+
 </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

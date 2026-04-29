@@ -443,361 +443,255 @@ require_once "../".ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-    <section class="relative py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl  text-center ">
-        <div class="container mx-auto flex flex-col items-center gap-3">
 
-            <div class="glass-border inline-block mb-4">
+    <section
+        class="relative bg-[var(--body-bg)] text-white py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+        <div class="relative text-center mb-24 z-10">
+            <div class="glass-border inline-flex items-center gap-3 mb-8">
                 <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;DESIGN PROCESS</p>
+                    <div class="glass flex items-center gap-3 text-sm font-light uppercase tracking-wide">
+                        &#9679; &nbsp; Qonkar Creative Excellence
                     </div>
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                From <b>Concept</b> to <b>Conversion</b>
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">
+                Bespoke <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] font-bold">Shopify Theme</span> Design & UX
             </h2>
+            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light">We create visually stunning, high-converting Shopify themes that reflect your brand's unique identity and drive growth.</p>
+        </div>
 
-            <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
-                We believe great design is 50% art and 50% data. Our workflow ensures your store isn't just beautiful—it's a high-performance sales machine.
-            </p>
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Custom UI/UX Prototypes"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Custom <b>UI/UX Prototypes</b>
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Visualize before you build. Our
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">design team</a>
+                    crafts high-fidelity Figma wireframes and interactive mockups that ensure absolute brand alignment and user-centric flows.
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> High-Fidelity Wireframes</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Interactive UX Flows</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg> Design System Alignment</li>
+                </ul>
+            </div>
+        </div>
 
-            <div class="w-full mt-10">
-                <div class="flex gap-2 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory no-scrollbar">
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Conversion Focused Layouts"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Conversion <b>Focused Layouts</b>
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Beauty that sells. We implement
+                    <a href="/contact-us"
+                        class="text-[var(--primary-color)] font-medium border-b border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] transition-colors pb-0.5">behavioral science</a>
+                    to design dynamic product pages, frictionless checkout paths, and smart cart upsells that maximize your average order value (AOV).
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            +45%</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Conversion Lift</p>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
+                            80%</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Mobile Reach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Liquid Template Engineering"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Liquid <b>Template Engineering</b>
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    High-performance code. Our
+                    <a href="/contact-us"
+                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">Liquid engineers</a>
+                    build performance-first templates with reusable sections and customizable schema settings for full merchant control.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Clean Liquid</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Reusable Sections</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Fast TTFB</span>
+                    <span
+                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Zero Bloat</span>
+                </div>
+            </div>
+        </div>
 
-                        <div class="absolute inset-0  opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Discover_strategy.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
-
-                        <div class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">01</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Brand Immersion</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    We dive deep into your brand identity, audience personas, and competitor landscape.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button class="w-10 h-10 flex items-center justify-center rounded-full  bg-white text-[var(--secondary-color)]  transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Immersive Mobile Experiences"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Immersive <b>Mobile UI</b></h3>
+                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
+                    Mobile-first by default. We design touch-optimized interfaces, thumb-friendly navigation, and blazing-fast mobile layouts that capture the modern shopper.
+                </p>
+                <div class="bg-black/30 p-5 rounded-2xl border border-white/5 flex items-center justify-between">
+                    <div class="text-white/90 font-semibold text-sm">Touch Optimized</div>
+                    <div class="flex-1 px-4 flex items-center justify-center">
+                        <div
+                            class="h-[2px] w-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--secondary-color)] relative">
+                            <svg class="w-6 h-6 text-[var(--secondary-color)] absolute right-[-5px] top-1/2 -translate-y-1/2"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
                         </div>
                     </div>
-                    <div class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+                    <div
+                        class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-bold py-1.5 px-4 rounded-lg text-sm">
+                        Mobile-First</div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="absolute inset-0  opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Design_expreience.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
+        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                </div>
+                <img src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Brand System Development"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
+            </div>
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Brand <b>Design Systems</b></h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    Cohesion across every page. We develop comprehensive design systems including custom iconography, typography scales, and harmonious color palettes for a premium brand feel.
+                </p>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Visual Consistency</span>
+                            <span class="text-[var(--secondary-color)]">100%</span>
                         </div>
-
-                        <div class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">02</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">UX Wireframing</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500"> We map out user journeys to ensure frictionless navigation and logical flow. </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col p-6 h-[20rem]   flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px]  text-white bg-[#227d8d transition-all duration-500 ease-in-out  md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
-
-                        <div class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Integration.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
-
-                        <div class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">03</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">High-Fidelity UI</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500"> We bring the design to life with pixel-perfect visuals, typography, and micro-interactions. </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 100%"></div>
                         </div>
                     </div>
-                    <div class="flex flex-col p-6 h-[20rem]   flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px]  text-white bg-[#227d8d] transition-all duration-500 ease-in-out  md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
-
-                        <div class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/testing.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <span class="text-gray-300 font-light">Brand Authority</span>
+                            <span class="text-[var(--primary-color)]">Elite</span>
                         </div>
-
-                        <div class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">04</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Liquid Development</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500"> We translate designs into clean, fast Liquid code that Shopify loves. </p>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
+                                style="width: 90%">
                             </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px]text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
-
-                        <div class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/growth.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
-
-                        <div class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">05</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Quality Assurance</h3>
-                                <p class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500"> Rigorous cross-device testing to ensure pixel perfection before launch. </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
-    
-    
-    <div class="container mx-auto flex flex-col items-center gap-3">
-    <div class="glass-border inline-block mb-2">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;OUR Services</p>
-                    </div>
+
+        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
+            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
                 </div>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Interactive Micro-Animations"
+                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
             </div>
-
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Global <b>Shopify Development</b>
-            </h2>
-            </div>
-    <!--Service Section No.1-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/premium-shopify-theme-design-and-customization-portfolio.webp" alt="A showcase of professional shopify website design and theme development services by Qonkar Technologies, featuring modern and responsive e-commerce layouts." class="rounded-xl w-[60%] h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Best Shopify Website Design Agency for High-Converting Stores
-                </h2>
-
-                
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  In today’s competitive e-commerce landscape, aesthetics alone aren’t enough to win customers. You need a storefront that tells your brand story while providing a seamless user journey. As the 
-                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
-                    best Shopify website design agency
-                  </a>, 
-                  Qonkar specializes in creating visually stunning and technically superior online stores. Our approach to 
-                  <a href="https://qonkar.com/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
-                    custom Shopify theme development
-                  </a> 
-                  ensures that your store is not just a digital catalog, but a high-performance sales engine designed for the global market.
+            <div
+                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
+                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Interactive <b>Micro-Animations</b>
+                </h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
+                    Delight in the details. We implement subtle hover effects, smooth scroll transitions, and dynamic cart feedback that bring your store to life and encourage interaction.
                 </p>
-
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path>
+                        </svg> Smooth Transitions</li>
+                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
+                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path>
+                        </svg> Dynamic Cart Feedback</li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-    
-    <!--Service Section No.2-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+        <div class="text-center mt-16 relative z-10">
+            <a href="/contact-us"
+                class="hero-btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--primary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white shadow-none">
+                Design Your Premium Store
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
 
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Expert Shopify Store Design Services
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Generic themes often come with unnecessary code that slows down your site and limits your brand’s potential. Our 
-                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify store design services
-                  </a> 
-                  focus on building a unique identity for your business. We understand that every niche requires a different UI/UX strategy. From high-fashion boutiques to complex industrial equipment stores, we tailor every pixel to match your target audience's expectations. By prioritizing user experience, we help you reduce bounce rates and increase the average order value.
-                </p>
-
-            </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/custom-shopify-theme-design-for-fashion-and-lifestyle-brands.webp" alt="High-end fashion and jewelry store layouts created through shopify custom theme development by Qonkar Technologies." class="rounded-xl w-[50%] max-w-md h-auto">
-            </div>
-        </div>
-    </section>
-    
-    <!--Service Section No.3-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/expert-shopify-theme-customization-for-lifestyle-brands.webp" alt="Qonkar Technologies is among the best design firms for customizing shopify theme, showcasing elegant fashion and lifestyle brand layouts." class="rounded-xl w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Why Hire a Shopify Theme Developer from Qonkar?
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  When you 
-                  <a href="https://qonkar.com/career" class="underline hover:text-blue-500 transition-colors duration-300">
-                    hire a Shopify theme developer
-                  </a> 
-                  from our team, you gain access to a technical strategist who understands the balance between beauty and performance. We don’t just "install" themes; we engineer them. Our developers are experts in Liquid, Shopify’s native templating language, allowing us to build features that off-the-shelf templates simply cannot offer. Whether it is advanced product filtering, custom cart drawers, or interactive lookbooks, we bring your most ambitious design ideas to life with clean, bug-free code.
-                </p>
-
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Service Section No.4-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Performance-Driven Shopify Custom Theme Development
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  A beautiful store is useless if it doesn't rank or takes too long to load. Our Shopify custom theme development process is rooted in SEO best practices and 
-                  <a href="https://qonkar.com/services/speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
-                    speed optimization
-                  </a>. 
-                  We ensure that your custom design is fully responsive, meaning it looks and functions perfectly on smartphones, tablets, and desktops. By utilizing modern web standards and minimizing heavy scripts, we ensure your 
-                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Shopify website design services
-                  </a> 
-                  result in a store that passes Google’s Core Web Vitals with flying colors.
-                </p>
-
-            </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/high-converting-shopify-landing-page-design-mockup.webp" alt="Our Client" class="rounded-xl w-[70%] h-auto">
-            </div>
-        </div>
-    </section>
-    
-    <!--Service Section No.5-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/minimalist-shopify-theme-design-for-beauty-and-skincare-brands.webp" alt="Clean and modern skin care store layouts showcasing premium shopify theme design" class="rounded-xl w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                    Scaling Your Brand with Bespoke Design
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Your e-commerce store is the digital face of your brand. Investing in custom Shopify theme development is an investment in your brand’s credibility. At 
-                  <a href="https://qonkar.com/" class="underline hover:text-blue-500 transition-colors duration-300">
-                    Qonkar
-                  </a>, 
-                  we move away from the "one-size-fits-all" mentality. We conduct deep market research to understand your competitors and your customers' pain points before we even start the design phase. This strategic approach ensures that your store isn't just another Shopify site, it’s a market leader in your category.
-                </p>
-
-            </div>
-        </div>
-    </section>
-    
-    
-    <!--Service Section No.6-->
-    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-
-
-                <h2 class="text-xl md:text-2xl  text-white">
-                   Why Design Matters for Your Technical Success?
-                </h2>
-<div>
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-  Many businesses overlook the fact that design and development are two sides of the same coin. Quality design directly impacts:
-</p>
-
-<ul class="leading-relaxed mt-2 font-light text-white max-w-xl mx-auto lg:mx-0">
-  <li class="flex items-start gap-2 mb-2">
-    <span class="text-[var(--tertiary-color)]">✔</span>
-    <span><strong>Conversion Rates:</strong> A clear, intuitive path to purchase makes it easier for customers to buy.</span>
-  </li>
-  <li class="flex items-start gap-2 mb-2">
-    <span class="text-[var(--tertiary-color)]">✔</span>
-    <span><strong>Brand Trust:</strong> Professional, bespoke designs make your business look established and reliable.</span>
-  </li>
-  <li class="flex items-start gap-2">
-    <span class="text-[var(--tertiary-color)]">✔</span>
-    <span><strong>Customer Retention:</strong> An enjoyable shopping experience encourages customers to return to your store.</span>
-  </li>
-</ul>
-</div>
-                
-
-            </div>
-            
-            <div class="order-2 lg:order-2 flex justify-center">
-                <img src="/images/premium-food-brand-shopify-theme-customization-portfolio.webp" alt="A professional display of food and beverage website layouts created by expert shopify theme designers for the official shopify theme store." class="rounded-xl w-full max-w-md h-auto">
-            </div>
         </div>
     </section>
     

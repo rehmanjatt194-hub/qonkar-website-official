@@ -454,6 +454,181 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
     
     
     
+    <div class="container mx-auto flex flex-col items-center gap-3">
+    <div class="glass-border inline-block mb-2">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;OUR Services</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-light mb-4">
+                Our <b>Development Strategies</b>
+            </h2>
+            </div>
+    <!--Service Section No.1-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Professional Shopify Development Services for Scalable E-Commerce
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  In the fast-paced world of e-commerce, a truly successful store is one that is robust on the backend and lightning-fast on the frontend. As an expert Shopify development partner, Qonkar provides your business with the technical foundation necessary for sustainable growth. Our focus goes beyond basic templates; we prioritize custom coding and robust architecture, ensuring your store can handle high traffic volumes and complex business requirements with ease.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!--Service Section No.2-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Expertise of a Shopify Plus Development Agency
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Managing large-scale enterprises requires a different level of technical sophistication than standard stores. As a specialized Shopify Plus development agency, Qonkar designs enterprise-level solutions for high-volume merchants. We excel in implementing advanced Shopify Plus capabilities, such as the Scripts Editor for personalized checkout experiences and B2B wholesale channels. Our Shopify expert developers ensure that your enterprise storefront remains secure, flexible, and compliant with global standards.
+                </p>
+
+            </div>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!--Service Section No.3-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Custom Shopify App Development Company
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Every business has a unique logic, and sometimes existing apps in the Shopify App Store fall short of your specific needs. Qonkar’s Shopify app development company builds bespoke private and public apps tailored to your workflow. Utilizing modern frameworks like Ruby on Rails and Node.js, we create apps that integrate seamlessly with your store. Whether it’s complex inventory synchronization or custom product builders, our Shopify app development team is expert at finding technical solutions for the most challenging requirements.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!--Service Section No.4-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Technical Excellence with Shopify Expert Developers
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  When you hire a Shopify expert developer from Qonkar, you aren’t just getting a coder; you are gaining a technical strategist. We are specialists in Liquid (Shopify’s native templating language) and take pride in writing clean, bug-free, and high-performance code. Our development process is deeply rooted in SEO best practices, ensuring your store is easily crawlable by search engines. From API integrations to connecting third-party software like ERPs and CRMs, we ensure all your data stays synchronized in one place.
+                </p>
+
+            </div>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!--Service Section No.5-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    ROI-Driven Shopify Solutions
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  At Qonkar, our goal isn't just to write code—it's to maximize your Return on Investment (ROI). Our Shopify development services incorporate performance marketing and data analytics into the core build. We develop custom checkout extensibility and modular landing page blocks that allow your marketing team to manage content effortlessly without needing a developer. As a results-focused Shopify app development company, we prioritize functionalities that eliminate manual tasks and save you valuable time.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!--Service Section No.6-->
+    <section class=" bg-[var(--body-bg)] py-8 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-1 lg:order-1 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+
+
+                <h2 class="text-xl md:text-2xl  text-white">
+                    Why Technical Development Matters?
+                </h2>
+<div>
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  While many agencies focus solely on aesthetics, Qonkar prioritizes technical Shopify development services. Investing in high-end technical development offers several key advantages:</p>
+<ul class="leading-relaxed mt-2 font-light">
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Custom Functionality: Get the exact features your specific business model requires to succeed.
+                                </li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Security: We write secure code that protects sensitive customer data and payment gateways.
+                                </li>
+                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
+                                    Scalability: As your business grows, our scalable architecture ensures your store never crashes under pressure.
+                                </li>
+                            </ul>
+</div>
+                
+
+            </div>
+            
+            <div class="order-2 lg:order-2 flex justify-center">
+                <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Our Client" class="w-full max-w-md h-auto">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
     
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">

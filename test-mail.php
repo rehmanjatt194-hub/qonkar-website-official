@@ -21,14 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'qonkartechnolgiespvtltd@gmail.com';
+        $mail->Username   = 'qonkartechnologiespvtltd@gmail.com';
         $mail->Password   = 'kgqseilcjpdcqumz';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // Recipients
-        $mail->setFrom('qonkartechnolgiespvtltd@gmail.com', 'Mailer Test');
-        $mail->addAddress('qonkartechnolgiespvtltd@gmail.com');
+        $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Mailer Test');
+        $mail->addAddress('qonkartechnologiespvtltd@gmail.com');
         $mail->addReplyTo($email, $name);
 
         // Content

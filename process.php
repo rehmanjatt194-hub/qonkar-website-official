@@ -58,14 +58,14 @@ try {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'qonkartechnologiespvtlts@gmail.com';
-        $mail->Password   = 'kgqs eilc jpdc qumz';
+        $mail->Username   = 'qonkartechnolgiespvtltd@gmail.com';
+        $mail->Password   = 'kgqseilcjpdcqumz';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
         $mail->Port       = 465;
 
         //Recipients
-        $mail->setFrom('qonkartechnologiespvtlts@gmail.com', 'Qonkar Notifications');
-        $mail->addAddress('qonkartechnologiespvtlts@gmail.com'); // Sending notification to yourself
+        $mail->setFrom('qonkartechnolgiespvtltd@gmail.com', 'Qonkar Notifications');
+        $mail->addAddress('qonkartechnolgiespvtltd@gmail.com'); // Sending notification to yourself
         $mail->addReplyTo($email, $name); // User's email as reply-to
 
         //Content

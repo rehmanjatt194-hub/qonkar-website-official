@@ -60,8 +60,8 @@ try {
         $mail->SMTPAuth   = true;
         $mail->Username   = 'qonkartechnologiespvtltd@gmail.com';
         $mail->Password   = 'kgqseilcjpdcqumz';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
-        $mail->Port       = 465;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use STARTTLS instead of SMTPS for broader compatibility
+        $mail->Port       = 587;
 
         // Crucial for many shared hosting setups to bypass local cert issues
         $mail->SMTPOptions = array(

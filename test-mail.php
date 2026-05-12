@@ -23,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->SMTPAuth   = true;
         $mail->Username   = 'qonkartechnologiespvtltd@gmail.com';
         $mail->Password   = 'kgqseilcjpdcqumz';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
 
         // Recipients
         $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Mailer Test');

@@ -54,7 +54,7 @@ try {
     // Send Email via PHPMailer
     $mail = new PHPMailer(true);
     try {
-        //Server settings
+        // Server settings
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
@@ -62,6 +62,15 @@ try {
         $mail->Password   = 'kgqseilcjpdcqumz';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
         $mail->Port       = 465;
+
+        // Crucial for many shared hosting setups to bypass local cert issues
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 
         //Recipients
         $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Qonkar Notifications');
@@ -86,12 +95,16 @@ try {
         $mail->AltBody = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nSubject: {$subject}\nBudget: {$budget}\nMessage:\n{$message}";
 
         $mail->send();
+        $mailStatus = "Sent";
     } catch (Exception $e) {
-        // We log or quietly ignore, database insertion was successful
-        error_log("Mailer Error: " . $mail->ErrorInfo);
+        $mailStatus = "Failed: " . $mail->ErrorInfo;
     }
 
-    echo json_encode(['success' => true, 'message' => "Thank you, {$name}! Your message has been received."]);
+    echo json_encode([
+        'success' => true, 
+        'message' => "Thank you, {$name}! Your message has been received.",
+        'mail_status' => $mailStatus
+    ]);
     exit;
 
 } catch (PDOException $e) {

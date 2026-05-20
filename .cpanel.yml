@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/qonkarco/public_html
-    - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='DO_NOT_UPLOAD_HERE' ./ $DEPLOYPATH

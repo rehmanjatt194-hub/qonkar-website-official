@@ -75,39 +75,41 @@ require_once ADMIN_URL.'/database_config.php';
             const responseBox = document.querySelector("#formResponse");
             const form = document.querySelector("#contactForm");
 
-            form.addEventListener("submit", async function(e) {
-                e.preventDefault();
-                responseBox.classList.remove("hidden");
-                responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
+            if (form) {
+                form.addEventListener("submit", async function(e) {
+                    e.preventDefault();
+                    responseBox.classList.remove("hidden");
+                    responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
 
-                try {
-                    const formData = new FormData(form);
-                    const res = await fetch("process.php", {
-                        method: "POST",
-                        body: formData
-                    });
-                    const contentType = res.headers.get("content-type") || "";
+                    try {
+                        const formData = new FormData(form);
+                        const res = await fetch("process.php", {
+                            method: "POST",
+                            body: formData
+                        });
+                        const contentType = res.headers.get("content-type") || "";
 
-                    let data;
-                    if (contentType.includes("application/json")) {
-                        data = await res.json();
-                    } else {
-                        data = {
-                            message: await res.text()
-                        };
+                        let data;
+                        if (contentType.includes("application/json")) {
+                            data = await res.json();
+                        } else {
+                            data = {
+                                message: await res.text()
+                            };
+                        }
+
+                        if (res.ok) {
+                            responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
+                            form.reset();
+                        } else {
+                            const msg = data.error || data.message || res.statusText;
+                            responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
+                        }
+                    } catch (err) {
+                        responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
                     }
-
-                    if (res.ok) {
-                        responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
-                        form.reset();
-                    } else {
-                        const msg = data.error || data.message || res.statusText;
-                        responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
-                    }
-                } catch (err) {
-                    responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
-                }
-            });
+                });
+            }
         });
     </script>
     <!-- Google tag (gtag.js) -->

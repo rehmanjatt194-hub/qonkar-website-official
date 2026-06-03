@@ -75,39 +75,41 @@ require_once ADMIN_URL.'/database_config.php';
             const responseBox = document.querySelector("#formResponse");
             const form = document.querySelector("#contactForm");
 
-            form.addEventListener("submit", async function(e) {
-                e.preventDefault();
-                responseBox.classList.remove("hidden");
-                responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
+            if (form) {
+                form.addEventListener("submit", async function(e) {
+                    e.preventDefault();
+                    responseBox.classList.remove("hidden");
+                    responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
 
-                try {
-                    const formData = new FormData(form);
-                    const res = await fetch("process.php", {
-                        method: "POST",
-                        body: formData
-                    });
-                    const contentType = res.headers.get("content-type") || "";
+                    try {
+                        const formData = new FormData(form);
+                        const res = await fetch("process.php", {
+                            method: "POST",
+                            body: formData
+                        });
+                        const contentType = res.headers.get("content-type") || "";
 
-                    let data;
-                    if (contentType.includes("application/json")) {
-                        data = await res.json();
-                    } else {
-                        data = {
-                            message: await res.text()
-                        };
+                        let data;
+                        if (contentType.includes("application/json")) {
+                            data = await res.json();
+                        } else {
+                            data = {
+                                message: await res.text()
+                            };
+                        }
+
+                        if (res.ok) {
+                            responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
+                            form.reset();
+                        } else {
+                            const msg = data.error || data.message || res.statusText;
+                            responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
+                        }
+                    } catch (err) {
+                        responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
                     }
-
-                    if (res.ok) {
-                        responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
-                        form.reset();
-                    } else {
-                        const msg = data.error || data.message || res.statusText;
-                        responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
-                    }
-                } catch (err) {
-                    responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
-                }
-            });
+                });
+            }
         });
     </script>
     <!-- Google tag (gtag.js) -->
@@ -282,68 +284,109 @@ require_once ADMIN_URL.'/database_config.php';
         <div id="google_translate_element"></div>
     </div>
 </header>
-    <!-- Hero Section -->
-    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] rounded-lg overflow-hidden mt-4 mb-4 flex items-center">
-        <!-- Gradient Background -->
-        <div class="absolute inset-0 rounded-lg bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
-
-        <!-- Pattern Overlay (single SVG, no repeat) -->
-        <div class="absolute inset-0 rounded-lg hero-pattern"></div>
+    <!-- ═══════════════════════════════════════════════
+         PORTFOLIO HERO SECTION — Redesigned
+    ════════════════════════════════════════════════ -->
+    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] sm:min-h-[60vh] mt-4 mb-4 flex items-center">
 
         <!-- Hero Content -->
-                 <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-start w-full px-10 sm:px-10 lg:px-9 py-10">
+        <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center justify-start w-full px-4 sm:px-10 lg:px-9 py-10 sm:py-14">
 
-            <!-- Left Side: Text -->
-            <div class="text-left text-white space-y-6 order-1">
-                <!-- Badge -->
-                <div class="hidden glass px-3 py-2 rounded-full text-xs sm:text-sm text-white 
-                inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center sm:text-left">
-
-                    <!-- Dot New -->
-                    <span class="px-3 py-0.5 rounded-full bg-white text-[var(--primary-color)] text-xs">
-                        &#9679; New
-                    </span>
-
-                    <!-- Text -->
-                    <span>
-                        Free your team from repetitive work with AI automation.
-                    </span>
+            <!-- Left Side: Text Content -->
+            <div class="text-left text-white space-y-8 order-1 mt-6 lg:mt-0">
+                
+                <!-- Pill Badge -->
+                <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.2)]">
+                    <div class="glass-background">
+                        <div class="glass px-4 py-2 flex items-center gap-2 text-xs sm:text-sm font-medium tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-[var(--tertiary-color)] shadow-[0_0_8px_var(--tertiary-color)] animate-pulse"></span>
+                            PORTFOLIO
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Heading -->
-                <h1 class="text-3xl sm:text-4xl md:text-5xl leading-snug">
-                    <b>Shopify</b> Experts for High-Performance<br class="hidden sm:block"> <b>E-commerce</b>
-                    Stores.
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] tracking-tight">
+                    Digital Excellence Across <br class="hidden sm:block">
+                    <span class="bg-clip-text text-transparent font-bold" style="background-image: var(--gradient);">E-Commerce & Enterprise Solutions.</span>
                 </h1>
 
-                <!-- Paragraph -->
-                <p class="text-base sm:text-lg font-light leading-relaxed max-w-lg">
-                    At Qonkar Technologies, our Shopify experts turn your store into a scalable, mobile-first sales
-                    machine — optimized for performance, growth, and user experience.
+                <!-- Description Paragraph -->
+                <p class="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-lg">
+                    Explore our diverse portfolio. From high-converting Shopify machines to custom-engineered SaaS, CRM, and ERP systems that drive real business growth.
                 </p>
 
-                <!-- CTA Button -->
-                <a href="/contact-us" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
-                hover:bg-[var(--secondary-color)] hover:text-white transition">
-                    Launch Your Store with us
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                    <a href="#case-studies" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-[var(--primary-color)] text-white font-medium hover:bg-[var(--secondary-color)] transition-all shadow-[0_0_20px_rgba(63,137,201,0.3)] hover:shadow-[0_0_25px_rgba(47,173,195,0.5)]">
+                        Explore All Projects
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    
+                    <a href="/contact-us" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+                        Contact Us
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Bottom Stats Row -->
+                <div class="pt-8 mt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div>
+                        <p class="text-3xl font-bold text-white mb-1">50+</p>
+                        <p class="text-xs text-gray-400 font-medium tracking-wider uppercase">Enterprise Systems</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white mb-1">$2M+</p>
+                        <p class="text-xs text-gray-400 font-medium tracking-wider uppercase">Revenue Generated</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white mb-1">99%</p>
+                        <p class="text-xs text-gray-400 font-medium tracking-wider uppercase">Client Retention</p>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Right Side: Image -->
-            <div class="flex justify-center md:justify-end order-2">
-                <img src="images/case-study-hero.webp" alt="Service Hero"
-                    class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
+            <!-- Right Side: Image with Floating Elements -->
+            <div class="relative flex justify-center lg:justify-end order-2 group">
+                
+                <!-- Main Image Wrapper -->
+                <div class="relative w-full max-w-lg lg:max-w-xl aspect-square lg:aspect-[4/3] flex items-center justify-center">
+                    
+                    <!-- Glow behind image removed -->
+
+                    <!-- Main Hero Image -->
+                    <img src="images/case-study-hero.webp" alt="Portfolio Showcase" class="relative z-10 w-full h-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] scale-100 group-hover:scale-[1.02] transition-transform duration-700">
+                    
+                    <!-- Floating Stat Card 1 (Top Right) -->
+                    <div class="absolute top-4 right-2 sm:top-10 sm:-right-8 z-20 background-backdrop-card p-2 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/10 flex items-center gap-2 sm:gap-3 backdrop-blur-md animate-[bounce_5s_infinite]">
+                        <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[var(--tertiary-color)]/20 flex items-center justify-center text-[var(--tertiary-color)] text-xs sm:text-base shrink-0">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <div class="leading-tight">
+                            <p class="text-[8px] sm:text-[10px] text-gray-300 uppercase tracking-wider font-semibold">Conversion Rate</p>
+                            <p class="text-xs sm:text-base font-bold text-white">+24.5%</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Stat Card 2 (Bottom Left) -->
+                    <div class="absolute bottom-6 left-2 sm:bottom-16 sm:-left-8 z-20 background-backdrop-card p-2 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/10 flex items-center gap-2 sm:gap-3 backdrop-blur-md animate-[bounce_6s_infinite_reverse]">
+                        <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[var(--primary-color)]/20 flex items-center justify-center text-[var(--primary-color)] text-xs sm:text-base shrink-0">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div class="leading-tight">
+                            <p class="text-[8px] sm:text-[10px] text-gray-300 uppercase tracking-wider font-semibold">System Uptime</p>
+                            <p class="text-xs sm:text-base font-bold text-white">99.99%</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
      <!-- Case Study -->
-    <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 text-center">
         <!-- Badge -->
         <div class="glass-border inline-block mb-4">
             <div class="glass-background">
@@ -359,47 +402,32 @@ require_once ADMIN_URL.'/database_config.php';
         </h2>
 
         <!-- Paragraph -->
-        <p class="text-white font-light max-w-3xl mx-auto mb-10">
+        <p class="text-white font-light max-w-3xl mx-auto mb-4 sm:mb-10 text-sm sm:text-base px-2 sm:px-0">
             Discover the solutions we’ve designed and developed — each project reflects our commitment to quality and
             creativity.
         </p>
 
-        <!-- Category Tabs with Scroll (Disable) -->
-        <div class="relative mb-10 w-fit mx-auto">
-            <!-- Scroll Buttons -->
-            <button id="scrollLeft"
-                class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
-                &#10094;
-            </button>
-            <button id="scrollRight"
-                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hidden">
-                &#10095;
-            </button>
-
-            <!-- Scrollable Categories -->
-            <div id="tabContainer" class="flex overflow-x-auto no-scrollbar gap-4 px-2 py-2 rounded-full 
-               justify-start md:justify-center md:[background-image:var(--gradient)] backdrop-blur-md">
+        <!-- Category Tabs with Scroll -->
+        <div class="w-full overflow-x-auto no-scrollbar py-2 text-left sm:text-center sm:px-0 sm:mx-0 mb-10">
+            <div id="tabContainer" class="inline-flex gap-1 p-1 sm:p-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
 
                 <button
-                    class="tab-btn active px-8 py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-xs"
+                    class="tab-btn active px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
                     data-tab="all">All</button>
-
 
                 <?php
                 $sql = "SELECT category_name FROM case_study_categories WHERE status = 'active'";
                 $result = $conn->query($sql);
 
-
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         // Convert category name into a slug for `data-tab`
                         $slug = strtolower(str_replace(' ', '-', $row['category_name']));
-                        echo '<button class="tab-btn px-4 py-2 rounded-full text-white font-semibold text-xs sm:text-sm" data-tab="' . $slug . '">' . $row['category_name'] . '</button>';
+                        echo '<button class="tab-btn px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap" data-tab="' . $slug . '">' . htmlspecialchars($row['category_name']) . '</button>';
                     }
                 } else {
                     echo "<p>No categories found.</p>";
                 }
-
                 ?>
 
             </div>
@@ -442,8 +470,12 @@ require_once ADMIN_URL.'/database_config.php';
                 data-category="' . htmlspecialchars($dataCategory) . '">
 
                 <!-- Top Image Section -->
-                <div class="w-full h-80 flex items-center justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0">
-                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full object-contain">
+                <div class="relative w-full h-48 sm:h-80 flex items-center justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0 overflow-hidden">
+                    <!-- Category Badge -->
+                    <div class="absolute top-4 left-4 bg-[var(--secondary-color)]/20 border border-[var(--secondary-color)]/50 text-[var(--secondary-color)] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md z-10">
+                        ' . htmlspecialchars($categories) . '
+                    </div>
+                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full h-full sm:h-auto object-contain rounded-t-[15px]">
                 </div>
 
                 <!-- Bottom Text Section -->
@@ -464,7 +496,7 @@ require_once ADMIN_URL.'/database_config.php';
                         . htmlspecialchars($row['brand_name']) . '
                                 </h3>
                                 <p class="text-sm md:text-base font-light text-left text-gray-200"><i>'
-                        . htmlspecialchars(mb_strimwidth($row['short_description'], 0, 100, '...')) .
+                        . htmlspecialchars(strlen($row['short_description']) > 100 ? substr($row['short_description'], 0, 100) . '...' : $row['short_description']) .
                         ' </i></p>
                             </div>
                             ' . $arrow . '

@@ -1,6 +1,13 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -44,7 +51,60 @@ try {
         ':message' => $message
     ]);
 
-    echo json_encode(['success' => true, 'message' => "Thank you, {$name}! Your message has been received."]);
+    // Send Email via PHPMailer
+    $mail = new PHPMailer(true);
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'qonkartechnologiespvtltd@gmail.com';
+        $mail->Password   = 'kgqseilcjpdcqumz';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use STARTTLS instead of SMTPS for broader compatibility
+        $mail->Port       = 587;
+
+        // Crucial for many shared hosting setups to bypass local cert issues
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        //Recipients
+        $mail->setFrom('qonkartechnologiespvtltd@gmail.com', 'Qonkar Notifications');
+        $mail->addAddress('qonkartechnologiespvtltd@gmail.com'); // Sending notification to yourself
+        $mail->addReplyTo($email, $name); // User's email as reply-to
+
+        //Content
+        $mail->isHTML(true);
+        $mail->Subject = "New Contact Inquiry: " . ($subject ?: 'General Inquiry');
+        
+        $mailBody = "
+            <h3>You have a new message from your website contact form</h3>
+            <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
+            <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+            <p><strong>Phone Number:</strong> " . htmlspecialchars($phone) . "</p>
+            <p><strong>Subject:</strong> " . htmlspecialchars($subject) . "</p>
+            <p><strong>Budget:</strong> " . htmlspecialchars($budget) . "</p>
+            <p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>
+        ";
+        
+        $mail->Body    = $mailBody;
+        $mail->AltBody = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nSubject: {$subject}\nBudget: {$budget}\nMessage:\n{$message}";
+
+        $mail->send();
+        $mailStatus = "Sent";
+    } catch (Exception $e) {
+        $mailStatus = "Failed: " . $mail->ErrorInfo;
+    }
+
+    echo json_encode([
+        'success' => true, 
+        'message' => "Thank you, {$name}! Your message has been received.",
+        'mail_status' => $mailStatus
+    ]);
     exit;
 
 } catch (PDOException $e) {
@@ -52,5 +112,3 @@ try {
     echo json_encode(['error' => 'Database error', 'detail' => $e->getMessage()]);
     exit;
 }
-
-

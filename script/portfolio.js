@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             renderPagination(totalPages);
-        }, 600); // 0.6s loading effect
+        }, 150); // 0.15s loading effect
     }
 
     // ✅ Render Pagination Buttons
@@ -98,8 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ✅ Category Filter
     tabButtons.forEach(btn => {
         btn.addEventListener("click", () => {
-            tabButtons.forEach(b => b.classList.remove("active", "bg-white", "text-[var(--primary-color)]"));
-            btn.classList.add("active", "bg-white", "text-[var(--primary-color)]");
+            tabButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            
             activeCategory = btn.dataset.tab;
             currentPage = 1;
             renderCards();

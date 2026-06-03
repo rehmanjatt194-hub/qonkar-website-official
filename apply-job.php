@@ -376,8 +376,7 @@ if (!empty($job_slug)) {
                     </div>
                 </div>
 
-                <a href="/portfolio"
-                    class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
+                <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
 
                 <a href="/blogs"
                     class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>

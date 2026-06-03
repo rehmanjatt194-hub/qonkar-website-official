@@ -5,6 +5,11 @@ RewriteEngine On
 RewriteBase /
 
 # --- SECTION 1: EXTERNAL REDIRECTS (Consolidated) ---
+# Skip external redirects to live site on localhost
+RewriteCond %{HTTP_HOST} ^localhost [NC,OR]
+RewriteCond %{HTTP_HOST} ^127\.0\.0\.1 [NC]
+RewriteRule ^ - [L]
+
 # 1. Force HTTPS, No-WWW, and Strip .php in one pass
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]

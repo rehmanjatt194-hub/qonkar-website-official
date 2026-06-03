@@ -79,39 +79,35 @@
             const responseBox = document.querySelector("#formResponse");
             const form = document.querySelector("#contactForm");
 
-            form.addEventListener("submit", async function(e) {
-                e.preventDefault();
-                responseBox.classList.remove("hidden");
-                responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
+            if (form) {
+                form.addEventListener("submit", async function(e) {
+                    e.preventDefault();
+                    responseBox.classList.remove("hidden");
+                    responseBox.innerHTML = `<span class="text-white">⏳ Sending message...</span>`;
 
-                try {
-                    const formData = new FormData(form);
-                    const res = await fetch("process.php", {
-                        method: "POST",
-                        body: formData
-                    });
-                    const contentType = res.headers.get("content-type") || "";
+                    try {
+                        const formData = new FormData(form);
+                        const res = await fetch(form.action, {
+                            method: form.method,
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
 
-                    let data;
-                    if (contentType.includes("application/json")) {
-                        data = await res.json();
-                    } else {
-                        data = {
-                            message: await res.text()
-                        };
+                        if (res.ok) {
+                            responseBox.innerHTML = `<span class="text-white">✅ Thanks for your submission! Your message has been sent.</span>`;
+                            form.reset();
+                        } else {
+                            const data = await res.json();
+                            const msg = data.errors ? data.errors.map(err => err.message).join(", ") : (data.error || data.message || res.statusText);
+                            responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
+                        }
+                    } catch (err) {
+                        responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
                     }
-
-                    if (res.ok) {
-                        responseBox.innerHTML = `<span class="text-white">✅ ${data.message || 'Message sent'}</span>`;
-                        form.reset();
-                    } else {
-                        const msg = data.error || data.message || res.statusText;
-                        responseBox.innerHTML = `<span class="text-red-400">❌ ${msg}</span>`;
-                    }
-                } catch (err) {
-                    responseBox.innerHTML = `<span class="text-red-400">❌ Network/error: ${err.message}</span>`;
-                }
-            });
+                });
+            }
         });
     </script>
 <!-- Google tag (gtag.js) -->
@@ -368,21 +364,21 @@
                     rgba(7,151,172,0.28) 92.67%) 1">
 
                     <!-- Form -->
-                    <form id="contactForm" class="w-full space-y-4 p-6 sm:p-8 relative z-10 text-white 
+                    <form id="contactForm" action="https://formspree.io/f/xjglzovo" method="POST" class="w-full space-y-4 p-6 sm:p-8 relative z-10 text-white 
                            bg-[url('images/card_back_drop.svg')] bg-cover bg-center bg-no-repeat 
                            bg-black/90 bg-blend-multiply overflow-hidden rounded-md">
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Full Name" name="full_name" required
+                            <input type="text" placeholder="Full Name" name="name" required
                                 class="w-full border border-gray-700 rounded-md px-4 py-2 bg-transparent text-white">
                             <input type="email" placeholder="Email" name="email" required
                                 class="w-full border border-gray-700 rounded-md px-4 py-2 bg-transparent text-white">
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Phone Number" name="phone_number" required
+                            <input type="text" placeholder="Phone Number" name="phone" required
                                 class="w-full border border-gray-700 rounded-md px-4 py-2 bg-transparent text-white">
-                            <input type="text" placeholder="Subject" name="subject" required
+                            <input type="text" placeholder="Subject" name="_subject" required
                                 class="w-full border border-gray-700 rounded-md px-4 py-2 bg-transparent text-white">
                         </div>
 

@@ -536,18 +536,17 @@ require_once ADMIN_URL.'/database_config.php';
                 We turn your online presence into a business asset. Whether you need a high-performing Shopify Store, powerful Custom Software, SEO that ranks, or Social Media that sells, Qonkar builds it, fixes it, and grows it. Fast. Simple. Results-focused.
             </p>
 
-            <div class="flex justify-center mb-5 w-full">
-                <div class=" 
-        flex flex-wrap justify-center gap-2 py-2 px-3 rounded-full 
-        bg-none md:[background-image:var(--gradient)] backdrop-blur-md">
+            <div class="w-full overflow-x-auto no-scrollbar py-2 text-left sm:text-center sm:px-0 sm:mx-0 mb-10">
+                <!-- Segmented Control Pill -->
+                <div class="inline-flex gap-1 p-1 sm:p-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
 
                     <button
-                        class="tab-btn active px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-[var(--primary-color)] font-semibold text-sm sm:text-sm transition"
+                        class="tab-btn active px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
                         data-tab="service1">
                         Shopify
                     </button>
                     <button
-                        class="tab-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white font-semibold text-sm sm:text-sm transition"
+                        class="tab-btn px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
                         data-tab="service2">
                         Custom Software Development
                     </button>

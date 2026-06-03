@@ -241,9 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-            tabs.forEach((t) => t.classList.remove("bg-white", "text-[var(--primary-color)]"));
+            tabs.forEach((t) => t.classList.remove("active"));
             tabContents.forEach((c) => c.classList.add("hidden"));
-            tab.classList.add("bg-white", "text-[var(--primary-color)]");
+            tab.classList.add("active");
             const target = document.getElementById(tab.dataset.tab);
             if (target) target.classList.remove("hidden");
         });

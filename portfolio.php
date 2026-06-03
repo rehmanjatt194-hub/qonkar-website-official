@@ -296,7 +296,7 @@ require_once ADMIN_URL.'/database_config.php';
             <div class="text-left text-white space-y-8 order-1 mt-6 lg:mt-0">
                 
                 <!-- Pill Badge -->
-                <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.2)]">
+                <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.2)] hero-badge">
                     <div class="glass-background">
                         <div class="glass px-4 py-2 flex items-center gap-2 text-xs sm:text-sm font-medium tracking-wide">
                             <span class="w-2 h-2 rounded-full bg-[var(--tertiary-color)] shadow-[0_0_8px_var(--tertiary-color)] animate-pulse"></span>
@@ -306,18 +306,18 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
 
                 <!-- Main Heading -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] tracking-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] tracking-tight hero-title">
                     Digital Excellence Across <br class="hidden sm:block">
                     <span class="bg-clip-text text-transparent font-bold" style="background-image: var(--gradient);">E-Commerce & Enterprise Solutions.</span>
                 </h1>
 
                 <!-- Description Paragraph -->
-                <p class="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-lg">
+                <p class="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-lg hero-text">
                     Explore our diverse portfolio. From high-converting Shopify machines to custom-engineered SaaS, CRM, and ERP systems that drive real business growth.
                 </p>
 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                <div class="flex flex-col sm:flex-row items-center gap-4 pt-2 hero-btns">
                     <a href="#case-studies" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-[var(--primary-color)] text-white font-medium hover:bg-[var(--secondary-color)] transition-all shadow-[0_0_20px_rgba(63,137,201,0.3)] hover:shadow-[0_0_25px_rgba(47,173,195,0.5)]">
                         Explore All Projects
                         <i class="fa-solid fa-arrow-right text-sm"></i>
@@ -330,7 +330,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
 
                 <!-- Bottom Stats Row -->
-                <div class="pt-8 mt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <div class="pt-8 mt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-6 hero-stats">
                     <div>
                         <p class="text-3xl font-bold text-white mb-1">50+</p>
                         <p class="text-xs text-gray-400 font-medium tracking-wider uppercase">Enterprise Systems</p>
@@ -348,7 +348,7 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
 
             <!-- Right Side: Image with Floating Elements -->
-            <div class="relative flex justify-center lg:justify-end order-2 group">
+            <div class="relative flex justify-center lg:justify-end order-2 group hero-img">
                 
                 <!-- Main Image Wrapper -->
                 <div class="relative w-full max-w-lg lg:max-w-xl aspect-square lg:aspect-[4/3] flex items-center justify-center">
@@ -668,8 +668,11 @@ require_once ADMIN_URL.'/database_config.php';
     </div>
 </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script/navbar.js"></script>
     <script src="script/portfolio.js"></script>
+    <script src="script/portfolio_GSAP.js"></script>
 
 
 </body>

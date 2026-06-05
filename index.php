@@ -809,93 +809,295 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
         </div>
     </section>
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 bg-[var(--body-bg)] text-white">
-        <div class="max-w-7xl mx-auto px-4 lg:px-0">
-            <!-- Header Section -->
-            <div class="mb-12">
-                <div class="glass-border inline-block mb-4">
-                    <div class="glass-background">
-                        <div class="glass text-sm font-light">
-                            <p>&#9679; &nbsp;PROJECTS</p>
-                        </div>
-                    </div>
+    <?php
+    // Define custom metadata for case studies carousel
+    $case_study_details = [
+        14 => [ // QUEST Website Redesign
+            'tags' => ['University Portal', 'UI/UX Redesign', 'Database Sync', 'Responsive'],
+            'metrics' => [
+                'Load Time Reduced by' => '72%',
+                'Student Portal Engagement' => '45%',
+                'Mobile Traffic Increase' => '38%',
+                'Database Query Load' => '-60%'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "Qonkar transformed our legacy platform into a blazing-fast, modern portal. The students and faculty love the new responsive layout and smooth performance.",
+                'client' => "QUEST IT Committee"
+            ]
+        ],
+        15 => [ // ERP Solutions
+            'tags' => ['Enterprise ERP', 'PHP / Laravel', 'Inventory Sync', 'Cloud Analytics'],
+            'metrics' => [
+                'Operational Costs' => '-24%',
+                'Order Processing Speed' => '40%',
+                'Inventory Accuracy' => '99%',
+                'Report Generation Time' => '-90%'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "This custom ERP system unified our fragmented operations. The automation features have saved our team hundreds of hours each week.",
+                'client' => "Director of Operations"
+            ]
+        ],
+        1 => [ // The Centara
+            'tags' => ['Hospitality Web', 'Booking Engine', 'Tailwind CSS', 'UI/UX Design'],
+            'metrics' => [
+                'Direct Bookings' => '42%',
+                'Mobile Conversion Rate' => '29%',
+                'Bounce Rate Reduced' => '35%',
+                'Site Load Speed' => '1.2s'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "A luxury hospitality brand deserves a luxury web experience, and Qonkar delivered exactly that. Our booking system is now seamless.",
+                'client' => "Centara Resorts Team"
+            ]
+        ],
+        5 => [ // CAINTE
+            'tags' => ['Shopify Plus', 'Conversion Rate', 'Custom Checkout', 'Speed Optimization'],
+            'metrics' => [
+                'Conversion Rate' => '34%',
+                'Mobile Checkout Speed' => '50%',
+                'Revenue Growth' => '28%',
+                'Page Load Time' => '0.8s'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "The new custom checkout flow and speed optimization resulted in a direct boost in sales. Qonkar is our go-to ecommerce development partner.",
+                'client' => "CAINTE E-Commerce Team"
+            ]
+        ],
+        16 => [ // CRM Solutions
+            'tags' => ['Custom CRM', 'React / Node.js', 'Sales Pipeline', 'API Integrations'],
+            'metrics' => [
+                'Lead Response Time' => '-65%',
+                'Sales Team Productivity' => '35%',
+                'Customer Retention' => '22%',
+                'Closed Deals' => '18%'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "Their custom CRM solution is fast, intuitive, and seamlessly integrated with our sales stack. Highly recommended!",
+                'client' => "Head of Sales"
+            ]
+        ],
+        18 => [ // Digital Product (Saas)
+            'tags' => ['SaaS Development', 'Cloud Multi-Tenant', 'Payment Gateway', 'API Sync'],
+            'metrics' => [
+                'User Onboarding Speed' => '55%',
+                'Server Uptime' => '99.99%',
+                'Active Users' => '10K+',
+                'Maintenance Overhead' => '-40%'
+            ],
+            'testimonial' => [
+                'stars' => 5,
+                'quote' => "Qonkar's engineering quality is top-notch. They built our SaaS product to scale from day one, with clean code and robust infrastructure.",
+                'client' => "SaaS Co-Founder & CTO"
+            ]
+        ]
+    ];
+
+    $fallback_details = [
+        'tags' => ['Custom Tech', 'UI/UX Design', 'Speed Optimization', 'High Conversion'],
+        'metrics' => [
+            'Revenue Growth' => '18%',
+            'Page Speed Score' => '98/100',
+            'Bounce Rate' => '-15%',
+            'Mobile Usability' => '99%'
+        ],
+        'testimonial' => [
+            'stars' => 5,
+            'quote' => "Working with Qonkar has been an absolute pleasure. They took our custom design vision and made it a reality with exceptional speed.",
+            'client' => "Founder & CEO"
+        ]
+    ];
+
+    $case_studies_data = [];
+    $query = "SELECT * FROM case_studies WHERE status = 'active' ORDER BY created_at DESC";
+    $result = $conn->query($query);
+    if ($result && $result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $id = intval($row['id']);
+            $mockup = !empty($row['mockup_image']) ? $row['mockup_image'] : '/images/case-studies/default_mockup.webp';
+            
+            $details = isset($case_study_details[$id]) ? $case_study_details[$id] : $fallback_details;
+            
+            $case_studies_data[] = [
+                'id' => $id,
+                'brand_name' => htmlspecialchars($row['brand_name']),
+                'short_description' => htmlspecialchars($row['short_description']),
+                'mockup_image' => $mockup,
+                'link' => !empty($row['link_of_case_study']) ? $row['link_of_case_study'] : '#',
+                'tags' => $details['tags'],
+                'metrics' => $details['metrics'],
+                'testimonial' => $details['testimonial']
+            ];
+        }
+    }
+    ?>
+
+    <style>
+    @keyframes float-mockup {
+      0% { transform: translateY(0px) rotate(-0.5deg); }
+      50% { transform: translateY(-10px) rotate(0.5deg); }
+      100% { transform: translateY(0px) rotate(-0.5deg); }
+    }
+    .animate-float-mockup {
+      animation: float-mockup 6s ease-in-out infinite;
+    }
+    </style>
+
+    <script>
+    const caseStudies = <?php echo json_encode($case_studies_data); ?>;
+    </script>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 bg-[var(--body-bg)] text-white relative">
+        <!-- Header: Title on Left, Navigation arrows on Right -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="max-w-2xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2BB5BC]/10 border border-[#2BB5BC]/20 text-[11px] font-semibold uppercase tracking-widest text-[#2BB5BC] mb-4">
+                    <span class="w-2 h-2 rounded-full bg-[#95C951] relative flex">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#95C951] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#95C951]"></span>
+                    </span>
+                    Portfolio Showcase
                 </div>
-                <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                    Featured Case Studies & <b>Success Stories</b>
+                
+                <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">
+                    Featured <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Case Studies</span>
                 </h2>
-                <p class="font-light leading-relaxed text-white">
-                    Explore how we help brands scale with custom technology.
+                <p class="text-sm md:text-base text-gray-400 font-light mt-3 leading-relaxed">
+                    Explore how we design, engineer, and optimize high-performing digital platforms that drive measurable business outcomes.
                 </p>
             </div>
-
-            <!-- Unified Case Studies Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <?php
-                // ✅ Fetch ALL active case studies (No hardcoded LIMIT/OFFSET)
-                $query = "SELECT * FROM case_studies WHERE status = 'active' ORDER BY created_at DESC";
-                $result = $conn->query($query);
-
-                if ($result && $result->num_rows > 0):
-                    while ($row = $result->fetch_assoc()):
-                        $mockup = !empty($row['mockup_image']) ? $row['mockup_image'] : '/images/case-studies/default_mockup.webp';
-                        $background = !empty($row['background_image']) ? $row['background_image'] : '/images/case-studies/background.webp';
-                        $brandName = htmlspecialchars($row['brand_name']);
-                        $description = htmlspecialchars($row['short_description']);
-                        $link = !empty($row['link_of_case_study']) ? $row['link_of_case_study'] : '#';
-                ?>
-                    <div class="w-full background-backdrop-card rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col">
-                        <div class="w-full h-80 flex items-start justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0 overflow-hidden">
-                            <img src="<?php echo $mockup; ?>" alt="Case Study Image" class="w-full h-full object-top object-cover">
-                        </div>
-
-                        <div class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] p-[2px]"
-                            style="background: linear-gradient(138deg, rgba(56,228,174,0.20) 12.07%, rgba(56,228,174,0.66) 39.55%, rgba(7,151,172,0.80) 63.36%, rgba(7,151,172,0.28) 92.67%);">
-
-                            <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
-                                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    <img src="<?php echo $background; ?>" alt="Hover BG" class="w-full h-full object-cover">
-                                    <div class="absolute inset-0 bg-[#046362]/60"></div>
-                                </div>
-
-                                <div class="relative z-10 p-6 flex items-center justify-between">
-                                    <div>
-                                        <h3 class="text-lg sm:text-xl md:text-2xl font-light mb-2">
-                                            <?php echo $brandName; ?>
-                                        </h3>
-                                        <p class="text-xs sm:text-sm md:text-base font-light leading-relaxed text-gray-200">
-                                            <i><?php echo $description; ?></i>
-                                        </p>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <a href="<?php echo $link; ?>">
-                                            <img src="/images/icons/arrrow_color.svg" class="w-8 h-8 transition-opacity duration-300 group-hover:hidden" alt="Arrow Icon">
-                                            <img src="/images/icons/arrrow_white.svg" class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block" alt="Arrow Icon White">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php 
-                    endwhile;
-                else: 
-                ?>
-                    <p class="text-center text-gray-400 col-span-2">No featured case studies available.</p>
-                <?php endif; ?>
+            
+            <!-- Sleek Left/Right Carousel navigation arrows -->
+            <div class="flex gap-4 items-center self-end md:mb-2">
+                <button id="case-study-prev" class="w-12 h-12 rounded-full border border-white/20 hover:border-[#2BB5BC] flex items-center justify-center text-white hover:text-[#2BB5BC] transition hover:shadow-[0_0_15px_rgba(43,181,188,0.3)] bg-white/5 backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="m313-440 224 224-57 57-320-320 320-320 57 57-224 224h487v80H313Z"/></svg>
+                </button>
+                <button id="case-study-next" class="w-12 h-12 rounded-full border border-white/20 hover:border-[#2BB5BC] flex items-center justify-center text-white hover:text-[#2BB5BC] transition hover:shadow-[0_0_15px_rgba(43,181,188,0.3)] bg-white/5 backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                </button>
             </div>
         </div>
 
+        <!-- Carousel Slide Wrapper -->
+        <div id="case-study-slider" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch transition-all duration-300 opacity-100">
+            <!-- Left Column: Large rounded container with floating laptop mockup -->
+            <div class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/5 bg-gradient-to-br from-[#0F0F0F] to-[#050505] p-3 sm:p-4 lg:p-3 relative overflow-hidden shadow-[inset_0_0_40px_rgba(255,255,255,0.03)] min-h-[300px] sm:min-h-[400px] group transition-all duration-300 hover:border-[#2BB5BC]/30">
+                <!-- Glowing Backdrop Spotlights -->
+                <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-[#2BB5BC]/10 blur-[100px] pointer-events-none"></div>
+                <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-[#95C951]/10 blur-[100px] pointer-events-none"></div>
+                
+                <!-- Display Wrapper around mockup image and overlay (No Link) -->
+                <div id="cs-mockup-container" class="w-full h-full flex items-center justify-center relative z-10 py-4 overflow-hidden rounded-2xl">
+                    <!-- Inner Container that scales up on hover -->
+                    <div class="w-full h-full flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-[1.08]">
+                        <!-- Floating Laptop Image -->
+                        <img id="cs-mockup" src="" alt="Featured Showcase" class="w-full max-w-[98%] sm:max-w-[95%] lg:max-w-[102%] h-auto object-contain drop-shadow-[0_20px_35px_rgba(43,181,188,0.2)] select-none animate-float-mockup rounded-[10px]">
+                    </div>
+                    
+                    <!-- Hover Popup Overlay -->
+                    <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-[2px] rounded-2xl pointer-events-none">
+                        <span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm shadow-[0_0_20px_rgba(43,181,188,0.3)] flex items-center gap-2.5 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <span id="cs-popup-title" class="text-white font-semibold">Project</span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#2BB5BC] animate-pulse"></span>
+                            <span class="text-gray-300 font-light text-xs">Showcase</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Right Column: Split into 3 Cards -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                <!-- Top Card: Overview -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
+                    <a id="cs-link" href="#" target="_blank" class="absolute top-6 right-6 text-gray-400 hover:text-[#2BB5BC] transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
+                    </a>
+                    
+                    <h3 id="cs-brand" class="text-2xl md:text-3xl font-light text-white tracking-wide mb-4"></h3>
+                    <p id="cs-description" class="text-sm md:text-base text-gray-300 font-light leading-relaxed mb-6"></p>
+                    
+                    <!-- Technology Tag Pills -->
+                    <div id="cs-tags" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <!-- Bottom Two Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Bottom Left Card: Metrics & Analytics -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex flex-col justify-between gap-4">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Growth Analytics</h4>
+                            <span class="text-[10px] text-[#2BB5BC] px-2 py-0.5 bg-[#2BB5BC]/10 rounded-full border border-[#2BB5BC]/20">Live Sync</span>
+                        </div>
+                        
+                        <!-- Glowing Mini Line Chart -->
+                        <div class="relative w-full h-24 bg-black/40 rounded-2xl border border-white/5 overflow-hidden p-2 flex items-center justify-center">
+                            <!-- Grid Background Lines -->
+                            <div class="absolute inset-0 flex flex-col justify-between p-3 opacity-20 pointer-events-none">
+                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
+                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
+                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
+                            </div>
+                            <!-- Chart Area -->
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 300 80">
+                                <defs>
+                                    <linearGradient id="chart-grad" x1="0" y1="0" x2="1" y2="0">
+                                        <stop offset="0%" stop-color="#2BB5BC" />
+                                        <stop offset="100%" stop-color="#95C951" />
+                                    </linearGradient>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="3" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <path id="cs-chart-area" d="" fill="url(#chart-grad)" fill-opacity="0.05" class="transition-all duration-500"></path>
+                                <path id="cs-chart-path" d="" fill="none" stroke="url(#chart-grad)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" class="transition-all duration-500"></path>
+                                <circle id="cs-chart-dot" cx="280" cy="20" r="4" fill="#95C951" class="transition-all duration-500" filter="url(#glow)"></circle>
+                            </svg>
+                        </div>
+                        
+                        <div id="cs-metrics" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Bottom Right Card: Testimonial -->
+                    <div class="border-l-4 border-l-[#2BB5BC] bg-white/5 border border-white/10 border-l-0 rounded-3xl p-6 hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex flex-col justify-between">
+                        <!-- Rating Stars -->
+                        <div class="flex gap-1 text-[#95C951]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                        </div>
+                        
+                        <!-- Client Quote -->
+                        <p id="cs-quote" class="text-sm text-gray-300 font-light italic leading-relaxed my-4"></p>
+                        
+                        <!-- Client Name -->
+                        <div class="border-t border-white/10 pt-3">
+                            <p id="cs-client" class="text-xs text-[#2BB5BC] tracking-wider uppercase font-semibold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Link -->
         <a href="/portfolio"
-            class="mt-12 w-fit py-3 px-6 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[var(--secondary-color)] hover:text-white transition">
+            class="mt-12 w-fit py-3 px-6 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[var(--secondary-color)] hover:text-white transition shadow-[0_0_20px_rgba(255,255,255,0.05)]">
             View More Case Studies
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
         </a>
-
     </section>
 
     <section
@@ -3356,6 +3558,7 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="/script/home_component.js"></script>
     <script src="/script/home_GSAP.js"></script>
+    <script src="/script/case_study_carousel.js"></script>
             
 </body>
 

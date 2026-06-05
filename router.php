@@ -8,12 +8,17 @@ if (file_exists(__DIR__ . $uri) && !is_dir(__DIR__ . $uri)) {
     return false;
 }
 
-// Serve index.php for the root path
-if ($uri === '/') {
-    chdir(__DIR__);
-    include __DIR__ . '/index.php';
-    return;
+// Serve index.php for a directory path if it exists
+$dirPath = __DIR__ . '/' . ltrim($uri, '/');
+if (is_dir($dirPath)) {
+    $dirIndex = rtrim($dirPath, '/') . '/index.php';
+    if (file_exists($dirIndex)) {
+        chdir(dirname($dirIndex));
+        include $dirIndex;
+        return;
+    }
 }
+
 
 // Normalize trailing slash for root-level checks
 $normalizedUri = rtrim($uri, '/');

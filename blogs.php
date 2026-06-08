@@ -35,7 +35,7 @@ require_once ADMIN_URL.'/database_config.php';
     <link rel="canonical" href="https://qonkar.com/blogs" />
 </head>
 
-<body class="bg-[var(--body-bg)]">
+<body class="bg-[#000d16]">
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
@@ -161,29 +161,9 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-    <section class="bg-[var(--body-bg)] py-12 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+    <section class="bg-[#000d16] py-12 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
         <div class="container mx-auto relative">
-            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-                <div class="order-1 text-center lg:text-left flex flex-col gap-6">
-                    <div class="glass-border w-[130px] mx-auto lg:mx-0">
-                        <div class="glass-background"><div class="glass text-sm font-light text-left"><p>&#9679; INSIGHTS</p></div></div>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl text-white">Blogs & <b>Article</b></h2>
-                    <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">Stay updated with expert insights, digital trends, and practical strategies.</p>
-                </div>
-                <div class="order-2 flex justify-center lg:justify-end w-full mt-6 lg:mt-0 lg:absolute lg:bottom-4 lg:right-4 gap-2 z-10">
-                    <button id="scrollLeft" class="group relative p-[2px] rounded-lg overflow-hidden shadow-lg [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)] transition-transform hover:scale-105">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-black/90 backdrop-blur-[600px] text-[var(--secondary-color)] group-hover:bg-[var(--primary-color)] group-hover:text-black">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960" fill="currentColor" class="rotate-180"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
-                        </div>
-                    </button>
-                    <button id="scrollRight" class="group relative p-[2px] rounded-lg overflow-hidden shadow-lg [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)] transition-transform hover:scale-105">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-black/90 backdrop-blur-[600px] text-[var(--secondary-color)] group-hover:bg-[var(--primary-color)] group-hover:text-black">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
-                        </div>
-                    </button>
-                </div>
-            </div>
+
         </div>
 
         <div class="mt-10 sm:mt-0 flex relative flex-col gap-0 sm:gap-4 ">
@@ -370,16 +350,20 @@ require_once ADMIN_URL.'/database_config.php';
             const blogContainer = document.getElementById("blogResults");
             const shareButtonsContainer = document.getElementById("shareButtons");
 
-            document.getElementById("scrollLeft").addEventListener("click", () => slider.scrollBy({ left: -200, behavior: "smooth" }));
-            document.getElementById("scrollRight").addEventListener("click", () => slider.scrollBy({ left: 200, behavior: "smooth" }));
+            if (document.getElementById("scrollLeft")) {
+                document.getElementById("scrollLeft").addEventListener("click", () => slider.scrollBy({ left: -200, behavior: "smooth" }));
+            }
+            if (document.getElementById("scrollRight")) {
+                document.getElementById("scrollRight").addEventListener("click", () => slider.scrollBy({ left: 200, behavior: "smooth" }));
+            }
 
             function showSkeleton() {
                 blogContainer.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full animate-pulse">${Array(6).fill().map(() => `<div class="rounded-[15px] border border-gray-600/50 bg-gray-700/30 p-3 h-64"></div>`).join("")}</div>`;
             }
 
             function fetchBlogs(categoryId = 0, page = 1) {
-                showSkeleton();
-                // ✅ FIXED: Use absolute path so search works from sub-pages
+                if (page == 1) showSkeleton();
+                
                 fetch("/blog-process.php", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -388,9 +372,30 @@ require_once ADMIN_URL.'/database_config.php';
                 .then(response => response.text())
                 .then(data => {
                     setTimeout(() => {
-                        blogContainer.innerHTML = data;
+                        if (page == 1) {
+                            blogContainer.innerHTML = data;
+                        } else {
+                            const oldLoadMore = document.querySelector('.load-more-container');
+                            if (oldLoadMore) oldLoadMore.remove();
+                            
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = data;
+                            
+                            const newGrid = tempDiv.querySelector('.grid');
+                            const existingGrid = blogContainer.querySelector('.grid');
+                            
+                            if (existingGrid && newGrid) {
+                                existingGrid.insertAdjacentHTML('beforeend', newGrid.innerHTML);
+                                const newLoadMore = tempDiv.querySelector('.load-more-container');
+                                if (newLoadMore) {
+                                    blogContainer.appendChild(newLoadMore);
+                                }
+                            } else {
+                                blogContainer.insertAdjacentHTML('beforeend', data);
+                            }
+                        }
                         initShareButtons();
-                    }, 500);
+                    }, page == 1 ? 500 : 0);
                 })
                 .catch(err => console.error("AJAX error:", err));
             }
@@ -412,14 +417,13 @@ require_once ADMIN_URL.'/database_config.php';
             });
 
             document.addEventListener("click", function(e) {
-                if (e.target.classList.contains("pagination-btn")) {
-                    const page = e.target.getAttribute("data-page");
+                if (e.target.classList.contains("load-more-btn")) {
+                    const page = e.target.getAttribute("data-next");
                     const activeCategory = document.querySelector('.category-btn.bg-white')?.getAttribute("data-id") || 0;
                     fetchBlogs(activeCategory, page);
                 }
                 const arrowBtn = e.target.closest(".blog-arrow-btn");
                 if (arrowBtn) {
-                    // ✅ FIXED: Redirect to clean URL using SLUG instead of ID
                     window.location.href = `/blog/${arrowBtn.dataset.slug}`;
                 }
             });

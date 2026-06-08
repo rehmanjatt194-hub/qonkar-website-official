@@ -10,7 +10,7 @@
     var(--secondary-color),
     var(--tertiary-color)
   );
-  --body-bg: #080808;
+  --body-bg: #000d16;
 }
 
 body {
@@ -194,15 +194,15 @@ body {
   border-radius: 9999px; /* full rounded */
 }
 .tab-btn.active {
-  background-color: var(--secondary-color);
+  background-color: #01a0d8;
   color: #fff;
-  box-shadow: 0 0 20px var(--secondary-color);
+  box-shadow: 0 0 20px rgba(1, 160, 216, 0.4);
   font-weight: 600;
 }
 .tab-btn:not(.active) {
-  color: #9ca3af;
+  color: #000d16;
 }
 .tab-btn:not(.active):hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #01a0d8;
+  background-color: rgba(1, 160, 216, 0.1);
 }

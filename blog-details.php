@@ -143,62 +143,79 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
     
 
 <style>
-    body { background-color: #080808; } 
+    body { background-color: #000d16; } 
 
     /* Typography Optimization for UX */
     .blog-content { 
-        font-family: 'Cormorant Garamond', serif; 
-        color: #f0f0f0; 
-        font-size: 22px; 
-        /* Decreased line-height for a tighter, editorial feel */
-        line-height: 1.6; 
-        letter-spacing: 0.01rem;
-        font-weight: 400;
+        font-family: "Lexend", sans-serif; 
+        color: #d1d5db; /* Tailwind gray-300 */
+        font-size: 18px; 
+        line-height: 1.8; 
+        letter-spacing: 0.015rem;
+        font-weight: 300;
     }
 
     /* Spacing between paragraphs */
     .blog-content p {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     /* Headlines inside blog content */
-    .blog-content h1, .blog-content h2, .blog-content h3 {
-        font-family: 'Cormorant Garamond', serif;
+    .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 {
+        font-family: "Lexend", sans-serif;
         color: #ffffff;
         font-weight: 700;
-        /* Tight line-height for headings to keep them bold and punchy */
-        line-height: 1.2; 
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+        line-height: 1.3; 
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
     }
 
-    .blog-content h1 { font-size: 2.5rem; }
-    .blog-content h2 { font-size: 2rem; }
-    .blog-content h3 { font-size: 1.75rem; }
+    .blog-content h1 { font-size: 2.25rem; color: #01a0d8; }
+    .blog-content h2 { font-size: 1.875rem; color: #01a0d8; }
+    .blog-content h3 { font-size: 1.5rem; }
+    .blog-content h4 { font-size: 1.25rem; }
 
     /* Elegant links */
     .blog-content a { 
-        color: #3f89c9 !important; 
+        color: #01a0d8 !important; 
         text-decoration: underline; 
-        text-underline-offset: 3px;
+        text-underline-offset: 4px;
         transition: all 0.3s ease;
+        font-weight: 500;
     }
     
     .blog-content a:hover { 
         color: #ffffff !important; 
     }
+    
+    /* Lists */
+    .blog-content ul, .blog-content ol {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+    }
+    .blog-content li {
+        margin-bottom: 0.75rem;
+    }
+    .blog-content ul li {
+        list-style-type: disc;
+        color: #d1d5db;
+    }
+    .blog-content ul li::marker {
+        color: #01a0d8;
+    }
 
     /* Mobile responsiveness */
     @media (max-width: 768px) {
         .blog-content {
-            font-size: 19px;
-            line-height: 1.5; /* Slightly tighter on mobile to save screen real estate */
+            font-size: 16px;
+            line-height: 1.7; 
         }
-        .blog-content h1 { font-size: 2rem; }
+        .blog-content h1 { font-size: 1.75rem; }
+        .blog-content h2 { font-size: 1.5rem; }
     }
 
     /* Overriding Tailwind Prose defaults */
@@ -215,7 +232,7 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
 
 </head>
 
-<body class="bg-[var(--body-bg)] text-white">
+<body class="bg-[#000d16] text-white">
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
@@ -354,8 +371,8 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
         <p class="text-gray-400 text-sm mb-4">Published on <?= date('F d, Y', strtotime($blog['created_at'])) ?></p>
 
         <?php if (!empty($blog['blog_image'])): ?>
-            <div class="rounded-lg overflow-hidden shadow-lg mb-10">
-                <img src="system-core-portal-admin-dashboard/<?= htmlspecialchars($blog['blog_image']) ?>" alt="<?= htmlspecialchars($blog['blog_title']) ?>" class="w-full max-h-[600px] object-cover">
+            <div class="rounded-lg overflow-hidden shadow-lg mb-10 flex justify-center bg-black/20">
+                <img src="system-core-portal-admin-dashboard/<?= htmlspecialchars($blog['blog_image']) ?>" alt="<?= htmlspecialchars($blog['blog_title']) ?>" class="w-full max-h-[600px] object-contain">
             </div>
         <?php endif; ?>
 

@@ -200,7 +200,7 @@ if (!empty($job_slug)) {
 
 </head>
 
-<body>
+<body class="bg-[#000d16] text-white">
 
     <!-- Screen Loader Overlay -->
     <div id="loaderOverlay"
@@ -428,23 +428,21 @@ if (!empty($job_slug)) {
     </section>
 
 
-    <section class="mt-10 mb-16">
-        <div class="group relative p-[2px] 
-    [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)] 
-    rounded-[20px] overflow-hidden shadow-lg max-w-4xl mx-auto">
+    <section class="mt-10 mb-16 px-4">
+        <div class="relative p-8 md:p-12 rounded-2xl border border-[#01a0d8] bg-[#000810] shadow-[0_0_30px_rgba(1,160,216,0.08)] max-w-4xl mx-auto">
 
-            <div class="relative px-8 py-10 rounded-[18px] bg-black/90 backdrop-blur-[600px] text-white">
+            <div class="relative text-white">
 
                 <?php if (!empty($selected_job_title)): ?>
-                    <h2 class="text-3xl text-center mb-2">
+                    <h2 class="text-3xl text-center font-bold mb-2">
                         Apply for <?php echo htmlspecialchars($selected_job_title); ?>
                     </h2>
-                    <p class="text-center text-sm text-gray-300 mb-6">
+                    <p class="text-center text-sm text-gray-300 mb-8">
                         Fill out the form below to apply for
                         <strong><?php echo htmlspecialchars($selected_job_title); ?></strong>.
                     </p>
                 <?php else: ?>
-                    <h2 class="text-3xl text-center mb-6">Job Application Form</h2>
+                    <h2 class="text-3xl text-center font-bold mb-8">Job Application Form</h2>
                 <?php endif; ?>
 
                 <form id="jobApplicationForm" action="/apply-process" method="POST" enctype="multipart/form-data"
@@ -455,37 +453,37 @@ if (!empty($job_slug)) {
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input type="text" placeholder="Full Name" name="name" required
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none">
 
                         <input type="email" placeholder="Email" name="email" required
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none">
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input type="text" placeholder="Phone Number" name="phone_number" required
-                            class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none">
 
                         <select id="countrySelect" name="country" required
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white focus:border-[#01a0d8] focus:outline-none">
                             <option value="">Select Country</option>
                         </select>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <select id="stateSelect" name="state" required disabled
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none disabled:opacity-50">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white focus:border-[#01a0d8] focus:outline-none disabled:opacity-50">
                             <option value="">Select State</option>
                         </select>
 
                         <select id="citySelect" name="city" required disabled
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none disabled:opacity-50">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white focus:border-[#01a0d8] focus:outline-none disabled:opacity-50">
                             <option value="">Select City</option>
                         </select>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
                         <select name="job_post" required
-                            class="w-full px-4 py-3 bg-black border border-gray-500 rounded-md text-white focus:border-[var(--secondary-color)] focus:outline-none">
+                            class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white focus:border-[#01a0d8] focus:outline-none">
                             <option value="">Select Job Post</option>
                             <?php
                             $result = $conn->query("SELECT job_id, job_title FROM jobs WHERE job_status='open' ORDER BY created_at DESC");
@@ -501,15 +499,15 @@ if (!empty($job_slug)) {
 
                     <div>
                         <div onclick="document.getElementById('resumeInput').click()"
-                            class="w-full flex items-center gap-4 px-4 py-3 border-2 border-gray-500 rounded-md cursor-pointer hover:border-[var(--secondary-color)] transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-[var(--secondary-color)]"
+                            class="w-full flex items-center gap-4 px-4 py-3 bg-[#050d14] border border-white/20 rounded-md cursor-pointer hover:border-[#01a0d8] transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#01a0d8]"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V4m0 8l-3-3m3 3l3-3" />
                             </svg>
                             <div class="flex flex-col">
-                                <span id="resumeText" class="text-gray-300">Upload your Resume</span>
-                                <p class="text-sm text-gray-400 mt-0.5">DOC, DOCX, PDF</p>
+                                <span id="resumeText" class="text-gray-300 font-medium">Upload your Resume</span>
+                                <p class="text-sm text-gray-500 mt-0.5">DOC, DOCX, PDF</p>
                             </div>
                             <input type="file" id="resumeInput" class="hidden" name="resume" accept=".pdf,.doc,.docx"
                                 onchange="document.getElementById('resumeText').textContent = this.files[0]?.name || 'Upload your Resume'">
@@ -517,18 +515,18 @@ if (!empty($job_slug)) {
                     </div>
 
                     <input type="url" placeholder="Portfolio Link (Optional)" name="portfolio_link"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                        class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none">
 
                     <input type="url" placeholder="LinkedIn Link (Optional)" name="linkedin"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none">
+                        class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none">
 
                     <textarea rows="4" required name="message"
                         placeholder="Tell us why you are a great fit for this role"
-                        class="w-full px-4 py-3 bg-transparent border border-gray-500 rounded-md text-white placeholder-gray-400 focus:border-[var(--secondary-color)] focus:outline-none"></textarea>
+                        class="w-full px-4 py-3 bg-[#050d14] border border-white/20 rounded-md text-white placeholder-gray-400 focus:border-[#01a0d8] focus:outline-none"></textarea>
 
-                    <div class="flex justify-center">
+                    <div class="flex justify-center mt-6">
                         <button type="submit"
-                            class="px-8 py-3 rounded-full border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-semibold transition hover:bg-[var(--secondary-color)] hover:text-white">
+                            class="px-8 py-3 rounded-full border border-[#01a0d8] bg-transparent text-[#01a0d8] font-semibold transition hover:bg-[#01a0d8] hover:text-[#000d16]">
                             Submit Application
                         </button>
                     </div>

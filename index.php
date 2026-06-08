@@ -261,7 +261,9 @@ require_once ADMIN_URL.'/database_config.php';
 
 <body>
     
-<header class="sticky top-5 z-50 mx-auto sm:px-4">
+<div class="bg-[#000d16] flex flex-col" style="background-color: #000d16; width: 100%; min-height: 100vh; overflow-x: hidden; margin: 0; padding: 0;">
+    
+<header class="sticky top-5 z-50 mx-auto sm:px-4 w-full">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
             <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
@@ -375,42 +377,30 @@ require_once ADMIN_URL.'/database_config.php';
 </header>
 
     <section id="hero"
-        class="relative min-h-screen flex items-center mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 bg-no-repeat bg-[length:50%] bg-center md:bg-left md:bg-[length:50%] overflow-x-hidden">
+        class="relative flex-1 flex items-center mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden w-full">
 
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto w-full">
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-8 max-w-7xl mx-auto w-full">
 
-            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-8 lg:gap-10 max-w-2xl">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4 lg:gap-5 max-w-2xl">
 
-                <div class="glass px-4 py-2 rounded-lg sm:rounded-full text-xs sm:text-sm text-white 
-                hidden sm:flex flex-col sm:flex-row items-center justify-center gap-2 hero-badge text-center">
-
-                    <span class="px-3 py-0.5 rounded-full bg-[var(--primary-color)] text-white text-xs">
-                        &#9679; New
-                    </span>
-                    <span class="leading-tight">
-                        One team to build, convert, and grow
-                    </span>
-                </div>
-
-                                <h1
-                  class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light hero-title leading-tight"
+                <h1
+                  class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-light hero-title leading-tight text-white"
                 >
                   Custom <br> <b>Software, Shopify</b><br>
                   & <span
-                    class="bg-clip-text text-transparent font-bold"
-                    style="background-image: var(--gradient);"
+                    class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold"
                   >Digital Growth</span>
                   Agency
                 </h1>
                 
                 <p
-                    class="text-sm sm:text-base md:text-lg lg:text-xl text-white font-light leading-tight hero-text max-w-2xl">
+                    class="text-sm sm:text-base md:text-md lg:text-lg text-white/90 font-light leading-relaxed hero-text max-w-xl">
                     One team to build, convert, and grow your digital presence. From scalable software to ROI-driven marketing, we deliver innovation that scales businesses faster.
                 </p>
 
-                <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn mt-2 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[var(--primary-color)] text-white text-lg font-semibold 
-                hover:bg-[var(--secondary-color)] transition">
+                <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn mt-2 inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#01a0d8] bg-transparent text-[#01a0d8] text-lg font-semibold 
+                hover:bg-[#01a0d8] hover:text-white transition-all duration-300">
                     Get a Free Consultation
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -420,66 +410,59 @@ require_once ADMIN_URL.'/database_config.php';
                 </a>
             </div>
 
-            <div class="w-full md:w-1/2 hero-img flex justify-center overflow-hidden">
+            <div class="w-full md:w-1/2 hero-img flex justify-center items-center overflow-hidden max-h-[40vh] md:max-h-[55vh]">
                 <img src="/images/shopify-responsive-store-design-case-study.webp" alt="Showcase of responsive Shopify store design case study for Timevo on desktop and mobile."
-                    class="w-5/6 md:w-full lg:w-4/5 xl:w-full h-auto max-w-full">
+                    class="w-5/6 md:w-full lg:w-4/5 xl:w-full h-auto max-h-[35vh] md:max-h-[50vh] object-contain">
             </div>
 
         </div>
     </section>
 
 
-    <section class="mt-4 bg-[var(--body-bg)] flex flex-col items-center justify-center h-[30vh] overflow-hidden relative">
-        <h2 class="text-white text-2xl font-light mb-10 text-center">
-           Trusted by Top Brands </h2>
+    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-5 md:mt-6 mb-5 md:mb-6">
 
-        <div class="relative overflow-hidden w-full">
-            <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 ">
-                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="w-14 ">
-                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
-                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
-                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
-                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
-                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation"
-                    class="w-14 object-contain" />
-                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
+        <div class="relative overflow-hidden w-full group">
+            <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 group-hover:[animation-play-state:paused] cursor-pointer">
+                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-7 md:h-8 object-contain" />
 
-                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="w-14 ">
-                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
-                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
-                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
-                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
-                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation"
-                    class="w-14 object-contain" />
-                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
+                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-7 md:h-8 object-contain" />
             </div>
 
         </div>
     </section>
+</div>
 
-    <section class="bg-[var(--body-bg)] py-12 mx-auto px-4 sm:px-6 lg:px-8  max-w7xl ">
+    <section class="bg-[#000d16] py-12 px-4 sm:px-6 lg:px-8 w-full">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/Successful-Business-Collaboration-And-Client-Meeting.webp" alt="Successful business collaboration shown by a professional shaking hands with a client during a team meeting." class="w-full max-w-xl h-auto">
+                <img src="/images/Successful-Business-Collaboration-And-Client-Meeting.webp" alt="Successful business collaboration shown by a professional shaking hands with a client during a team meeting." class="w-full max-w-xl h-auto rounded-2xl shadow-xl">
             </div>
 
             <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
@@ -495,7 +478,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
 
 
-                <h2 class="text-3xl md:text-4xl  text-white">
+                <h2 class="text-3xl md:text-4xl text-white">
                     Why <b>Qonkar</b> is the Best IT Services Agency?
                 </h2>
 
@@ -504,8 +487,8 @@ require_once ADMIN_URL.'/database_config.php';
 
                 </p>
 
-                <a href="/about-us" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
-                hover:bg-[var(--primary-color)] hover:text-white transition w-fit mx-auto lg:mx-0">
+                <a href="/about-us" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#01a0d8] bg-transparent text-[#01a0d8] font-semibold 
+                hover:bg-[#01a0d8] hover:text-white transition-all duration-300 w-fit mx-auto lg:mx-0">
                     Know More About us
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -518,297 +501,656 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 
-    <section class="py-8  mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] text-white max-w-7xl">
-        <div class="max-w-7xl mx-auto  text-center ">
-            <div class="glass-border inline-block mb-4">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;SERVICES</p>
-                    </div>
+<div class="bg-[#000d16] w-full">
+    <section class="py-8 md:py-10 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-2 border-b border-slate-200/50">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16]">
+                        IT <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Solutions</span>
+                    </h2>
                 </div>
+                <p class="text-slate-500 font-light text-sm md:text-base max-w-md md:text-right">
+                    Tailored development and design services built to scale your digital presence.
+                </p>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Complete Digital & <b>IT Solutions</b>
+            <!-- Bento Grid of Actual Services (5-card Layout, Dark Cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+                
+                <!-- Card 1: Shopify Ecommerce (Left Column - Tall) -->
+                <div class="lg:col-span-1 flex flex-col h-full">
+                    <div class="bg-[#000d16] rounded-[24px] p-4 sm:p-5 border border-white/5 flex flex-col justify-between overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 relative group h-full min-h-[300px]">
+                        <div class="text-left">
+                            <h3 class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold text-xl mb-1">Shopify</h3>
+                            <p class="text-slate-300 font-light text-sm leading-relaxed mb-2">High-converting stores designed for modern ecommerce brands.</p>
+                            <ul class="space-y-1.5 text-slate-200 font-medium text-sm mb-2">
+                                <li>
+                                    <a href="/services/shopify-development" class="flex items-center gap-2 hover:text-[#2BB5BC] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Shopify Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/services/shopify-theme-design" class="flex items-center gap-2 hover:text-[#2BB5BC] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Shopify Theme Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/services/shopify-store-setup" class="flex items-center gap-2 hover:text-[#2BB5BC] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Shopify Store Setup
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full mt-2 overflow-hidden rounded-xl border border-white/5 bg-black/20 p-1">
+                            <img src="/images/shopify-responsive-store-design-case-study.webp" alt="Shopify Development mockup" class="w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500 shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Web Dev + Nested Row (Wide) -->
+                <div class="lg:col-span-2 flex flex-col gap-3 md:gap-4">
+                    <!-- Web & SaaS Solutions Card -->
+                    <div class="bg-[#000d16] rounded-[24px] p-4 sm:p-5 border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 relative group flex-1">
+                        <div class="text-left flex-1">
+                            <h3 class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold text-xl mb-1">Web & SaaS</h3>
+                            <p class="text-slate-300 font-light text-sm leading-relaxed max-w-sm mb-2">Custom applications engineered for performance, scalability, and seamless user experiences.</p>
+                            <ul class="space-y-1 text-slate-200 font-medium text-sm">
+                                <li>
+                                    <a href="/services/web-design-and-development" class="flex items-center gap-2 hover:text-[#95C951] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Web Design & Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/services/saas-product-development" class="flex items-center gap-2 hover:text-[#95C951] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> SaaS Product Development
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 flex justify-center w-full mt-2 sm:mt-0 bg-black/10 rounded-xl p-1.5">
+                            <img src="/images/qonkar-custom-software-products-saas-portfolio.webp" alt="Web Development" class="w-full max-w-[220px] h-auto object-contain rounded-xl transform group-hover:scale-105 transition-all duration-500 shadow-md">
+                        </div>
+                    </div>
+
+                    <!-- Nested Row: Speed & Migration and Maintenance -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                        <!-- Speed & Migration -->
+                        <div class="bg-[#000d16] rounded-[24px] p-4 sm:p-5 border border-white/5 flex flex-col justify-between overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 relative group min-h-[150px]">
+                            <div class="text-left">
+                                <h3 class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold text-lg mb-1">Optimization</h3>
+                                <ul class="space-y-1 text-slate-200 font-medium text-xs md:text-sm">
+                                    <li>
+                                        <a href="/services/speed-optimization" class="flex items-center gap-2 hover:text-[#2BB5BC] transition-colors duration-200">
+                                            <span class="text-[#01a0d8] font-bold">✔</span> Speed optimization
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/services/migration-services" class="flex items-center gap-2 hover:text-[#2BB5BC] transition-colors duration-200">
+                                            <span class="text-[#01a0d8] font-bold">✔</span> Migration Services
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full flex justify-center mt-2 bg-black/10 rounded-lg p-1">
+                                <img src="/images/qonkar-shopify-speed-optimization-services.webp" alt="Speed Optimization" class="h-11 w-auto object-contain transform group-hover:scale-110 transition-all duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Maintenance -->
+                        <div class="bg-[#000d16] rounded-[24px] p-4 sm:p-5 border border-white/5 flex flex-col justify-between overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 relative group min-h-[150px]">
+                            <div class="text-left">
+                                <h3 class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold text-lg mb-1">Maintenance</h3>
+                                <a href="/contact-us" class="block text-slate-300 hover:text-[#2BB5BC] transition font-light text-xs md:text-sm leading-normal">
+                                    Flexible, ongoing support designed to adapt to your needs. <span class="text-[#01a0d8] font-semibold">Contact Us →</span>
+                                </a>
+                            </div>
+                            <div class="w-full flex justify-center mt-2 bg-black/10 rounded-lg p-1">
+                                <img src="/images/services_pictures/shopify_maintanance.webp" alt="Maintenance" class="h-11 w-auto object-contain transform group-hover:scale-110 transition-all duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Enterprise & Custom Apps (Right Column - Tall) -->
+                <div class="lg:col-span-1 flex flex-col h-full">
+                    <div class="bg-[#000d16] rounded-[24px] p-4 sm:p-5 border border-white/5 flex flex-col justify-between overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 relative group h-full min-h-[300px]">
+                        <div class="text-left">
+                            <h3 class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold text-xl mb-1">Enterprise Apps</h3>
+                            <p class="text-slate-300 font-light text-sm leading-relaxed mb-2">Scalable systems and specialty applications for growing businesses.</p>
+                            <ul class="space-y-1.5 text-slate-200 font-medium text-sm mb-2">
+                                <li>
+                                    <a href="/contact-us" class="flex items-center gap-2 hover:text-[#95C951] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> CRM & ERP Systems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/services/automative-app" class="flex items-center gap-2 hover:text-[#95C951] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Automotive Apps
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/services/healthcare-and-hippa-apps" class="flex items-center gap-2 hover:text-[#95C951] transition-colors duration-200">
+                                        <span class="text-[#01a0d8] font-bold">✔</span> Healthcare Apps
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full mt-2 overflow-hidden rounded-xl border border-white/5 bg-black/20 p-1">
+                            <img src="/images/future_enterprise_dashboard.png" alt="Enterprise Software mockup" class="w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500 shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto mb-6 text-center md:text-left">
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight text-white">
+                Our <span class="font-bold bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent">Process</span>
             </h2>
+        </div>
 
-            <p class="text-white font-light max-w-3xl mx-auto mb-10">
-                We turn your online presence into a business asset. Whether you need a high-performing Shopify Store, powerful Custom Software, SEO that ranks, or Social Media that sells, Qonkar builds it, fixes it, and grows it. Fast. Simple. Results-focused.
-            </p>
-
-            <div class="w-full overflow-x-auto no-scrollbar py-2 text-left sm:text-center sm:px-0 sm:mx-0 mb-10">
-                <!-- Segmented Control Pill -->
-                <div class="inline-flex gap-1 p-1 sm:p-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
-
-                    <button
-                        class="tab-btn active px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
-                        data-tab="service1">
-                        Shopify
-                    </button>
-                    <button
-                        class="tab-btn px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
-                        data-tab="service2">
-                        Custom Software Development
-                    </button>
-
-                </div>
-            </div>
-
-            <div class="relative flex justify-center background-backdrop-card">
-                <div class="w-full p-4 sm:p-6 rounded-[15px] border border-[1.087px] border-[#2F2F2F]/50 bg-white/1 backdrop-blur-[100px]"
-                    style="background-color: rgba(0, 0, 0, 0.5);">
-                    <div id="service1"
-                        class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row justify-center items-center gap-5">
-                        <div class="flex-1 text-left top-0">
-                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex items-center gap-2">
-                                Shopify Ecommerce Experts & Store Setup
-                            </h3>
-
-                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Custom Shopify Theme Design & Development</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    High-Converting Store Setup & Migration
-                                </li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Speed Optimization & Technical SEO
-                                </li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Email, WhatsApp, & Social Media Marketing
-                                </li>
-                            </ul>
-
-                            <a href="/contact-us"
-                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
-                                Get a Quote
-                            </a>
+        <div class="relative w-full max-w-7xl mx-auto mt-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Left Column: Workstation Card (Sits on top on mobile, on left on desktop) -->
+                <div class="order-last lg:order-first lg:col-span-5 flex flex-col justify-start">
+                    <div id="workstation-container" class="sticky top-28 w-full bg-[#060e14] border border-[#2BB5BC]/30 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(43,181,188,0.12)] flex flex-col justify-between transition-all duration-500 min-h-[300px]">
+                        <!-- Frame Header -->
+                        <div class="flex items-center justify-between px-4 py-3 bg-[#03090d] border-b border-white/5">
+                            <div class="flex gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                            </div>
+                            <span class="text-[9px] font-mono text-gray-500 uppercase tracking-widest">Qonkar Workstation</span>
+                            <span class="w-10"></span> <!-- spacer -->
                         </div>
 
-                        <div class="flex-1 flex justify-center w-[110%]">
-                            <img src="/images/qonkar-expert-shopify-development-team.webp" alt="Qonkar expert team collaborating on a Shopify store development project in the office"
-                                class="w-full  rounded-xl shadow-lg" />
+                        <!-- Workstation Widgets Content -->
+                        <div class="relative flex-1 bg-black/20 flex flex-col justify-center">
+                            
+                            <!-- Widget 1: Discovery Checklist -->
+                            <div id="widget-discovery" class="widget-content h-full flex flex-col justify-between p-6">
+                                <div>
+                                    <h5 class="text-xs font-semibold text-[#2BB5BC] uppercase tracking-wider mb-4">Discovery Checklist</h5>
+                                    <div class="space-y-3">
+                                        <label class="flex items-center gap-3 cursor-pointer text-sm text-gray-300 hover:text-white transition">
+                                            <input type="checkbox" checked class="w-4 h-4 rounded border-gray-700 bg-black text-[#2BB5BC] focus:ring-0 cursor-pointer" />
+                                            <span>Gather Requirements</span>
+                                        </label>
+                                        <label class="flex items-center gap-3 cursor-pointer text-sm text-gray-300 hover:text-white transition">
+                                            <input type="checkbox" checked class="w-4 h-4 rounded border-gray-700 bg-black text-[#2BB5BC] focus:ring-0 cursor-pointer" />
+                                            <span>Competitor Analysis</span>
+                                        </label>
+                                        <label class="flex items-center gap-3 cursor-pointer text-sm text-gray-300 hover:text-white transition">
+                                            <input type="checkbox" id="discovery-check-3" class="w-4 h-4 rounded border-gray-700 bg-black text-[#2BB5BC] focus:ring-0 cursor-pointer" />
+                                            <span>Define Project Scope</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-white/5">
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Roadmap Progress</span>
+                                        <span id="discovery-progress-text">66%</span>
+                                    </div>
+                                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                                        <div id="discovery-progress-bar" class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] h-full transition-all duration-500" style="width: 66%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Widget 2: Design visual slider -->
+                            <div id="widget-design" class="widget-content h-full hidden flex-col justify-between p-6">
+                                <div>
+                                    <h5 class="text-xs font-semibold text-[#95C951] uppercase tracking-wider mb-3">Wireframe to High-Fidelity UI</h5>
+                                    <div class="relative w-full h-[140px] bg-black/40 rounded-xl overflow-hidden border border-white/5 flex items-center justify-center">
+                                        <!-- Before (Wireframe) -->
+                                        <div class="absolute inset-0 bg-[#00111d] flex flex-col justify-center p-4">
+                                            <div class="w-full h-3 bg-white/10 rounded mb-2"></div>
+                                            <div class="grid grid-cols-3 gap-2">
+                                                <div class="h-10 border border-dashed border-white/20 rounded flex items-center justify-center text-[9px] text-white/40">BOX</div>
+                                                <div class="h-10 border border-dashed border-white/20 rounded flex items-center justify-center text-[9px] text-white/40">IMAGE</div>
+                                                <div class="h-10 border border-dashed border-white/20 rounded flex items-center justify-center text-[9px] text-white/40">TEXT</div>
+                                            </div>
+                                        </div>
+                                        <!-- After (UI) -->
+                                        <div id="design-after-screen" class="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-br from-[#00283d] to-[#080808] border-r-2 border-[#95C951] overflow-hidden transition-all duration-300">
+                                            <div class="w-[300px] p-4">
+                                                <div class="w-24 h-3.5 bg-[#2BB5BC] rounded mb-2 shadow-[0_0_10px_rgba(43,181,188,0.5)]"></div>
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <div class="h-10 bg-white/5 rounded-lg border border-[#95C951]/20 p-1">
+                                                        <div class="w-3 h-3 rounded-full bg-[#95C951] mb-1"></div>
+                                                        <div class="w-6 h-1 bg-white/40 rounded"></div>
+                                                    </div>
+                                                    <div class="h-10 bg-white/5 rounded-lg border border-[#95C951]/20 p-1">
+                                                        <div class="w-3 h-3 rounded-full bg-[#2BB5BC] mb-1"></div>
+                                                        <div class="w-6 h-1 bg-white/40 rounded"></div>
+                                                    </div>
+                                                    <div class="h-10 bg-[#01a0d8]/10 rounded-lg border border-[#01a0d8]/30 p-1">
+                                                        <div class="w-3 h-3 rounded-full bg-[#01a0d8] mb-1"></div>
+                                                        <div class="w-6 h-1 bg-white/40 rounded"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full mt-3 flex items-center gap-2">
+                                        <span class="text-[9px] text-gray-500 font-mono">WIREFRAME</span>
+                                        <input type="range" min="0" max="100" value="50" id="design-slider" class="flex-1 h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#95C951]" />
+                                        <span class="text-[9px] text-gray-500 font-mono">HI-FI UI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Widget 3: Engineering Terminal -->
+                            <div id="widget-engineering" class="widget-content h-full hidden flex-col justify-between p-6">
+                                <div>
+                                    <h5 class="text-xs font-semibold text-[#2BB5BC] uppercase tracking-wider mb-3">Live Compilation Logs</h5>
+                                    <div class="bg-black/50 rounded-xl p-4 border border-white/5 h-[140px] overflow-y-auto flex flex-col justify-start space-y-1.5 text-gray-400 font-mono text-[10px]" id="engineering-terminal">
+                                        <div><span class="text-green-500">$</span> npm run build:prod</div>
+                                        <div><span class="text-[#2BB5BC]">&gt;</span> bundling codebase modules...</div>
+                                        <div class="text-white animate-pulse"><span class="text-green-500">$</span> awaiting compiler...</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Widget 4: Launch Confetti/Status -->
+                            <div id="widget-launch" class="widget-content h-full hidden flex-col justify-between p-6">
+                                <div>
+                                    <h5 class="text-xs font-semibold text-[#95C951] uppercase tracking-wider mb-4">Production Deployment</h5>
+                                    <div class="flex flex-col items-center justify-center h-[120px] bg-black/40 rounded-xl border border-white/5 p-4">
+                                        <button id="launch-deploy-btn" class="relative group px-6 py-3 bg-gradient-to-r from-[#95C951] to-[#2BB5BC] text-black font-bold text-xs uppercase rounded-full shadow-[0_0_20px_rgba(43,181,188,0.3)] hover:shadow-[0_0_30px_rgba(149,201,81,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2">
+                                            <i class="fa-solid fa-rocket animate-bounce"></i>
+                                            <span>Deploy Project</span>
+                                        </button>
+                                        <!-- Status Bar -->
+                                        <div id="launch-status" class="w-full hidden">
+                                            <div class="flex justify-between text-[10px] text-gray-400 mb-1 font-mono">
+                                                <span id="launch-status-text">Uploading assets...</span>
+                                                <span id="launch-status-percent">0%</span>
+                                            </div>
+                                            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                                                <div id="launch-status-bar" class="bg-[#95C951] h-full" style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Widget 5: Scaling Line Chart -->
+                            <div id="widget-scaling" class="widget-content h-full hidden flex-col justify-between p-6">
+                                <div>
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h5 class="text-xs font-semibold text-[#2BB5BC] uppercase tracking-wider">Traffic Scaling</h5>
+                                        <span class="text-[9px] text-green-400 font-mono font-bold animate-pulse">+320% Speed Boost</span>
+                                    </div>
+                                    <div class="relative w-full h-[120px] bg-black/40 rounded-xl border border-white/5 overflow-hidden p-3 flex flex-col justify-between">
+                                        <span class="text-[9px] text-gray-500 font-mono">Cloud Load Scaling</span>
+                                        <div class="h-20 flex items-end relative">
+                                            <svg class="w-full h-full" viewBox="0 0 100 50" preserveAspectRatio="none">
+                                                <line x1="0" y1="10" x2="100" y2="10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                                                <line x1="0" y1="25" x2="100" y2="25" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                                                <line x1="0" y1="40" x2="100" y2="40" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                                                
+                                                <path d="M0,45 Q20,40 40,30 T80,12 T100,2" fill="none" stroke="url(#chart-grad-workstation)" stroke-width="2" id="scaling-chart-path" stroke-dasharray="200" stroke-dashoffset="200" class="transition-all duration-[2000ms] ease-in-out" />
+                                                
+                                                <defs>
+                                                    <linearGradient id="chart-grad-workstation" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                        <stop offset="0%" stop-color="#2BB5BC" />
+                                                        <stop offset="100%" stop-color="#95C951" />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Live Server Metrics Section (Merged inside workstation container) -->
+                        <div class="p-4 bg-[#03090d]/40 border-t border-white/5 flex flex-col gap-3 font-mono text-[9px] text-gray-500">
+                            <div class="flex items-center justify-between text-gray-400 border-b border-white/5 pb-2">
+                                <span class="font-bold uppercase tracking-wider text-[8px] text-[#2BB5BC] flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                                    System Health
+                                </span>
+                                <span class="text-[8px] bg-white/5 px-1.5 py-0.5 rounded text-gray-400">ENV: PRODUCTION</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-black/40 border border-white/5 p-2 rounded-lg flex flex-col gap-0.5">
+                                    <span class="text-gray-500 text-[8px] uppercase tracking-wider">API Latency</span>
+                                    <span class="text-white font-bold text-[11px]">14ms</span>
+                                </div>
+                                <div class="bg-black/40 border border-white/5 p-2 rounded-lg flex flex-col gap-0.5">
+                                    <span class="text-gray-500 text-[8px] uppercase tracking-wider">Server Load</span>
+                                    <span class="text-white font-bold text-[11px]" id="metrics-cpu-load">0.8%</span>
+                                </div>
+                                <div class="bg-black/40 border border-white/5 p-2 rounded-lg flex flex-col gap-0.5">
+                                    <span class="text-gray-500 text-[8px] uppercase tracking-wider">Security Status</span>
+                                    <span class="text-green-400 font-bold text-[11px] flex items-center gap-1">
+                                        <i class="fa-solid fa-shield-halved text-[9px]"></i> SECURE
+                                    </span>
+                                </div>
+                                <div class="bg-black/40 border border-white/5 p-2 rounded-lg flex flex-col gap-0.5">
+                                    <span class="text-gray-500 text-[8px] uppercase tracking-wider">SSL Certificate</span>
+                                    <span class="text-green-400 font-bold text-[11px]">ACTIVE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Step Selectors (Sits first on mobile, on right on desktop) -->
+                <div class="order-first lg:order-last lg:col-span-7 flex flex-col gap-3.5">
+                    
+                    <!-- Step 1 -->
+                    <div class="process-step-btn active group flex items-start gap-4 p-5 rounded-2xl border border-[#2BB5BC]/30 bg-white/[0.05] shadow-[0_0_20px_rgba(43,181,188,0.05)] cursor-pointer hover:bg-white/[0.04] transition-all duration-300" data-step="discovery">
+                        <div class="w-10 h-10 rounded-full border-2 border-[#2BB5BC] bg-[#000d16] flex items-center justify-center shrink-0 font-mono text-[#2BB5BC] font-bold transition-all duration-300">01</div>
+                        <div>
+                            <h4 class="text-base font-semibold text-[#2BB5BC] transition-colors duration-300">Discovery Phase</h4>
+                            <p class="text-gray-400 text-xs mt-1 leading-relaxed">We explore your goals, align with your vision, and build a data-backed roadmap to guide the project.</p>
                         </div>
                     </div>
-                    <div id="service2"
-                        class="px-2 sm:px-8 tab-content flex flex-col lg:flex-row  justify-center items-center gap-5">
-                        <div class="flex-1 text-left top-0">
-
-                            <h3 class="text-2xl sm:text-3xl font-semibold mb-2 flex gap-2">
-                               Custom Software & Enterprise Solutions
-                            </h3>
-
-                            <ul class="space-y-2 mb-6 text-base sm:text-xl leading-relaxed">
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Scalable SaaS Product Development</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    CRM & ERP Management Systems</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    API Development & Cloud Integration</li>
-                                <li class="flex items-start gap-2"><span class="text-[var(--tertiary-color)]">✔</span>
-                                    Mobile App Development (iOS & Android)</li>
-                                
-                            </ul>
-
-                            <a href="/contact-us"
-                                class="inline-block px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition">
-                                Get a Quote
-                            </a>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step-btn group flex items-start gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/[0.04] transition-all duration-300" data-step="design">
+                        <div class="w-10 h-10 rounded-full border-2 border-white/10 bg-[#000d16] flex items-center justify-center shrink-0 font-mono text-gray-500 font-bold transition-all duration-300">02</div>
+                        <div>
+                            <h4 class="text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#95C951]">Design & Prototyping</h4>
+                            <p class="text-gray-400 text-xs mt-1 leading-relaxed">We craft wireframes and custom UI prototypes that prioritize UX and pixel-perfect branding.</p>
                         </div>
-
-                        <div class="flex-1 flex justify-center w-[110%]">
-                            <img src="/images/qonkar-custom-software-products-saas-portfolio.webp" alt="Strategy Service"
-                                class="w-full rounded-xl shadow-lg" />
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step-btn group flex items-start gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/[0.04] transition-all duration-300" data-step="engineering">
+                        <div class="w-10 h-10 rounded-full border-2 border-white/10 bg-[#000d16] flex items-center justify-center shrink-0 font-mono text-gray-500 font-bold transition-all duration-300">03</div>
+                        <div>
+                            <h4 class="text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#2BB5BC]">Development & Coding</h4>
+                            <p class="text-gray-400 text-xs mt-1 leading-relaxed">Our developers build high-performance, clean liquid and API architectures optimized for speed.</p>
                         </div>
                     </div>
 
+                    <!-- Step 4 -->
+                    <div class="process-step-btn group flex items-start gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/[0.04] transition-all duration-300" data-step="launch">
+                        <div class="w-10 h-10 rounded-full border-2 border-white/10 bg-[#000d16] flex items-center justify-center shrink-0 font-mono text-gray-500 font-bold transition-all duration-300">04</div>
+                        <div>
+                            <h4 class="text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#95C951]">QA & Deployment</h4>
+                            <p class="text-gray-400 text-xs mt-1 leading-relaxed">Rigorous speed optimization and quality assurance testing followed by a secure, zero-downtime launch.</p>
+                        </div>
+                    </div>
 
+                    <!-- Step 5 -->
+                    <div class="process-step-btn group flex items-start gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/[0.04] transition-all duration-300" data-step="scaling">
+                        <div class="w-10 h-10 rounded-full border-2 border-white/10 bg-[#000d16] flex items-center justify-center shrink-0 font-mono text-gray-500 font-bold transition-all duration-300">05</div>
+                        <div>
+                            <h4 class="text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#2BB5BC]">Maintenance & Scaling</h4>
+                            <p class="text-gray-400 text-xs mt-1 leading-relaxed">Ongoing support, updates, and server scaling to optimize conversions and traffic growth.</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="relative py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center ">
-        <div class="container mx-auto flex flex-col items-center gap-3">
+    <!-- Scroll Intersection Observer Animation and Interactive Workstation JS -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- 1. Interactive Step Selector Logic ---
+        const steps = document.querySelectorAll('.process-step-btn');
+        const widgets = document.querySelectorAll('.widget-content');
+        const workstation = document.getElementById('workstation-container');
 
-            <div class="glass-border inline-block mb-2">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;OUR PROCESS</p>
-                    </div>
-                </div>
-            </div>
+        const colors = {
+            discovery: '#2BB5BC',
+            design: '#95C951',
+            engineering: '#2BB5BC',
+            launch: '#95C951',
+            scaling: '#2BB5BC'
+        };
 
-            <h2 class="text-3xl md:text-4xl font-light">
-                Our <b>Development Roadmap</b>
-            </h2>
+        function activateStep(stepElement) {
+            // Deactivate all steps
+            steps.forEach(s => {
+                s.classList.remove('active', 'border-[#2BB5BC]/30', 'border-[#95C951]/30', 'bg-white/[0.05]', 'shadow-[0_0_20px_rgba(43,181,188,0.05)]', 'shadow-[0_0_20px_rgba(149,201,81,0.05)]');
+                const num = s.querySelector('.w-10');
+                num.classList.remove('border-[#2BB5BC]', 'border-[#95C951]', 'text-[#2BB5BC]', 'text-[#95C951]');
+                num.classList.add('border-white/10', 'text-gray-500');
+                
+                const h4 = s.querySelector('h4');
+                h4.classList.remove('text-[#2BB5BC]', 'text-[#95C951]');
+                h4.classList.add('text-white');
+            });
 
-            <p class="leading-none text-white-300 font-light leading-tight max-w-2xl text-sm md:text-base">
-                We believe in keeping things simple and transparent. At Qonkar, we don't confuse you with technical jargon. Our streamlined process ensures that your project moves smoothly from the first meeting to the final launch, delivering high-quality results on time and within budget.
+            // Activate clicked step
+            const stepName = stepElement.getAttribute('data-step');
+            const activeColor = colors[stepName];
+            stepElement.classList.add('active', 'bg-white/[0.05]');
+            if (activeColor === '#2BB5BC') {
+                stepElement.classList.add('border-[#2BB5BC]/30', 'shadow-[0_0_20px_rgba(43,181,188,0.05)]');
+            } else {
+                stepElement.classList.add('border-[#95C951]/30', 'shadow-[0_0_20px_rgba(149,201,81,0.05)]');
+            }
 
-            </p>
+            const activeNum = stepElement.querySelector('.w-10');
+            activeNum.classList.remove('border-white/10', 'text-gray-500');
+            
+            const activeH4 = stepElement.querySelector('h4');
+            activeH4.classList.remove('text-white');
 
-            <div class="w-full mt-10">
-                <div
-                    class="flex gap-2 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory  no-scrollbar">
-                    <div
-                        class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+            if (activeColor === '#2BB5BC') {
+                activeNum.classList.add('border-[#2BB5BC]', 'text-[#2BB5BC]');
+                activeH4.classList.add('text-[#2BB5BC]');
+            } else {
+                activeNum.classList.add('border-[#95C951]', 'text-[#95C951]');
+                activeH4.classList.add('text-[#95C951]');
+            }
 
-                        <div
-                            class="absolute inset-0  opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Discover_strategy.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
+            // Change workstation glowing shadow
+            workstation.style.boxShadow = `0 0 40px ${activeColor}15`;
+            workstation.style.borderColor = `${activeColor}30`;
 
-                        <div
-                            class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
+            // Switch visible widget
+            widgets.forEach(w => {
+                w.classList.add('hidden');
+                w.classList.remove('flex');
+            });
+            const targetWidget = document.getElementById(`widget-${stepName}`);
+            targetWidget.classList.remove('hidden');
+            targetWidget.classList.add('flex');
 
-                            <span class="text-6xl font-bold text-[#57EAE6]">01</span>
+            // Trigger widget-specific animations
+            if (stepName === 'engineering') {
+                runTerminalSimulation();
+            } else if (stepName === 'scaling') {
+                animateScalingChart();
+            }
+        }
 
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Discovery & Strategy</h3>
-                                <p
-                                    class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    We explore your goals and challenges, then build a clear, data-backed roadmap.
-                                </p>
-                            </div>
-                        </div>
+        steps.forEach(step => {
+            step.addEventListener('click', () => {
+                stopAutoplay();
+                activateStep(step);
+            });
+        });
 
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center rounded-full  bg-white text-[var(--secondary-color)]  transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+        // --- Autoplay Demo Logic ---
+        let autoplayInterval;
+        let activeIndex = 0;
+        let hasInteracted = false;
 
-                        <div
-                            class="absolute inset-0  opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Design_expreience.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
+        function startAutoplay() {
+            if (hasInteracted) return;
+            autoplayInterval = setInterval(() => {
+                activeIndex = (activeIndex + 1) % steps.length;
+                
+                // Stop autoplay after one full cycle
+                if (activeIndex === 0) {
+                    stopAutoplay();
+                    return;
+                }
+                
+                activateStep(steps[activeIndex]);
+            }, 1200); // 1.2 seconds per step
+        }
 
-                        <div
-                            class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
+        function stopAutoplay() {
+            hasInteracted = true;
+            clearInterval(autoplayInterval);
+        }
 
-                            <span class="text-6xl font-bold text-[#57EAE6]">02</span>
+        // Trigger autoplay when section enters view
+        const processSection = document.getElementById('process-section');
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAutoplay();
+                    processObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Design & Experience</h3>
-                                <p
-                                    class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    We create intuitive, brand-aligned prototypes
-                                    focused on user experience. </p>
-                            </div>
-                        </div>
+        if (processSection) processObserver.observe(processSection);
 
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col p-6 h-[20rem]  flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px] text-white bg-[#227d8d transition-all duration-500 ease-in-out  md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+        // --- 2. Discovery Progress Bar Logic ---
+        const discoveryCheck3 = document.getElementById('discovery-check-3');
+        if (discoveryCheck3) {
+            discoveryCheck3.addEventListener('change', (e) => {
+                stopAutoplay();
+                const bar = document.getElementById('discovery-progress-bar');
+                const text = document.getElementById('discovery-progress-text');
+                if (e.target.checked) {
+                    bar.style.width = '100%';
+                    text.textContent = '100%';
+                } else {
+                    bar.style.width = '66%';
+                    text.textContent = '66%';
+                }
+            });
+        }
 
-                        <div
-                            class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/Integration.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
+        // --- 3. Design Slider Logic ---
+        const designSlider = document.getElementById('design-slider');
+        const designAfterScreen = document.getElementById('design-after-screen');
+        if (designSlider && designAfterScreen) {
+            designSlider.addEventListener('input', (e) => {
+                stopAutoplay();
+                designAfterScreen.style.right = `${100 - e.target.value}%`;
+            });
+        }
 
-                        <div
-                            class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
+        // --- 4. Engineering Terminal Typing simulation ---
+        let terminalInterval;
+        function runTerminalSimulation() {
+            const term = document.getElementById('engineering-terminal');
+            if (!term) return;
+            term.innerHTML = ''; // Clear previous
+            
+            const lines = [
+                '<span class="text-green-500">$</span> npm run build:prod',
+                '<span class="text-[#2BB5BC]">&gt;</span> bundling codebase modules...',
+                '<span class="text-[#2BB5BC]">&gt;</span> compiling custom liquid files...',
+                '<span class="text-yellow-500">&gt;</span> database connection initialized',
+                '<span class="text-green-400">&gt;</span> build success: 0 errors, 2 warnings',
+                '<span class="text-white animate-pulse">&gt;</span> live server active.'
+            ];
 
-                            <span class="text-6xl font-bold text-[#57EAE6]">03</span>
+            let currentLine = 0;
+            clearInterval(terminalInterval);
+            terminalInterval = setInterval(() => {
+                if (currentLine < lines.length) {
+                    const div = document.createElement('div');
+                    div.innerHTML = lines[currentLine];
+                    term.appendChild(div);
+                    term.scrollTop = term.scrollHeight;
+                    currentLine++;
+                } else {
+                    clearInterval(terminalInterval);
+                }
+            }, 120);
+        }
 
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Build & Integrate</h3>
-                                <p
-                                    class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    Our developers build powerful, scalable solutions
-                                    with smart tech integrations. </p>
-                            </div>
-                        </div>
+        // --- 5. Launch Button Deploy simulation ---
+        const deployBtn = document.getElementById('launch-deploy-btn');
+        const launchStatus = document.getElementById('launch-status');
+        const launchStatusBar = document.getElementById('launch-status-bar');
+        const launchStatusText = document.getElementById('launch-status-text');
+        const launchStatusPercent = document.getElementById('launch-status-percent');
 
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col p-6 h-[20rem]   flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px]  text-white bg-[#227d8d] transition-all duration-500 ease-in-out  md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
+        if (deployBtn) {
+            deployBtn.addEventListener('click', () => {
+                stopAutoplay();
+                deployBtn.classList.add('hidden');
+                launchStatus.classList.remove('hidden');
+                launchStatus.classList.add('flex', 'flex-col');
+                
+                let percent = 0;
+                const statusTexts = [
+                    'Uploading assets...',
+                    'Compiling scripts...',
+                    'Syncing databases...',
+                    'Testing load times...',
+                    'Launch successful!'
+                ];
+                
+                const interval = setInterval(() => {
+                    percent += 4;
+                    launchStatusBar.style.width = `${percent}%`;
+                    launchStatusPercent.textContent = `${percent}%`;
+                    
+                    if (percent < 25) {
+                        launchStatusText.textContent = statusTexts[0];
+                    } else if (percent < 50) {
+                        launchStatusText.textContent = statusTexts[1];
+                    } else if (percent < 75) {
+                        launchStatusText.textContent = statusTexts[2];
+                    } else if (percent < 98) {
+                        launchStatusText.textContent = statusTexts[3];
+                    } else {
+                        launchStatusText.textContent = statusTexts[4];
+                        clearInterval(interval);
+                        
+                        launchStatusText.classList.add('text-green-400', 'font-bold');
+                        setTimeout(() => {
+                            deployBtn.classList.remove('hidden');
+                            launchStatus.classList.add('hidden');
+                            launchStatus.classList.remove('flex', 'flex-col');
+                            launchStatusBar.style.width = '0%';
+                            launchStatusPercent.textContent = '0%';
+                            launchStatusText.classList.remove('text-green-400', 'font-bold');
+                        }, 4000);
+                    }
+                }, 80);
+            });
+        }
 
-                        <div
-                            class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/testing.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
+        // --- 6. Scaling SVG path animation ---
+        function animateScalingChart() {
+            const path = document.getElementById('scaling-chart-path');
+            if (!path) return;
+            path.style.strokeDashoffset = '200';
+            setTimeout(() => {
+                path.style.strokeDashoffset = '0';
+            }, 100);
+        }
 
-                        <div
-                            class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">04</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Testing & Launch</h3>
-                                <p
-                                    class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    Every feature is tested and optimized for speed,
-                                    performance, and reliability. </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col p-6 h-[20rem] flex-shrink-0 w-[80%] sm:w-[60%] md:flex-1 md:min-w-[150px]text-white bg-[#227d8d] transition-all duration-500 ease-in-out md:hover:flex-[3] relative group overflow-hidden rounded-md snap-start">
-
-                        <div
-                            class="absolute inset-0 opacity-100 transition-opacity duration-500 bg-[url('/images/process-images/growth.webp')] bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-tr before:from-[var(--primary-color)] before:to-black/60">
-                        </div>
-
-                        <div
-                            class="flex flex-col items-start flex-1 relative z-10 transition-all duration-500 ease-in-out justify-start items-start md:group-hover:justify-end">
-
-                            <span class="text-6xl font-bold text-[#57EAE6]">05</span>
-
-                            <div class="mt-4 md:group-hover:mt-0 transition-all duration-500">
-                                <h3 class="text-lg text-left">Support & Growth</h3>
-                                <p
-                                    class="mt-2 text-sm font-light text-gray-100 text-left block md:hidden md:group-hover:block transition-all duration-500">
-                                    Post-launch, we monitor, improve, and scale your
-                                    product for long-term success. </p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-end mt-4 relative z-10">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[var(--secondary-color)] transition-all duration-300 ease-in-out group-hover:bg-gray-600/60 group-hover:text-white cursor-default">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960"
-                                    class="transition-colors duration-300" fill="currentColor">
-                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        // --- 7. System Metrics CPU fluctuation logic ---
+        const cpuText = document.getElementById('metrics-cpu-load');
+        if (cpuText) {
+            setInterval(() => {
+                const val = (Math.random() * 2 + 0.5).toFixed(1);
+                cpuText.textContent = `${val}%`;
+            }, 2000);
+        }
+    });
+    </script>
     <?php
     // Define custom metadata for case studies carousel
     $case_study_details = [
@@ -937,169 +1279,294 @@ require_once ADMIN_URL.'/database_config.php';
     }
     ?>
 
-    <style>
-    @keyframes float-mockup {
-      0% { transform: translateY(0px) rotate(-0.5deg); }
-      50% { transform: translateY(-10px) rotate(0.5deg); }
-      100% { transform: translateY(0px) rotate(-0.5deg); }
-    }
-    .animate-float-mockup {
-      animation: float-mockup 6s ease-in-out infinite;
-    }
-    </style>
-
     <script>
     const caseStudies = <?php echo json_encode($case_studies_data); ?>;
     </script>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 bg-[var(--body-bg)] text-white relative">
-        <!-- Header: Title on Left, Navigation arrows on Right -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div class="max-w-2xl">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2BB5BC]/10 border border-[#2BB5BC]/20 text-[11px] font-semibold uppercase tracking-widest text-[#2BB5BC] mb-4">
-                    <span class="w-2 h-2 rounded-full bg-[#95C951] relative flex">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#95C951] opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#95C951]"></span>
-                    </span>
-                    Portfolio Showcase
+    <style>
+    .game-cursor {
+        cursor: grab !important;
+    }
+    .game-cursor a, .game-cursor button, .game-cursor [role="button"], .game-cursor #cs-left-card-link {
+        cursor: pointer !important;
+    }
+    </style>
+
+<div class="bg-[#000d16] w-full">
+    <section class="w-full bg-[#ffffff] pt-6 pb-2 relative group/section game-cursor">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header: Title on Left, Navigation arrows on Right -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-3">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent leading-tight tracking-tight">
+                        Case Studies
+                    </h2>
                 </div>
                 
-                <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">
-                    Featured <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Case Studies</span>
-                </h2>
-                <p class="text-sm md:text-base text-gray-400 font-light mt-3 leading-relaxed">
-                    Explore how we design, engineer, and optimize high-performing digital platforms that drive measurable business outcomes.
-                </p>
-            </div>
-            
-            <!-- Sleek Left/Right Carousel navigation arrows -->
-            <div class="flex gap-4 items-center self-end md:mb-2">
-                <button id="case-study-prev" class="w-12 h-12 rounded-full border border-white/20 hover:border-[#2BB5BC] flex items-center justify-center text-white hover:text-[#2BB5BC] transition hover:shadow-[0_0_15px_rgba(43,181,188,0.3)] bg-white/5 backdrop-blur-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="m313-440 224 224-57 57-320-320 320-320 57 57-224 224h487v80H313Z"/></svg>
-                </button>
-                <button id="case-study-next" class="w-12 h-12 rounded-full border border-white/20 hover:border-[#2BB5BC] flex items-center justify-center text-white hover:text-[#2BB5BC] transition hover:shadow-[0_0_15px_rgba(43,181,188,0.3)] bg-white/5 backdrop-blur-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Carousel Slide Wrapper -->
-        <div id="case-study-slider" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch transition-all duration-300 opacity-100">
-            <!-- Left Column: Large rounded container with floating laptop mockup -->
-            <div class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/5 bg-gradient-to-br from-[#0F0F0F] to-[#050505] p-3 sm:p-4 lg:p-3 relative overflow-hidden shadow-[inset_0_0_40px_rgba(255,255,255,0.03)] min-h-[300px] sm:min-h-[400px] group transition-all duration-300 hover:border-[#2BB5BC]/30">
-                <!-- Glowing Backdrop Spotlights -->
-                <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-[#2BB5BC]/10 blur-[100px] pointer-events-none"></div>
-                <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-[#95C951]/10 blur-[100px] pointer-events-none"></div>
-                
-                <!-- Display Wrapper around mockup image and overlay (No Link) -->
-                <div id="cs-mockup-container" class="w-full h-full flex items-center justify-center relative z-10 py-4 overflow-hidden rounded-2xl">
-                    <!-- Inner Container that scales up on hover -->
-                    <div class="w-full h-full flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-[1.08]">
-                        <!-- Floating Laptop Image -->
-                        <img id="cs-mockup" src="" alt="Featured Showcase" class="w-full max-w-[98%] sm:max-w-[95%] lg:max-w-[102%] h-auto object-contain drop-shadow-[0_20px_35px_rgba(43,181,188,0.2)] select-none animate-float-mockup rounded-[10px]">
-                    </div>
-                    
-                    <!-- Hover Popup Overlay -->
-                    <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-[2px] rounded-2xl pointer-events-none">
-                        <span class="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-sm shadow-[0_0_20px_rgba(43,181,188,0.3)] flex items-center gap-2.5 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                            <span id="cs-popup-title" class="text-white font-semibold">Project</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#2BB5BC] animate-pulse"></span>
-                            <span class="text-gray-300 font-light text-xs">Showcase</span>
-                        </span>
-                    </div>
+                <!-- Sleek Left/Right Carousel navigation arrows in a styled container box -->
+                <div class="flex items-center bg-slate-100 border border-slate-200/60 p-1 rounded-full gap-1 shadow-[0_2px_10px_rgba(0,13,22,0.03)] self-end">
+                    <button id="case-study-prev" class="w-9 h-9 rounded-full flex items-center justify-center text-white bg-[#2BB5BC] hover:bg-[#000d16] active:scale-95 transition-all shadow-[0_2px_6px_rgba(43,181,188,0.2)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="m313-440 224 224-57 57-320-320 320-320 57 57-224 224h487v80H313Z"/></svg>
+                    </button>
+                    <button id="case-study-next" class="w-9 h-9 rounded-full flex items-center justify-center text-white bg-[#2BB5BC] hover:bg-[#000d16] active:scale-95 transition-all shadow-[0_2px_6px_rgba(43,181,188,0.2)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
                 </div>
             </div>
 
-            <!-- Right Column: Split into 3 Cards -->
-            <div class="lg:col-span-7 flex flex-col gap-6">
-                <!-- Top Card: Overview -->
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
-                    <a id="cs-link" href="#" target="_blank" class="absolute top-6 right-6 text-gray-400 hover:text-[#2BB5BC] transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
-                    </a>
-                    
-                    <h3 id="cs-brand" class="text-2xl md:text-3xl font-light text-white tracking-wide mb-4"></h3>
-                    <p id="cs-description" class="text-sm md:text-base text-gray-300 font-light leading-relaxed mb-6"></p>
-                    
-                    <!-- Technology Tag Pills -->
-                    <div id="cs-tags" class="flex flex-wrap gap-2"></div>
-                </div>
+            <!-- Carousel Slide Wrapper with hidden overflow -->
+            <div class="overflow-hidden w-full rounded-3xl">
+                <!-- Slider Track -->
+                <div id="case-study-slider-track" class="flex transition-transform duration-500 ease-out" style="width: 100%;">
+                    <?php foreach ($case_studies_data as $index => $study): ?>
+                        <div class="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch px-1" style="width: 100%;">
+                            <!-- Left Column: Large rounded container with mockup -->
+                            <a href="<?php echo $study['link'] !== '#' ? $study['link'] : '#'; ?>" 
+                               target="_blank" 
+                               class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/10 bg-[#000d16] p-2 relative overflow-hidden shadow-[0_8px_30px_rgba(0,13,22,0.3)] min-h-[240px] sm:min-h-[300px] lg:min-h-0 group transition-all duration-500 hover:border-[#2BB5BC]/40 hover:shadow-[0_15px_45px_rgba(43,181,188,0.18)] cursor-pointer <?php echo $study['link'] === '#' ? 'pointer-events-none' : ''; ?>">
+                                
+                                <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-[#2BB5BC]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#2BB5BC]/20 group-hover:scale-125"></div>
+                                <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-[#95C951]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#95C951]/20 group-hover:scale-125"></div>
+                                
+                                <div class="w-full h-full flex items-center justify-center relative z-10 py-2 overflow-hidden rounded-2xl">
+                                    <div class="w-full h-full flex items-center justify-center transition-transform duration-700 ease-out">
+                                        <img src="<?php echo $study['mockup_image']; ?>" alt="<?php echo $study['brand_name']; ?> Mockup" class="w-full max-w-[98%] sm:max-w-[95%] lg:max-w-[102%] h-auto object-contain drop-shadow-[0_15px_30px_rgba(43,181,188,0.15)] select-none rounded-[10px] transition-all duration-700 ease-out group-hover/section:scale-[1.06] group-hover/section:translate-y-[-6px] group-hover/section:drop-shadow-[0_25px_50px_rgba(43,181,188,0.35)]">
+                                    </div>
+                                    
+                                    <?php if ($study['link'] !== '#'): ?>
+                                        <div class="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20 rounded-2xl">
+                                            <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-[0_0_20px_rgba(43,181,188,0.3)] transform scale-75 group-hover:scale-100 transition-all duration-300">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </a>
 
-                <!-- Bottom Two Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <!-- Bottom Left Card: Metrics & Analytics -->
-                    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex flex-col justify-between gap-4">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Growth Analytics</h4>
-                            <span class="text-[10px] text-[#2BB5BC] px-2 py-0.5 bg-[#2BB5BC]/10 rounded-full border border-[#2BB5BC]/20">Live Sync</span>
-                        </div>
-                        
-                        <!-- Glowing Mini Line Chart -->
-                        <div class="relative w-full h-24 bg-black/40 rounded-2xl border border-white/5 overflow-hidden p-2 flex items-center justify-center">
-                            <!-- Grid Background Lines -->
-                            <div class="absolute inset-0 flex flex-col justify-between p-3 opacity-20 pointer-events-none">
-                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
-                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
-                                <div class="border-b border-dashed border-white/20 w-full h-0"></div>
+                            <!-- Right Column: Split into 3 Cards -->
+                            <div class="lg:col-span-7 flex flex-col gap-3">
+                                <!-- Top Card: Overview -->
+                                <div class="bg-white border border-slate-200 rounded-3xl p-4 md:p-5 relative hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] group/card">
+                                    <?php if ($study['link'] !== '#'): ?>
+                                        <a href="<?php echo $study['link']; ?>" target="_blank" class="absolute top-5 right-5 text-slate-400 group-hover/section:text-[#2BB5BC] hover:text-[#2BB5BC] transition-colors duration-300 z-30">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
+                                        </a>
+                                    <?php endif; ?>
+                                    
+                                    <h3 class="text-2xl md:text-3xl font-bold text-[#000d16] tracking-tight mb-1.5"><?php echo $study['brand_name']; ?></h3>
+                                    <p class="text-sm md:text-base text-slate-600 font-light leading-relaxed mb-2.5"><?php echo $study['short_description']; ?></p>
+                                    
+                                    <!-- Technology Tag Pills -->
+                                    <div class="flex flex-wrap gap-2">
+                                        <?php foreach ($study['tags'] as $tag): ?>
+                                            <span class="px-3 py-1 bg-[#2BB5BC]/10 border border-[#2BB5BC]/20 rounded-full text-xs font-semibold text-[#2BB5BC] hover:bg-[#2BB5BC] hover:text-white transition"><?php echo htmlspecialchars($tag); ?></span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Two Cards Grid -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <!-- Bottom Left Card: Metrics & Analytics -->
+                                    <div class="bg-white border border-slate-200 rounded-3xl p-4 hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] flex flex-col justify-between gap-2">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Growth Analytics</h4>
+                                            <span class="text-[10px] text-[#2BB5BC] px-2 py-0.5 bg-[#2BB5BC]/10 rounded-full border border-[#2BB5BC]/20">Live Sync</span>
+                                        </div>
+                                        
+                                        <!-- Glowing Mini Line Chart -->
+                                        <div class="relative w-full h-[68px] bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden p-2 flex items-center justify-center">
+                                            <div class="absolute inset-0 flex flex-col justify-between p-2.5 opacity-30 pointer-events-none">
+                                                <div class="border-b border-dashed border-slate-200 w-full h-0"></div>
+                                                <div class="border-b border-dashed border-slate-200 w-full h-0"></div>
+                                                <div class="border-b border-dashed border-slate-200 w-full h-0"></div>
+                                            </div>
+                                            <!-- Chart Area -->
+                                            <svg class="w-full h-full overflow-visible cs-chart-svg" viewBox="0 0 300 80" data-metrics='<?php echo json_encode($study['metrics']); ?>'>
+                                                <defs>
+                                                    <linearGradient id="chart-grad-<?php echo $study['id']; ?>" x1="0" y1="0" x2="1" y2="0">
+                                                        <stop offset="0%" stop-color="#2BB5BC" />
+                                                        <stop offset="100%" stop-color="#95C951" />
+                                                    </linearGradient>
+                                                    <filter id="glow-<?php echo $study['id']; ?>" x="-20%" y="-20%" width="140%" height="140%">
+                                                        <feGaussianBlur stdDeviation="3" result="blur" />
+                                                        <feMerge>
+                                                            <feMergeNode in="blur" />
+                                                            <feMergeNode in="SourceGraphic" />
+                                                        </feMerge>
+                                                    </filter>
+                                                </defs>
+                                                <path class="cs-chart-area" d="" fill="url(#chart-grad-<?php echo $study['id']; ?>)" fill-opacity="0.05"></path>
+                                                <path class="cs-chart-path" d="" fill="none" stroke="url(#chart-grad-<?php echo $study['id']; ?>)" stroke-width="3" stroke-linecap="round" filter="url(#glow-<?php echo $study['id']; ?>)"></path>
+                                                <circle class="cs-chart-dot" cx="280" cy="20" r="4" fill="#95C951" filter="url(#glow-<?php echo $study['id']; ?>)"></circle>
+                                            </svg>
+                                        </div>
+                                        
+                                        <div class="space-y-1.5">
+                                            <?php foreach ($study['metrics'] as $label => $value): 
+                                                $isNegative = strpos($value, '-') === 0;
+                                                $arrowIcon = $isNegative ? '↓' : '↑';
+                                                $displayValue = $isNegative ? substr($value, 1) : $value;
+                                            ?>
+                                                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 px-3 bg-slate-50 border border-slate-100 rounded-xl shadow-[0_2px_8px_rgba(0,13,22,0.02)]">
+                                                    <span class="text-[#000d16] font-medium"><?php echo htmlspecialchars($label); ?></span>
+                                                    <span class="text-[#95C951] font-bold flex items-center gap-1">
+                                                        <span class="text-xs font-bold"><?php echo $arrowIcon; ?></span>
+                                                        <span><?php echo htmlspecialchars($displayValue); ?></span>
+                                                    </span>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Right Card: Testimonial -->
+                                    <div class="bg-gradient-to-br from-[#2BB5BC] to-[#95C951] rounded-3xl p-4 shadow-[0_8px_30px_rgba(43,181,188,0.15)] flex flex-col justify-between">
+                                        <!-- Rating Stars -->
+                                        <div class="flex gap-1 text-white mb-1">
+                                            <?php for ($s=0; $s<$study['testimonial']['stars']; $s++): ?>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                                            <?php endfor; ?>
+                                        </div>
+                                        
+                                        <!-- Client Quote -->
+                                        <p class="text-sm md:text-[15px] text-white font-semibold italic leading-relaxed my-2">
+                                            “<?php echo htmlspecialchars($study['testimonial']['quote']); ?>”
+                                        </p>
+                                        
+                                        <!-- Client Name -->
+                                        <div class="border-t border-white/20 pt-2">
+                                            <p class="text-[9px] md:text-[10px] text-white font-bold tracking-widest uppercase">
+                                                <?php 
+                                                    $client_text = $study['testimonial']['client'] === "Founder & CEO" ? $study['brand_name'] . " Team" : $study['testimonial']['client'];
+                                                    echo htmlspecialchars($client_text);
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Chart Area -->
-                            <svg class="w-full h-full overflow-visible" viewBox="0 0 300 80">
-                                <defs>
-                                    <linearGradient id="chart-grad" x1="0" y1="0" x2="1" y2="0">
-                                        <stop offset="0%" stop-color="#2BB5BC" />
-                                        <stop offset="100%" stop-color="#95C951" />
-                                    </linearGradient>
-                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="3" result="blur" />
-                                        <feMerge>
-                                            <feMergeNode in="blur" />
-                                            <feMergeNode in="SourceGraphic" />
-                                        </feMerge>
-                                    </filter>
-                                </defs>
-                                <path id="cs-chart-area" d="" fill="url(#chart-grad)" fill-opacity="0.05" class="transition-all duration-500"></path>
-                                <path id="cs-chart-path" d="" fill="none" stroke="url(#chart-grad)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" class="transition-all duration-500"></path>
-                                <circle id="cs-chart-dot" cx="280" cy="20" r="4" fill="#95C951" class="transition-all duration-500" filter="url(#glow)"></circle>
-                            </svg>
                         </div>
-                        
-                        <div id="cs-metrics" class="space-y-3"></div>
-                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
 
-                    <!-- Bottom Right Card: Testimonial -->
-                    <div class="border-l-4 border-l-[#2BB5BC] bg-white/5 border border-white/10 border-l-0 rounded-3xl p-6 hover:border-[#2BB5BC]/40 transition duration-300 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex flex-col justify-between">
-                        <!-- Rating Stars -->
-                        <div class="flex gap-1 text-[#95C951]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
-                        </div>
-                        
-                        <!-- Client Quote -->
-                        <p id="cs-quote" class="text-sm text-gray-300 font-light italic leading-relaxed my-4"></p>
-                        
-                        <!-- Client Name -->
-                        <div class="border-t border-white/10 pt-3">
-                            <p id="cs-client" class="text-xs text-[#2BB5BC] tracking-wider uppercase font-semibold"></p>
-                        </div>
+            <!-- View All Link -->
+            <a href="/portfolio"
+                class="mt-4 w-fit py-2.5 px-6 rounded-full bg-[#000d16] text-white font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[#01a0d8] transition shadow-[0_4px_20px_rgba(0,13,22,0.15)]">
+                View More Case Studies
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+</div>
+
+<div class="bg-[#080808] w-full">
+    <!-- New Section: Building Brands Worldwide -->
+    <section class="w-full bg-[#080808] text-white pt-20 pb-0 relative overflow-hidden">
+        <!-- Dotted Map Background Overlay (Seamless & Proportional) -->
+        <div class="absolute inset-0 z-0 opacity-80 pointer-events-none mix-blend-screen bg-no-repeat bg-right bg-cover md:bg-[length:auto_100%]" 
+             style="background-image: url('/images/orange_map_clean.png'); background-position: right center;"></div>
+        
+        <!-- Subtle Ambient Glows matching Orange/Dark Theme -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--primary-color)] opacity-[0.05] blur-[120px] pointer-events-none animate-blob"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-20">
+            <!-- Left Info Column -->
+            <div class="flex flex-col items-start text-left gap-6 max-w-xl w-full md:w-[50%]">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--primary-color)] leading-tight tracking-tight">
+                    Building Brands <br>
+                    Worldwide
+                </h2>
+                <p class="text-[#b5b5b5] font-light text-sm sm:text-base md:text-lg leading-relaxed max-w-lg">
+                    We offer 360° eCommerce solutions that help brands launch, grow, and scale online. Our team works with businesses globally to create and improve digital commerce experiences that deliver measurable results.
+                </p>
+                <a href="/about-us" class="inline-flex items-center gap-2 px-9 py-4 rounded-full font-semibold text-white bg-[var(--secondary-color)] transition hover:bg-white hover:text-[var(--secondary-color)] text-sm md:text-base shadow-lg hover:scale-105 duration-300">
+                    About Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom Statistics Bar -->
+        <div id="stats-section" class="w-full bg-gradient-to-b from-[#111111] to-[#080808] border-t border-white/5 rounded-t-2xl md:rounded-t-[20px] py-5 md:py-6 px-4 md:px-8 shadow-[0_-15px_40px_rgba(0,0,0,0.5)] relative z-10">
+            <div class="max-w-4xl mx-auto relative">
+                <div class="flex items-center justify-between w-full">
+                    <!-- Stat 1 -->
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="200" data-suffix="+">0+</span>
+                        <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Employees</span>
+                    </div>
+                    <!-- Divider -->
+                    <div class="w-[1px] h-8 bg-white/10 self-center"></div>
+                    <!-- Stat 2 -->
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="5" data-suffix="">0</span>
+                        <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Locations</span>
+                    </div>
+                    <!-- Divider -->
+                    <div class="w-[1px] h-8 bg-white/10 self-center"></div>
+                    <!-- Stat 3 -->
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="15" data-suffix="+">0+</span>
+                        <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Years</span>
+                    </div>
+                    <!-- Divider -->
+                    <div class="w-[1px] h-8 bg-white/10 self-center"></div>
+                    <!-- Stat 4 -->
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="1000" data-suffix="+">0+</span>
+                        <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Customers</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- View All Link -->
-        <a href="/portfolio"
-            class="mt-12 w-fit py-3 px-6 rounded-full bg-white text-[var(--primary-color)] font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[var(--secondary-color)] hover:text-white transition shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-            View More Case Studies
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-        </a>
-    </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const counters = document.querySelectorAll(".stat-counter");
+                const observerOptions = {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.5
+                };
 
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const targetNumber = parseInt(target.getAttribute("data-target"));
+                            const suffix = target.getAttribute("data-suffix") || "";
+                            let current = 0;
+                            // Ensure smaller numbers don't take forever but large numbers zip by quickly
+                            const duration = 2000; // ms
+                            const stepTime = Math.abs(Math.floor(duration / targetNumber));
+                            const increment = Math.max(1, Math.ceil(targetNumber / (duration / 16))); // assuming 60fps
+                            
+                            const updateCounter = () => {
+                                current += increment;
+                                if (current < targetNumber) {
+                                    target.innerText = Math.ceil(current).toLocaleString() + suffix;
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    target.innerText = targetNumber.toLocaleString() + suffix;
+                                }
+                            };
+                            
+                            requestAnimationFrame(updateCounter);
+                            observer.unobserve(target); // Only animate once
+                        }
+                    });
+                }, observerOptions);
+
+                counters.forEach(counter => {
+                    observer.observe(counter);
+                });
+            });
+        </script>
+    </section>
+</div>
+
+<div class="bg-black w-full">
     <section
         class="bg-black py-12 text-white relative bg-no-repeat bg-[length:50%] bg-[url('images/background_curve.svg')] bg-[center_top_80px]">
         <div class=" mx-auto px-4 sm:px-6 lg:px-0 text-center relative">
@@ -2033,6 +2500,7 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
 
         </section>
+</div>
 
     <section class="w-full flex justify-center items-center py-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] " style="

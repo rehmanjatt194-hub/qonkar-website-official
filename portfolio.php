@@ -168,9 +168,9 @@ require_once ADMIN_URL.'/database_config.php';
 </script>
 </head>
 
-<body>
+<body class="bg-[#000d16]">
 
-<header class="sticky top-5 z-50 mx-auto sm:px-4">
+<header class="relative mt-5 z-50 mx-auto sm:px-4">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
             <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
@@ -287,23 +287,13 @@ require_once ADMIN_URL.'/database_config.php';
     <!-- ═══════════════════════════════════════════════
          PORTFOLIO HERO SECTION — Redesigned
     ════════════════════════════════════════════════ -->
-    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] sm:min-h-[60vh] mt-4 mb-4 flex items-center">
+    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-8 flex items-center">
 
         <!-- Hero Content -->
-        <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center justify-start w-full px-4 sm:px-10 lg:px-9 py-10 sm:py-14">
+        <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center justify-start w-full px-4 sm:px-10 lg:px-9 pt-4 pb-10 sm:pt-6 sm:pb-14">
 
             <!-- Left Side: Text Content -->
             <div class="text-left text-white space-y-8 order-1 mt-6 lg:mt-0">
-                
-                <!-- Pill Badge -->
-                <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.2)] hero-badge">
-                    <div class="glass-background">
-                        <div class="glass px-4 py-2 flex items-center gap-2 text-xs sm:text-sm font-medium tracking-wide">
-                            <span class="w-2 h-2 rounded-full bg-[var(--tertiary-color)] shadow-[0_0_8px_var(--tertiary-color)] animate-pulse"></span>
-                            PORTFOLIO
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Main Heading -->
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] tracking-tight hero-title">
@@ -318,7 +308,7 @@ require_once ADMIN_URL.'/database_config.php';
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row items-center gap-4 pt-2 hero-btns">
-                    <a href="#case-studies" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-[var(--primary-color)] text-white font-medium hover:bg-[var(--secondary-color)] transition-all shadow-[0_0_20px_rgba(63,137,201,0.3)] hover:shadow-[0_0_25px_rgba(47,173,195,0.5)]">
+                    <a href="#case-studies" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-transparent border border-[#01a0d8] text-[#01a0d8] font-medium hover:bg-[#01a0d8] hover:text-white transition-all shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)]">
                         Explore All Projects
                         <i class="fa-solid fa-arrow-right text-sm"></i>
                     </a>
@@ -351,12 +341,12 @@ require_once ADMIN_URL.'/database_config.php';
             <div class="relative flex justify-center lg:justify-end order-2 group hero-img">
                 
                 <!-- Main Image Wrapper -->
-                <div class="relative w-full max-w-lg lg:max-w-xl aspect-square lg:aspect-[4/3] flex items-center justify-center">
+                <div class="relative w-full max-w-md lg:max-w-lg flex items-center justify-center -mt-4 sm:mt-6 lg:-mt-16 xl:-mt-24">
                     
                     <!-- Glow behind image removed -->
 
                     <!-- Main Hero Image -->
-                    <img src="images/case-study-hero.webp" alt="Portfolio Showcase" class="relative z-10 w-full h-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] scale-100 group-hover:scale-[1.02] transition-transform duration-700">
+                    <img src="images/case-study-hero.webp" alt="Portfolio Showcase" class="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] scale-100 group-hover:scale-[1.02] transition-transform duration-700">
                     
                     <!-- Floating Stat Card 1 (Top Right) -->
                     <div class="absolute top-4 right-2 sm:top-10 sm:-right-8 z-20 background-backdrop-card p-2 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/10 flex items-center gap-2 sm:gap-3 backdrop-blur-md animate-[bounce_5s_infinite]">
@@ -386,55 +376,13 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
      <!-- Case Study -->
-    <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 text-center">
-        <!-- Badge -->
-        <div class="glass-border inline-block mb-4">
-            <div class="glass-background">
-                <div class="glass text-sm font-light">
-                    <p>&#9679; &nbsp;PROJECTS</p>
-                </div>
-            </div>
-        </div>
+    <div class="w-full bg-white relative z-20 -mt-2 sm:-mt-6 rounded-t-[30px] sm:rounded-t-[50px] shadow-[0_-15px_40px_rgba(0,0,0,0.3)] border-t border-[#01a0d8]/20">
+        <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 sm:pt-16 sm:pb-20 text-center">
 
-        <!-- Heading -->
-        <h2 class="text-3xl md:text-4xl font-light mb-4">
-            What We <b>Build</b>
-        </h2>
 
-        <!-- Paragraph -->
-        <p class="text-white font-light max-w-3xl mx-auto mb-4 sm:mb-10 text-sm sm:text-base px-2 sm:px-0">
-            Discover the solutions we’ve designed and developed — each project reflects our commitment to quality and
-            creativity.
-        </p>
-
-        <!-- Category Tabs with Scroll -->
-        <div class="w-full overflow-x-auto no-scrollbar py-2 text-left sm:text-center sm:px-0 sm:mx-0 mb-10">
-            <div id="tabContainer" class="inline-flex gap-1 p-1 sm:p-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
-
-                <button
-                    class="tab-btn active px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap"
-                    data-tab="all">All</button>
-
-                <?php
-                $sql = "SELECT category_name FROM case_study_categories WHERE status = 'active'";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        // Convert category name into a slug for `data-tab`
-                        $slug = strtolower(str_replace(' ', '-', $row['category_name']));
-                        echo '<button class="tab-btn px-4 py-1.5 sm:px-6 sm:py-2 text-[10px] sm:text-sm tracking-wide whitespace-nowrap" data-tab="' . $slug . '">' . htmlspecialchars($row['category_name']) . '</button>';
-                    }
-                } else {
-                    echo "<p>No categories found.</p>";
-                }
-                ?>
-
-            </div>
-        </div>
 
         <!-- Case Study Cards Grid -->
-        <div id="caseStudiesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+        <div id="caseStudiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-8 w-full max-w-7xl mx-auto">
             <?php
             $sql = "SELECT cs.id, cs.mockup_image, cs.background_image, cs.brand_name, cs.short_description, cs.link_of_case_study,
                    GROUP_CONCAT(csc.category_name SEPARATOR ', ') AS categories
@@ -466,42 +414,39 @@ require_once ADMIN_URL.'/database_config.php';
             ' : '';
 
                     echo '
-            <div class="w-full background-backdrop-card rounded-[15px] shadow-lg overflow-hidden bg-white/5 backdrop-blur-[50px] flex flex-col"
-                data-category="' . htmlspecialchars($dataCategory) . '">
-
-                <!-- Top Image Section -->
-                <div class="relative w-full h-48 sm:h-80 flex items-center justify-center bg-black/70 border border-gray-900 rounded-t-[15px] border-b-0 overflow-hidden">
+            <div class="w-full flex flex-col" data-category="' . htmlspecialchars($dataCategory) . '">
+                <!-- Image Wrapper -->
+                <' . (!empty($row['link_of_case_study']) ? 'a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank"' : 'div') . ' class="relative block w-full aspect-square overflow-hidden rounded-[24px] group shadow-md cursor-pointer">
+                    <!-- Main Image -->
+                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    
+                    <!-- Gradient Overlay at bottom for text readability -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+                    
                     <!-- Category Badge -->
-                    <div class="absolute top-4 left-4 bg-[var(--secondary-color)]/20 border border-[var(--secondary-color)]/50 text-[var(--secondary-color)] text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md z-10">
+                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-white/15 backdrop-blur-md text-white text-[9px] sm:text-[10px] uppercase tracking-wider px-2.5 py-1 sm:px-3 rounded-full border border-white/20">
                         ' . htmlspecialchars($categories) . '
                     </div>
-                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full h-full sm:h-auto object-contain rounded-t-[15px]">
-                </div>
 
-                <!-- Bottom Text Section -->
-                <div class="group relative flex flex-col flex-1 overflow-hidden rounded-b-[15px] p-[2px]
-                    [background:linear-gradient(138deg,rgba(56,228,174,0.20)12.07%,rgba(56,228,174,0.66)39.55%,rgba(7,151,172,0.80)63.36%,rgba(7,151,172,0.28)92.67%)]">
-
-                    <div class="relative flex flex-col flex-1 rounded-b-[13px] bg-black overflow-hidden">
-                        <!-- Hover Overlay -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="' . htmlspecialchars($row['background_image']) . '" alt="Hover BG" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
-                        </div>
-
-                        <!-- Text Content -->
-                        <div class="relative z-10 p-6 flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl md:text-2xl text-left font-light mb-2">'
+                    <!-- Title Overlaid at Bottom Left -->
+                    <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-left">
+                        <h3 class="text-lg sm:text-2xl font-bold text-white tracking-tight leading-tight truncate whitespace-nowrap overflow-hidden text-ellipsis text-left">'
                         . htmlspecialchars($row['brand_name']) . '
-                                </h3>
-                                <p class="text-sm md:text-base font-light text-left text-gray-200"><i>'
-                        . htmlspecialchars(strlen($row['short_description']) > 100 ? substr($row['short_description'], 0, 100) . '...' : $row['short_description']) .
-                        ' </i></p>
-                            </div>
-                            ' . $arrow . '
-                        </div>
+                        </h3>
                     </div>
+                </' . (!empty($row['link_of_case_study']) ? 'a' : 'div') . '>
+                
+                <!-- Info Section (Outside the image) -->
+                <div class="pt-3 sm:pt-4 pb-2 flex flex-col flex-grow items-start text-left">
+                    <p class="text-[#000d16] text-sm sm:text-base font-normal leading-relaxed mb-3 text-left w-full line-clamp-2">
+                        ' . htmlspecialchars($row['short_description']) . '
+                    </p>
+                    ' . (!empty($row['link_of_case_study']) ? '
+                    <a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-[#000d16] hover:text-[#01a0d8] hover:underline hover:decoration-[#01a0d8] transition-all group/link w-fit text-left">
+                        <span>Visit website</span>
+                        <span class="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                    </a>
+                    ' : '') . '
                 </div>
             </div>';
                 }
@@ -513,13 +458,28 @@ require_once ADMIN_URL.'/database_config.php';
             ?>
         </div>
 
-        <!-- Pagination -->
-        <div id="pagination" class="flex justify-center mt-10 gap-2 flex-wrap"></div>
-        <span id="pageInfo" class="text-white text-sm flex items-center"></span>
-        </div>
+
 
     </section>
-
+    </div>
+    
+    <!-- Call to Action Banner -->
+    <div class="w-full bg-[#000d16] relative z-10 py-16 sm:py-24 overflow-hidden border-t border-[#01a0d8]/20">
+        <!-- Abstract Glow Background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#01a0d8] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col md:flex-row items-center justify-between gap-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight text-center md:text-left leading-tight">
+                Whatever your goal, <br class="hidden md:block" />
+                <span class="text-[#01a0d8]">let's get started.</span>
+            </h2>
+            
+            <a href="/contact-us" class="inline-flex justify-center items-center gap-2 px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-transparent border border-[#01a0d8] text-[#01a0d8] font-medium hover:bg-[#01a0d8] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)] text-base sm:text-lg shrink-0 group">
+                Let's get Started
+                <i class="fa-solid fa-arrow-right text-sm transform transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
 <footer>
     <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">

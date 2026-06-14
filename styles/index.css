@@ -4,12 +4,10 @@
   --primary-color: #3f89c9;
   --secondary-color: #2fadc3;
   --tertiary-color: #85d55c;
-  --gradient: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color),
-    var(--tertiary-color)
-  );
+  --gradient: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--tertiary-color));
   --body-bg: #000d16;
 }
 
@@ -24,12 +22,10 @@ body {
   border-radius: 40px;
   padding: 1px;
   /* 1px = border thickness */
-  background: linear-gradient(
-    138deg,
-    var(--primary-color),
-    var(--secondary-color),
-    var(--tertiary-color)
-  );
+  background: linear-gradient(138deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--tertiary-color));
   -webkit-mask: linear-gradient(#fff 0 0);
 }
 
@@ -107,14 +103,12 @@ body {
 
 #prevBtn:hover img,
 #nextBtn:hover img {
-  filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%)
-    hue-rotate(0deg) brightness(90%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
 
 #prevBtn:active img,
 #nextBtn:active img {
-  filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%)
-    hue-rotate(0deg) brightness(60%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(60%) contrast(90%);
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -162,11 +156,9 @@ body {
 /* ✅ Glass Morphism Utility */
 
 .badge-text {
-  background-image: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background-image: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -191,17 +183,21 @@ body {
 /* Filter Tab Styling - Segmented Pill */
 .tab-btn {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 9999px; /* full rounded */
+  border-radius: 9999px;
+  /* full rounded */
 }
+
 .tab-btn.active {
   background-color: #01a0d8;
   color: #fff;
   box-shadow: 0 0 20px rgba(1, 160, 216, 0.4);
   font-weight: 600;
 }
+
 .tab-btn:not(.active) {
   color: #000d16;
 }
+
 .tab-btn:not(.active):hover {
   color: #01a0d8;
   background-color: rgba(1, 160, 216, 0.1);

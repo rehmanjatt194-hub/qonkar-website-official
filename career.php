@@ -81,6 +81,7 @@ require_once ADMIN_URL.'/database_config.php';
 <body class="bg-[#000d16] text-white">
 
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
+    <h1>TEST NEW CODE</h1>
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
             <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>

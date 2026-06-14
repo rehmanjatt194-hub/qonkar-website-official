@@ -4,28 +4,31 @@ Options -Indexes -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# --- SECTION 1: EXTERNAL REDIRECTS (Consolidated) ---
-# Skip external redirects to live site on localhost
-RewriteCond %{HTTP_HOST} ^localhost [NC,OR]
-RewriteCond %{HTTP_HOST} ^127\.0\.0\.1 [NC]
-RewriteRule ^ - [L]
+# --- SECTION 1: EXTERNAL REDIRECTS (skip on localhost) ---
 
-# 1. Force HTTPS, No-WWW, and Strip .php in one pass
+# 1. Force HTTPS, No-WWW (skip on localhost)
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://qonkar.com/$1 [L,R=301,NE]
 
-# 2. Redirect index.php and home to root
+# 2. Redirect index.php and home to root (skip on localhost)
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(index\.php|home|index)(\s|\?) [NC]
 RewriteRule ^ / [R=301,L]
 
-# 3. Clean .php extension (Preventing loops)
+# 3. Strip .php extension from URL (skip on localhost)
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
 RewriteCond %{REQUEST_METHOD} !POST
 RewriteCond %{REQUEST_URI} !^/system-core-portal-admin-dashboard/
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.php [NC]
 RewriteRule ^ %1 [R=301,L]
 
-# --- SECTION 2: INTERNAL REWRITES ---
+# --- SECTION 2: INTERNAL REWRITES (work on localhost AND live) ---
+
 # 4. Explicit rule for Portfolio (Prevents loops/404)
 RewriteRule ^portfolio$ portfolio.php [L]
 
@@ -33,14 +36,14 @@ RewriteRule ^portfolio$ portfolio.php [L]
 RewriteRule ^blog/([^/]+)/?$ blog-details.php?slug=$1 [L,QSA]
 RewriteRule ^apply/([^/]+)/?$ apply-job.php?slug=$1 [L,QSA]
 
-# 6. Specific rule for Services
+# 6. Specific rule for Services (use REQUEST_FILENAME for reliable path check)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}/services/$1.php -f
-RewriteRule ^services/(.*)$ services/$1.php [L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^services/(.+)$ services/$1.php [L]
 
-# 7. Global Clean URLs
+# 7. Global Clean URLs (e.g. /about-us -> /about-us.php)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.+)$ $1.php [L]

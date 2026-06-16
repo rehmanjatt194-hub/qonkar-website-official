@@ -413,32 +413,128 @@ require_once "../".ADMIN_URL.'/database_config.php';
     </section>
     </div>
 
-    <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #ffffff;">
+        <div class="max-w-7xl mx-auto">
 
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/shopify development.png" alt="Our Client" class="w-full max-w-md h-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-14">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
+                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff; letter-spacing:0.12em;">
+                    &#9679; &nbsp;Services
+                </span>
+                <h2 class="text-3xl md:text-4xl font-light mt-3" style="color: #0a1628; line-height:1.2;">
+                    Design That Captures <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Attention</span> &amp; Converts <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Intent</span>
+                </h2>
             </div>
 
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+            <!-- Main Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                <div class="glass-border w-[150px]  mx-auto lg:mx-0">
-                    <div class="glass-background">
-                        <div class="glass text-sm font-light text-center">
-                            <p> &#9679; SERVICES </p>
+                <!-- Left: Image with floating stat cards -->
+                <div class="relative flex justify-center order-2 lg:order-1">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="background: linear-gradient(135deg,#eaf5fb,#f0faf5);">
+                        <img src="/images/shopify development.png" alt="Shopify Theme Design" class="w-full h-auto relative z-10 rounded-3xl">
+                    </div>
+
+                    <!-- Floating stat card 1 -->
+                    <div class="absolute -bottom-4 -left-4 sm:left-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3"
+                        style="background:#fff; border-left: 4px solid #3f89c9; min-width:160px;">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+                            style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium" style="color:#6b7280;">Avg. Revenue Boost</p>
+                            <p class="text-lg font-bold" style="color:#0a1628;">+187%</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating stat card 2 -->
+                    <div class="absolute -top-4 -right-4 sm:right-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3"
+                        style="background:#fff; border-left: 4px solid #85d55c; min-width:160px;">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+                            style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium" style="color:#6b7280;">Global Brands Served</p>
+                            <p class="text-lg font-bold" style="color:#0a1628;">50+</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Right: Content -->
+                <div class="order-1 lg:order-2 flex flex-col gap-6 lg:text-left text-center">
+                    <p class="text-base leading-relaxed" style="color:#374151; max-width:520px; margin: 0 auto 0 0;">
+                        Your store is your digital flagship. We don't just "install themes." We architect visual systems that elevate your brand value. From intuitive navigation to high-fidelity product pages, we design interfaces that make purchasing irresistible for your US & UK customers.
+                    </p>
 
-                <h2 class="text-3xl md:text-4xl  text-white">
-                    Design That Captures <b>Attention</b> & Converts <b>Intent</b>
-                </h2>
+                    <!-- Feature pills -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
 
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Your store is your digital flagship. We don't just "install themes." We architect visual systems that elevate your brand value. From intuitive navigation to high-fidelity product pages, we design interfaces that make purchasing irresistible for your US & UK customers.
-                </p>
+                        <div class="flex items-center gap-3 rounded-xl px-4 py-3 text-left" style="background:#f0f9ff; border:1px solid #bae6fd;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold" style="color:#0a1628;">Custom UI/UX Design</span>
+                        </div>
 
+                        <div class="flex items-center gap-3 rounded-xl px-4 py-3 text-left" style="background:#f0fdf4; border:1px solid #bbf7d0;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold" style="color:#0a1628;">Mobile-First Architecture</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 rounded-xl px-4 py-3 text-left" style="background:#faf5ff; border:1px solid #e9d5ff;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold" style="color:#0a1628;">Interaction &amp; Motion</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 rounded-xl px-4 py-3 text-left" style="background:#fff7ed; border:1px solid #fed7aa;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2m0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold" style="color:#0a1628;">Conversion-Centered Design</span>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
+                        <a href="/contact-us"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                            style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                            Start Your Project
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#design-expertise"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105"
+                            style="background:#f3f4f6; color:#0a1628; border: 1.5px solid #e5e7eb;">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -862,7 +958,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
+    <section id="design-expertise" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
         <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
                 bg-[url('/images/background_curve.svg')] 
                 bg-[center_top_60px]">

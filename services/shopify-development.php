@@ -1375,18 +1375,86 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </script>
 
     </section>
+    <style>
+        .mouse-hover-card {
+            position: relative;
+            overflow: hidden;
+            background-color: #071824;
+            border: 1px solid #1a3a4a;
+            border-radius: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mouse-hover-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(350px circle at var(--x, 0px) var(--y, 0px), rgba(1, 160, 216, 0.12), transparent 80%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .mouse-hover-card:hover::before {
+            opacity: 1;
+        }
+        .mouse-hover-card:hover {
+            border-color: #01a0d8;
+            box-shadow: 0 0 0 1px #01a0d8, 0 12px 30px -10px rgba(1, 160, 216, 0.2);
+        }
+        .icon-circle {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .mouse-hover-card:hover .icon-circle {
+            border-color: #01a0d8;
+        }
+        .icon-tint {
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s ease;
+        }
+        .mouse-hover-card:hover .icon-tint {
+            filter: invert(51%) sepia(82%) saturate(2250%) hue-rotate(167deg) brightness(93%) contrast(101%);
+        }
+        .scroll-reveal-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .scroll-reveal-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid rgba(61, 191, 138, 0.25); /* #3dbf8a40 */
+            background-color: rgba(61, 191, 138, 0.05);
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 600;
+            color: #3dbf8a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .section-pill::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px;
+            background-color: #3dbf8a;
+        }
+    </style>
 
     <section class="w-full py-16 bg-[var(--body-bg)] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2 space-y-4">
-                    <div class="glass-border inline-block mb-4">
-                        <div class="glass-background">
-                            <div class="glass text-sm font-light">
-                                <p>&#9679; &nbsp;STREAMLING</p>
-                            </div>
-                        </div>
+                    <div class="section-pill">
+                        STREAMLING
                     </div>
                     <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
                         Performance & <b>Optimization</b>
@@ -1399,22 +1467,28 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 </div>
 
                 <div class="md:w-1/2 flex flex-col gap-3">
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                         border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="/images/services_pictures/shopify_optimize.webp"
-                                class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
-                        <img src="/images/icons/services/05_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/05_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
-                        <div class="relative z-10">
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Technical Speed Optimization</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 We achieve 90+ Google Mobile Scores by minifying code, compressing assets, and
                                 implementing lazy loading. Faster load times mean lower bounce rates and higher Google
                                 rankings.
@@ -1422,25 +1496,28 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                         </div>
                     </div>
 
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                            border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover"
-                                alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/07_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/07_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Conversion Rate Optimization (CRO)</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 Turn traffic into revenue. We analyze US/UK user behavior using heatmaps and A/B testing
                                 to optimize your UI, reduce cart abandonment, and maximize purchases.
                             </p>
@@ -1452,50 +1529,56 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2 flex flex-col gap-3 order-2 md:order-1">
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                         border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="/images/services_pictures/shopify_strategy.webp"
-                                class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    <!-- Card 3 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_strategy.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/05_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/05_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Scalable Growth Strategy</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 Data-backed strategies to boost revenue. We implement smart upsells, cross-sells, and
                                 backend automation to increase your profit margins per sale.
                             </p>
                         </div>
                     </div>
 
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                          border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <img src="/images/services_pictures/shopify_marketing.webp"
-                                class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    <!-- Card 4 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_marketing.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/06_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/06_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/06_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Retention & Loyalty Marketing</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 Turn one-time buyers into lifelong fans. We build automated Email/SMS flows (Klaviyo)
                                 and loyalty programs that drive repeat purchases and sustainable growth.
                             </p>
@@ -1504,12 +1587,8 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 </div>
 
                 <div class="md:w-1/2 space-y-4 order-1 md:order-2">
-                    <div class="glass-border inline-block mb-4">
-                        <div class="glass-background">
-                            <div class="glass text-sm font-light">
-                                <p>&#9679; &nbsp;ADVANCEMENT</p>
-                            </div>
-                        </div>
+                    <div class="section-pill">
+                        ADVANCEMENT
                     </div>
                     <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
                         <b>Revenue</b> Growth & Customer Retention
@@ -1524,6 +1603,43 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
         </div>
     </section>
+
+    <script>
+    (function() {
+        function initHorizontalEffects() {
+            // Radial hover glow
+            document.querySelectorAll('.mouse-hover-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--x', `${x}px`);
+                    card.style.setProperty('--y', `${y}px`);
+                });
+            });
+
+            // Scroll reveal observer
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-reveal-card').forEach(card => {
+                revealObserver.observe(card);
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHorizontalEffects);
+        } else {
+            initHorizontalEffects();
+        }
+    })();
+    </script>section>
 
 
 

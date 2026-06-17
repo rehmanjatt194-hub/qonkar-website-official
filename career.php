@@ -72,9 +72,9 @@ require_once ADMIN_URL.'/database_config.php';
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-      html {
+    html {
         scroll-behavior: smooth;
-      }
+    }
     </style>
 </head>
 

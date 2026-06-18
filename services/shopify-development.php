@@ -2217,29 +2217,29 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
 
 
-    <section class="w-full flex justify-center items-center py-4  mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] shadow-lg" style="
-      border: 2px solid rgba(56, 228, 174, 0.53);
-      background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
-                  linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
-      box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);">
-            <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
-                Ready to <strong>Build</strong> Your Next Big<strong> Digital Product</strong>?
-            </h1>
+    <section class="w-full flex justify-center items-center py-12 mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-7xl p-8 md:p-16 text-center text-white rounded-[24px] border" style="background-color: #071824; border-color: rgba(26, 58, 74, 0.8);">
+            <!-- Small icon box centered above the heading -->
+            <div class="flex justify-center mb-6">
+                <div class="w-14 h-14 rounded-2xl border border-[#01a0d8]/30 bg-[#01a0d8]/10 flex items-center justify-center">
+                    <i class="fa-solid fa-rocket text-[#01a0d8] text-2xl"></i>
+                </div>
+            </div>
 
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-white font-light">
-                Stop guessing and start growing. We provide Custom Software, Web Development, and ROI-Driven Marketing
-                to scale your business faster.
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-4">
+                Ready to Build Your Next Big <span class="text-[#01a0d8] font-semibold">Digital Product</span>?
+            </h2>
+
+            <p class="text-sm sm:text-base text-white/60 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+                Stop guessing and start growing. We provide Custom Software, Web Development, and ROI-Driven Marketing to scale your business faster.
             </p>
 
             <a href="/contact-us"
-                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                class="inline-flex rounded-full items-center gap-2 px-6 py-3 border border-[#01a0d8] text-[#01a0d8] font-semibold bg-transparent transition-all duration-300 hover:bg-[#01a0d8] hover:text-white">
                 Get Your Free Proposal
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
         </div>

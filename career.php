@@ -72,9 +72,9 @@ require_once ADMIN_URL.'/database_config.php';
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-      html {
+    html {
         scroll-behavior: smooth;
-      }
+    }
     </style>
 </head>
 
@@ -388,7 +388,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex flex-col gap-0">

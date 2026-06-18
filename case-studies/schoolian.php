@@ -77,8 +77,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         }
         .portal-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(47, 173, 195, 0.35);
-            border-color: rgba(47, 173, 195, 0.5);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
         }
         
         .roadmap-card {
@@ -108,7 +107,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     </style>
 </head>
 
-<body class="bg-[#080808] text-white">
+<body class="bg-[#000d16] text-white">
 
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
@@ -217,15 +216,15 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <!-- ==========================================
      1. HERO SECTION (4-Portal Switcher Layout)
      ========================================== -->
-<section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] mt-6 mb-16 rounded-[30px] overflow-hidden flex items-center bg-[#0d0d0f] border border-white/5">
+<section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] mt-6 mb-16 rounded-[30px] overflow-hidden flex items-center bg-[#00101a] border border-white/5">
     <div class="absolute inset-0 z-0 bg-cover bg-center opacity-80" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.4) 10%, rgba(8, 8, 10, 0.7) 50%, rgba(8, 8, 10, 0.95) 90%), url('/images/case-studies/schoolian_bg.png'); mix-blend-mode: normal;"></div>
     <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-[var(--primary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] bg-[var(--secondary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full py-16 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start w-full py-16 px-4 sm:px-8">
         
         <!-- Left Column: Content -->
-        <div class="lg:col-span-6 text-left space-y-6">
+        <div class="lg:col-span-7 text-left space-y-6 lg:pt-8">
             <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.15)]">
                 <div class="glass-background">
                     <div class="glass px-4 py-1.5 flex items-center gap-2 text-xs font-semibold tracking-wider">
@@ -261,73 +260,23 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
         </div>
 
-        <!-- Right Column: Portal Switching UI Simulation -->
-        <div class="lg:col-span-6 flex justify-center lg:justify-end">
-            <div class="w-full max-w-lg bg-[#141417]/80 border border-white/10 rounded-2xl p-6 shadow-2xl backdrop-blur-md relative">
-                
-                <!-- Simulated App Bar -->
-                <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
-                    <div class="flex items-center gap-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                    </div>
-                    <div class="text-[10px] text-gray-500 font-mono tracking-widest">SCHOOLIAN_PORTAL_CORE</div>
-                </div>
-
-                <!-- Simulation Info Block -->
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between bg-[#1b1b20] border border-white/5 p-3 rounded-xl">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-[var(--secondary-color)]">admin_panel_settings</span>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Admin Command Center</h4>
-                                <p class="text-[9px] text-gray-400 font-light">Multi-branch financial auditing</p>
-                            </div>
-                        </div>
-                        <span class="text-[9px] text-[var(--tertiary-color)] font-bold tracking-wider uppercase bg-[var(--tertiary-color)]/10 px-2 py-0.5 rounded border border-[var(--tertiary-color)]/25">Live Ledger</span>
-                    </div>
-
-                    <div class="flex items-center justify-between bg-[#1b1b20]/50 border border-white/5 p-3 rounded-xl opacity-80">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-[var(--primary-color)]">co_present</span>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Teacher Workspace</h4>
-                                <p class="text-[9px] text-gray-400 font-light">Dynamic digital gradebooks</p>
-                            </div>
-                        </div>
-                        <span class="text-[9px] text-gray-400">100ms sync</span>
-                    </div>
-
-                    <div class="flex items-center justify-between bg-[#1b1b20]/50 border border-white/5 p-3 rounded-xl opacity-85">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-[var(--tertiary-color)]">family_history</span>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Parent Companion Portal</h4>
-                                <p class="text-[9px] text-gray-400 font-light">Real-time alerts & online billing</p>
-                            </div>
-                        </div>
-                        <span class="text-[9px] text-[var(--secondary-color)]">Auto Reminders</span>
-                    </div>
-                </div>
-
-                <!-- Featured Mockup Graphic Layer -->
-                <div class="mt-6 border border-white/5 rounded-xl overflow-hidden shadow-inner">
-                    <img src="/images/case-studies/schoolian_dashboard.png" alt="Portal Preview" class="w-full h-auto object-cover opacity-90">
-                </div>
+        <!-- Right Column: Card Mockup -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <div class="relative max-w-md w-full bg-white/5 rounded-2xl border border-white/10 shadow-2xl p-2 backdrop-blur-md">
+                <img src="/images/case-studies/schoolian_dashboard.png" alt="Schoolian Dashboard Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>
 </section>
 
 <!-- ==========================================
-     2. PROJECT OVERVIEW & 3. CLIENT BACKGROUND
+     2. PROJECT OVERVIEW & CONTEXT
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
         <!-- Overview Card -->
-        <div class="lg:col-span-6 bg-[#0c0c0e] border border-white/5 rounded-3xl p-8 lg:p-12 flex flex-col justify-between hover:border-white/10 transition-all duration-300">
+        <div class="lg:col-span-6 bg-[#00101a] border border-white/5 rounded-3xl p-8 lg:p-12 flex flex-col justify-between hover:border-white/10 transition-all duration-300">
             <div class="space-y-6">
                 <span class="inline-block bg-[var(--primary-color)]/10 text-[var(--primary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--primary-color)]/25">Overview</span>
                 <h3 class="text-3xl font-light text-white leading-tight">Empowering education with <span class="italic text-[var(--secondary-color)] font-bold">structured workflows.</span></h3>
@@ -344,20 +293,20 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
         </div>
 
-        <!-- Client Background Card -->
-        <div class="lg:col-span-6 bg-[#0c0c0e] border border-white/5 rounded-3xl p-8 lg:p-12 flex flex-col justify-between hover:border-white/10 transition-all duration-300">
+        <!-- Project Context & Existing Details Card -->
+        <div class="lg:col-span-6 bg-[#00101a] border border-white/5 rounded-3xl p-8 lg:p-12 flex flex-col justify-between hover:border-white/10 transition-all duration-300">
             <div class="space-y-6">
-                <span class="inline-block bg-[var(--tertiary-color)]/10 text-[var(--tertiary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--tertiary-color)]/25">Client Background</span>
-                <h3 class="text-3xl font-light text-white leading-tight">Scaling across a <span class="italic text-[var(--tertiary-color)] font-bold">growing network.</span></h3>
-                <p class="text-gray-300 font-light text-sm leading-relaxed">
-                    The client manages a fast-growing network of private institutions serving thousands of active students.
+                <span class="inline-block bg-[var(--tertiary-color)]/10 text-[var(--tertiary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--tertiary-color)]/25">Project Context</span>
+                <h3 class="text-3xl font-light text-white leading-tight">Automating operations for <span class="italic text-[var(--tertiary-color)] font-bold">growing institutions.</span></h3>
+                <p class="text-gray-300 font-light text-sm leading-relaxed font-sans">
+                    Schoolian is a web-based portal designed for small to medium-sized schools. It automates manual processes like fee collection, student attendance tracking, and report card generation.
                 </p>
-                <p class="text-gray-400 font-light text-xs leading-relaxed">
-                    With rapid expansion, operational data scattered across spreadsheets and manual records led to severe billing delays, absent tracking errors, and high admin workload.
+                <p class="text-gray-400 font-light text-xs leading-relaxed font-sans">
+                    The primary goal is to save administrative workloads by 50% and establish a simplified, real-time parent-teacher communication loop.
                 </p>
             </div>
             <div class="pt-8 border-t border-white/5 mt-8 flex justify-between items-center text-xs text-[var(--tertiary-color)]">
-                <span>Growing Network</span>
+                <span>50% Time Saved Goal</span>
                 <span class="font-bold">Automated Database</span>
             </div>
         </div>
@@ -366,222 +315,258 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 </section>
 
 <!-- ==========================================
-     4. CHALLENGES SECTION (The Legacy Chaos)
+     3. THE PROBLEM & CHALLENGE
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <!-- Sidebar Content -->
         <div class="lg:col-span-4 space-y-6">
-            <span class="bg-red-500/10 border border-red-500/25 text-red-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">The Legacy Chaos</span>
-            <h2 class="text-3xl sm:text-4xl font-light text-white leading-tight">Limitations of <br><span class="text-red-400 font-bold">Manual Schooling</span></h2>
-            <p class="text-gray-400 font-light text-sm leading-relaxed">
-                Before implementing Schoolian, administrative teams faced critical bottlenecks that impacted daily operations, financial performance, and parent trust.
+            <span class="bg-red-500/10 border border-red-500/25 text-red-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">The Challenge</span>
+            <h2 class="text-3xl sm:text-4xl font-light text-white leading-tight">Legacy Operations & <br><span class="text-red-400 font-bold">User Frustrations</span></h2>
+            <p class="text-gray-400 font-light text-sm leading-relaxed font-sans">
+                For small to medium-sized academic institutions, growth often exposes major gaps in manual administrative procedures. Without automated software, schools rely on fragmented physical ledgers and disconnected databases—creating severe operational friction.
             </p>
         </div>
 
         <!-- Challenges Grid -->
         <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-[#121215] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
+            <!-- Card 1 -->
+            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
                 <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-clock"></i></div>
-                <h4 class="text-white font-medium text-base">Manual Roll Call Time</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Class teachers spent up to 45 minutes daily calling names and marking physical registers, reducing actual learning time.</p>
+                <h4 class="text-white font-medium text-base">The 45-Minute Daily Attendance Drain</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Teachers spent the first 15–20 minutes of every class taking manual roll calls on paper registers. Staff then had to re-key this data into spreadsheets, converting active teaching hours into tedious clerical entry.</p>
             </div>
 
-            <div class="bg-[#121215] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
-                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-box-archive"></i></div>
-                <h4 class="text-white font-medium text-base">Paper Student Records</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Paper files and spreadsheets made historical search difficult, causing data duplication and slow profile validation.</p>
-            </div>
-
-            <div class="bg-[#121215] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
+            <!-- Card 2 -->
+            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
                 <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-receipt"></i></div>
-                <h4 class="text-white font-medium text-base">Fee Deficits & Dues</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Lack of automated billing notices meant parents frequently missed payment cycles, causing administrative balance deficits.</p>
+                <h4 class="text-white font-medium text-base">Friction-Ridden Fee Collection</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Without digital channels, admin teams manually compiled fee books and chased late collections via phone. The lack of proactive reminders led to payment delays and complex monthly reconciliations.</p>
             </div>
 
-            <div class="bg-[#121215] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
+            <!-- Card 3 -->
+            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
+                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-file-signature"></i></div>
+                <h4 class="text-white font-medium text-base">End-of-Term Grading Bottlenecks</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Compiling test results, GPA averages, and class rankings required manual gradebook sums. Admin teams spent days writing and printing physical report cards, causing significant distribution delays.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
                 <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-comment-slash"></i></div>
-                <h4 class="text-white font-medium text-base">Disconnected Parents</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Zero real-time connection. Parents remained unaware of absenteeism, syllabus progress, or exams schedules.</p>
+                <h4 class="text-white font-medium text-base">The Parent-Teacher Blindspot</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Parents had zero real-time insights into attendance anomalies or daily updates. Critical circulars regarding exams or scheduling went unseen, resulting in disconnected home-school relationships.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ==========================================
-     5. CORE STRATEGIC GOALS
+     6. OUR SOLUTION: THE 4 CORE PORTALS (Dark Premium Cards)
      ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5">
-    <div class="text-center space-y-4 mb-12">
-        <span class="bg-[var(--secondary-color)]/10 border border-[var(--secondary-color)]/25 text-[var(--secondary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Our Strategy</span>
-        <h2 class="text-3xl md:text-4xl font-light">Schoolian <b>System Objectives</b></h2>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-white/5">
+    <div class="text-center space-y-4 mb-16">
+        <span class="bg-[#01a0d8]/10 border border-[#01a0d8]/30 text-[#01a0d8] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Unified Ecosystem</span>
+        <h2 class="text-3xl md:text-4xl font-light text-white">The <b>4 Core Portals</b></h2>
+        <p class="text-gray-400 font-normal max-w-xl mx-auto text-sm sm:text-base leading-relaxed">Connecting administrators, teachers, parents, and students in one unified, real-time environment.</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl hover:border-[var(--secondary-color)]/20 transition-all">
-            <span class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-cloud-arrow-up"></i></span>
-            <h4 class="text-white font-medium text-base mt-4 mb-2">Cloud Digitalization</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Migrating manual registers to highly-accessible web and mobile database panels.</p>
+    <!-- Portals: Flex Row with Connectors -->
+    <div class="flex flex-col lg:flex-row items-stretch gap-4 lg:gap-0">
+
+        <!-- Portal 1: Admin Command Center -->
+        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#01a0d8]/40 hover:shadow-[0_0_30px_rgba(1,160,216,0.08)] transition-all duration-400 overflow-hidden">
+            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">01</span>
+            <div class="space-y-5 relative z-10">
+                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(1,160,216,0.15);">
+                    <span class="material-symbols-outlined text-2xl" style="color:#01a0d8;">shield_person</span>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-white leading-snug">Admin Command Center</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Manage student registries, billing ledgers, branch analytics, and institutional audits from one control panel.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 relative z-10">
+                <span class="inline-flex items-center gap-2 bg-[#01a0d8]/10 border border-[#01a0d8]/25 text-[#01a0d8] text-[11px] font-semibold px-4 py-1.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#01a0d8]"></span>
+                    Multi-Branch Analytics
+                </span>
+            </div>
         </div>
 
-        <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl hover:border-[var(--primary-color)]/20 transition-all">
-            <span class="text-[var(--primary-color)] text-xl"><i class="fa-solid fa-leaf"></i></span>
-            <h4 class="text-white font-medium text-base mt-4 mb-2">Eco-Friendly Classrooms</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Eliminating paper dependency across rosters, forms, and report card generations.</p>
+        <!-- Connector 1→2 -->
+        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
+            <div class="w-full h-px bg-gradient-to-r from-[#01a0d8]/30 via-white/10 to-[#95C951]/30"></div>
+            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#01a0d8] shadow-[0_0_10px_3px_rgba(1,160,216,0.6)] animate-pulse z-10"></div>
         </div>
 
-        <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl hover:border-[var(--tertiary-color)]/20 transition-all">
-            <span class="text-[var(--tertiary-color)] text-xl"><i class="fa-solid fa-bell"></i></span>
-            <h4 class="text-white font-medium text-base mt-4 mb-2">Auto Notification Hub</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Real-time event, exam schedule, and billing alerts push notifications.</p>
+        <!-- Portal 2: Teacher Hub -->
+        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#95C951]/40 hover:shadow-[0_0_30px_rgba(149,201,81,0.08)] transition-all duration-400 overflow-hidden">
+            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">02</span>
+            <div class="space-y-5 relative z-10">
+                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(149,201,81,0.15);">
+                    <span class="material-symbols-outlined text-2xl" style="color:#95C951;">menu_book</span>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-white leading-snug">Teacher Hub</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Track daily attendance, input exam grades, upload homework resources, and broadcast notification alerts to parents.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 relative z-10">
+                <span class="inline-flex items-center gap-2 bg-[#95C951]/10 border border-[#95C951]/25 text-[#95C951] text-[11px] font-semibold px-4 py-1.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#95C951]"></span>
+                    Instant Marks Entry
+                </span>
+            </div>
         </div>
 
-        <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl hover:border-[var(--secondary-color)]/20 transition-all">
-            <span class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-chart-line"></i></span>
-            <h4 class="text-white font-medium text-base mt-4 mb-2">Data-Driven Administration</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Visualizing operational metrics, financial reports, and class stats instantly.</p>
+        <!-- Connector 2→3 -->
+        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
+            <div class="w-full h-px bg-gradient-to-r from-[#95C951]/30 via-white/10 to-[#a78bfa]/30"></div>
+            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#95C951] shadow-[0_0_10px_3px_rgba(149,201,81,0.6)] animate-pulse z-10" style="animation-delay: 0.4s;"></div>
         </div>
+
+        <!-- Portal 3: Parent Mobile Companion -->
+        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#a78bfa]/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.08)] transition-all duration-400 overflow-hidden">
+            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">03</span>
+            <div class="space-y-5 relative z-10">
+                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(167,139,250,0.15);">
+                    <span class="material-symbols-outlined text-2xl" style="color:#a78bfa;">supervised_user_circle</span>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-white leading-snug">Parent Mobile Companion</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Track child attendance, view exam report cards, receive circular alerts, and pay school fee invoices.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 relative z-10">
+                <span class="inline-flex items-center gap-2 bg-[#a78bfa]/10 border border-[#a78bfa]/25 text-[#a78bfa] text-[11px] font-semibold px-4 py-1.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#a78bfa]"></span>
+                    Billing &amp; Dues Sync
+                </span>
+            </div>
+        </div>
+
+        <!-- Connector 3→4 -->
+        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
+            <div class="w-full h-px bg-gradient-to-r from-[#a78bfa]/30 via-white/10 to-[#fbbf24]/30"></div>
+            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#a78bfa] shadow-[0_0_10px_3px_rgba(167,139,250,0.6)] animate-pulse z-10" style="animation-delay: 0.8s;"></div>
+        </div>
+
+        <!-- Portal 4: Student Space -->
+        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#fbbf24]/40 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-400 overflow-hidden">
+            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">04</span>
+            <div class="space-y-5 relative z-10">
+                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(251,191,36,0.15);">
+                    <span class="material-symbols-outlined text-2xl" style="color:#fbbf24;">school</span>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-white leading-snug">Student Space</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Access digital class materials, check exam grades, view class timetables, and track active homework assignments.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 relative z-10">
+                <span class="inline-flex items-center gap-2 bg-[#fbbf24]/10 border border-[#fbbf24]/25 text-[#fbbf24] text-[11px] font-semibold px-4 py-1.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#fbbf24]"></span>
+                    Syllabus &amp; Timetable Logs
+                </span>
+            </div>
+        </div>
+
     </div>
 </section>
+
+
 
 <!-- ==========================================
      THE TOOLKIT (Premium Feature Set)
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
     <div class="space-y-2 mb-12 text-left">
-        <span class="text-[10px] text-[var(--secondary-color)] uppercase tracking-widest font-mono font-bold">THE TOOLKIT</span>
-        <h2 class="text-3xl sm:text-4xl font-light text-white">Premium Feature Set</h2>
+        <span class="text-[10px] text-[var(--secondary-color)] uppercase tracking-widest font-mono font-bold">THE SOLUTION</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-white">Premium Feature Suite</h2>
     </div>
 
     <!-- 2-Column Feature Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
         <!-- Card 1 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-users-rectangle"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">STUDENT MGMT</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-users-rectangle"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">STUDENT MGMT</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Centralized Cloud Profiles</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Replaces manual student folders with secure, searchable database directories and quick-validation digital profiles.</p>
             </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-user-check"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">ATTENDANCE</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-user-check"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">ATTENDANCE</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Smart Attendance & SMS Alerts</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Single-click registers marked in under 2 minutes, auto-generating stats and broadcasting instant SMS alerts to parents for absences.</p>
             </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-people-roof"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">PARENT PORTAL</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-people-roof"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">PARENT PORTAL</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Real-Time Mobile Companion</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Connects parents with academic progress, notifications, attendance tracking, and digital invoice portals instantly.</p>
             </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-money-check-dollar"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">FEE TRACKING</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-money-check-dollar"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">FEE TRACKING</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Automated Billing & Checkout</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Generates monthly invoices, dispatches automatic notices, and allows online payment checkout with auto-reconciliation.</p>
             </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-chalkboard-user"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">TEACHER HUB</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">TEACHER HUB</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Unified Teaching Hub</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Equips faculty with lesson planners, resource uploading tools, grading panels, and direct messaging channels.</p>
             </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="bg-[#0e0e11] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[160px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-file-signature"></i></div>
-            <div class="mt-4">
-                <h4 class="text-xs font-bold text-gray-400 tracking-widest uppercase">EXAM SYSTEM</h4>
+        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
+            <div class="flex justify-between items-start">
+                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-file-signature"></i></div>
+                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">EXAM SYSTEM</h4>
+            </div>
+            <div class="mt-4 space-y-2">
+                <h3 class="text-white font-medium text-base">Consolidated Gradebooks</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automates exam records entries, rank calculations, and GPA averages to generate digital report cards instantaneously.</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- ==========================================
-     6. OUR SOLUTION: THE 4 CORE PORTALS
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
-    <div class="text-center space-y-4 mb-16">
-        <span class="bg-[var(--secondary-color)]/10 border border-[var(--secondary-color)]/25 text-[var(--secondary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Unified Ecosystem</span>
-        <h2 class="text-3xl md:text-4xl font-light text-white">The <b>4 Core Portals</b></h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm">Every educational stakeholder connected under one secure environment.</p>
-    </div>
-
-    <!-- Portals Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- Portal 1 -->
-        <div class="portal-card bg-[#0e0e11] border border-white/5 rounded-3xl p-6 flex flex-col justify-between">
-            <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-[var(--secondary-color)]/10 border border-[var(--secondary-color)]/20 text-[var(--secondary-color)] flex items-center justify-center">
-                    <span class="material-symbols-outlined">shield_person</span>
-                </div>
-                <h3 class="text-xl font-bold text-white">Admin Command Center</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Enables school directors to manage teacher assignments, billing ledgers, branch analytics, and institutional audits from a unified control deck.
-                </p>
-            </div>
-            <div class="pt-6 border-t border-white/5 mt-6 text-[10px] text-[var(--secondary-color)] uppercase tracking-wider font-semibold">
-                Multi-Branch Analytics
-            </div>
-        </div>
-
-        <!-- Portal 2 -->
-        <div class="portal-card bg-[#0e0e11] border border-white/5 rounded-3xl p-6 flex flex-col justify-between">
-            <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/20 text-[var(--primary-color)] flex items-center justify-center">
-                    <span class="material-symbols-outlined">menu_book</span>
-                </div>
-                <h3 class="text-xl font-bold text-white">Teacher Gradebook Hub</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Designed for class teachers to track student daily roll calls, grade exams, post homework files, and send instant status reports to parents.
-                </p>
-            </div>
-            <div class="pt-6 border-t border-white/5 mt-6 text-[10px] text-[var(--primary-color)] uppercase tracking-wider font-semibold">
-                Instant Marks Entry
-            </div>
-        </div>
-
-        <!-- Portal 3 -->
-        <div class="portal-card bg-[#0e0e11] border border-white/5 rounded-3xl p-6 flex flex-col justify-between">
-            <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/20 text-[var(--tertiary-color)] flex items-center justify-center">
-                    <span class="material-symbols-outlined">supervised_user_circle</span>
-                </div>
-                <h3 class="text-xl font-bold text-white">Parent Mobile Companion</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Enables parents to track children attendance records, review academic report cards, read announcements, and settle billing dues securely.
-                </p>
-            </div>
-            <div class="pt-6 border-t border-white/5 mt-6 text-[10px] text-[var(--tertiary-color)] uppercase tracking-wider font-semibold">
-                Billing & Dues Sync
-            </div>
-        </div>
-
-        <!-- Portal 4 -->
-        <div class="portal-card bg-[#0e0e11] border border-white/5 rounded-3xl p-6 flex flex-col justify-between">
-            <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-[var(--secondary-color)]/10 border border-[var(--secondary-color)]/20 text-[var(--secondary-color)] flex items-center justify-center">
-                    <span class="material-symbols-outlined">school</span>
-                </div>
-                <h3 class="text-xl font-bold text-white">Student Space</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Students can view daily calendars, access shared class resources, download grades, and track virtual homework assignments.
-                </p>
-            </div>
-            <div class="pt-6 border-t border-white/5 mt-6 text-[10px] text-[var(--secondary-color)] uppercase tracking-wider font-semibold">
-                Syllabus & Timetable Logs
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -607,7 +592,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
             
             <!-- Step 1 -->
-            <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl relative">
+            <div class="bg-[#00101a] border border-white/5 p-6 rounded-2xl relative">
                 <span class="absolute top-4 right-4 text-xs font-bold text-white/20 font-mono">01</span>
                 <span class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-file-invoice-dollar"></i></span>
                 <h4 class="text-white font-medium text-sm mt-3 mb-1">Invoice Generation</h4>
@@ -615,7 +600,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
 
             <!-- Step 2 -->
-            <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl relative">
+            <div class="bg-[#00101a] border border-white/5 p-6 rounded-2xl relative">
                 <span class="absolute top-4 right-4 text-xs font-bold text-white/20 font-mono">02</span>
                 <span class="text-[var(--tertiary-color)] text-lg"><i class="fa-solid fa-paper-plane"></i></span>
                 <h4 class="text-white font-medium text-sm mt-3 mb-1">Notification Dispatch</h4>
@@ -623,7 +608,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
 
             <!-- Step 3 -->
-            <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl relative">
+            <div class="bg-[#00101a] border border-white/5 p-6 rounded-2xl relative">
                 <span class="absolute top-4 right-4 text-xs font-bold text-white/20 font-mono">03</span>
                 <span class="text-[var(--primary-color)] text-lg"><i class="fa-solid fa-credit-card"></i></span>
                 <h4 class="text-white font-medium text-sm mt-3 mb-1">Online Portal Checkout</h4>
@@ -631,7 +616,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
 
             <!-- Step 4 -->
-            <div class="bg-[#0e0e11] border border-white/5 p-6 rounded-2xl relative">
+            <div class="bg-[#00101a] border border-white/5 p-6 rounded-2xl relative">
                 <span class="absolute top-4 right-4 text-xs font-bold text-white/20 font-mono">04</span>
                 <span class="text-[var(--tertiary-color)] text-lg"><i class="fa-solid fa-circle-check"></i></span>
                 <h4 class="text-white font-medium text-sm mt-3 mb-1">Reconciliation</h4>
@@ -643,449 +628,95 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     </div>
 </section>
 
-<!-- ==========================================
-     8. & 9. DESIGN & DEVELOPMENT ROADMAP
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5">
-    <!-- Header -->
-    <div class="text-center space-y-2.5 mb-10">
-        <span class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-[#2fa9c3]/30 bg-transparent text-[#2fa9c3] text-[10px] font-bold tracking-widest uppercase">
-            Our Approach
-        </span>
-        <h2 class="text-4xl md:text-5xl font-light text-white leading-tight tracking-tight">
-            <span class="text-white font-extralight tracking-tighter">System</span> 
-            <span class="text-[#2fa9c3] font-normal">Deployment</span> 
-            <span class="text-white font-extralight tracking-tighter">Roadmap</span>
-        </h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm">
-            From requirements auditing to onboarding parent networks.
-        </p>
-    </div>
 
-    <!-- Timeline Circles (Desktop Only) -->
-    <div class="relative w-full max-w-5xl mx-auto mb-6 hidden md:block">
-        <!-- Background Connecting Line -->
-        <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 h-[1px] bg-white/10 -z-10"></div>
-        <!-- Active Progress Connecting Line (Start to 02) -->
-        <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[1px] bg-gradient-to-r from-blue-500 to-[#2fa9c3] w-[33.3%] -z-10"></div>
-        
-        <!-- Circles Container -->
-        <div class="flex justify-between items-center w-full">
-            <!-- Circle 01 -->
-            <div class="w-12 h-12 rounded-full bg-[#13223f] border border-[#254689] text-[#4f8eff] flex items-center justify-center font-bold font-mono text-sm shadow-lg shadow-[#13223f]/50">
-                01
-            </div>
-            <!-- Circle 02 -->
-            <div class="w-12 h-12 rounded-full bg-[#0e272b] border border-[#1b5058] text-[#2fa9c3] flex items-center justify-center font-bold font-mono text-sm shadow-lg shadow-[#0e272b]/50">
-                02
-            </div>
-            <!-- Circle 03 -->
-            <div class="w-12 h-12 rounded-full bg-[#1d1435] border border-[#3b276e] text-[#906bee] flex items-center justify-center font-bold font-mono text-sm shadow-lg shadow-[#1d1435]/50">
-                03
-            </div>
-            <!-- Circle 04 -->
-            <div class="w-12 h-12 rounded-full bg-[#2f1c0e] border border-[#5d381c] text-[#d97706] flex items-center justify-center font-bold font-mono text-sm shadow-lg shadow-[#2f1c0e]/50">
-                04
-            </div>
-        </div>
-    </div>
-
-    <!-- Gradient Progress Bar (Matches the design in screenshot) -->
-    <div class="relative w-full max-w-5xl mx-auto mb-3 px-1">
-        <div class="h-[6px] w-full bg-[#0f0f13] rounded-full overflow-hidden">
-            <div class="h-full bg-gradient-to-r from-blue-500 via-[#2fa9c3] to-purple-500 rounded-full" style="width: 48%;"></div>
-        </div>
-    </div>
-
-    <!-- Labels Below Progress Bar -->
-    <div class="flex justify-between items-center w-full max-w-5xl mx-auto mb-10 px-1 text-xs text-gray-500 font-light">
-        <span>Start</span>
-        <span class="text-[#2fa9c3] font-medium">Phase 2 active</span>
-        <span>Complete</span>
-    </div>
-
-    <!-- Separated Cards Container -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-        
-        <!-- Phase 1 Card -->
-        <div class="roadmap-card bg-[#0e0e11]/80 border border-white/5 rounded-3xl p-6 space-y-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:bg-[#0f0f13] hover:shadow-2xl hover:shadow-[#2fa9c3]/5 hover:border-white/10 hover:scale-[1.02] relative">
-            <div class="space-y-4">
-                <!-- Icon and Badge -->
-                <div class="flex items-center gap-3">
-                    <span class="text-xl text-blue-500/80"><i class="fa-regular fa-square"></i></span>
-                    <span class="px-2.5 py-0.5 rounded border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest font-mono">PHASE 01</span>
-                </div>
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-white tracking-tight">Institutional Audit</h3>
-                <!-- Description -->
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Analyzing school structures, class levels, subjects, grading policies, and custom fee setups.
-                </p>
-            </div>
-        </div>
-
-        <!-- Phase 2 Card (Active) -->
-        <div class="roadmap-card bg-[#0e1616]/80 border border-[#2fa9c3]/30 rounded-3xl p-6 space-y-4 flex flex-col justify-between relative before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-[#2fa9c3] before:rounded-t-3xl transition-all duration-300 hover:-translate-y-2 hover:bg-[#122020] hover:shadow-2xl hover:shadow-[#2fa9c3]/20 hover:border-[#2fa9c3]/60 hover:scale-[1.02]">
-            <div class="space-y-4">
-                <!-- Icon and Badge -->
-                <div class="flex items-center gap-3">
-                    <span class="text-xl text-[#2fa9c3]"><i class="fa-regular fa-square"></i></span>
-                    <span class="px-2.5 py-0.5 rounded border border-[#2fa9c3]/30 text-[#2fa9c3] text-[10px] font-bold tracking-widest font-mono">PHASE 02</span>
-                </div>
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-white tracking-tight">Data Ingestion</h3>
-                <!-- Description -->
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Cleaning spreadsheets and importing student archives, family profiles, academic records, and teacher data safely.
-                </p>
-            </div>
-        </div>
-
-        <!-- Phase 3 Card -->
-        <div class="roadmap-card bg-[#0e0e11]/80 border border-white/5 rounded-3xl p-6 space-y-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:bg-[#0f0f13] hover:shadow-2xl hover:shadow-[#2fa9c3]/5 hover:border-white/10 hover:scale-[1.02] relative">
-            <div class="space-y-4">
-                <!-- Icon and Badge -->
-                <div class="flex items-center gap-3">
-                    <span class="text-xl text-purple-500/80"><i class="fa-regular fa-square"></i></span>
-                    <span class="px-2.5 py-0.5 rounded border border-purple-500/20 text-purple-400 text-[10px] font-bold tracking-widest font-mono">PHASE 03</span>
-                </div>
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-white tracking-tight">Portal Customization</h3>
-                <!-- Description -->
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Structuring workflows for user portals, creating access control tags, and setting SMS integrations.
-                </p>
-            </div>
-        </div>
-
-        <!-- Phase 4 Card -->
-        <div class="roadmap-card bg-[#0e0e11]/80 border border-white/5 rounded-3xl p-6 space-y-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:bg-[#0f0f13] hover:shadow-2xl hover:shadow-[#2fa9c3]/5 hover:border-white/10 hover:scale-[1.02] relative">
-            <div class="space-y-4">
-                <!-- Icon and Badge -->
-                <div class="flex items-center gap-3">
-                    <span class="text-xl text-amber-600/80"><i class="fa-regular fa-square"></i></span>
-                    <span class="px-2.5 py-0.5 rounded border border-amber-600/20 text-amber-500 text-[10px] font-bold tracking-widest font-mono">PHASE 04</span>
-                </div>
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-white tracking-tight">Onboarding & Launch</h3>
-                <!-- Description -->
-                <p class="text-gray-400 text-xs font-light leading-relaxed">
-                    Conducting teacher training, publishing parent login codes, and activating live portal operations.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ==========================================
-     11. TRADITIONAL VS SCHOOLIAN COMPARISON
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
-    
-    <!-- Header -->
-    <div class="space-y-4 mb-12">
-        <span class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-[var(--secondary-color)]/30 bg-transparent text-[var(--secondary-color)] text-[10px] font-bold tracking-widest uppercase">
-            Comparison
-        </span>
-        <h2 class="text-4xl md:text-5xl font-light text-white leading-tight">
-            <span class="text-white font-extralight tracking-tighter">Before vs After</span> 
-            <span class="text-[var(--secondary-color)] font-bold italic">Contrast</span>
-        </h2>
-        <p class="text-zinc-400 font-light text-sm max-w-2xl leading-relaxed">
-            Observe the difference in daily workflows before and after Qonkar implemented Schoolian ERP across the networks.
-        </p>
-    </div>
-
-    <!-- Main Comparison Split Box -->
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-[#0a0a0c]/80 border border-white/5 rounded-3xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-white/5 mb-6">
-        
-        <!-- Left Side: Traditional Schooling -->
-        <div class="p-8 space-y-8 relative before:absolute before:left-0 before:top-8 before:h-8 before:w-[3px] before:bg-red-500 before:rounded-r">
-            <!-- Header -->
-            <div class="flex items-center gap-3 pl-4">
-                <div class="w-8 h-8 rounded-full bg-red-500/10 border border-red-500/25 text-red-400 flex items-center justify-center text-sm shadow-md shadow-red-950/30">
-                    <i class="fa-solid fa-ban"></i>
-                </div>
-                <span class="text-xs font-bold tracking-widest text-red-400 uppercase font-mono">Traditional Schooling</span>
-            </div>
-
-            <!-- List Items -->
-            <div class="space-y-6 pl-4">
-                
-                <!-- Roster Roll Calls -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-red-500 text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Roster Roll Calls</h4>
-                    </div>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                        Manually marked on register, logged into spreadsheets by hand.
-                    </p>
-                </div>
-
-                <!-- Fee Reminders -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-red-500 text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Fee Reminders</h4>
-                    </div>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                        Required physical printing, mail routing, or phone chasing.
-                    </p>
-                </div>
-
-                <!-- Progress Reports -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-red-500 text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Progress Reports</h4>
-                    </div>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                        Printed term reports distributed physically, often delayed weeks.
-                    </p>
-                </div>
-
-                <!-- Parent Communication -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-red-500 text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Parent Communication</h4>
-                    </div>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">
-                        Phone calls, paper notes, or unreliable SMS chains.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Right Side: Schoolian Optimized -->
-        <div class="p-8 space-y-8 relative before:absolute before:left-0 before:top-8 before:h-8 before:w-[3px] before:bg-[var(--tertiary-color)] before:rounded-r">
-            <!-- Header -->
-            <div class="flex items-center gap-3 pl-4">
-                <div class="w-8 h-8 rounded-full bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/25 text-[var(--tertiary-color)] flex items-center justify-center text-sm shadow-md shadow-emerald-950/30">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-                <span class="text-xs font-bold tracking-widest text-[var(--tertiary-color)] uppercase font-mono">Schoolian Optimized</span>
-            </div>
-
-            <!-- List Items -->
-            <div class="space-y-6 pl-4">
-                
-                <!-- Roster Roll Calls -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-[var(--tertiary-color)] text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Roster Roll Calls</h4>
-                    </div>
-                    <p class="text-white text-sm font-light leading-relaxed">
-                        Marked in portal under 2 mins, auto-sent to parent app instantly.
-                    </p>
-                </div>
-
-                <!-- Fee Reminders -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-[var(--tertiary-color)] text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Fee Reminders</h4>
-                    </div>
-                    <p class="text-white text-sm font-light leading-relaxed">
-                        Automated push notices with direct payment links inside app.
-                    </p>
-                </div>
-
-                <!-- Progress Reports -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-[var(--tertiary-color)] text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Progress Reports</h4>
-                    </div>
-                    <p class="text-white text-sm font-light leading-relaxed">
-                        Live grade dashboards accessible anytime by parents and students.
-                    </p>
-                </div>
-
-                <!-- Parent Communication -->
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-[var(--tertiary-color)] text-xs"><i class="fa-regular fa-square"></i></span>
-                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400/60 font-mono">Parent Communication</h4>
-                    </div>
-                    <p class="text-white text-sm font-light leading-relaxed">
-                        In-app messaging with read receipts and broadcast announcements.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Bottom Daily Admin Load Split Box -->
-    <div class="grid grid-cols-1 md:grid-cols-2 border border-white/5 rounded-3xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-white/5">
-        <!-- Before admin load -->
-        <div class="bg-[#180a0a]/20 p-8 text-center space-y-2">
-            <div class="text-3xl md:text-4xl font-bold text-red-500 font-mono tracking-tight">4–6 hrs</div>
-            <div class="text-[10px] font-bold tracking-widest text-zinc-500 uppercase font-mono">Daily Admin Load (Before)</div>
-        </div>
-        <!-- After admin load -->
-        <div class="bg-[var(--tertiary-color)]/5 p-8 text-center space-y-2">
-            <div class="text-3xl md:text-4xl font-bold text-[var(--tertiary-color)] font-mono tracking-tight">&lt; 45 min</div>
-            <div class="text-[10px] font-bold tracking-widest text-zinc-500 uppercase font-mono">Daily Admin Load (After)</div>
-        </div>
-    </div>
-
-</section>
 
 <!-- ==========================================
      12. RESULTS & ACHIEVEMENTS (KPI Cards)
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
     <div class="text-center mb-16 space-y-4">
-        <span class="bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/25 text-[var(--tertiary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Achievements</span>
-        <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">Project Results & Metrics</h2>
+        <span class="bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/25 text-[var(--tertiary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Results & Impact</span>
+        <h2 class="text-3xl md:text-4xl font-light text-white tracking-tight">Quantifiable <b>Improvements</b></h2>
+        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm font-sans">How Schoolian transformed admin workloads and parent engagement across the network.</p>
     </div>
 
     <!-- Metrics Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
         <!-- Metric Card 1 -->
-        <div class="metric-card-premium bg-[#101012]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
-            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Admin Overhead</p>
-            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">70% Less</p>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Reduction in paperwork and manual archives.</p>
+        <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
+            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest font-mono">ADMINISTRATIVE TIME</p>
+            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">50% Saved</p>
+            <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automating registers, gradebooks, and reports cut daily admin workload in half.</p>
         </div>
         
         <!-- Metric Card 2 -->
-        <div class="metric-card-premium bg-[#101012]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
-            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Attendance Time</p>
-            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">60% Faster</p>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Class checks completed within seconds.</p>
+        <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
+            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest font-mono">FEE COLLECTION SPEED</p>
+            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">40% Faster</p>
+            <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Direct mobile billing links reduced payment cycle delays and manual reconciliation.</p>
         </div>
         
         <!-- Metric Card 3 -->
-        <div class="metric-card-premium bg-[#101012]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
-            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Parent engagement</p>
-            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">55% Better</p>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Real-time alerts loop parent responses faster.</p>
+        <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
+            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest font-mono">PARENT ADOPTION RATE</p>
+            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">95% Active</p>
+            <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">High app adoption established a robust real-time communication loop with families.</p>
         </div>
 
         <!-- Metric Card 4 -->
-        <div class="metric-card-premium bg-[#101012]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
-            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Paper dependencies</p>
-            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">80% Less</p>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">Forms and files converted to cloud registries.</p>
+        <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer glow-box-cyan">
+            <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest font-mono">PAPER DEPENDENCY</p>
+            <p class="metric-value text-4xl font-extrabold text-[var(--primary-color)] tracking-tight">90% Less</p>
+            <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Progress cards, receipts, and registration databases migrated fully to the cloud.</p>
         </div>
     </div>
-</section>
 
-<!-- ==========================================
-     13. SCREENSHOTS GALLERY
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 text-center">
-    <div class="space-y-4 mb-12">
-        <span class="bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/25 text-[var(--primary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Interface Preview</span>
-        <h2 class="text-3xl md:text-4xl font-light">Schoolian <b>SaaS Showcase</b></h2>
-    </div>
-
-    <!-- Gallery Container -->
-    <div class="max-w-4xl mx-auto border border-white/10 rounded-3xl overflow-hidden shadow-2xl relative bg-[#0e0e11] p-3">
-        <img src="/images/case-studies/schoolian_dashboard.png" alt="Schoolian Main Dashboard Screen" class="w-full h-auto object-cover rounded-2xl">
-    </div>
-</section>
-
-<!-- ==========================================
-     14. CLIENT TESTIMONIAL
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 text-center">
-    <div class="max-w-5xl mx-auto bg-[#101012] border border-white/5 rounded-3xl p-10 md:p-14 relative overflow-hidden text-left shadow-2xl transition-all duration-500 hover:border-white/10">
-        <!-- Quote icon -->
-        <div class="text-[var(--secondary-color)]/10 text-9xl absolute right-12 top-6 font-serif select-none pointer-events-none">
-            ”
-        </div>
-        
-        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-            <!-- Left Side Avatar -->
-            <div class="md:col-span-4 flex justify-center md:justify-start">
-                <div class="w-48 h-48 rounded-full border-4 border-[var(--secondary-color)]/30 bg-[#080808]/80 p-1 flex items-center justify-center overflow-hidden shadow-2xl transition-all duration-500 hover:border-[var(--secondary-color)]/60">
-                    <img src="/images/case-studies/director_avatar.png" alt="Director, Educational Network" class="w-full h-full rounded-full object-cover">
-                </div>
+    <!-- Narrative Impact Bullet Points -->
+    <div class="max-w-4xl mx-auto bg-[#00101a] border border-white/5 rounded-3xl p-8 md:p-12 space-y-8">
+        <h3 class="text-2xl font-light text-white leading-tight">Key Achievements & Operational Impact</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div class="space-y-2">
+                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h4 class="text-white font-medium text-base">Reclaimed Instruction Hours</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">By digitizing classroom attendance and test grading, teachers reclaimed up to 5 hours weekly, directly reinvesting that time into student mentoring.</p>
             </div>
-            
-            <!-- Right Side Content -->
-            <div class="md:col-span-8 space-y-6">
-                <p class="text-white text-base sm:text-lg md:text-xl font-light italic leading-relaxed text-gray-200">
-                    "Schoolian transformed how our schools operate. Administrative tasks that once took hours now take minutes. The platform improved efficiency across every department."
-                </p>
-                
-                <div class="space-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--secondary-color)]">Director, Educational Network</h3>
-                    <p class="text-xs sm:text-sm font-light text-gray-400">Managing Director, Private Schools Network Group</p>
-                </div>
+            <div class="space-y-2">
+                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-piggy-bank"></i></div>
+                <h4 class="text-white font-medium text-base">Eliminated Billing Friction</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automated digital invoicing, direct SMS billing triggers, and integrated checkout channels eliminated manual ledger matching and minimized outstanding debt.</p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-users"></i></div>
+                <h4 class="text-white font-medium text-base">Active Family Partnership</h4>
+                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Real-time attendance push alerts and dynamic grade access bridges the gap between home and school, fostering parent trust and transparency.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==========================================
-     15. RELATED CASE STUDIES (Linking to Homalix)
-     ========================================== -->
-<section id="local-cases" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 text-center">
-    <div class="space-y-4 mb-12">
-        <span class="bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/25 text-[var(--primary-color)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Related Projects</span>
-        <h2 class="text-3xl md:text-4xl font-light">Explore <b>More Work</b></h2>
-    </div>
 
-    <div class="max-w-md mx-auto">
-        <div class="bg-[#101012] border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="relative w-full h-40 bg-black/60 overflow-hidden flex items-center justify-center">
-                <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/images/successful-business-collaboration-and-client-meeting.webp');"></div>
-                <div class="absolute top-4 left-4 bg-[var(--secondary-color)]/20 border border-[var(--secondary-color)]/50 text-[var(--secondary-color)] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-                    Clinical Platform
-                </div>
-                <h4 class="relative z-10 text-white font-bold text-lg px-6 text-center">Homalix Hospital Central</h4>
-            </div>
-
-            <div class="p-6 space-y-4 flex-1 flex flex-col justify-between text-left">
-                <div class="space-y-2">
-                    <h3 class="text-lg font-medium text-white group-hover:text-[var(--secondary-color)] transition-colors">Homalix Case Study</h3>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">
-                        A unified multi-branch Hospital Management and patient records central database.
-                    </p>
-                </div>
-                
-                <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[var(--secondary-color)]">
-                    <a href="/case-studies/homalix.php" class="font-bold flex items-center gap-1 hover:underline">
-                        View Case Study
-                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ==========================================
      16. FINAL CTA SECTION
      ========================================== -->
-<section class="w-full bg-[#101012] py-20 text-center border-t border-white/5">
+<section class="w-full bg-[#000d16] py-20 text-center border-t border-white/5">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 space-y-8 flex flex-col items-center">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-light text-white leading-tight">
-            Ready to digitize your <br>
-            <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Academic Organization?</span>
+            Ready to Modernize Your <br>
+            <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Educational Workflows?</span>
         </h2>
         
-        <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed max-w-2xl">
-            Let Qonkar Technologies design and engineer a custom digital ERP system built to handle transaction scalability and multi-branch synchronization.
+        <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed max-w-2xl font-sans">
+            Let Qonkar Technologies engineer a custom, secure EdTech platform tailored to your institution’s unique processes, fee models, and communication needs.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a href="/contact-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[var(--primary-color)] text-white text-sm sm:text-base font-medium transition-all duration-300 hover:bg-[var(--secondary-color)] hover:scale-105 shadow-xl">
-                Get In Touch
+                Start Your Project
                 <span class="text-white text-lg">➔</span>
             </a>
             <a href="/portfolio" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/20 text-white text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300">
-                Explore Portfolio
+                View More Case Studies
             </a>
         </div>
     </div>
@@ -1183,3 +814,4 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <script src="/script/navbar.js"></script>
 </body>
 </html>
+

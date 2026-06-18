@@ -61,14 +61,263 @@ require_once ADMIN_URL.'/database_config.php';
             background-color: #000;
             color: #fff;
         }
-
         select option:disabled {
             color: #9ca3af;
-            /* Tailwind's gray-400 for placeholder */
         }
-      html {
-        scroll-behavior: smooth;
-      }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ═══════════════════════════════════
+           PREMIUM EDITORIAL PORTFOLIO GRID
+        ═══════════════════════════════════ */
+
+        /* --- Section Title Accent --- */
+        .section-title-bar {
+            display: inline-block;
+            width: 50px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(to right, #01a0d8, #95C951);
+            margin-bottom: 12px;
+        }
+
+        /* --- Editorial Grid Layout --- */
+        .portfolio-editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 900px) {
+            .portfolio-editorial-grid { grid-template-columns: 1fr 1fr; }
+            .pcard-featured { grid-column: span 2 !important; grid-row: span 1 !important; }
+        }
+        @media (max-width: 600px) {
+            .portfolio-editorial-grid { grid-template-columns: 1fr; }
+            .pcard-featured { grid-column: span 1 !important; }
+        }
+
+        /* --- Base Card --- */
+        .pcard {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #050e18;
+            border: 1px solid rgba(255,255,255,0.07);
+            opacity: 0;
+            transform: translateY(55px);
+            will-change: transform, opacity;
+            transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.08s ease;
+        }
+        .pcard.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.7s ease, transform 0.7s ease,
+                        box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .pcard:hover {
+            box-shadow: 0 0 0 1.5px rgba(1,160,216,0.5),
+                        0 30px 70px rgba(0,0,0,0.7),
+                        0 0 50px rgba(1,160,216,0.12);
+            border-color: rgba(1,160,216,0.5);
+        }
+        .pcard-green:hover {
+            box-shadow: 0 0 0 1.5px rgba(149,201,81,0.5),
+                        0 30px 70px rgba(0,0,0,0.7),
+                        0 0 50px rgba(149,201,81,0.1);
+            border-color: rgba(149,201,81,0.5);
+        }
+
+        /* --- Featured card --- */
+        .pcard-featured .pcard-img { height: 100%; min-height: 460px; }
+        .pcard-small   .pcard-img { height: 240px; }
+
+        /* --- Image wrapper --- */
+        .pcard-img {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+        .pcard-img img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.5s ease;
+            filter: brightness(0.82) saturate(1.1);
+        }
+        .pcard:hover .pcard-img img {
+            transform: scale(1.07);
+            filter: brightness(1) saturate(1.15);
+        }
+
+        /* --- Cinematic overlay --- */
+        .pcard-overlay {
+            position: absolute; inset: 0; z-index: 2;
+            background: linear-gradient(
+                to top,
+                rgba(0,13,22,1)    0%,
+                rgba(0,13,22,0.78) 30%,
+                rgba(0,13,22,0.15) 65%,
+                transparent        100%
+            );
+            transition: opacity 0.4s ease;
+        }
+        .pcard:hover .pcard-overlay { opacity: 0.88; }
+
+        /* --- Mouse-follow shimmer overlay --- */
+        .pcard-shimmer {
+            position: absolute; inset: 0; z-index: 3;
+            pointer-events: none;
+            background: radial-gradient(
+                400px circle at var(--mx, 50%) var(--my, 50%),
+                rgba(255,255,255,0.06),
+                transparent 60%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .pcard:hover .pcard-shimmer { opacity: 1; }
+
+        /* --- Large faded project number --- */
+        .pcard-number {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            z-index: 4;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            color: rgba(255,255,255,0.06);
+            letter-spacing: -0.05em;
+            pointer-events: none;
+            user-select: none;
+            transition: color 0.4s ease;
+        }
+        .pcard:hover .pcard-number { color: rgba(255,255,255,0.10); }
+        .pcard-featured .pcard-number { font-size: 8rem; }
+
+        /* --- Category badge with glowing dot --- */
+        .pcard-badge {
+            position: absolute;
+            top: 16px; left: 16px;
+            z-index: 10;
+            display: flex; align-items: center; gap: 7px;
+            font-size: 9px; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 6px 12px 6px 10px;
+            border-radius: 999px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(1,160,216,0.45);
+            background: rgba(0,13,22,0.55);
+            color: #6fdcff;
+            transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+        .pcard:hover .pcard-badge {
+            background: rgba(1,160,216,0.18);
+            box-shadow: 0 0 12px rgba(1,160,216,0.3);
+        }
+        .pcard-badge-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #01a0d8;
+            flex-shrink: 0;
+            animation: dot-pulse 2s infinite;
+        }
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.5; transform: scale(0.7); }
+        }
+        .pcard-green .pcard-badge {
+            border-color: rgba(149,201,81,0.45);
+            color: #b5e878;
+        }
+        .pcard-green:hover .pcard-badge {
+            background: rgba(149,201,81,0.15);
+            box-shadow: 0 0 12px rgba(149,201,81,0.25);
+        }
+        .pcard-green .pcard-badge-dot { background: #95C951; }
+
+        /* --- Bottom content body --- */
+        .pcard-body {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            z-index: 10;
+            padding: 22px 24px 20px;
+        }
+
+        /* Thin brand-color top accent line */
+        .pcard-body::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(to right, #01a0d8, #95C951);
+            margin-bottom: 14px;
+            transition: width 0.5s cubic-bezier(0.25,0.8,0.25,1);
+        }
+        .pcard:hover .pcard-body::before { width: 50px; }
+
+        .pcard-title {
+            font-size: 1.15rem; font-weight: 700;
+            color: #fff; line-height: 1.3; margin-bottom: 0;
+            transition: transform 0.4s ease;
+        }
+        .pcard-featured .pcard-title { font-size: 1.8rem; }
+        .pcard:hover .pcard-title { transform: translateY(-2px); }
+
+        .pcard-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.65;
+            margin-top: 8px;
+            max-height: 0; overflow: hidden; opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.4s ease;
+        }
+        .pcard:hover .pcard-desc { max-height: 80px; opacity: 1; }
+
+        /* --- Visit Website button --- */
+        .pcard-link {
+        }
+        .pcard-link .link-arrow {
+            transition: transform 0.25s ease;
+        }
+        .pcard-link:hover .link-arrow {
+            transform: translateX(4px);
+        }
+
+        /* --- Glow border on hover --- */
+        .pcard::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            border: 1.5px solid transparent;
+            background: linear-gradient(135deg, rgba(1,160,216,0), rgba(1,160,216,0)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            z-index: 20;
+        }
+        .pcard:hover::after {
+            opacity: 1;
+            background: linear-gradient(135deg, rgba(1,160,216,0.7), rgba(149,201,81,0.3)) border-box;
+            box-shadow: 0 0 30px rgba(1,160,216,0.2), 0 25px 60px rgba(0,0,0,0.6);
+        }
+        /* Simpler glow via box-shadow instead */
+        .pcard:hover {
+            box-shadow: 0 0 0 1px rgba(1,160,216,0.4), 0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(1,160,216,0.1);
+            border-color: rgba(1,160,216,0.4);
+        }
+        .pcard-green:hover {
+            box-shadow: 0 0 0 1px rgba(149,201,81,0.4), 0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(149,201,81,0.08);
+            border-color: rgba(149,201,81,0.4);
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -375,92 +624,115 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-     <!-- Case Study -->
-    <div class="w-full bg-white relative z-20 -mt-2 sm:-mt-6 rounded-t-[30px] sm:rounded-t-[50px] shadow-[0_-15px_40px_rgba(0,0,0,0.3)] border-t border-[#01a0d8]/20">
-        <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 sm:pt-16 sm:pb-20 text-center">
+    <!-- ═══════════════════════════════════════════════════
+         PREMIUM EDITORIAL PORTFOLIO GRID
+    ════════════════════════════════════════════════════ -->
+    <div class="w-full bg-[#000d16] relative z-20" style="border-top: 1px solid rgba(1,160,216,0.1);">
 
+        <!-- Ambient blobs -->
+        <div class="absolute top-10 left-1/3 w-[500px] h-[500px] rounded-full bg-[#01a0d8] opacity-[0.04] blur-[130px] pointer-events-none"></div>
+        <div class="absolute bottom-20 right-1/4 w-[400px] h-[400px] rounded-full bg-[#95C951] opacity-[0.04] blur-[110px] pointer-events-none"></div>
 
+        <section id="case-studies" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24 sm:pt-20 sm:pb-32">
 
-        <!-- Case Study Cards Grid -->
-        <div id="caseStudiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-8 w-full max-w-7xl mx-auto">
-            <?php
-            $sql = "SELECT cs.id, cs.mockup_image, cs.background_image, cs.brand_name, cs.short_description, cs.link_of_case_study,
-                   GROUP_CONCAT(csc.category_name SEPARATOR ', ') AS categories
-            FROM case_studies cs
-            LEFT JOIN case_study_category_bridge bridge ON cs.id = bridge.case_study_id
-            LEFT JOIN case_study_categories csc ON bridge.category_id = csc.id
-            WHERE cs.status = 'active'
-            GROUP BY cs.id
-            ORDER BY cs.created_at DESC";
+            <!-- Section Header -->
+            <div class="mb-12 sm:mb-16">
+                <span class="section-title-bar"></span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Our Work</h2>
+                <p class="text-gray-400 mt-4 text-base sm:text-lg max-w-2xl leading-relaxed">Explore the digital experiences we've crafted &mdash; from powerful Shopify stores to scalable enterprise systems.</p>
+            </div>
 
-            $result = $conn->query($sql);
+            <!-- Editorial Cards Grid -->
+            <div id="caseStudiesGrid" class="portfolio-editorial-grid">
+                <?php
+                $sql = "SELECT cs.id, cs.mockup_image, cs.background_image, cs.brand_name, cs.short_description, cs.link_of_case_study,
+                       GROUP_CONCAT(csc.category_name SEPARATOR ', ') AS categories
+                FROM case_studies cs
+                LEFT JOIN case_study_category_bridge bridge ON cs.id = bridge.case_study_id
+                LEFT JOIN case_study_categories csc ON bridge.category_id = csc.id
+                WHERE cs.status = 'active'
+                GROUP BY cs.id
+                ORDER BY cs.created_at DESC";
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    // ✅ Replace underscores with spaces in categories
-                    $categories = str_replace('_', ' ', $row['categories']);
+                $result = $conn->query($sql);
 
-                    // ✅ Convert categories for filtering (data attribute)
-                    $dataCategory = strtolower(str_replace(' ', '-', $categories));
+                if ($result->num_rows > 0) {
+                    $index = 0;
+                    while ($row = $result->fetch_assoc()) {
+                        $categories = str_replace('_', ' ', $row['categories']);
+                        $hasLink = !empty($row['link_of_case_study']);
+                        $href = $hasLink ? htmlspecialchars($row['link_of_case_study']) : '#';
 
-                    // ✅ Conditional Arrow (only show if link exists)
-                    $arrow = !empty($row['link_of_case_study']) ? '
-                <div class="flex-shrink-0">
-                    <a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank">
-                        <img src="images/icons/arrrow_color.svg" class="w-8 h-8 transition-opacity duration-300 group-hover:hidden" alt="Arrow Icon">
-                        <img src="images/icons/arrrow_white.svg" class="w-8 h-8 transition-opacity duration-300 hidden group-hover:block" alt="Arrow Icon White">
-                    </a>
-                </div>
-            ' : '';
+                        $groupIndex = intdiv($index, 3); // row-group: 0,1,2...
+                        $posInGroup = $index % 3;        // 0=featured, 1,2=small
+                        $startRow   = $groupIndex * 2 + 1;
 
-                    echo '
-            <div class="w-full flex flex-col" data-category="' . htmlspecialchars($dataCategory) . '">
-                <!-- Image Wrapper -->
-                <' . (!empty($row['link_of_case_study']) ? 'a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank"' : 'div') . ' class="relative block w-full aspect-square overflow-hidden rounded-[24px] group shadow-md cursor-pointer">
-                    <!-- Main Image -->
-                    <img src="' . htmlspecialchars($row['mockup_image']) . '" alt="' . htmlspecialchars($row['brand_name']) . '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <!-- Gradient Overlay at bottom for text readability -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
-                    
-                    <!-- Category Badge -->
-                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-white/15 backdrop-blur-md text-white text-[9px] sm:text-[10px] uppercase tracking-wider px-2.5 py-1 sm:px-3 rounded-full border border-white/20">
+                        $isFeatured = ($posInGroup === 0);
+                        $isEven     = ($groupIndex % 2 === 0); // even group → featured LEFT
+                        $isGreen    = ($index % 2 === 1);
+
+                        // Alternating grid placement
+                        if ($isFeatured) {
+                            $col       = $isEven ? '1 / span 2' : '2 / span 2';
+                            $gridStyle = "grid-column:{$col};grid-row:{$startRow}/span 2;";
+                        } else {
+                            $smallRow  = $startRow + ($posInGroup - 1);
+                            $col       = $isEven ? '3' : '1';
+                            $gridStyle = "grid-column:{$col};grid-row:{$smallRow};";
+                        }
+
+                        $cardClass  = 'pcard';
+                        $cardClass .= $isFeatured ? ' pcard-featured' : ' pcard-small';
+                        $cardClass .= $isGreen    ? ' pcard-green'    : '';
+
+                        $num      = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
+                        $linkHtml = $hasLink ? '
+                            <a href="' . $href . '" target="_blank" class="pcard-link">
+                                Visit Website
+                                <i class="fa-solid fa-arrow-right link-arrow"></i>
+                            </a>' : '';
+
+                        echo '
+                <div class="' . $cardClass . '" data-index="' . $index . '" style="' . $gridStyle . '">
+
+                    <!-- Mouse-follow shimmer -->
+                    <div class="pcard-shimmer"></div>
+
+                    <!-- Faded project number -->
+                    <div class="pcard-number">' . $num . '</div>
+
+                    <!-- Category badge with live dot -->
+                    <div class="pcard-badge">
+                        <span class="pcard-badge-dot"></span>
                         ' . htmlspecialchars($categories) . '
                     </div>
 
-                    <!-- Title Overlaid at Bottom Left -->
-                    <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-left">
-                        <h3 class="text-lg sm:text-2xl font-bold text-white tracking-tight leading-tight truncate whitespace-nowrap overflow-hidden text-ellipsis text-left">'
-                        . htmlspecialchars($row['brand_name']) . '
-                        </h3>
+                    <!-- Image -->
+                    <div class="pcard-img">
+                        <img src="' . htmlspecialchars($row['mockup_image']) . '"
+                             alt="' . htmlspecialchars($row['brand_name']) . '"
+                             loading="lazy">
+                        <div class="pcard-overlay"></div>
                     </div>
-                </' . (!empty($row['link_of_case_study']) ? 'a' : 'div') . '>
-                
-                <!-- Info Section (Outside the image) -->
-                <div class="pt-3 sm:pt-4 pb-2 flex flex-col flex-grow items-start text-left">
-                    <p class="text-[#000d16] text-sm sm:text-base font-normal leading-relaxed mb-3 text-left w-full line-clamp-2">
-                        ' . htmlspecialchars($row['short_description']) . '
-                    </p>
-                    ' . (!empty($row['link_of_case_study']) ? '
-                    <a href="' . htmlspecialchars($row['link_of_case_study']) . '" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-[#000d16] hover:text-[#01a0d8] hover:underline hover:decoration-[#01a0d8] transition-all group/link w-fit text-left">
-                        <span>Visit website</span>
-                        <span class="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-                    </a>
-                    ' : '') . '
-                </div>
-            </div>';
+
+                    <!-- Info body -->
+                    <div class="pcard-body">
+                        <h3 class="pcard-title">' . htmlspecialchars($row['brand_name']) . '</h3>
+                        <p class="pcard-desc">' . htmlspecialchars($row['short_description']) . '</p>
+                        ' . $linkHtml . '
+                    </div>
+                </div>';
+
+                        $index++;
+                    }
+                } else {
+                    echo "<p class='text-gray-400 text-center py-16 col-span-3'>No case studies found.</p>";
                 }
-            } else {
-                echo "<p class='text-gray-400 text-center'>No case studies found.</p>";
-            }
+                $conn->close();
+                ?>
+            </div>
 
-            $conn->close();
-            ?>
-        </div>
-
-
-
-    </section>
+        </section>
     </div>
     
     <!-- Call to Action Banner -->
@@ -633,6 +905,53 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="script/navbar.js"></script>
     <script src="script/portfolio.js"></script>
     <script src="script/portfolio_GSAP.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        /* ── Scroll-reveal for portfolio cards ── */
+        const cards = document.querySelectorAll('.pcard');
+        if (cards.length) {
+            const revealObs = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const idx = parseInt(entry.target.dataset.index || 0);
+                        const delay = (idx % 3) * 120;
+                        setTimeout(() => entry.target.classList.add('revealed'), delay);
+                        revealObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            cards.forEach(c => revealObs.observe(c));
+        }
+
+        /* ── 3D Tilt + Mouse-follow shimmer ── */
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const cx = rect.width  / 2;
+                const cy = rect.height / 2;
+
+                // 3D tilt
+                const rotX = ((y - cy) / cy) * -5;
+                const rotY = ((x - cx) / cx) *  5;
+                card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+
+                // shimmer position (as percentages)
+                const px = (x / rect.width)  * 100;
+                const py = (y / rect.height) * 100;
+                card.style.setProperty('--mx', px + '%');
+                card.style.setProperty('--my', py + '%');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.removeProperty('--mx');
+                card.style.removeProperty('--my');
+            });
+        });
+    });
+    </script>
 
 
 </body>

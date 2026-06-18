@@ -1543,9 +1543,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
             <!-- Title + pulsing active badge -->
             <div class="flex items-center justify-center gap-3 mb-3 flex-wrap">
                 <h2 class="text-3xl md:text-4xl font-light text-white">Our Shopify <b>Services</b></h2>
-                <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.3); color:#22c55e;">
-                    <span class="pulse-dot"></span> 4 active services
-                </span>
+                
             </div>
             <p class="font-light leading-relaxed text-white/70 w-[75%] mx-auto">
                 Launch faster. Scale smarter. At Qonkar, we build custom Shopify stores that are fast,
@@ -1754,7 +1752,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         <!-- See all services link -->
         <div class="text-center mt-10">
             <a href="/contact-us" class="inline-flex items-center gap-2 text-sm font-semibold text-[#01a0d8] hover:text-white transition-colors duration-300 group">
-                See all services
+                Get Free Consultation
                 <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
@@ -2051,7 +2049,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
             initHorizontalEffects();
         }
     })();
-    </script>section>
+    </script>
 
 
 

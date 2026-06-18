@@ -672,344 +672,368 @@ require_once ADMIN_URL.'/database_config.php';
             <p class="max-w-3xl mx-auto  mb-12 text-sm sm:text-base">
                 From design to strategy, every member plays a key role in your digital success. </p>
 
-            <div class="team-cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                                    <div class="team-cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/M-Owais.webp" alt="Muhammad Owais"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/M-Owais.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muhammad Owais</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">CEO</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muhammad Owais</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">CEO</p>
-
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/muhammadowaisrehmani/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/arsalan.webp" alt="Muhammad Arslan"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/arsalan.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muhammad Arslan</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">COO</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muhammad Arslan</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">COO</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/devmarslan" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/Abdul-Rehman.webp" alt="Abdul Rehman"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/Abdul-Rehman.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Abdul Rehman</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">SEO Specialist</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Abdul Rehman</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">SEO Specialist</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/abdul-rehman-jatt/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/hassan_waheed_pic.webp" alt="Hassan Waheed"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/hassan_waheed_pic.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Hassan Waheed</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Business Development Manager</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Hassan Waheed</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Business Development Manager</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="#" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/alina.webp" alt="Alina Ahmed"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/alina.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Alina Ahmed</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">HR Manager</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Alina Ahmed</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Project Manager</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/alina-ahmed-55a504266/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/muqadas.webp" alt="Muqadas Lakho"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/muqadas.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muqadas Lakho</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Jr. SEO</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muqadas Lakho</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Jr. SEO</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/muqadas-lakho-6243b9298" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/zain.webp" alt="Muhammad Zain"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/zain.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muhammad Zain</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">AI Engineer</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muhammad Zain</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">AI Engineer</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/muhammad-zain-rehmani/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/huzaifa.webp" alt="Huzaifa Haris"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/huzaifa.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Huzaifa Haris</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Software Engineer</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Huzaifa Haris</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Software Engineer</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/huzaifa-haris-aa8281262/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/faraz.webp" alt="Muhammad Faraz"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
-
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/faraz.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muhammad Faraz</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Software Engineer</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muhammad Faraz</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Software Engineer</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/muhammadfaraz-abbasi" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/Tooba.webp" alt="Tooba"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/Tooba.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Tooba</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Graphics Designer</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Tooba</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Graphics Designer</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/toobaayoub" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                
-                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/Bisma.webp" alt="Bisma"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/Bisma.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Bisma</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">SEO Intern</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Bisma</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">SEO Intern</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/bisma-a-khan-018b85386/" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-                                <div class="team-card hidden relative rounded-xl border border-[var(--secondary-color)]">
-                    <div
-                        class="background-backdrop-card rounded-xl bg-black/40 hover:shadow-xl transition-all flex flex-col items-center text-center p-6 relative z-10 gap-4">
+                <div class="team-card hidden group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-[#000810]">
+                    <!-- Background Image -->
+                    <div class="w-full h-[340px] pointer-events-none">
+                        <img src="/images/staff/Muskan.webp" alt="Muskan"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#000d16] via-[#000d16]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                        <div class="w-48 h-48 flex items-center justify-center overflow-hidden rounded-md">
-                            <img src="/images/staff/Muskan.webp" alt="Team Member"
-                                class="w-full h-full object-cover object-top rounded-md">
+                    <!-- Content -->
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                            <h3 class="text-xl font-bold text-white mb-1">Muskan</h3>
+                            <p class="text-[#01a0d8] font-medium text-sm tracking-wide">Social Media Manager</p>
                         </div>
-
-                        <div class="flex flex-col items-center justify-between">
-                            <div>
-                                <h3 class="text-xl font-medium text-white">Muskan</h3>
-                                <p class="text-[var(--secondary-color)] text-xl mt-1">Social Media Manager</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex items-center justify-center mt-4">
+                        
+                        <!-- Connect Button (Slide up on hover) -->
+                        <div class="absolute bottom-6 left-6 right-6 opacity-0 transform translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-auto">
                             <a href="https://www.linkedin.com/in/muskan-rathore-658354251" target="_blank"
-                                class="flex items-center gap-2 bg-[var(--secondary-color)] text-white hover:bg-white hover:text-[var(--secondary-color)] px-4 py-2 rounded-full font-medium text-sm hover:bg-[var(--secondary-color)]/90 transition-all duration-300 shadow-md">
+                                class="flex items-center justify-center gap-2 w-full bg-white/5 backdrop-blur-md border border-white/20 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:bg-[#01a0d8] hover:border-[#01a0d8] hover:text-[#001220] transition-all duration-300 relative z-20">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                                 <span>Connect</span>
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Border glow on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl group-hover:border-[#01a0d8]/60 transition-colors duration-500"></div>
                 </div>
-
             </div>
-
 
             <div class="text-center">
                 <button id="view-team-btn"
@@ -1320,7 +1344,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex flex-col gap-0">

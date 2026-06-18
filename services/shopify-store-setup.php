@@ -299,52 +299,68 @@ require_once "../".ADMIN_URL.'/database_config.php';
             </div>
         </section>
         
-        <section class="mt-4 bg-[var(--body-bg)] flex flex-col items-center justify-center h-[30vh] overflow-hidden relative">
-        <h2 class="text-white text-2xl font-light mb-10 text-center">
-           Trusted by Top Brands </h2>
+    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-5 md:mt-6 mb-5 md:mb-6">
 
-        <div class="relative overflow-hidden w-full">
-            <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 ">
-                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="w-14 ">
-                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
-                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
-                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
-                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation"
-                    class="w-14 object-contain" />
-                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
+        <div class="relative overflow-hidden w-full group">
+            <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 group-hover:[animation-play-state:paused] cursor-pointer">
+                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-7 md:h-8 object-contain" />
 
-                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="w-14 ">
-                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="w-20">
-                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="w-20 object-contain" />
-                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-20 object-contain" />
-                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance"
-                    class="h-8 object-contain" />
-                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation"
-                    class="w-14 object-contain" />
-                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-8 object-contain" />
-                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-8 object-contain" />
-                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-28 object-contain" />
+                <img src="/images/company-logos/CAINTE.webp" alt="Cainte Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/CENTRA.webp" alt="Centra Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/derma-space.webp" alt="Derma Space Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/govt-sindh.webp" alt="Government of Sindh" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/quest.webp" alt="Quaid-e-Awam University of Engineering, Science and Technology" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/PSEB_white.webp" alt="Pakistan software Export Board" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="h-10 md:h-12 object-contain" />
+                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MICROSOFT.webp" alt="Microsoft Partner" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/power-culture.webp" alt="Power Culture Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/THALASEMIA.webp" alt="Thalassemia Foundation" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/MAINE.webp" alt="Maine Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/earsound.webp" alt="Earsound Insurance" class="h-7 md:h-8 object-contain" />
+                <img src="/images/company-logos/upwork.webp" alt="Upwork Partner" class="h-7 md:h-8 object-contain" />
             </div>
 
         </div>
     </section>
     </div>
+
+    <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+
+            <div class="order-2 lg:order-1 flex justify-center">
+                <img src="/images/shopify-theme-design-services.webp" alt="Our Client" class="w-[90%] max-w-md h-auto">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+
+                <div class="section-pill mb-0">SERVICES</div>
+
+
+                <h2 class="text-3xl md:text-4xl  text-white">
+                    Architected for <b>Scale</b> & <b>Global Growth</b>
+                </h2>
+
+                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  A Shopify store is more than just a website; it's a financial engine. We configure your store's backend, tax settings, shipping zones, and inventory systems to handle high transaction volumes without breaking.
+                </p>
+
+            </div>
+        </div>
+    </section>
 
     <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
@@ -1204,7 +1220,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
     </section>
 
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex flex-col gap-0">

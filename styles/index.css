@@ -11,10 +11,14 @@
   --body-bg: #000d16;
 }
 
-body {
+html, body {
   background-color: var(--body-bg);
   font-family: "Lexend", sans-serif;
   color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .glass-border {
@@ -201,4 +205,37 @@ body {
 .tab-btn:not(.active):hover {
   color: #01a0d8;
   background-color: rgba(1, 160, 216, 0.1);
+}
+
+/* ✅ Ambient Glowing Blobs & Animations */
+@keyframes blob-bounce {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob-bounce 12s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* ✅ Pause horizontal brand scroll on hover */
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
 }

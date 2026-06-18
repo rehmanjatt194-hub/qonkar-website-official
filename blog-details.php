@@ -397,7 +397,7 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
     </section>
 
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8 ">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex flex-col gap-0">

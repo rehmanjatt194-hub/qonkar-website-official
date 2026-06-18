@@ -849,7 +849,6 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -857,8 +856,6 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         </div>
     </section>
 
-<!-- Scroll Intersection Observer Animation and Interactive Process JS -->
-    <script>
 <!-- Scroll Intersection Observer Animation and Interactive Process JS -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -1231,9 +1228,9 @@ require_once "../" . ADMIN_URL . '/database_config.php';
         }
     });
     </script>
-    </script>
 
     <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        <div class="max-w-7xl mx-auto">
 
             <!-- Section Header -->
             <div class="text-center mb-16">

@@ -63,6 +63,76 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
       html {
         scroll-behavior: smooth;
       }
+      .mouse-hover-card {
+          position: relative;
+          overflow: hidden;
+          background-color: #071824;
+          border: 1px solid #1a3a4a;
+          border-radius: 14px;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .mouse-hover-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(350px circle at var(--x, 0px) var(--y, 0px), rgba(1, 160, 216, 0.12), transparent 80%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+          z-index: 2;
+      }
+      .mouse-hover-card:hover::before {
+          opacity: 1;
+      }
+      .mouse-hover-card:hover {
+          border-color: #01a0d8;
+          box-shadow: 0 0 0 1px #01a0d8, 0 12px 30px -10px rgba(1, 160, 216, 0.2);
+      }
+      .icon-circle {
+          border-color: rgba(255, 255, 255, 0.15);
+      }
+      .mouse-hover-card:hover .icon-circle {
+          border-color: #01a0d8;
+      }
+      .icon-tint {
+          filter: brightness(0) invert(1);
+          transition: filter 0.3s ease;
+      }
+      .mouse-hover-card:hover .icon-tint {
+          filter: invert(51%) sepia(82%) saturate(2250%) hue-rotate(167deg) brightness(93%) contrast(101%);
+      }
+      .scroll-reveal-card {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .scroll-reveal-card.visible {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      .section-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 4px 12px;
+          border-radius: 9999px;
+          border: 1px solid rgba(61, 191, 138, 0.25); /* #3dbf8a40 */
+          background-color: rgba(61, 191, 138, 0.05);
+          font-size: 0.75rem; /* text-xs */
+          font-weight: 600;
+          color: #3dbf8a;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 1rem;
+      }
+      .section-pill::before {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 9999px;
+          background-color: #3dbf8a;
+      }
     </style>
 </head>
 
@@ -925,267 +995,259 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
     
     
     
-    <section
-        class="relative bg-[var(--body-bg)] text-white py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        <div class="max-w-7xl mx-auto">
 
-        <div class="relative text-center mb-24 z-10">
-            <div class="glass-border inline-flex items-center gap-3 mb-8">
-                <div class="glass-background">
-                    <div class="glass flex items-center gap-3 text-sm font-light uppercase tracking-wide">
-                        &#9679; &nbsp; Qonkar E-Commerce Excellence
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
+                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                    &#9679; &nbsp;Qonkar E-Commerce Excellence
+                </span>
+                <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
+                    End-to-End <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Solutions</span>
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
+                    From custom theme architecture to complex headless integrations, we build e-commerce ecosystems that dominate the market.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="flex flex-col gap-8">
+
+                <!-- Card 1: Bespoke Storefront Architecture -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Shopify Theme Development"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
-                </div>
-            </div>
-
-            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">
-                End-to-End <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] font-bold">Shopify
-                    Solutions</span>
-            </h2>
-            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light">From custom theme architecture to
-                complex headless integrations, we build e-commerce ecosystems that dominate the market.</p>
-        </div>
-
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Shopify Theme Development"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Bespoke <b>Storefront Architecture</b>
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
-                    <a href="/contact-us"
-                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">Shopify
-                        development partner</a>,
-                    we translate your brand identity into a high-converting digital experience.
-                </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Pixel-Perfect Figma to Liquid</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Mobile-First Responsive Design</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg> Advanced Filtering & Search Setup</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Shopify Plus Enterprise"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Enterprise <b>Shopify Plus</b> Experts
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Scale without limits. Our
-                    <a href="/contact-us"
-                        class="text-[var(--primary-color)] font-medium border-b border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] transition-colors pb-0.5">Enterprise
-                        developers</a>
-                    leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout
-                    extensibility.
-                </p>
-                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
-                    <div>
-                        <h4
-                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
-                            10k+</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Orders Per Minute</p>
-                    </div>
-                    <div>
-                        <h4
-                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] mb-1">
-                            99.9%</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Server Uptime</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Custom Shopify Apps"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Private & <b>Custom App</b> Development
-                </h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Bridge functionality gaps with custom-coded apps. Whether it’s complex ERP syncing, specialized
-                    product builders, or unique loyalty programs, our
-                    <a href="/contact-us"
-                        class="text-[var(--secondary-color)] font-medium border-b border-[var(--secondary-color)]/30 hover:border-[var(--secondary-color)] transition-colors pb-0.5">engineering
-                        team</a>
-                    has you covered.
-                </p>
-                <div class="flex flex-wrap gap-3 mt-4">
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Node.js</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">React
-                        / Polaris</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">GraphQL
-                        API</span>
-                    <span
-                        class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300">Laravel</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="E-Commerce Migration"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Zero-Downtime <b>Migrations</b></h3>
-                <p class="text-white/90 text-lg leading-relaxed mb-3 font-light">
-                    Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so
-                    you don't lose a single customer or ranking during the transition.
-                </p>
-                <div class="bg-black/30 p-5 rounded-2xl border border-white/5 flex items-center justify-between">
-                    <div class="text-white/90 font-semibold text-sm">Magento / Woo</div>
-                    <div class="flex-1 px-4 flex items-center justify-center">
-                        <div
-                            class="h-[2px] w-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--secondary-color)] relative">
-                            <svg class="w-6 h-6 text-[var(--secondary-color)] absolute right-[-5px] top-1/2 -translate-y-1/2"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                            </svg>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Bespoke <b>Storefront Architecture</b></h3>
                         </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
+                            <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">Shopify development partner</a>,
+                            we translate your brand identity into a high-converting digital experience.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Pixel-Perfect Figma to Liquid
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Mobile-First Responsive Design
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Advanced Filtering &amp; Search Setup
+                            </li>
+                        </ul>
                     </div>
-                    <div
-                        class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-bold py-1.5 px-4 rounded-lg text-sm">
-                        Shopify Plus</div>
                 </div>
-            </div>
-        </div>
 
-        <div class="relative flex flex-col md:flex-row items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
-                </div>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Speed Optimization"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Speed <b>Optimization & CRO</b></h3>
-                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
-                    A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and
-                    restructure Liquid logic to deliver blazing-fast loading speeds.
-                </p>
-                <div class="space-y-5">
-                    <div>
-                        <div class="flex justify-between text-sm font-semibold mb-2">
-                            <span class="text-gray-300 font-light">Performance Score</span>
-                            <span class="text-[var(--secondary-color)]">98/100</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
-                                style="width: 98%"></div>
-                        </div>
+                <!-- Card 2: Shopify Plus (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Shopify Plus Enterprise"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
-                    <div>
-                        <div class="flex justify-between text-sm font-semibold mb-2">
-                            <span class="text-gray-300 font-light">Conversion Rate Uplift</span>
-                            <span class="text-[var(--primary-color)]">+35%</span>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Enterprise <b>Shopify Plus</b> Experts</h3>
                         </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] h-2 rounded-full"
-                                style="width: 85%">
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Scale without limits. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">Enterprise developers</a> leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout extensibility.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">10k+</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Orders Per Minute</p>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">99.9%</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Server Uptime</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="relative flex flex-col md:flex-row-reverse items-stretch gap-10 mb-10 z-10">
-            <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-none border border-white/10">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-[var(--body-bg)] via-transparent to-transparent z-10">
+                <!-- Card 3: Custom App Development -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Custom Shopify Apps"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Private &amp; <b>Custom App</b> Development</h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Bridge functionality gaps with custom-coded apps. Whether it's complex ERP syncing, specialized product builders, or unique loyalty programs, our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">engineering team</a> has you covered.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Node.js</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">React / Polaris</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">GraphQL API</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Laravel</span>
+                        </div>
+                    </div>
                 </div>
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Headless Commerce"
-                    class="relative w-full h-full object-cover transition duration-700 group-hover:scale-105 min-h-[400px] rounded-3xl">
-            </div>
-            <div
-                class="w-full md:w-1/2 bg-white/[0.02] border border-white/5 p-8 md:p-10 rounded-3xl backdrop-blur-xl transition duration-500 flex flex-col justify-center min-h-[400px]">
-                <h3 class="text-3xl md:text-3xl font-light mb-2 leading-tight">Future-Proof <b>Headless Commerce</b>
-                </h3>
-                <p class="text-gray-400 text-lg leading-relaxed mb-3 font-light">
-                    Decouple your front-end from the backend. We build lightning-fast, highly customizable headless
-                    experiences using <span class="text-white font-semibold">Hydrogen & Next.js</span> while keeping
-                    Shopify as your powerful engine.
-                </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg> Omnichannel Selling Power</li>
-                    <li class="flex items-center gap-3 text-gray-300 font-light"><svg
-                            class="w-6 h-6 text-[var(--secondary-color)]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg> Complete Design Freedom</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="text-center mt-16 relative z-10">
-            <a href="/contact-us"
-                class="hero-btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--primary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white shadow-none">
-                Discuss Your Project With Us
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
+                <!-- Card 4: Zero-Downtime Migrations (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="E-Commerce Migration"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Zero-Downtime <b>Migrations</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so you don't lose a single customer or ranking during the transition.
+                        </p>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
+                            <span class="font-semibold text-sm" style="color:#374151;">Magento / Woo</span>
+                            <div class="flex-1 flex items-center justify-center">
+                                <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Shopify Plus</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Card 5: Speed Optimization -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Speed Optimization"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>Optimization &amp; CRO</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and restructure Liquid logic to deliver blazing-fast loading speeds.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">Performance Score</span>
+                                    <span style="color:#2fadc3; font-weight:700;">98/100</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:98%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">Conversion Rate Uplift</span>
+                                    <span style="color:#3f89c9; font-weight:700;">+35%</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:85%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Headless Commerce (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Headless Commerce"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Future-Proof <b>Headless Commerce</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Decouple your front-end from the backend. We build lightning-fast, highly customizable headless experiences using <span style="color:#0a1628; font-weight:600;">Hydrogen &amp; Next.js</span> while keeping Shopify as your powerful engine.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Omnichannel Selling Power
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Complete Design Freedom
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-14">
+                <a href="/contact-us"
+                    class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c);">
+                    Discuss Your Project With Us
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
     
@@ -1317,12 +1379,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
 
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2 space-y-4">
-                    <div class="glass-border inline-block mb-4">
-                        <div class="glass-background">
-                            <div class="glass text-sm font-light">
-                                <p>&#9679; &nbsp;SEO PROTECTION</p>
-                            </div>
-                        </div>
+                    <div class="section-pill">
+                        SEO PROTECTION
                     </div>
                     <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
                         Keep Your <b>Rankings</b>
@@ -1333,44 +1391,55 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 </div>
 
                 <div class="md:w-1/2 flex flex-col gap-3">
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                         border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
                             <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
-                        <img src="/images/icons/services/05_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/05_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
-                        <div class="relative z-10">
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">301 Redirect Mapping</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 We map thousands of old URLs to new ones, preventing "404 Not Found" errors and preserving link equity.
                             </p>
                         </div>
                     </div>
 
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                            border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
                             <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/07_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/07_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Zero Downtime</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 We build your new store on a staging environment. Your current site stays live and selling until the exact moment we flip the switch.
                             </p>
                         </div>
@@ -1381,47 +1450,55 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
 
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2 flex flex-col gap-3 order-2 md:order-1">
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                         border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Card 3 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
                             <img src="/images/services_pictures/shopify_strategy.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/05_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/05_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">Customer Retention</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 We migrate customer accounts and send activation emails, so your loyal buyers can log in immediately on the new site.
                             </p>
                         </div>
                     </div>
 
-                    <div class="group background-backdrop relative flex gap-7 items-center p-6 rounded-lg shadow-lg overflow-hidden
-                          border border-[1.087px] border-[#2F2F2F]/50 bg-white/5 backdrop-blur-[200px]">
-
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Card 4 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
                             <img src="/images/services_pictures/shopify_marketing.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#046362]/60"></div>
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
                         </div>
 
-                        <img src="/images/icons/services/06_color.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 group-hover:hidden relative z-10"
-                            alt="">
-                        <img src="/images/icons/services/06_white.svg"
-                            class="w-12 h-12 flex-shrink-0 transition-all duration-500 hidden group-hover:block relative z-10"
-                            alt="">
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
 
-                        <div class="relative z-10">
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/06_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
                             <h3 class="text-2xl font-light mb-2 text-white">App Consolidation</h3>
-                            <p class="text-sm font-light leading-relaxed text-white">
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
                                 We replace expensive or redundant plugins from your old platform with integrated Shopify features or better alternatives.
                             </p>
                         </div>
@@ -1429,12 +1506,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 </div>
 
                 <div class="md:w-1/2 space-y-4 order-1 md:order-2">
-                    <div class="glass-border inline-block mb-4">
-                        <div class="glass-background">
-                            <div class="glass text-sm font-light">
-                                <p>&#9679; &nbsp;POST LAUNCH</p>
-                            </div>
-                        </div>
+                    <div class="section-pill">
+                        POST LAUNCH
                     </div>
                     <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
                         Seamless <b>Training</b>
@@ -1774,6 +1847,42 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
 </footer>
 
     
+    <script>
+    (function() {
+        function initHorizontalEffects() {
+            // Radial hover glow
+            document.querySelectorAll('.mouse-hover-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--x', `${x}px`);
+                    card.style.setProperty('--y', `${y}px`);
+                });
+            });
+
+            // Scroll reveal observer
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-reveal-card').forEach(card => {
+                revealObserver.observe(card);
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHorizontalEffects);
+        } else {
+            initHorizontalEffects();
+        }
+    })();
+    </script>
     <script src="/script/FAQ.js"></script>
     <script src="/script/navbar.js"></script>
 </body>

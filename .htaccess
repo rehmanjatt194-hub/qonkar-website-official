@@ -36,13 +36,13 @@ RewriteRule ^portfolio$ portfolio.php [L]
 RewriteRule ^blog/([^/]+)/?$ blog-details.php?slug=$1 [L,QSA]
 RewriteRule ^apply/([^/]+)/?$ apply-job.php?slug=$1 [L,QSA]
 
-# 6. Specific rule for Services
+# 6. Specific rule for Services (use REQUEST_FILENAME for reliable path check)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^services/(.+)$ services/$1.php [L]
 
-# 7. Global Clean URLs
+# 7. Global Clean URLs (e.g. /about-us -> /about-us.php)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f

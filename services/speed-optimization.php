@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -333,30 +333,6 @@ require_once "../".ADMIN_URL.'/database_config.php';
         </div>
     </section>
     </div>
-
-    <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/qonkar-shopify-speed-optimization-services.webp" alt="Shopify Speed Optimization and Performance Boost Services by Qonkar Technologies" class="w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-                <div class="section-pill mb-0">PERFORMANCE</div>
-
-
-                <h2 class="text-3xl md:text-4xl  text-white">
-                    Core Web Vitals <b>Mastery</b>
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Google now ranks sites based on speed. We optimize your LCP (Largest Contentful Paint), FID (First Input Delay), and CLS (Cumulative Layout Shift) to ensure you rank higher and convert better.
-                </p>
-
-            </div>
-        </div>
-    </section>
 
     <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">

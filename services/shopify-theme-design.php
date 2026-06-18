@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -499,29 +499,6 @@ require_once "../".ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-    <section class=" bg-[var(--body-bg)] py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-
-            <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/shopify development.png" alt="Our Client" class="w-full max-w-md h-auto">
-            </div>
-
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
-
-                <div class="section-pill mb-0">SERVICES</div>
-
-
-                <h2 class="text-3xl md:text-4xl  text-white">
-                    Design That Captures <b>Attention</b> & Converts <b>Intent</b>
-                </h2>
-
-                <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Your store is your digital flagship. We don't just "install themes." We architect visual systems that elevate your brand value. From intuitive navigation to high-fidelity product pages, we design interfaces that make purchasing irresistible for your US & UK customers.
-                </p>
-
-            </div>
-        </div>
-    </section>
 
     <section class="relative py-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl  text-center ">
         <div class="container mx-auto flex flex-col items-center gap-3">

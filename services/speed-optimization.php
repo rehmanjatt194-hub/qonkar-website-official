@@ -769,7 +769,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
-        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
+        <div class="text-center mb-12 bg-no-repeat bg-[length:40%] 
                 bg-[url('/images/background_curve.svg')] 
                 bg-[center_top_60px]">
             <h2 class="text-sm uppercase font-light text-white mb-6">
@@ -788,101 +788,201 @@ require_once "../".ADMIN_URL.'/database_config.php';
             <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
                 We fix the root cause of slow loading. From server-side rendering to script management, we fine-tune every aspect of your Shopify store.
             </p>
+
+            <!-- Filter buttons -->
+            <div class="flex items-center justify-center gap-3 mt-8 flex-wrap" id="svc-filters">
+                <button class="svc-filter-btn active" data-filter="all">All</button>
+                <button class="svc-filter-btn" data-filter="code">Code</button>
+                <button class="svc-filter-btn" data-filter="media">Media</button>
+                <button class="svc-filter-btn" data-filter="vitals">Core Web Vitals</button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+        <!-- ---- Cards Grid ---- -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto w-full" id="svc-cards-grid">
 
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+            <!-- Card 1: Code Minification & Cleanup -->
+            <div class="svc-card p-7 flex flex-col gap-5 border border-white/5" data-category="code" id="svc-card-1">
+                <!-- Top row: icon + badge -->
+                <div class="flex items-start justify-between">
+                    <div class="svc-icon-box">
+                        <img src="/images/icons/services/01_color.svg" class="w-7 h-7" alt="Code Minification icon">
                     </div>
+                    <span class="svc-badge badge-demand">In Demand</span>
+                </div>
 
-                    <img src="/images/icons/services/01_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/01_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Code Minification & Cleanup
+                <!-- Title + body -->
+                <div>
+                    <h3 class="text-2xl font-light mb-2 leading-snug">
+                        Code Minification &amp; Cleanup
                     </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                    <p class="text-sm leading-relaxed text-white/65 font-light">
                         We reduce the size of your HTML, CSS, and JavaScript files without breaking functionality. This leads to faster Time to First Byte (TTFB).
                     </p>
                 </div>
 
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                <!-- Progress bars -->
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 text-white/50"><span>Speed Score Improvement</span><span class="text-[#01a0d8] font-semibold">85%</span></div>
+                        <div class="svc-progress-track"><div class="svc-progress-fill" style="--prog-w:85%;"></div></div>
                     </div>
+                </div>
 
-                    <img src="/images/icons/services/02_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/02_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
+                <!-- Expand button -->
+                <button class="svc-expand-btn flex items-center gap-1.5 text-xs text-[#01a0d8] font-semibold w-fit mt-auto" onclick="toggleCard('svc-card-1')">
+                    What's included
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Checklist (hidden by default) -->
+                <div class="svc-checklist">
+                    <ul class="flex flex-col gap-2 pt-3 border-t border-white/5">
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>HTML, CSS, and JS minification</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Unused CSS/JS identification &amp; removal</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Render-blocking resources elimination</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Image & Media Compression
+            <!-- Card 2: Image & Media Compression -->
+            <div class="svc-card p-7 flex flex-col gap-5 border border-white/5" data-category="media" id="svc-card-2">
+                <!-- Top row: icon + badge -->
+                <div class="flex items-start justify-between">
+                    <div class="svc-icon-box">
+                        <img src="/images/icons/services/02_color.svg" class="w-7 h-7" alt="Image Compression icon">
+                    </div>
+                    <span class="svc-badge badge-new">New</span>
+                </div>
+
+                <!-- Title + body -->
+                <div>
+                    <h3 class="text-2xl font-light mb-2 leading-snug">
+                        Image &amp; Media Compression
                     </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                    <p class="text-sm leading-relaxed text-white/65 font-light">
                         We convert heavy images to Next-Gen formats (WebP/AVIF) and implement smart lazy-loading so your site looks sharp but loads instantly.
                     </p>
                 </div>
 
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                <!-- Progress bars -->
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 text-white/50"><span>Page Load Speed Boost</span><span class="text-[#85d55c] font-semibold">92%</span></div>
+                        <div class="svc-progress-track"><div class="svc-progress-fill" style="--prog-w:92%; background: linear-gradient(90deg,#85d55c,#2fadc3);"></div></div>
                     </div>
+                </div>
 
-                    <img src="/images/icons/services/03_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/03_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
+                <!-- Expand button -->
+                <button class="svc-expand-btn flex items-center gap-1.5 text-xs text-[#01a0d8] font-semibold w-fit mt-auto" onclick="toggleCard('svc-card-2')">
+                    What's included
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Checklist (hidden by default) -->
+                <div class="svc-checklist">
+                    <ul class="flex flex-col gap-2 pt-3 border-t border-white/5">
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Next-gen WebP/AVIF format conversion</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Smart lazy-loading &amp; responsive sizing</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Lossless compression of media assets</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+            <!-- Card 3: Third-Party Script Control -->
+            <div class="svc-card p-7 flex flex-col gap-5 border border-white/5" data-category="code" id="svc-card-3">
+                <!-- Top row: icon -->
+                <div class="flex items-start justify-between">
+                    <div class="svc-icon-box">
+                        <img src="/images/icons/services/03_color.svg" class="w-7 h-7" alt="Script Control icon">
+                    </div>
+                </div>
+
+                <!-- Title + body -->
+                <div>
+                    <h3 class="text-2xl font-light mb-2 leading-snug">
                         Third-Party Script Control
                     </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                    <p class="text-sm leading-relaxed text-white/65 font-light">
                         Apps like chat bots and reviews can kill speed. We defer and load these scripts only when needed, preventing main-thread blocking.
                     </p>
                 </div>
 
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+                <!-- Expand button -->
+                <button class="svc-expand-btn flex items-center gap-1.5 text-xs text-[#01a0d8] font-semibold w-fit mt-auto" onclick="toggleCard('svc-card-3')">
+                    What's included
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Checklist (hidden by default) -->
+                <div class="svc-checklist">
+                    <ul class="flex flex-col gap-2 pt-3 border-t border-white/5">
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Script execution deferral &amp; prioritization</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>App analysis &amp; bloat removal</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Google Tag Manager &amp; pixel optimization</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+            <!-- Card 4: Core Web Vitals Audit -->
+            <div class="svc-card p-7 flex flex-col gap-5 border border-white/5" data-category="vitals" id="svc-card-4">
+                <!-- Top row: icon -->
+                <div class="flex items-start justify-between">
+                    <div class="svc-icon-box">
+                        <img src="/images/icons/services/04_color.svg" class="w-7 h-7" alt="Core Web Vitals icon">
                     </div>
+                </div>
 
-                    <img src="/images/icons/services/04_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/04_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                <!-- Title + body -->
+                <div>
+                    <h3 class="text-2xl font-light mb-2 leading-snug">
                         Core Web Vitals Audit
                     </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        We fix Layout Shifts (CLS), Content Paint (LCP), and Input Delay (FID) to ensure your store passes Google's rigorous performance standards.</p>
+                    <p class="text-sm leading-relaxed text-white/65 font-light">
+                        We fix Layout Shifts (CLS), Content Paint (LCP), and Input Delay (FID) to ensure your store passes Google's rigorous performance standards.
+                    </p>
                 </div>
+
+                <!-- Expand button -->
+                <button class="svc-expand-btn flex items-center gap-1.5 text-xs text-[#01a0d8] font-semibold w-fit mt-auto" onclick="toggleCard('svc-card-4')">
+                    What's included
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Checklist (hidden by default) -->
+                <div class="svc-checklist">
+                    <ul class="flex flex-col gap-2 pt-3 border-t border-white/5">
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>LCP, FID/INP, and CLS debugging</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Cumulative Layout Shift (CLS) prevention</li>
+                        <li class="flex items-center gap-2 text-sm text-white/75"><svg class="w-4 h-4 text-[#01a0d8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Real-user monitoring (CrUX) setup</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
+        <script>
+            // ---- Expand / collapse cards ----
+            function toggleCard(id) {
+                const card = document.getElementById(id);
+                card.classList.toggle('expanded');
+            }
+
+            // ---- Filter buttons ----
+            document.getElementById('svc-filters').addEventListener('click', function(e) {
+                const btn = e.target.closest('.svc-filter-btn');
+                if (!btn) return;
+                // Update active state
+                document.querySelectorAll('.svc-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('#svc-cards-grid .svc-card').forEach(card => {
+                    const cats = card.dataset.category || '';
+                    if (filter === 'all' || cats.includes(filter)) {
+                        card.style.display = '';
+                        card.style.animation = 'fadeInUp 0.35s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </section>
 
     <section class="w-full py-16 bg-[var(--body-bg)] text-white">

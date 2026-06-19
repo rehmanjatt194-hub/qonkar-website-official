@@ -317,45 +317,95 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <!-- ==========================================
      3. THE PROBLEM & CHALLENGE
      ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Sidebar Content -->
-        <div class="lg:col-span-4 space-y-6">
-            <span class="bg-red-500/10 border border-red-500/25 text-red-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">The Challenge</span>
-            <h2 class="text-3xl sm:text-4xl font-light text-white leading-tight">Legacy Operations & <br><span class="text-red-400 font-bold">User Frustrations</span></h2>
-            <p class="text-gray-400 font-light text-sm leading-relaxed font-sans">
-                For small to medium-sized academic institutions, growth often exposes major gaps in manual administrative procedures. Without automated software, schools rely on fragmented physical ledgers and disconnected databases—creating severe operational friction.
-            </p>
-        </div>
+<!-- ==========================================
+     3. THE PROBLEM & CHALLENGE
+     ========================================== -->
+<section class="w-full bg-[#f8fafc] text-slate-900 py-16 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Sidebar Content -->
+            <div class="lg:col-span-4 space-y-6 text-left">
+                <span class="bg-teal-50 border border-teal-200 text-teal-600 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">The Challenge</span>
+                <h2 class="text-3xl sm:text-4xl font-light text-slate-900 leading-tight">Legacy Operations & <br><span class="text-[#2BB5BC] font-bold">User Frustrations</span></h2>
+                <p class="text-slate-600 font-normal text-sm leading-relaxed font-sans">
+                    Manual administrative registers and fragmented databases created severe operational friction across all academic departments.
+                </p>
 
-        <!-- Challenges Grid -->
-        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
-                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-clock"></i></div>
-                <h4 class="text-white font-medium text-base">The 45-Minute Daily Attendance Drain</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Teachers spent the first 15–20 minutes of every class taking manual roll calls on paper registers. Staff then had to re-key this data into spreadsheets, converting active teaching hours into tedious clerical entry.</p>
+                <!-- Attractive Stat Card -->
+                <div class="pt-2 border-t border-slate-200 mt-1">
+                    <div class="bg-white border border-slate-400 p-4 rounded-[30px] flex items-center gap-4 shadow-[0_10px_25px_rgba(15,23,42,0.02)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-teal-500/5 rounded-full blur-xl pointer-events-none"></div>
+                        
+                        <!-- Circular Gauge -->
+                        <div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
+                            <!-- SVG Circular Progress Ring -->
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <!-- Background Track Circle -->
+                                <circle cx="50" cy="50" r="42" stroke="#f1f5f9" stroke-width="8" fill="transparent" />
+                                <!-- Progress Circle (40% value) -->
+                                <circle cx="50" cy="50" r="42" stroke="url(#tealGreenGradient)" stroke-width="8" fill="transparent" 
+                                        stroke-dasharray="264" stroke-dashoffset="158" stroke-linecap="round" />
+                                <!-- Gradient definition -->
+                                <defs>
+                                    <linearGradient id="tealGreenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#2BB5BC" />
+                                        <stop offset="100%" stop-color="#95C951" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <!-- Centered Text inside the SVG circle -->
+                            <div class="absolute flex flex-col items-center justify-center text-center">
+                                <span class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#2BB5BC] to-[#95C951] leading-none">40%</span>
+                                <span class="text-[8px] text-slate-500 font-bold uppercase tracking-wider mt-0.5">Leaked</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Text Content -->
+                        <div class="space-y-1 flex-1">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-5 h-5 rounded bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center">
+                                    <i class="fa-solid fa-chart-line text-[9px]"></i>
+                                </div>
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest block">Efficiency Leak</span>
+                            </div>
+                            <h4 class="text-slate-900 font-bold text-[11px] uppercase tracking-wider mt-0.5">Admin Overhead</h4>
+                            <p class="text-slate-500 text-[11px] font-normal leading-relaxed font-sans mt-0.5">
+                                Wasted on manual ledger logs, attendance double-keying, and parent circular distribution workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
-                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-receipt"></i></div>
-                <h4 class="text-white font-medium text-base">Friction-Ridden Fee Collection</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Without digital channels, admin teams manually compiled fee books and chased late collections via phone. The lack of proactive reminders led to payment delays and complex monthly reconciliations.</p>
-            </div>
+            <!-- Challenges Grid -->
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                <!-- Card 1 -->
+                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-clock"></i></div>
+                    <h4 class="text-slate-900 font-bold text-base">The 45-Minute Daily Attendance Drain</h4>
+                    <p class="text-slate-600 text-sm font-normal leading-relaxed font-sans">Teachers wasted 20 minutes daily on paper attendance, which staff had to manually re-enter into spreadsheets.</p>
+                </div>
 
-            <!-- Card 3 -->
-            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
-                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-file-signature"></i></div>
-                <h4 class="text-white font-medium text-base">End-of-Term Grading Bottlenecks</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Compiling test results, GPA averages, and class rankings required manual gradebook sums. Admin teams spent days writing and printing physical report cards, causing significant distribution delays.</p>
-            </div>
+                <!-- Card 2 -->
+                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-receipt"></i></div>
+                    <h4 class="text-slate-900 font-bold text-base">Friction-Ridden Fee Collection</h4>
+                    <p class="text-slate-600 text-sm font-normal leading-relaxed font-sans">Manual invoicing and chasing late payments over calls caused significant collection delays and reconciliation errors.</p>
+                </div>
 
-            <!-- Card 4 -->
-            <div class="bg-[#00101a] border border-red-500/10 p-6 rounded-2xl space-y-3 hover:border-red-500/20 transition-all duration-300">
-                <div class="w-8 h-8 rounded bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-comment-slash"></i></div>
-                <h4 class="text-white font-medium text-base">The Parent-Teacher Blindspot</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Parents had zero real-time insights into attendance anomalies or daily updates. Critical circulars regarding exams or scheduling went unseen, resulting in disconnected home-school relationships.</p>
+                <!-- Card 3 -->
+                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4 class="text-slate-900 font-bold text-base">End-of-Term Grading Bottlenecks</h4>
+                    <p class="text-slate-600 text-sm font-normal leading-relaxed font-sans">Calculating GPA averages manually and printing report cards delayed final grade distribution by days.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                    <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-comment-slash"></i></div>
+                    <h4 class="text-slate-900 font-bold text-base">The Parent-Teacher Blindspot</h4>
+                    <p class="text-slate-600 text-sm font-normal leading-relaxed font-sans">Parents lacked real-time visibility into child attendance and exams, creating communication gaps.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -375,19 +425,22 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="flex flex-col lg:flex-row items-stretch gap-4 lg:gap-0">
 
         <!-- Portal 1: Admin Command Center -->
-        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#01a0d8]/40 hover:shadow-[0_0_30px_rgba(1,160,216,0.08)] transition-all duration-400 overflow-hidden">
-            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">01</span>
-            <div class="space-y-5 relative z-10">
-                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(1,160,216,0.15);">
+        <div class="portal-card relative bg-[#00101a] border border-white/10 rounded-[28px] p-7 flex flex-col justify-between flex-1 hover:border-[#01a0d8]/40 hover:shadow-[0_0_30px_rgba(1,160,216,0.08)] transition-all duration-400 overflow-hidden">
+            <!-- Header: Icon & Number -->
+            <div class="flex items-center justify-between relative z-10 mb-5">
+                <div class="w-12 h-12 rounded-[16px] flex items-center justify-center border border-[#01a0d8]/30 shadow-[0_0_15px_rgba(1,160,216,0.15)]" style="background: rgba(1,160,216,0.1);">
                     <span class="material-symbols-outlined text-2xl" style="color:#01a0d8;">shield_person</span>
                 </div>
-                <div class="space-y-2">
-                    <h3 class="text-lg font-bold text-white leading-snug">Admin Command Center</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
-                        Manage student registries, billing ledgers, branch analytics, and institutional audits from one control panel.
-                    </p>
-                </div>
+                <span class="text-5xl font-black text-white/5 select-none leading-none">01</span>
             </div>
+            <!-- Title & Description -->
+            <div class="space-y-2 relative z-10">
+                <h3 class="text-lg font-bold text-white leading-snug">Admin Command Center</h3>
+                <p class="text-gray-400 text-sm font-normal leading-relaxed">
+                    Manage student registries, billing ledgers, branch analytics, and institutional audits from one control panel.
+                </p>
+            </div>
+            <!-- Badge -->
             <div class="mt-8 relative z-10">
                 <span class="inline-flex items-center gap-2 bg-[#01a0d8]/10 border border-[#01a0d8]/25 text-[#01a0d8] text-[11px] font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#01a0d8]"></span>
@@ -397,25 +450,29 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </div>
 
         <!-- Connector 1→2 -->
-        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
-            <div class="w-full h-px bg-gradient-to-r from-[#01a0d8]/30 via-white/10 to-[#95C951]/30"></div>
-            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#01a0d8] shadow-[0_0_10px_3px_rgba(1,160,216,0.6)] animate-pulse z-10"></div>
+        <div class="hidden lg:flex items-start justify-center w-10 shrink-0 relative pt-[52px]">
+            <div class="w-full h-px bg-gradient-to-r from-[#01a0d8]/30 via-white/10 to-[#95C951]/30 relative flex items-center justify-center">
+                <div class="absolute w-2.5 h-2.5 rounded-full bg-[#01a0d8] shadow-[0_0_10px_3px_rgba(1,160,216,0.6)] animate-pulse z-10"></div>
+            </div>
         </div>
 
         <!-- Portal 2: Teacher Hub -->
-        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#95C951]/40 hover:shadow-[0_0_30px_rgba(149,201,81,0.08)] transition-all duration-400 overflow-hidden">
-            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">02</span>
-            <div class="space-y-5 relative z-10">
-                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(149,201,81,0.15);">
+        <div class="portal-card relative bg-[#00101a] border border-white/10 rounded-[28px] p-7 flex flex-col justify-between flex-1 hover:border-[#95C951]/40 hover:shadow-[0_0_30px_rgba(149,201,81,0.08)] transition-all duration-400 overflow-hidden">
+            <!-- Header: Icon & Number -->
+            <div class="flex items-center justify-between relative z-10 mb-5">
+                <div class="w-12 h-12 rounded-[16px] flex items-center justify-center border border-[#95C951]/30 shadow-[0_0_15px_rgba(149,201,81,0.15)]" style="background: rgba(149,201,81,0.1);">
                     <span class="material-symbols-outlined text-2xl" style="color:#95C951;">menu_book</span>
                 </div>
-                <div class="space-y-2">
-                    <h3 class="text-lg font-bold text-white leading-snug">Teacher Hub</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
-                        Track daily attendance, input exam grades, upload homework resources, and broadcast notification alerts to parents.
-                    </p>
-                </div>
+                <span class="text-5xl font-black text-white/5 select-none leading-none">02</span>
             </div>
+            <!-- Title & Description -->
+            <div class="space-y-2 relative z-10">
+                <h3 class="text-lg font-bold text-white leading-snug">Teacher Hub</h3>
+                <p class="text-gray-400 text-sm font-normal leading-relaxed">
+                    Track daily attendance, input exam grades, upload homework resources, and broadcast notification alerts to parents.
+                </p>
+            </div>
+            <!-- Badge -->
             <div class="mt-8 relative z-10">
                 <span class="inline-flex items-center gap-2 bg-[#95C951]/10 border border-[#95C951]/25 text-[#95C951] text-[11px] font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#95C951]"></span>
@@ -425,25 +482,29 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </div>
 
         <!-- Connector 2→3 -->
-        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
-            <div class="w-full h-px bg-gradient-to-r from-[#95C951]/30 via-white/10 to-[#a78bfa]/30"></div>
-            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#95C951] shadow-[0_0_10px_3px_rgba(149,201,81,0.6)] animate-pulse z-10" style="animation-delay: 0.4s;"></div>
+        <div class="hidden lg:flex items-start justify-center w-10 shrink-0 relative pt-[52px]">
+            <div class="w-full h-px bg-gradient-to-r from-[#95C951]/30 via-white/10 to-[#a78bfa]/30 relative flex items-center justify-center">
+                <div class="absolute w-2.5 h-2.5 rounded-full bg-[#95C951] shadow-[0_0_10px_3px_rgba(149,201,81,0.6)] animate-pulse z-10" style="animation-delay: 0.4s;"></div>
+            </div>
         </div>
 
         <!-- Portal 3: Parent Mobile Companion -->
-        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#a78bfa]/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.08)] transition-all duration-400 overflow-hidden">
-            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">03</span>
-            <div class="space-y-5 relative z-10">
-                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(167,139,250,0.15);">
+        <div class="portal-card relative bg-[#00101a] border border-white/10 rounded-[28px] p-7 flex flex-col justify-between flex-1 hover:border-[#a78bfa]/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.08)] transition-all duration-400 overflow-hidden">
+            <!-- Header: Icon & Number -->
+            <div class="flex items-center justify-between relative z-10 mb-5">
+                <div class="w-12 h-12 rounded-[16px] flex items-center justify-center border border-[#a78bfa]/30 shadow-[0_0_15px_rgba(167,139,250,0.15)]" style="background: rgba(167,139,250,0.1);">
                     <span class="material-symbols-outlined text-2xl" style="color:#a78bfa;">supervised_user_circle</span>
                 </div>
-                <div class="space-y-2">
-                    <h3 class="text-lg font-bold text-white leading-snug">Parent Mobile Companion</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
-                        Track child attendance, view exam report cards, receive circular alerts, and pay school fee invoices.
-                    </p>
-                </div>
+                <span class="text-5xl font-black text-white/5 select-none leading-none">03</span>
             </div>
+            <!-- Title & Description -->
+            <div class="space-y-2 relative z-10">
+                <h3 class="text-lg font-bold text-white leading-snug">Parent Mobile Companion</h3>
+                <p class="text-gray-400 text-sm font-normal leading-relaxed">
+                    Track child attendance, view exam report cards, receive circular alerts, and pay school fee invoices.
+                </p>
+            </div>
+            <!-- Badge -->
             <div class="mt-8 relative z-10">
                 <span class="inline-flex items-center gap-2 bg-[#a78bfa]/10 border border-[#a78bfa]/25 text-[#a78bfa] text-[11px] font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#a78bfa]"></span>
@@ -453,25 +514,29 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </div>
 
         <!-- Connector 3→4 -->
-        <div class="hidden lg:flex items-center justify-center w-10 shrink-0 relative">
-            <div class="w-full h-px bg-gradient-to-r from-[#a78bfa]/30 via-white/10 to-[#fbbf24]/30"></div>
-            <div class="absolute w-2.5 h-2.5 rounded-full bg-[#a78bfa] shadow-[0_0_10px_3px_rgba(167,139,250,0.6)] animate-pulse z-10" style="animation-delay: 0.8s;"></div>
+        <div class="hidden lg:flex items-start justify-center w-10 shrink-0 relative pt-[52px]">
+            <div class="w-full h-px bg-gradient-to-r from-[#a78bfa]/30 via-white/10 to-[#fbbf24]/30 relative flex items-center justify-center">
+                <div class="absolute w-2.5 h-2.5 rounded-full bg-[#a78bfa] shadow-[0_0_10px_3px_rgba(167,139,250,0.6)] animate-pulse z-10" style="animation-delay: 0.8s;"></div>
+            </div>
         </div>
 
         <!-- Portal 4: Student Space -->
-        <div class="portal-card relative bg-[#00101a] border border-white/8 rounded-[20px] p-7 flex flex-col justify-between flex-1 hover:border-[#fbbf24]/40 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-400 overflow-hidden">
-            <span class="absolute top-5 right-6 text-5xl font-black text-white/5 select-none leading-none">04</span>
-            <div class="space-y-5 relative z-10">
-                <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: rgba(251,191,36,0.15);">
+        <div class="portal-card relative bg-[#00101a] border border-white/10 rounded-[28px] p-7 flex flex-col justify-between flex-1 hover:border-[#fbbf24]/40 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-400 overflow-hidden">
+            <!-- Header: Icon & Number -->
+            <div class="flex items-center justify-between relative z-10 mb-5">
+                <div class="w-12 h-12 rounded-[16px] flex items-center justify-center border border-[#fbbf24]/30 shadow-[0_0_15px_rgba(251,191,36,0.15)]" style="background: rgba(251,191,36,0.1);">
                     <span class="material-symbols-outlined text-2xl" style="color:#fbbf24;">school</span>
                 </div>
-                <div class="space-y-2">
-                    <h3 class="text-lg font-bold text-white leading-snug">Student Space</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
-                        Access digital class materials, check exam grades, view class timetables, and track active homework assignments.
-                    </p>
-                </div>
+                <span class="text-5xl font-black text-white/5 select-none leading-none">04</span>
             </div>
+            <!-- Title & Description -->
+            <div class="space-y-2 relative z-10">
+                <h3 class="text-lg font-bold text-white leading-snug">Student Space</h3>
+                <p class="text-gray-400 text-sm font-normal leading-relaxed">
+                    Access digital class materials, check exam grades, view class timetables, and track active homework assignments.
+                </p>
+            </div>
+            <!-- Badge -->
             <div class="mt-8 relative z-10">
                 <span class="inline-flex items-center gap-2 bg-[#fbbf24]/10 border border-[#fbbf24]/25 text-[#fbbf24] text-[11px] font-semibold px-4 py-1.5 rounded-full">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#fbbf24]"></span>

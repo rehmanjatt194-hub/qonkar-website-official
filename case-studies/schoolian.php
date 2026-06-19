@@ -56,6 +56,22 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         html {
             scroll-behavior: smooth;
         }
+        /* Lenis Smooth Scroll CSS */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
         
         /* EdTech Glowing Accents (Blue, Cyan, Green) */
         .glow-box-blue {
@@ -315,6 +331,112 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 </section>
 
 <!-- ==========================================
+     PRODUCT TOUR VIDEO SECTION (DARK THEME)
+     ========================================== -->
+<section class="w-full bg-[#000d16] pt-8 pb-12 border-t border-white/5 text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
+            
+            <!-- Left Column: Copy & Details -->
+            <div class="lg:col-span-4 space-y-5">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] text-[10px] font-bold tracking-widest uppercase border border-[var(--secondary-color)]/25">
+                    Product Walkthrough
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
+                    Inside the <br>
+                    <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Academic Hub.</span>
+                </h2>
+                <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed font-sans">
+                    Observe how Schoolian simplifies campus complexity. Explore a comprehensive visual walkthrough showing central student registries, automated fee invoicing, grade compilation, and instant parent messaging alerts in real-time.
+                </p>
+
+                <!-- Key Demonstration Features -->
+                <ul class="space-y-3 pt-1">
+                    <li class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-[var(--secondary-color)]/10 border border-[var(--secondary-color)]/20 text-[var(--secondary-color)] flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(47,173,195,0.1)]">
+                            <i class="fa-solid fa-graduation-cap text-xs"></i>
+                        </div>
+                        <div class="space-y-0.5">
+                            <h4 class="text-white text-sm font-semibold">Campus Orchestration</h4>
+                            <p class="text-gray-400 text-xs font-light font-sans">Class registers, student files, and timetables synchronized.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/20 text-[var(--tertiary-color)] flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(133,213,92,0.1)]">
+                            <i class="fa-solid fa-file-invoice-dollar text-xs"></i>
+                        </div>
+                        <div class="space-y-0.5">
+                            <h4 class="text-white text-sm font-semibold">Automated Fee Billing</h4>
+                            <p class="text-gray-400 text-xs font-light font-sans">Instant slip generation, notifications, and mobile checkout.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Watch Video Button -->
+                <div class="pt-4">
+                    <button id="btnOpenVideo" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[var(--primary-color)] text-white text-sm font-semibold hover:bg-[var(--secondary-color)] transition-all duration-300 shadow-[0_0_20px_rgba(63,137,201,0.25)] hover:scale-105 group focus:outline-none">
+                        <span class="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_8px_white] animate-pulse"></span>
+                        Watch Product Tour
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Browser Frame -->
+            <div class="lg:col-span-8 pt-6 lg:pt-0">
+                <div class="relative w-full rounded-[32px] border border-white/10 p-2 bg-[#00101a]/80 backdrop-blur-md shadow-[0_0_50px_rgba(47,173,195,0.15)] group overflow-hidden cursor-pointer" id="btnOpenVideoPoster">
+                    <!-- Glow background overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[var(--secondary-color)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Video Thumbnail / Poster Image -->
+                    <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
+                        <img src="/images/case-studies/schoolian_bg.png" alt="Schoolian System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        
+                        <!-- Dark overlay -->
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
+
+                        <!-- Custom Pulsing Play Button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-[var(--secondary-color)] flex items-center justify-center text-white shadow-[0_0_30px_rgba(47,173,195,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--tertiary-color)] group-hover:shadow-[0_0_40px_rgba(133,213,92,0.6)] relative">
+                                <span class="absolute inset-0 rounded-full bg-[var(--secondary-color)]/30 animate-ping"></span>
+                                <i class="fa-solid fa-play text-2xl translate-x-0.5"></i>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Bar Label -->
+                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-center text-white/80 text-xs tracking-wider uppercase font-semibold">
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-circle text-red-500 animate-pulse text-[8px]"></i> System Demo Walkthrough</span>
+                            <span>2:15 Min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO MODAL LIGHTBOX -->
+<div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-md transition-opacity duration-300">
+    <!-- Close trigger background -->
+    <div class="absolute inset-0 cursor-pointer" id="modalOverlay"></div>
+    
+    <!-- Close Button -->
+    <button class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl focus:outline-none transition-colors z-[110]" id="btnCloseVideo">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Video Frame Container -->
+    <div class="relative w-[95%] max-w-4xl aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/10 scale-90 transition-transform duration-300" id="videoContainer">
+        <!-- Native Video Player (ready for local MP4 video file path) -->
+        <video id="htmlVideo" class="w-full h-full" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!-- ==========================================
      3. THE PROBLEM & CHALLENGE
      ========================================== -->
 <!-- ==========================================
@@ -553,83 +675,119 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <!-- ==========================================
      THE TOOLKIT (Premium Feature Set)
      ========================================== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
-    <div class="space-y-2 mb-12 text-left">
-        <span class="text-[10px] text-[var(--secondary-color)] uppercase tracking-widest font-mono font-bold">THE SOLUTION</span>
-        <h2 class="text-3xl sm:text-4xl font-light text-white">Premium Feature Suite</h2>
-    </div>
-
-    <!-- 2-Column Feature Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-        <!-- Card 1 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-users-rectangle"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">STUDENT MGMT</h4>
-            </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Centralized Cloud Profiles</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Replaces manual student folders with secure, searchable database directories and quick-validation digital profiles.</p>
-            </div>
+<section class="w-full bg-[#f8fafc] pt-10 pb-16 border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-2 mb-8 text-left">
+            <span class="text-xs sm:text-sm text-cyan-700 uppercase tracking-widest font-mono font-bold">THE SOLUTION</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Premium Feature Suite</h2>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-user-check"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">ATTENDANCE</h4>
-            </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Smart Attendance & SMS Alerts</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Single-click registers marked in under 2 minutes, auto-generating stats and broadcasting instant SMS alerts to parents for absences.</p>
-            </div>
-        </div>
+        <!-- Bento Feature Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <!-- Card 1 (Tall: Student Mgmt) -->
+            <div class="md:row-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-center hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                </div>
 
-        <!-- Card 3 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-people-roof"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">PARENT PORTAL</h4>
+                <div class="relative z-10 space-y-4 text-left">
+                    <div class="flex justify-between items-center">
+                        <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-users-rectangle"></i></div>
+                        <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">STUDENT MGMT</h4>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-white font-medium text-base">Centralized Cloud Profiles</h3>
+                        <p class="text-gray-400 text-xs font-light leading-relaxed">
+                            Replaces legacy manual student folders with secure, searchable cloud database directories. Enables quick-validation digital profiles, emergency contact records, automated enrollment logs, and historical academic archives in one central admin control panel.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Real-Time Mobile Companion</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Connects parents with academic progress, notifications, attendance tracking, and digital invoice portals instantly.</p>
-            </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-money-check-dollar"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">FEE TRACKING</h4>
-            </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Automated Billing & Checkout</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Generates monthly invoices, dispatches automatic notices, and allows online payment checkout with auto-reconciliation.</p>
-            </div>
-        </div>
+            <!-- Card 2 (Wide: Attendance) -->
+            <div class="md:col-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/attendance_bento_bg.png');">
+                </div>
 
-        <!-- Card 5 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-chalkboard-user"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">TEACHER HUB</h4>
+                <div class="flex justify-between items-start relative z-10">
+                    <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-user-check"></i></div>
+                    <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">ATTENDANCE</h4>
+                </div>
+                <div class="space-y-1 relative z-10 max-w-[75%]">
+                    <h3 class="text-white font-medium text-base">Smart Attendance & SMS Alerts</h3>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Single-click registers marked in under 2 minutes, auto-generating stats and broadcasting instant SMS alerts to parents for absences.</p>
+                </div>
             </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Unified Teaching Hub</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Equips faculty with lesson planners, resource uploading tools, grading panels, and direct messaging channels.</p>
-            </div>
-        </div>
 
-        <!-- Card 6 -->
-        <div class="bg-[#00101a] border border-white/5 rounded-xl p-8 flex flex-col justify-between min-h-[180px] hover:border-[var(--secondary-color)]/25 transition-all duration-300">
-            <div class="flex justify-between items-start">
-                <div class="text-[var(--secondary-color)] text-2xl"><i class="fa-solid fa-file-signature"></i></div>
-                <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">EXAM SYSTEM</h4>
+            <!-- Card 3 (Normal: Parent Portal) -->
+            <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                </div>
+
+                <div class="flex justify-between items-start relative z-10">
+                    <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-people-roof"></i></div>
+                    <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">PARENT PORTAL</h4>
+                </div>
+                <div class="space-y-1 relative z-10">
+                    <h3 class="text-white font-medium text-base">Real-Time Mobile Companion</h3>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Connects parents with academic progress, notifications, attendance tracking, and digital invoice portals instantly.</p>
+                </div>
             </div>
-            <div class="mt-4 space-y-2">
-                <h3 class="text-white font-medium text-base">Consolidated Gradebooks</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automates exam records entries, rank calculations, and GPA averages to generate digital report cards instantaneously.</p>
+
+            <!-- Card 4 (Normal: Teacher Hub) -->
+            <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                </div>
+
+                <div class="flex justify-between items-start relative z-10">
+                    <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">TEACHER HUB</h4>
+                </div>
+                <div class="space-y-1 relative z-10">
+                    <h3 class="text-white font-medium text-base">Unified Teaching Hub</h3>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Equips faculty with lesson planners, resource uploading tools, grading panels, and direct messaging channels.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 (Wide: Fee Tracking) -->
+            <div class="md:col-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/finance_bento_bg.png');">
+                </div>
+
+                <div class="flex justify-between items-start relative z-10">
+                    <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">FEE TRACKING</h4>
+                </div>
+                <div class="space-y-1 relative z-10 max-w-[75%]">
+                    <h3 class="text-white font-medium text-base">Automated Billing & Checkout</h3>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Generates monthly invoices, dispatches automatic notices, and allows online payment checkout with auto-reconciliation.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 (Normal: Exam System) -->
+            <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
+                <!-- Background Image layer with hover zoom -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                </div>
+
+                <div class="flex justify-between items-start relative z-10">
+                    <div class="text-[var(--secondary-color)] text-xl"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4 class="text-[10px] font-bold text-gray-400 tracking-widest uppercase font-mono">EXAM SYSTEM</h4>
+                </div>
+                <div class="space-y-1 relative z-10">
+                    <h3 class="text-white font-medium text-base">Consolidated Gradebooks</h3>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automates exam records entries, rank calculations, and GPA averages to generate digital report cards instantaneously.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -737,23 +895,23 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     </div>
 
     <!-- Narrative Impact Bullet Points -->
-    <div class="max-w-4xl mx-auto bg-[#00101a] border border-white/5 rounded-3xl p-8 md:p-12 space-y-8">
-        <h3 class="text-2xl font-light text-white leading-tight">Key Achievements & Operational Impact</h3>
+    <div class="max-w-4xl mx-auto bg-white border border-slate-200 rounded-3xl p-8 md:p-12 space-y-8 shadow-md">
+        <h3 class="text-2xl font-bold text-slate-900 leading-tight">Key Achievements & Operational Impact</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div class="space-y-2">
-                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                <h4 class="text-white font-medium text-base">Reclaimed Instruction Hours</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">By digitizing classroom attendance and test grading, teachers reclaimed up to 5 hours weekly, directly reinvesting that time into student mentoring.</p>
+                <div class="text-cyan-700 text-lg"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h4 class="text-slate-900 font-semibold text-base">Reclaimed Instruction Hours</h4>
+                <p class="text-slate-600 text-xs font-normal leading-relaxed font-sans">By digitizing classroom attendance and test grading, teachers reclaimed up to 5 hours weekly, directly reinvesting that time into student mentoring.</p>
             </div>
             <div class="space-y-2">
-                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-piggy-bank"></i></div>
-                <h4 class="text-white font-medium text-base">Eliminated Billing Friction</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Automated digital invoicing, direct SMS billing triggers, and integrated checkout channels eliminated manual ledger matching and minimized outstanding debt.</p>
+                <div class="text-cyan-700 text-lg"><i class="fa-solid fa-piggy-bank"></i></div>
+                <h4 class="text-slate-900 font-semibold text-base">Eliminated Billing Friction</h4>
+                <p class="text-slate-600 text-xs font-normal leading-relaxed font-sans">Automated digital invoicing, direct SMS billing triggers, and integrated checkout channels eliminated manual ledger matching and minimized outstanding debt.</p>
             </div>
             <div class="space-y-2">
-                <div class="text-[var(--secondary-color)] text-lg"><i class="fa-solid fa-users"></i></div>
-                <h4 class="text-white font-medium text-base">Active Family Partnership</h4>
-                <p class="text-gray-400 text-xs font-light leading-relaxed font-sans">Real-time attendance push alerts and dynamic grade access bridges the gap between home and school, fostering parent trust and transparency.</p>
+                <div class="text-cyan-700 text-lg"><i class="fa-solid fa-users"></i></div>
+                <h4 class="text-slate-900 font-semibold text-base">Active Family Partnership</h4>
+                <p class="text-slate-600 text-xs font-normal leading-relaxed font-sans">Real-time attendance push alerts and dynamic grade access bridges the gap between home and school, fostering parent trust and transparency.</p>
             </div>
         </div>
     </div>
@@ -877,6 +1035,75 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 </footer>
 
 <script src="/script/navbar.js"></script>
+<!-- Product Tour Video Modal JS -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btnOpen = document.getElementById("btnOpenVideo");
+        const btnOpenPoster = document.getElementById("btnOpenVideoPoster");
+        const btnClose = document.getElementById("btnCloseVideo");
+        const overlay = document.getElementById("modalOverlay");
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("htmlVideo");
+        const container = document.getElementById("videoContainer");
+
+        // Set the path to your video file when available (e.g. "/videos/schoolian_tour.mp4")
+        const videoPath = "";
+
+        function openModal() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            setTimeout(() => {
+                if (videoPath) {
+                    video.src = videoPath;
+                    video.load();
+                    video.play();
+                }
+                container.classList.remove("scale-90");
+                container.classList.add("scale-100");
+            }, 50);
+        }
+
+        function closeModal() {
+            container.classList.remove("scale-100");
+            container.classList.add("scale-90");
+            setTimeout(() => {
+                video.pause();
+                video.src = "";
+                modal.classList.remove("flex");
+                modal.classList.add("hidden");
+            }, 200);
+        }
+
+        if(modal) {
+            if (btnOpen) btnOpen.addEventListener("click", openModal);
+            if (btnOpenPoster) btnOpenPoster.addEventListener("click", openModal);
+            if (btnClose) btnClose.addEventListener("click", closeModal);
+            if (overlay) overlay.addEventListener("click", closeModal);
+        }
+    });
+</script>
+<!-- Lenis Smooth Scroll Script -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+</script>
 </body>
 </html>
 

@@ -337,7 +337,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/hero_image.webp" alt="Our Client" class="w-full max-w-md h-auto">
+                <img src="/images/hero-section/hero.webp" alt="Our Client" class="w-full max-w-md h-auto">
             </div>
 
             <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">

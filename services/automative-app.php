@@ -286,7 +286,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 </div>
 
                 <div class="flex justify-center md:justify-end order-2">
-                    <img src="/images/hero-section/Automotive App.webp" alt="automotive dealership management software dashboard displaying vehicle inventory and sales analytics."
+                    <img src="/images/hero-section/automative app.webp" alt="automotive dealership management software dashboard displaying vehicle inventory and sales analytics."
                         class="max-h-[40vh] sm:max-h-[50vh] md:max-h-[65vh] object-contain">
                 </div>
             </div>
@@ -335,7 +335,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/hero_image.webp" alt="Our Client" class="w-full max-w-md h-auto" loading="lazy">
+                <img src="/images/hero-section/hero.webp" alt="Our Client" class="w-full max-w-md h-auto" loading="lazy">
             </div>
 
             <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">

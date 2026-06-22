@@ -40,7 +40,7 @@ document.querySelectorAll(".faq-header").forEach(header => {
             if (headerSpan) headerSpan.style.color = "var(--secondary-color)";
 
             const contentP = content ? content.querySelector("p") : null;
-            if (contentP) contentP.style.color = "black";
+            if (contentP) contentP.style.color = "rgb(209 213 219)";
 
             if (icon) icon.style.background = "linear-gradient(138deg,var(--primary-color),var(--secondary-color))";
         } else {

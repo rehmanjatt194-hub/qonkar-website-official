@@ -106,13 +106,17 @@ require_once ADMIN_URL.'/database_config.php';
             background: #050e18;
             border: 1px solid rgba(255,255,255,0.07);
             opacity: 0;
-            transform: translateY(55px);
+            transform: translateY(55px) translateZ(0);
+            -webkit-transform: translateY(55px) translateZ(0);
             will-change: transform, opacity;
             transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.08s ease;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
         .pcard.revealed {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) translateZ(0);
+            -webkit-transform: translateY(0) translateZ(0);
             transition: opacity 0.7s ease, transform 0.7s ease,
                         box-shadow 0.4s ease, border-color 0.4s ease;
         }
@@ -139,6 +143,15 @@ require_once ADMIN_URL.'/database_config.php';
             display: block;
             overflow: hidden;
             position: relative;
+            border-radius: 21px 21px 0 0;
+            -webkit-border-radius: 21px 21px 0 0;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+        .pcard-featured .pcard-img {
+            border-radius: 21px;
+            -webkit-border-radius: 21px;
         }
         .pcard-img img {
             width: 100%; height: 100%;

@@ -18,8 +18,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <!-- Basic SEO Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Homalixxxx Case Study - Unified Hospital Management and Clinical Automation Solutions by Qonkar Technologies." />
-    <meta name="keywords" content="Homalixxxxxx, Hospital Management System, HMS, Qonkar, Clinical Automation, EMR" />
+    <meta name="description" content="Homalix Case Study - Unified Hospital Management and Clinical Automation Solutions by Qonkar Technologies." />
+    <meta name="keywords" content="Homalix, Hospital Management System, HMS, Qonkar, Clinical Automation, EMR" />
     <meta name="author" content="Qonkar" />
 
     <!-- Open Graph (Social Media Preview) -->

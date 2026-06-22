@@ -264,7 +264,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <!-- ==========================================
      HERO SECTION
      ========================================== -->
-<section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[60vh] mt-6 mb-12 rounded-[25px] overflow-hidden flex items-center background-backdrop-card">
+<section class="relative w-full mt-0 mb-0 rounded-t-[30px] rounded-b-none overflow-hidden flex items-center background-backdrop-card min-h-[60vh] animate-fade-in">
     <!-- Darkened Hospital/Clinic Overlay Background -->
     <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-right" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.95) 30%, rgba(8, 8, 10, 0.75) 55%, rgba(8, 8, 10, 0.2) 100%), url('/images/case-studies/background/homalix_bg.png'); filter: contrast(1.05); mix-blend-mode: normal;"></div>
 
@@ -272,10 +272,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         
         <!-- Left Side content -->
         <div class="lg:col-span-7 text-left space-y-6">
-            <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.2)]">
-                <div class="glass-background">
-                    <div class="glass px-4 py-1.5 flex items-center gap-2 text-xs font-semibold tracking-wider">
-                        <span class="w-2.5 h-2.5 rounded-full bg-[var(--tertiary-color)] shadow-[0_0_8px_var(--tertiary-color)] animate-pulse"></span>
+            <div class="inline-flex laser-border shadow-md">
+                <div class="laser-background">
+                    <div class="glass px-4 py-1.5 flex items-center gap-2 text-xs font-semibold tracking-wider text-gray-300">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#01a0d8] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#01a0d8] shadow-[0_0_6px_rgba(1,160,216,0.6)]"></span>
+                        </span>
                         ENTERPRISE STATUS: ACTIVE
                     </div>
                 </div>
@@ -307,10 +310,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
         </div>
 
-        <!-- Right Side product mockup -->
-        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <!-- Right Column: Card Mockup -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div class="relative max-w-md w-full bg-white/5 rounded-2xl border border-white/10 shadow-2xl p-2 backdrop-blur-md">
-                <img src="/images/case-studies/homalix_mockup.png" alt="Homalix Dashboard Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+                <img src="/images/case-studies/homalix_mockup.png" alt="Homalix System Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>

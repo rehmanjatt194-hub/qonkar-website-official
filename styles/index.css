@@ -279,3 +279,60 @@ html, body {
 .svc-stat-val { font-size: 22px; font-weight: 700; color: #01a0d8; line-height: 1; }
 .svc-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
 
+/* ---- Futuristic Border Beam (Laser) Animation ---- */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-beam {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.laser-border {
+  position: relative;
+  display: inline-flex;
+  border-radius: 40px; /* Default rounded corners for badges */
+  padding: 1.5px; /* Border thickness */
+  background: rgba(1, 160, 216, 0.15); /* Default subtle border track */
+  z-index: 1;
+}
+
+.laser-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 80%,
+    #01a0d8 92%,
+    #ffffff 96%,
+    #2fadc3 99%,
+    transparent 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: border-beam 3.5s linear infinite;
+  z-index: 3;
+}
+
+.laser-background {
+  position: relative;
+  z-index: 2;
+  border-radius: inherit;
+  background-color: #000d16;
+  overflow: hidden;
+  width: 100%;
+  display: inline-flex;
+}
+
+

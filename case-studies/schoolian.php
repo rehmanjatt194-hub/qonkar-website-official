@@ -232,7 +232,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <!-- ==========================================
      1. HERO SECTION (4-Portal Switcher Layout)
      ========================================== -->
-<section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[70vh] mt-6 mb-16 rounded-[30px] overflow-hidden flex items-center bg-[#00101a] border border-white/5">
+<section class="relative w-full mt-0 mb-16 rounded-t-[30px] rounded-b-none overflow-hidden flex items-center bg-[#00101a] border-b border-white/5 min-h-[70vh] animate-fade-in">
     <div class="absolute inset-0 z-0 bg-cover bg-center opacity-80" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.4) 10%, rgba(8, 8, 10, 0.7) 50%, rgba(8, 8, 10, 0.95) 90%), url('/images/case-studies/schoolian_bg.png'); mix-blend-mode: normal;"></div>
     <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-[var(--primary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] bg-[var(--secondary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -241,10 +241,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         
         <!-- Left Column: Content -->
         <div class="lg:col-span-7 text-left space-y-6 lg:pt-8">
-            <div class="inline-flex glass-border shadow-[0_0_15px_rgba(47,173,195,0.15)]">
-                <div class="glass-background">
-                    <div class="glass px-4 py-1.5 flex items-center gap-2 text-xs font-semibold tracking-wider">
-                        <span class="w-2.5 h-2.5 rounded-full bg-[var(--secondary-color)] shadow-[0_0_8px_var(--secondary-color)] active-dot-pulse"></span>
+            <div class="inline-flex laser-border shadow-md">
+                <div class="laser-background">
+                    <div class="glass px-4 py-1.5 flex items-center gap-2 text-xs font-semibold tracking-wider text-gray-300">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#01a0d8] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#01a0d8] shadow-[0_0_6px_rgba(1,160,216,0.6)]"></span>
+                        </span>
                         EDTECH SAAS AUTOMATION
                     </div>
                 </div>

@@ -508,13 +508,17 @@ require_once ADMIN_URL.'/database_config.php';
     <section class="py-8 md:py-10 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-2 border-b border-slate-200/50">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16]">
-                        IT <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Solutions</span>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
+                <div class="flex flex-col items-start">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/60 text-[11px] font-bold tracking-wider text-[#2BB5BC] uppercase mb-2.5 shadow-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#2BB5BC] to-[#95C951] animate-pulse"></span>
+                        Our Services
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-[#000d16] tracking-tight">
+                        Innovative <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-extrabold">IT Solutions</span>
                     </h2>
                 </div>
-                <p class="text-slate-500 font-light text-sm md:text-base max-w-md md:text-right">
+                <p class="text-slate-500 font-normal text-sm md:text-base max-w-md md:text-right leading-relaxed">
                     Tailored development and design services built to scale your digital presence.
                 </p>
             </div>

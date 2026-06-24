@@ -1,0 +1,21 @@
+﻿commit a087871046efac4c7ea1cbf4813329d5154a8793
+Author: Saadullah <saadsoomr6@gmail.com>
+Date:   Mon Jun 22 13:46:42 2026 +0500
+
+    update
+
+diff --git a/case-studies/homalix.php b/case-studies/homalix.php
+index 34db6ba..461ccba 100644
+--- a/case-studies/homalix.php
++++ b/case-studies/homalix.php
+@@ -18,8 +18,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
+     <!-- Basic SEO Meta -->
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <meta name="description" content="Homalix Case Study - Unified Hospital Management and Clinical Automation Solutions by Qonkar Technologies." />
+-    <meta name="keywords" content="Homalix, Hospital Management System, HMS, Qonkar, Clinical Automation, EMR" />
++    <meta name="description" content="Homalixxxx Case Study - Unified Hospital Management and Clinical Automation Solutions by Qonkar Technologies." />
++    <meta name="keywords" content="Homalixxxxxx, Hospital Management System, HMS, Qonkar, Clinical Automation, EMR" />
+     <meta name="author" content="Qonkar" />
+ 
+     <!-- Open Graph (Social Media Preview) -->

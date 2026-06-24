@@ -56,6 +56,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         html {
             scroll-behavior: smooth;
         }
+        body {
+            font-family: "Lexend", sans-serif;
+        }
+        p:not(.font-bold):not(.font-semibold):not(.font-medium):not(.font-extrabold) {
+            font-weight: 300;
+            line-height: 1.625;
+        }
         /* Lenis Smooth Scroll CSS */
         html.lenis, html.lenis body {
             height: auto;
@@ -284,12 +291,12 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </div>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight tracking-tight">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white leading-none">
                 Homalix Multi-Branch <br>
                 <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Clinical Network Hub.</span>
             </h1>
 
-            <p class="text-gray-300 font-light text-base sm:text-lg leading-relaxed max-w-xl">
+            <p class="text-slate-300 font-light text-base sm:text-lg leading-relaxed max-w-xl">
                 A unified, secure, and highly scalable Hospital Management System centralizing electronic medical records, patient flow triage, and diagnostics across healthcare networks.
             </p>
 
@@ -325,10 +332,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="w-full bg-[#F8F3EB] py-20 text-center">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 space-y-8 flex flex-col items-center">
         <!-- Brand Name Logo -->
-        <h2 class="text-[#080808] text-3xl sm:text-4xl font-light tracking-[0.35em] font-serif uppercase">HOMALIX</h2>
+        <h2 class="text-[#000d16] text-3xl md:text-4xl font-bold tracking-[0.35em] uppercase">HOMALIX</h2>
         
         <!-- Premium Description -->
-        <p class="text-[#4a4a4a] font-light text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
+        <p class="text-slate-700 font-light text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
             Leveraging cutting-edge cloud infrastructure and clinical machine learning, Homalix has established itself as a pioneer in modern hospital resource management, celebrated for its unparalleled efficiency and HIPAA-compliant architecture.
         </p>
         
@@ -354,11 +361,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] text-[10px] font-bold tracking-widest uppercase border border-[var(--secondary-color)]/25">
                     Product Walkthrough
                 </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
+                <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
                     Inside the <br>
                     <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Clinical Hub.</span>
                 </h2>
-                <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed">
+                <p class="text-slate-300 font-light text-base sm:text-lg leading-relaxed">
                     Observe how Homalix simplifies medical complexity. Explore a comprehensive visual walkthrough showing central patient queues, automated EMR routing, and integrated lab results in real-time.
                 </p>
 
@@ -370,7 +377,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-0.5">
                             <h4 class="text-white text-sm font-semibold">Triage Orchestration</h4>
-                            <p class="text-gray-400 text-xs font-light">Patient routing across clinic networks in real-time.</p>
+                            <p class="text-slate-300 text-sm font-light">Patient routing across clinic networks in real-time.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-4">
@@ -379,7 +386,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-0.5">
                             <h4 class="text-white text-sm font-semibold">Zero-Trust EMR Vault</h4>
-                            <p class="text-gray-400 text-xs font-light">End-to-end encrypted electronic health records.</p>
+                            <p class="text-slate-300 text-sm font-light">End-to-end encrypted electronic health records.</p>
                         </div>
                     </li>
                 </ul>
@@ -455,10 +462,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <!-- Text Column -->
         <div class="lg:col-span-5 space-y-6">
-            <h2 class="text-3xl sm:text-4xl font-light text-white leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
                 Operational <span class="text-[var(--secondary-color)] italic font-bold">Transformation</span>
             </h2>
-            <p class="text-gray-300 font-light text-base leading-relaxed">
+            <p class="text-slate-300 font-light text-base leading-relaxed">
                 Transitioning from fragmented legacy silos to a unified clinical nervous system. Observe the impact of Homalix enterprise integration across clinical ecosystems.
             </p>
             <div class="pt-2">
@@ -544,10 +551,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 text-center">
     <div class="space-y-4 mb-12">
-        <h2 class="text-3xl md:text-4xl font-light">
-            Network <b>Core Capabilities</b>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+            Network Core Capabilities
         </h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm">
+        <p class="text-slate-300 font-light max-w-xl mx-auto text-sm">
             Precision-engineered modules designed to handle the velocity of enterprise medical operations.
         </p>
     </div>
@@ -560,8 +567,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     <div class="w-12 h-12 rounded-xl bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] flex items-center justify-center border border-[var(--secondary-color)]/20">
                         <span class="material-symbols-outlined">patient_list</span>
                     </div>
-                    <h3 class="text-2xl font-light text-white">Patient Flow Management</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Patient Flow Management</h3>
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Predictive triage algorithms that intelligently route patients across the 12-clinic network based on real-time load and physician availability.
                     </p>
                     <div class="flex gap-2 pt-2">
@@ -581,8 +588,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     <div class="w-12 h-12 rounded-xl bg-[var(--primary-color)]/10 text-[var(--primary-color)] flex items-center justify-center border border-[var(--primary-color)]/20">
                         <span class="material-symbols-outlined">payments</span>
                     </div>
-                    <h3 class="text-2xl font-light text-white">Smart Revenue</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Smart Revenue</h3>
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Automated ICD-10 coding and claim scrubbing with a 99.8% first-pass acceptance rate.
                     </p>
                 </div>
@@ -598,8 +605,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     <span class="material-symbols-outlined">calendar_today</span>
                 </div>
                 <div class="space-y-2">
-                    <h4 class="text-lg font-medium text-white">Staff Optimization</h4>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    <h4 class="text-lg font-bold text-white">Staff Optimization</h4>
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Intelligent scheduling reduces physician burnout by 35% through ergonomic shift rotation.
                     </p>
                 </div>
@@ -612,8 +619,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         <span class="material-symbols-outlined">shield_lock</span>
                     </div>
                     <div class="space-y-2">
-                        <h4 class="text-lg font-medium text-white">HIPAA Fortress Architecture</h4>
-                        <p class="text-gray-400 text-xs font-light leading-relaxed">
+                        <h4 class="text-lg font-bold text-white">HIPAA Fortress Architecture</h4>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">
                             Zero-trust data environment with end-to-end quantum-resistant encryption.
                         </p>
                     </div>
@@ -631,7 +638,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-white/5">
     <!-- Section Header -->
     <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">The Intelligence Transformation</h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">The <span class="font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)] bg-clip-text text-transparent">Intelligence Transformation</span></h2>
     </div>
 
     <!-- Wavy Process Flow (Desktop) -->
@@ -654,7 +661,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Text/Badge Above -->
             <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 bg-[#00101a] border border-white/10 rounded-full px-5 py-2.5 text-center shadow-2xl transition-all duration-300 w-48 group-hover:border-[var(--secondary-color)]/40 group-hover:-translate-y-1">
                 <h4 class="text-white text-xs font-semibold tracking-wide font-medium">Fragmented Data</h4>
-                <p class="text-gray-400 text-[10px] font-light mt-0.5">Isolated legacy servers</p>
+                <p class="text-slate-300 text-xs font-light mt-0.5">Isolated legacy servers</p>
             </div>
             <!-- Dot on the curve -->
             <div class="transformation-node w-8 h-8 rounded-full border-4 border-white bg-[var(--primary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(63,137,201,0.5)] cursor-pointer">
@@ -671,7 +678,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Text/Badge Below -->
             <div class="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-[#00101a] border border-white/10 rounded-full px-5 py-2.5 text-center shadow-2xl transition-all duration-300 w-48 group-hover:border-[var(--secondary-color)]/40 group-hover:translate-y-1">
                 <h4 class="text-[var(--secondary-color)] text-xs font-semibold tracking-wide font-medium">Homalix Core</h4>
-                <p class="text-gray-400 text-[10px] font-light mt-0.5">Central AI Processing</p>
+                <p class="text-slate-300 text-xs font-light mt-0.5">Central AI Processing</p>
             </div>
         </div>
 
@@ -680,7 +687,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Text/Badge Above -->
             <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 bg-[#00101a] border border-white/10 rounded-full px-5 py-2.5 text-center shadow-2xl transition-all duration-300 w-48 group-hover:border-[var(--secondary-color)]/40 group-hover:-translate-y-1">
                 <h4 class="text-white text-xs font-semibold tracking-wide font-medium">Predictive Action</h4>
-                <p class="text-gray-400 text-[10px] font-light mt-0.5">Real-time clinical insights</p>
+                <p class="text-slate-300 text-xs font-light mt-0.5">Real-time clinical insights</p>
             </div>
             <!-- Dot on the curve -->
             <div class="transformation-node w-8 h-8 rounded-full border-4 border-white bg-[var(--tertiary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(133,213,92,0.5)] cursor-pointer">
@@ -698,7 +705,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
             <div>
                 <h4 class="text-white text-sm font-semibold tracking-wide">Fragmented Data</h4>
-                <p class="text-gray-400 text-xs font-light mt-0.5">Isolated legacy servers</p>
+                <p class="text-slate-300 text-sm font-light mt-0.5">Isolated legacy servers</p>
             </div>
         </div>
         
@@ -709,7 +716,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
             <div>
                 <h4 class="text-[var(--secondary-color)] text-sm font-semibold tracking-wide">Homalix Core</h4>
-                <p class="text-gray-400 text-xs font-light mt-0.5">Central AI Processing</p>
+                <p class="text-slate-300 text-sm font-light mt-0.5">Central AI Processing</p>
             </div>
         </div>
         
@@ -720,7 +727,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
             <div>
                 <h4 class="text-white text-sm font-semibold tracking-wide">Predictive Action</h4>
-                <p class="text-gray-400 text-xs font-light mt-0.5">Real-time clinical insights</p>
+                <p class="text-slate-300 text-sm font-light mt-0.5">Real-time clinical insights</p>
             </div>
         </div>
     </div>
@@ -731,21 +738,21 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-10 flex flex-col justify-center items-center text-center space-y-4 cursor-pointer">
             <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Time Saved</p>
             <p class="metric-value text-4xl sm:text-5xl font-extrabold text-[var(--primary-color)] tracking-tight">12,000 hrs</p>
-            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed max-w-[240px]">Clinical administrative hours recovered annually.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed max-w-[240px]">Clinical administrative hours recovered annually.</p>
         </div>
         
         <!-- Metric Card 2 -->
         <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-10 flex flex-col justify-center items-center text-center space-y-4 cursor-pointer">
             <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Revenue Growth</p>
             <p class="metric-value text-4xl sm:text-5xl font-extrabold text-[var(--primary-color)] tracking-tight">18.5%</p>
-            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed max-w-[240px]">Increase in billing accuracy and resource recovery.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed max-w-[240px]">Increase in billing accuracy and resource recovery.</p>
         </div>
         
         <!-- Metric Card 3 -->
         <div class="metric-card-premium bg-[#00101a]/40 border border-white/5 rounded-2xl p-10 flex flex-col justify-center items-center text-center space-y-4 cursor-pointer">
             <p class="text-[10px] text-[var(--secondary-color)] font-bold uppercase tracking-widest">Staff Satisfaction</p>
             <p class="metric-value text-4xl sm:text-5xl font-extrabold text-[var(--primary-color)] tracking-tight">+42pt</p>
-            <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed max-w-[240px]">Improvement in clinician eNPS survey results.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed max-w-[240px]">Improvement in clinician eNPS survey results.</p>
         </div>
     </div>
 </section>
@@ -758,12 +765,12 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Side: Content -->
             <div class="lg:col-span-6 space-y-8">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-slate-900">
+                <h2 class="text-3xl md:text-5xl font-bold text-[#000d16] leading-tight">
                     Empowering decision-makers with <br>
-                    <span class="text-[var(--secondary-color)]">Clarity.</span>
+                    <span class="font-bold bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent">Clarity.</span>
                 </h2>
                 
-                <p class="text-slate-600 font-light text-base sm:text-lg leading-relaxed max-w-xl">
+                <p class="text-slate-700 font-light text-base sm:text-lg leading-relaxed max-w-xl">
                     The Homalix interface was designed for high-stress clinical environments. No cluttered menus, only actionable intelligence.
                 </p>
                 
@@ -806,10 +813,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section id="local-cases" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
     <div class="text-center space-y-4 mb-12">
-        <h2 class="text-3xl md:text-4xl font-light">
-            Partner <b>Hospital Profiles</b>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+            Partner Hospital Profiles
         </h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm">
+        <p class="text-slate-300 font-light max-w-xl mx-auto text-sm">
             Check the outcomes of Homalix deployment across various multi-branch clinics and diagnostic systems.
         </p>
     </div>
@@ -870,7 +877,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                 <div class="space-y-2">
                     <h3 class="text-lg font-medium text-white group-hover:text-[var(--secondary-color)] transition-colors">Al Noor Hospital</h3>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Streamlined clinical appointments and central medical billing. Resolved major administrative bottlenecks caused by paper logs.
                     </p>
                 </div>
@@ -896,7 +903,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                 <div class="space-y-2">
                     <h3 class="text-lg font-medium text-white group-hover:text-[var(--tertiary-color)] transition-colors">City Care Network</h3>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Synchronized multi-branch records and schedules. Centralized control panel simplifies operational analytics for branch directors.
                     </p>
                 </div>
@@ -922,7 +929,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                 <div class="space-y-2">
                     <h3 class="text-lg font-medium text-white group-hover:text-[var(--primary-color)] transition-colors">Prime Diagnostics</h3>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    <p class="text-slate-300 text-sm font-light leading-relaxed">
                         Automated laboratory transcription and report updates. Minimized processing delays and transcription errors significantly.
                     </p>
                 </div>
@@ -942,10 +949,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 text-center">
     <div class="space-y-4 mb-12">
-        <h2 class="text-3xl md:text-4xl font-light">
-            Aggregate <b>Network Performance</b>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+            Aggregate Network Performance
         </h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm">
+        <p class="text-slate-300 font-light max-w-xl mx-auto text-sm">
             Average metrics achieved across healthcare clinics using Homalix Hospital Management modules.
         </p>
     </div>
@@ -959,8 +966,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <span class="text-2xl font-bold text-white">60%</span>
                 <span class="absolute inset-0 rounded-full border-4 border-t-[var(--secondary-color)] border-l-[var(--secondary-color)] border-b-transparent border-r-transparent"></span>
             </div>
-            <h4 class="text-lg font-medium text-white">Time Reduction</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+            <h4 class="text-lg font-bold text-white">Time Reduction</h4>
+            <p class="text-slate-300 text-sm font-light leading-relaxed max-w-xs">
                 Average reduction in clinical charting and patient registration time per encounter.
             </p>
         </div>
@@ -971,8 +978,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <span class="text-2xl font-bold text-white">45%</span>
                 <span class="absolute inset-0 rounded-full border-4 border-t-[var(--tertiary-color)] border-r-transparent border-b-transparent border-l-transparent"></span>
             </div>
-            <h4 class="text-lg font-medium text-white">Admin Workload Decrease</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+            <h4 class="text-lg font-bold text-white">Admin Workload Decrease</h4>
+            <p class="text-slate-300 text-sm font-light leading-relaxed max-w-xs">
                 Significant drop in repetitive paperwork and manual booking conflicts for nursing staff.
             </p>
         </div>
@@ -995,13 +1002,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             
             <!-- Right Side Content -->
             <div class="md:col-span-9 space-y-6">
-                <p class="text-white text-lg md:text-xl font-light italic leading-relaxed text-gray-200">
-                    "The ROI wasn't just measured in pounds and pence; it was measured in minutes returned to our doctors to actually care for patients. Homalix has fundamentally changed the metabolic rate of our hospital operations."
+                <p class="text-slate-200 text-lg md:text-xl font-light italic leading-relaxed">
+                    "Elena Rodriguez Chief Medical Officer"
                 </p>
                 
                 <div class="space-y-1">
                     <h3 class="text-xl font-bold text-[var(--secondary-color)]">Dr. Elena Rodriguez</h3>
-                    <p class="text-xs sm:text-sm font-light text-gray-400">Chief Medical Officer, St. Mary's General Hospital</p>
+                    <p class="text-xs sm:text-sm font-light text-slate-300">Chief Medical Officer, St. Mary's General Hospital</p>
                 </div>
             </div>
         </div>
@@ -1010,24 +1017,38 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
 <!-- Standard Footer -->
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2 text-white px-4">
-                    <a href="/"><img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48"></a>
-                </div>
 
-                <div class="flex gap-3">
-                    <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-youtube"></i></a>
+            <div class="flex flex-col gap-0">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-2 text-white px-4 ">
+                        <a href="/">
+                            <img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48">
+                        </a>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="border-t border-white/30 my-8"></div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
+                
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
                     <ul class="space-y-2 text-sm font-light">
@@ -1087,12 +1108,58 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Location</h2>
+                    <div class="flex flex-wrap justify-start gap-4 font-light">
+                        <p>UK</p>
+                        <p class="text-white/30">|</p>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
+                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
+                        <p>(+92) 305 8214945</p>
+                        <p class="text-white/30 sm:block">|</p>
+                        <p>(+44) 7476451747</p>
+                        <p class="text-white/30 hidden sm:block">|</p>
+                        <p class="break-all">info@qonkar.com</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                        <div class="flex items-center gap-10 h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                            </a>
+                            
+                            <a href="https://www.secp.gov.pk/" target="_blank">
+                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                    <div class="flex items-center h-20">
+                        <a href="https://techdestination.com/" target="_blank">
+                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
                 <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
-                <div class="flex gap-4 text-sm">
+                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
             </div>
+
         </div>
     </div>
 </footer>

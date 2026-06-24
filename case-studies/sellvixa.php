@@ -59,6 +59,10 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             color: #fff;
             overflow-x: hidden;
         }
+        p:not(.font-bold):not(.font-semibold):not(.font-medium):not(.font-extrabold) {
+            font-weight: 300;
+            line-height: 1.625;
+        }
 
         /* Mockup Frame (Flat & Elegant) */
         .mockup-frame {
@@ -340,14 +344,14 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
             
             <div class="space-y-2">
-                <p class="text-xs font-bold text-gray-400 tracking-[0.2em] uppercase">CASE STUDY: SELLVIXA</p>
-                <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-light leading-tight tracking-tight text-white leading-none">
+                <p class="text-xs font-bold text-slate-400 tracking-[0.2em] uppercase">CASE STUDY: SELLVIXA</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight text-white leading-none">
                     Retail.<br>
                     <span class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Redefined.</span>
                 </h1>
             </div>
 
-            <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed max-w-xl">
+            <p class="text-slate-300 font-light text-base sm:text-lg leading-relaxed max-w-xl">
                 Sellvixa consolidates fragmented cash points, branch inventory deprivations, and bookkeeping errors into a single, cohesive dashboard ecosystem.
             </p>
         </div>
@@ -419,7 +423,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="bg-white/5 border border-white/10 p-8 rounded-2xl space-y-3 hover:border-white/20 transition duration-300">
             <div class="text-[var(--secondary-color)]"><i class="fa-solid fa-square-poll-vertical text-xl"></i></div>
             <h4 class="text-white font-bold text-lg">Sales Intelligence</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">
+            <p class="text-slate-300 text-sm font-light leading-relaxed">
                 Live branch data consolidation provides managers with instantaneous reports on best sellers, sales velocity, and profit margins.
             </p>
         </div>
@@ -427,7 +431,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="bg-white/5 border border-white/10 p-8 rounded-2xl space-y-3 hover:border-white/20 transition duration-300">
             <div class="text-[var(--tertiary-color)]"><i class="fa-solid fa-boxes-packing text-xl"></i></div>
             <h4 class="text-white font-bold text-lg">Inventory Depletion</h4>
-            <p class="text-gray-400 text-xs font-light leading-relaxed">
+            <p class="text-slate-300 text-sm font-light leading-relaxed">
                 As cashiers scan items, inventory levels deplete globally. Reorder triggers activate automatically when thresholds are reached.
             </p>
         </div>
@@ -446,11 +450,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] text-[10px] font-bold tracking-widest uppercase border border-[var(--secondary-color)]/25">
                     Product Walkthrough
                 </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
+                <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
                     Inside the <br>
                     <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Retail Hub.</span>
                 </h2>
-                <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed font-sans">
+                <p class="text-slate-300 font-light text-base sm:text-lg leading-relaxed">
                     Observe how Sellvixa simplifies retail complexity. Explore a comprehensive visual walkthrough showing central inventory logs, real-time POS transaction processing, and automated reorder tracking.
                 </p>
 
@@ -462,7 +466,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-0.5">
                             <h4 class="text-white text-sm font-semibold">POS Checkout Simulation</h4>
-                            <p class="text-gray-400 text-xs font-light">High-speed barcode scanning with automatic totals calculation.</p>
+                            <p class="text-slate-300 text-sm font-light">High-speed barcode scanning with automatic totals calculation.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-4">
@@ -471,7 +475,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-0.5">
                             <h4 class="text-white text-sm font-semibold">Unified Stock Registry</h4>
-                            <p class="text-gray-400 text-xs font-light">Automatic inventory updates and low-stock procurement triggers.</p>
+                            <p class="text-slate-300 text-sm font-light">Automatic inventory updates and low-stock procurement triggers.</p>
                         </div>
                     </li>
                 </ul>
@@ -525,8 +529,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10 text-left">
     <div class="space-y-2 mb-8">
-        <h2 class="text-2xl md:text-4xl font-semibold text-white">POS Checkout <span class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Simulator</span></h2>
-        <p class="text-gray-400 max-w-xl text-xs sm:text-sm leading-relaxed">
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">POS Checkout <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Simulator</span></h2>
+        <p class="text-slate-300 max-w-xl text-sm sm:text-base leading-relaxed">
             Click on items below to simulate a high-speed scan. Watch the receipt and logs update in real-time.
         </p>
     </div>
@@ -660,13 +664,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Info & Slider (Left) -->
         <div class="lg:col-span-5 space-y-4">
             <span class="bg-[var(--tertiary-color)]/10 border border-[var(--tertiary-color)]/20 text-[var(--tertiary-color)] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Interactive ROI</span>
-            <h2 class="text-2xl md:text-3xl font-semibold text-white">Scale Your ROI Metrics</h2>
-            <p class="text-gray-400 text-xs leading-relaxed">
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Scale Your <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">ROI Metrics</span></h2>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">
                 As you scale your store locations, Sellvixa keeps database operations centralized. Drag the slider to observe live estimates of administrative savings, reduced checkout hours, and prevented margin leakage.
             </p>
             
             <div class="space-y-2 pt-2">
-                <div class="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-gray-400">
+                <div class="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-slate-400">
                     <span>Locations Scale</span>
                     <span id="sliderValue" class="text-[var(--secondary-color)]">1 Branch</span>
                 </div>
@@ -678,21 +682,21 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <!-- Metric 1 -->
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-5 text-center space-y-1 hover:border-[var(--secondary-color)]/30 transition duration-200">
-                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider block">Monthly Transactions</span>
+                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Monthly Transactions</span>
                 <span id="statBillings" class="text-2xl font-extrabold text-white block">450+</span>
-                <p class="text-[9px] text-gray-400 leading-snug">Simulated checkouts handled per week</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Simulated checkouts handled per week</p>
             </div>
             <!-- Metric 2 -->
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-5 text-center space-y-1 hover:border-[var(--tertiary-color)]/30 transition duration-200">
-                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider block">Audit Hours Saved</span>
+                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Audit Hours Saved</span>
                 <span id="statHours" class="text-2xl font-extrabold text-[var(--tertiary-color)] block">20 hrs</span>
-                <p class="text-[9px] text-gray-400 leading-snug">Reduced manual reconciliation hours</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Reduced manual reconciliation hours</p>
             </div>
             <!-- Metric 3 -->
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-5 text-center space-y-1 hover:border-[var(--secondary-color)]/30 transition duration-200">
-                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider block">Prevented Losses</span>
+                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Prevented Losses</span>
                 <span id="statLoss" class="text-2xl font-extrabold text-[var(--secondary-color)] block">Rs. 1,200</span>
-                <p class="text-[9px] text-gray-400 leading-snug">Stopped stockout & shrinkage leakage</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Stopped stockout & shrinkage leakage</p>
             </div>
         </div>
     </div>
@@ -705,7 +709,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <div class="mb-12 text-left">
-            <h2 class="text-3xl md:text-5xl font-light text-slate-900 leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#000d16] leading-tight">
                 Retail Operations: <br>
                 <span class="bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Manual vs. Automated</span>
             </h2>
@@ -728,7 +732,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-1">
                             <h4 class="text-sm font-bold text-slate-800">Checkout Line Delays</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">
                                 Cashiers wasted 2 minutes daily keying in barcodes, leading to slow checkouts, customer dropouts (+18%), and billing errors.
                             </p>
                         </div>
@@ -741,7 +745,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-1">
                             <h4 class="text-sm font-bold text-slate-800">Inventory Discrepancy</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">
                                 Discrepancies between physical items on the shelf and the stock databases caused critical product stockouts daily.
                             </p>
                         </div>
@@ -754,7 +758,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-1">
                             <h4 class="text-sm font-bold text-slate-800">Product Expiry Losses</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">
                                 No automated batch-wise tracking meant expired goods stayed on shelves, causing write-offs and 4.5% revenue leakage.
                             </p>
                         </div>
@@ -780,7 +784,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                         <div class="space-y-1">
                             <h4 class="text-sm font-bold text-slate-800">High-Speed Scanner & Checkout</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">
                                 Instant barcode scan processing with automatic subtotal/tax calculations, cutting customer checkout time by 80%.
                             </p>
                         </div>
@@ -793,7 +797,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                           </div>
                           <div class="space-y-1">
                               <h4 class="text-sm font-bold text-slate-800">Unified Stock Sync & Procurement</h4>
-                              <p class="text-xs text-slate-600 leading-relaxed">
+                              <p class="text-sm text-slate-600 font-light leading-relaxed">
                                   Global inventory levels deplete in real-time as checkouts happen, automatically triggering reorder procurements.
                               </p>
                           </div>
@@ -806,7 +810,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                           </div>
                           <div class="space-y-1">
                               <h4 class="text-sm font-bold text-slate-800">Predictive Expiry Log Alerter</h4>
-                              <p class="text-xs text-slate-600 leading-relaxed">
+                              <p class="text-sm text-slate-600 font-light leading-relaxed">
                                   Intelligent log alerts flag items approaching expiry, allowing dynamic discount triggers and preventing write-off losses.
                               </p>
                           </div>
@@ -823,8 +827,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-white/10 relative">
     <div class="text-center space-y-4 mb-16">
         <span class="bg-[#01a0d8]/10 border border-[#01a0d8]/30 text-[#01a0d8] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Unified flow</span>
-        <h2 class="text-3xl md:text-4xl font-light text-white">The <b>Transaction Pipeline</b></h2>
-        <p class="text-gray-400 font-normal max-w-xl mx-auto text-sm sm:text-base leading-relaxed">Observe the path of a checkout scan. Data moves securely from POS to analytics instantly.</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">The Transaction Pipeline</h2>
+        <p class="text-slate-300 font-light max-w-xl mx-auto text-sm sm:text-base leading-relaxed">Observe the path of a checkout scan. Data moves securely from POS to analytics instantly.</p>
     </div>
 
     <!-- Static Data Pipeline Diagram -->
@@ -846,28 +850,28 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="bg-[#00101a] border border-white/10 rounded-2xl p-6 w-56 text-center space-y-3 z-10 relative">
             <div class="w-10 h-10 rounded-full bg-[var(--primary-color)]/10 text-[var(--primary-color)] flex items-center justify-center mx-auto border border-[var(--primary-color)]/25 font-bold text-sm">1</div>
             <h4 class="text-white text-sm font-bold">POS Barcode Scan</h4>
-            <p class="text-gray-400 text-[10px] font-light leading-relaxed">Cashier scans item, register retrieves price & details instantly.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">Cashier scans item, register retrieves price & details instantly.</p>
         </div>
 
         <!-- Step 2 -->
         <div class="bg-[#00101a] border border-white/10 rounded-2xl p-6 w-56 text-center space-y-3 z-10 relative">
             <div class="w-10 h-10 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] flex items-center justify-center mx-auto border border-[var(--secondary-color)]/25 font-bold text-sm">2</div>
             <h4 class="text-white text-sm font-bold">Stock Deduction</h4>
-            <p class="text-gray-400 text-[10px] font-light leading-relaxed">Global inventory database depletes product stock logs globally.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">Global inventory database depletes product stock logs globally.</p>
         </div>
 
         <!-- Step 3 -->
         <div class="bg-[#00101a] border border-white/10 rounded-2xl p-6 w-56 text-center space-y-3 z-10 relative">
             <div class="w-10 h-10 rounded-full bg-[var(--tertiary-color)]/10 text-[var(--tertiary-color)] flex items-center justify-center mx-auto border border-[var(--tertiary-color)]/25 font-bold text-sm">3</div>
             <h4 class="text-white text-sm font-bold">Alert Threshold</h4>
-            <p class="text-gray-400 text-[10px] font-light leading-relaxed">Real-time check alerts manager if stock hits critical reorder levels.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">Real-time check alerts manager if stock hits critical reorder levels.</p>
         </div>
 
         <!-- Step 4 -->
         <div class="bg-[#00101a] border border-white/10 rounded-2xl p-6 w-56 text-center space-y-3 z-10 relative">
             <div class="w-10 h-10 rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto border border-purple-500/25 font-bold text-sm">4</div>
             <h4 class="text-white text-sm font-bold">Auto procurement</h4>
-            <p class="text-gray-400 text-[10px] font-light leading-relaxed">Supplier order is compiled, preparing a purchase balance sheet.</p>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">Supplier order is compiled, preparing a purchase balance sheet.</p>
         </div>
     </div>
 </section>
@@ -890,7 +894,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </div>
         
         <!-- Testimonial Quote -->
-        <p class="text-xl sm:text-2xl font-light text-gray-200 leading-relaxed tracking-tight max-w-3xl mx-auto italic">
+        <p class="text-xl sm:text-2xl font-light text-slate-200 leading-relaxed tracking-tight max-w-3xl mx-auto italic">
             "Sellvixa completely transformed how we manage our supermarket. From billing and inventory to supplier management, everything is now centralized and incredibly easy to use. Our checkout speed improved dramatically, and stock management has never been this accurate."
         </p>
         
@@ -918,8 +922,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center space-y-4 mb-16">
             <span class="bg-[#2fadc3]/10 border border-[#2fadc3]/30 text-[#2fadc3] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Engineering Spec</span>
-            <h2 class="text-3xl md:text-4xl font-light text-white">System <b>Architecture & Stack</b></h2>
-            <p class="text-gray-400 font-normal max-w-xl mx-auto text-sm">Engineered for low latency, secure multi-branch synchronization, and fast client-side rendering.</p>
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">System Architecture & Stack</h2>
+            <p class="text-slate-300 font-light max-w-xl mx-auto text-sm">Engineered for low latency, secure multi-branch synchronization, and fast client-side rendering.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
@@ -927,7 +931,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-black/50 transition duration-300">
                 <span class="text-[var(--secondary-color)] text-lg mb-2 block"><i class="fa-solid fa-server"></i></span>
                 <h4 class="text-white font-bold text-sm">Robust Backend</h4>
-                <p class="text-gray-400 text-xs mt-1 leading-relaxed">Built on a secure PHP core, handling API requests, batch barcode imports, and inventory calculations with multi-layer error protection.</p>
+                <p class="text-slate-300 text-sm mt-1 leading-relaxed">Built on a secure PHP core, handling API requests, batch barcode imports, and inventory calculations with multi-layer error protection.</p>
                 <div class="flex gap-2 flex-wrap mt-4">
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">PHP 8.2+</span>
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">REST APIs</span>
@@ -938,7 +942,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-black/50 transition duration-300">
                 <span class="text-[var(--tertiary-color)] text-lg mb-2 block"><i class="fa-solid fa-database"></i></span>
                 <h4 class="text-white font-bold text-sm">Relational DB</h4>
-                <p class="text-gray-400 text-xs mt-1 leading-relaxed">Structured MySQL schema utilizing indexing, transactional queries (ACID), and constraints to prevent data duplication across depots.</p>
+                <p class="text-slate-300 text-sm mt-1 leading-relaxed">Structured MySQL schema utilizing indexing, transactional queries (ACID), and constraints to prevent data duplication across depots.</p>
                 <div class="flex gap-2 flex-wrap mt-4">
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">MySQL</span>
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">Indexed Queries</span>
@@ -949,7 +953,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-black/50 transition duration-300">
                 <span class="text-amber-400 text-lg mb-2 block"><i class="fa-solid fa-bolt"></i></span>
                 <h4 class="text-white font-bold text-sm">Real-time Layer</h4>
-                <p class="text-gray-400 text-xs mt-1 leading-relaxed">WebSocket interfaces push updates dynamically to checking registers and supervisor consoles, keeping stock levels synced.</p>
+                <p class="text-slate-300 text-sm mt-1 leading-relaxed">WebSocket interfaces push updates dynamically to checking registers and supervisor consoles, keeping stock levels synced.</p>
                 <div class="flex gap-2 flex-wrap mt-4">
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">WebSockets</span>
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">Event Loops</span>
@@ -960,7 +964,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-black/50 transition duration-300">
                 <span class="text-purple-400 text-lg mb-2 block"><i class="fa-solid fa-display"></i></span>
                 <h4 class="text-white font-bold text-sm">Responsive UI</h4>
-                <p class="text-gray-400 text-xs mt-1 leading-relaxed">Premium client dashboard styled with Tailwind CSS, custom vanilla CSS grid system, and optimized vanilla JS client routines.</p>
+                <p class="text-slate-300 text-sm mt-1 leading-relaxed">Premium client dashboard styled with Tailwind CSS, custom vanilla CSS grid system, and optimized vanilla JS client routines.</p>
                 <div class="flex gap-2 flex-wrap mt-4">
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">Tailwind CSS</span>
                     <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300">Vanilla JS</span>
@@ -976,8 +980,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-white/5">
     <div class="text-center space-y-4 mb-16">
         <span class="bg-[#01a0d8]/10 border border-[#01a0d8]/30 text-[#01a0d8] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Common Queries</span>
-        <h2 class="text-3xl md:text-4xl font-light text-white">Frequently Asked <b>Questions</b></h2>
-        <p class="text-gray-400 font-normal text-sm sm:text-base">Toggle tabs on the left to see dynamic answers slide in on the right.</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Frequently Asked Questions</h2>
+        <p class="text-slate-300 font-light text-sm sm:text-base">Toggle tabs on the left to see dynamic answers slide in on the right.</p>
     </div>
 
     <!-- Tabbed grid layout -->
@@ -1002,7 +1006,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="md:col-span-7 bg-[#00101a] border border-white/10 rounded-xl p-8 flex items-center min-h-[180px]">
             <div class="relative z-10 space-y-4">
                 <h4 id="faqContentTitle" class="text-lg font-bold text-white">Offline POS Billing</h4>
-                <p id="faqContentBody" class="text-gray-400 text-sm font-light leading-relaxed">
+                <p id="faqContentBody" class="text-slate-300 text-sm font-light leading-relaxed">
                     Yes. Sellvixa includes an offline mode that allows store cashiers to continue checkout billing and receipt printing even during network disruptions. Transactions are auto-synchronized once connections are restored.
                 </p>
             </div>
@@ -1018,11 +1022,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="absolute -top-24 -left-24 w-48 h-48 bg-[var(--primary-color)]/5 rounded-full blur-2xl pointer-events-none"></div>
         <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-[var(--secondary-color)]/5 rounded-full blur-2xl pointer-events-none"></div>
         
-        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">
+        <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
             Ready to Scale Your <br>
             <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Retail Network?</span>
         </h2>
-        <p class="text-gray-400 font-light max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+        <p class="text-slate-300 font-light max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
             Connect with Qonkar Technologies today to configure a high-speed POS and Multi-Branch ERP custom tailored for your business.
         </p>
         <div class="pt-4">
@@ -1036,24 +1040,38 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
 <!-- Standard Footer -->
 <footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[var(--primary-color)] via-[var(--secondary-color)] to-[var(--tertiary-color)] text-white px-10 sm:px-14 py-8">
+    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2 text-white px-4">
-                    <a href="/"><img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48"></a>
-                </div>
 
-                <div class="flex gap-3">
-                    <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"><i class="fab fa-youtube"></i></a>
+            <div class="flex flex-col gap-0">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-2 text-white px-4 ">
+                        <a href="/">
+                            <img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48">
+                        </a>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="border-t border-white/30 my-8"></div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
+                
                 <div>
                     <h3 class="font-bold text-lg mb-4">Shopify</h3>
                     <ul class="space-y-2 text-sm font-light">
@@ -1113,12 +1131,58 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Location</h2>
+                    <div class="flex flex-wrap justify-start gap-4 font-light">
+                        <p>UK</p>
+                        <p class="text-white/30">|</p>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
+                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
+                        <p>(+92) 305 8214945</p>
+                        <p class="text-white/30 sm:block">|</p>
+                        <p>(+44) 7476451747</p>
+                        <p class="text-white/30 hidden sm:block">|</p>
+                        <p class="break-all">info@qonkar.com</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
+                    <div class="flex flex-col md:items-start md:text-left mb-8">
+                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
+                        <div class="flex items-center gap-10 h-20">
+                            <a href="https://techdestination.com/" target="_blank">
+                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
+                            </a>
+                            
+                            <a href="https://www.secp.gov.pk/" target="_blank">
+                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:items-start md:text-left mb-8">
+                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
+                    <div class="flex items-center h-20">
+                        <a href="https://techdestination.com/" target="_blank">
+                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
                 <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
-                <div class="flex gap-4 text-sm">
+                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
                     <a href="/contact-us" class="hover:underline">Contact Us</a>
                 </div>
             </div>
+
         </div>
     </div>
 </footer>

@@ -1,0 +1,38 @@
+﻿commit b0c6379b10d9838d36b5c738eb7bc3c92b71aa4d
+Author: Saadullah <saadsoomr6@gmail.com>
+Date:   Mon Jun 22 13:06:49 2026 +0500
+
+    update
+
+diff --git a/index.php b/index.php
+index 103d56e..4f54469 100644
+--- a/index.php
++++ b/index.php
+@@ -399,15 +399,18 @@ require_once ADMIN_URL.'/database_config.php';
+                     One team to build, convert, and grow your digital presence. From scalable software to ROI-driven marketing, we deliver innovation that scales businesses faster.
+                 </p>
+ 
+-                <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn mt-2 inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#01a0d8] bg-transparent text-[#01a0d8] text-lg font-semibold 
+-                hover:bg-[#01a0d8] hover:text-white transition-all duration-300">
+-                    Get a Free Consultation
+-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+-                        stroke="currentColor">
+-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+-                    </svg>
+-                </a>
++                <div class="laser-border rounded-full mt-2 shadow-md">
++                    <div class="laser-background rounded-full">
++                        <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn inline-flex items-center gap-2 px-8 py-3 rounded-full text-[#01a0d8] text-lg font-semibold hover:bg-[#01a0d8] hover:text-white transition-all duration-300">
++                            Get a Free Consultation
++                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
++                                stroke="currentColor">
++                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
++                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
++                            </svg>
++                        </a>
++                    </div>
++                </div>
+             </div>
+ 
+             <div class="w-full md:w-1/2 hero-img flex justify-center items-center overflow-hidden max-h-[40vh] md:max-h-[55vh]">

@@ -90,10 +90,12 @@ require_once ADMIN_URL.'/database_config.php';
         }
         @media (max-width: 900px) {
             .portfolio-editorial-grid { grid-template-columns: 1fr 1fr; }
-            .pcard-featured { grid-column: span 2 !important; grid-row: span 1 !important; }
+            .pcard { grid-column: auto !important; grid-row: auto !important; }
+            .pcard-featured { grid-column: span 2 !important; }
         }
         @media (max-width: 600px) {
             .portfolio-editorial-grid { grid-template-columns: 1fr; }
+            .pcard { grid-column: auto !important; grid-row: auto !important; }
             .pcard-featured { grid-column: span 1 !important; }
         }
 
@@ -106,13 +108,17 @@ require_once ADMIN_URL.'/database_config.php';
             background: #050e18;
             border: 1px solid rgba(255,255,255,0.07);
             opacity: 0;
-            transform: translateY(55px);
+            transform: translateY(55px) translateZ(0);
+            -webkit-transform: translateY(55px) translateZ(0);
             will-change: transform, opacity;
             transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.08s ease;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
         .pcard.revealed {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) translateZ(0);
+            -webkit-transform: translateY(0) translateZ(0);
             transition: opacity 0.7s ease, transform 0.7s ease,
                         box-shadow 0.4s ease, border-color 0.4s ease;
         }
@@ -139,6 +145,15 @@ require_once ADMIN_URL.'/database_config.php';
             display: block;
             overflow: hidden;
             position: relative;
+            border-radius: 21px 21px 0 0;
+            -webkit-border-radius: 21px 21px 0 0;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+        .pcard-featured .pcard-img {
+            border-radius: 21px;
+            -webkit-border-radius: 21px;
         }
         .pcard-img img {
             width: 100%; height: 100%;
@@ -415,6 +430,25 @@ require_once ADMIN_URL.'/database_config.php';
   ]
 }
 </script>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body class="bg-[#000d16]">
@@ -693,7 +727,7 @@ require_once ADMIN_URL.'/database_config.php';
                             </a>' : '';
 
                         echo '
-                <div class="' . $cardClass . '" data-index="' . $index . '" style="' . $gridStyle . '">
+                <div class="' . $cardClass . '" data-index="' . $index . '" style="' . $gridStyle . '"' . ($hasLink ? ' data-href="' . $href . '"' : '') . '>
 
                     <!-- Mouse-follow shimmer -->
                     <div class="pcard-shimmer"></div>
@@ -926,6 +960,13 @@ require_once ADMIN_URL.'/database_config.php';
 
         /* ── 3D Tilt + Mouse-follow shimmer ── */
         cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                const href = card.getAttribute('data-href');
+                if (href && href !== '#') {
+                    window.open(href, '_blank');
+                }
+            });
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -954,6 +995,39 @@ require_once ADMIN_URL.'/database_config.php';
     </script>
 
 
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 
 </html>

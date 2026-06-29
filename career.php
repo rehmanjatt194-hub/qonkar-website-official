@@ -76,12 +76,30 @@ require_once ADMIN_URL.'/database_config.php';
         scroll-behavior: smooth;
     }
     </style>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body class="bg-[#000d16] text-white">
 
 <header class="sticky top-5 z-50 mx-auto sm:px-4">
-    <h1>TEST NEW CODE</h1>
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
             <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
@@ -198,30 +216,31 @@ require_once ADMIN_URL.'/database_config.php';
 </header>
 
 
-    <section class="mt-10 lg:mt-16 mb-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section class="relative mt-10 lg:mt-16 mb-10 max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/5 bg-[#000d16]/40 backdrop-blur-md">
+        <!-- Grid layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10 lg:p-16 relative z-10">
             
-            <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 order-1">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#01a0d8]/10 border border-[#01a0d8]/20">
-                    <span class="text-[#01a0d8] text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase">Careers At Qonkar</span>
+            <!-- Left Side: Content (6 cols on lg) -->
+            <div class="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left gap-6 w-full">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#01a0d8]/20 border border-[#01a0d8]/30 backdrop-blur-md">
+                    <span class="text-[#01a0d8] text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase drop-shadow-md">Careers At Qonkar</span>
                 </div>
                 
-                <h1 class="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05]">Join Our Team</h1>
+                <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold text-white leading-[1.1] drop-shadow-2xl">Join Our <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Team</span></h1>
                 
-                <p class="text-gray-300 text-base lg:text-lg font-light leading-relaxed max-w-lg">
+                <p class="text-gray-300 text-base lg:text-lg font-light leading-relaxed max-w-xl">
                     At Qonkar, we don't just write code; we architect solutions. We are looking for passionate individuals ready to build the future of technology in an agile, innovative environment.
                 </p>
                 
-                <a href="#openings" class="mt-4 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-transparent border border-[#01a0d8] text-[#01a0d8] font-bold hover:bg-[#01a0d8] hover:text-[#000d16] transition-all duration-300 shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)] group">
+                <a href="#openings" class="mt-4 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#01a0d8] text-[#000d16] border border-[#01a0d8] font-bold hover:bg-transparent hover:text-[#01a0d8] transition-all duration-300 shadow-[0_0_20px_rgba(1,160,216,0.3)] hover:shadow-[0_0_30px_rgba(1,160,216,0.5)] group">
                     View Openings 
                     <i class="fa-solid fa-arrow-down text-sm group-hover:translate-y-1 transition-transform"></i>
                 </a>
             </div>
 
-            <div class="order-2 w-full flex justify-center lg:justify-end">
-                <div class="relative w-full max-w-xl rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/5">
-                    <img src="/images/hero-section/career.webp" alt="Careers at Qonkar" class="w-full h-auto object-cover">
-                </div>
+            <!-- Right Side: Image (6 cols on lg) -->
+            <div class="lg:col-span-6 w-full flex justify-center">
+                <img src="/images/hero-section/career.webp" alt="Join Our Team" class="w-full max-w-lg lg:max-w-none h-auto object-contain transition-transform duration-700 hover:scale-105 rounded-[30px]">
             </div>
 
         </div>
@@ -566,5 +585,38 @@ require_once ADMIN_URL.'/database_config.php';
         });
     </script>
     <script src="/script/navbar.js"></script>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 </html>

@@ -32,8 +32,13 @@ try {
     // DB connection
     $dbHost = 'localhost';
     $dbName = 'qonkarco_db';
-    $dbUser = 'qonkarco_user';
-    $dbPass = 'db_user1122@';
+    if (in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1', 'localhost:8000'])) {
+        $dbUser = 'root';
+        $dbPass = '';
+    } else {
+        $dbUser = 'qonkarco_user';
+        $dbPass = 'db_user1122@';
+    }
 
     $pdo = new PDO("mysql:host={$dbHost};dbname={$dbName};charset=utf8", $dbUser, $dbPass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

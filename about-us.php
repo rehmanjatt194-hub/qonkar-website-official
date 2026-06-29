@@ -164,6 +164,25 @@ require_once ADMIN_URL.'/database_config.php';
   ]
 }
 </script>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -1074,268 +1093,256 @@ require_once ADMIN_URL.'/database_config.php';
 
         </div>
     </section>
-    <section class="max-w-7xl py-10 mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] mb-2 text-white ">
+
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-0 text-slate-900 rounded-t-[30px] rounded-b-none shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
         <div class="w-full mx-auto ">
             <div class="text-center mb-10">
-                <div class="glass-border inline-block mb-4">
-                    <div class="glass-background">
-                        <div class="glass text-sm font-light">
-                            <p>&#9679; &nbsp;QUESTIONS</p>
-                        </div>
-                    </div>
+                <!-- Badge -->
+                <div class="inline-block mb-4 bg-[#01a0d8]/10 border border-[#01a0d8]/20 rounded-full px-4 py-1.5">
+                    <p class="text-xs font-bold text-[#01a0d8] tracking-wider uppercase flex items-center justify-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#01a0d8] animate-pulse"></span>
+                        QUESTIONS
+                    </p>
                 </div>
 
-                <h2 class="text-3xl md:text-4xl font-light mb-4">
-                    Frequently Ask <b>Questions</b>
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 text-[#000d16]">
+                    Frequently Asked <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Questions</span>
                 </h2>
-                <p class="mt-2 text-white">
+                <p class="mt-2 text-slate-600 max-w-2xl mx-auto font-light">
                     Find quick, clear answers—or chat with our AI assistant for instant help.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+                <!-- Column 1 -->
                 <div class="space-y-4">
 
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span class="text-white">What services does Qonkar Technologies provide?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                    <!-- Question 1 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>What services does Qonkar Technologies provide?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
                         </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden transition-all duration-500  bg-[var(--body-bg)]">
-                            <div class="px-6 py-4 text-white space-y-2">
-                                <p class="!text-white">
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
                                     We offer end-to-end digital solutions: Shopify development, custom web & mobile
                                     apps, AI integrations, automation workflows, UX/UI design, and data-driven
                                     marketing. Every service is tailored to your goals, so you get a seamless,
                                     growth-focused outcome.
                                 </p>
-
                             </div>
                         </div>
                     </div>
 
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
+                    <!-- Question 2 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
                             <span>How does your five-step process work?</span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
                         </button>
-                        <div
-                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent bg-[var(--body-bg)]">
-                            <p class="px-6 py-4 !text-white  bg-[var(--body-bg)]">
-                                Our human-first approach is simple:
-                                <br />
-                                1. <b>Chat & Explore </b>– understand your vision
-                                <br />
-                                2. <b>Map & Blueprint </b> – create a shared roadmap
-                                <br />
-                                3.<b>Design & Build </b>– roll out prototypes and code
-                                <br />
-                                4.<b>Test & Polish </b>– ensure speed, security, and usability
-                                <br />
-                                5. <b>Launch & Learn</b> – monitor performance and optimize continuously
-                            </p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Our human-first approach is simple:
+                                    <br />
+                                    1. <b>Chat & Explore </b>– understand your vision
+                                    <br />
+                                    2. <b>Map & Blueprint </b> – create a shared roadmap
+                                    <br />
+                                    3.<b>Design & Build </b>– roll out prototypes and code
+                                    <br />
+                                    4.<b>Test & Polish </b>– ensure speed, security, and usability
+                                    <br />
+                                    5. <b>Launch & Learn</b> – monitor performance and optimize continuously
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
+                    <!-- Question 3 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
                             <span>How long does it take to launch a Shopify store?</span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
                         </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent ">
-                            <p class="px-6 py-4 text-gray-300 !text-white bg-[var(--body-bg)]">
-                                Typical Shopify projects run 4–6 weeks from kickoff to launch. We move fast by using
-                                proven templates, AI-powered recommendations, and real-time feedback loops—so you start
-                                selling sooner. </p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Typical Shopify projects run 4–6 weeks from kickoff to launch. We move fast by using
+                                    proven templates, AI-powered recommendations, and real-time feedback loops—so you start
+                                    selling sooner.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>Can you integrate AI features into my website or app?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                    <!-- Question 4 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>Can you integrate AI features into my website or app?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
                         </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 text-gray-300 !text-white bg-[var(--body-bg)]">
-                                Absolutely. We build <b>custom AI</b> solutions—chatbots, recommendation engines,
-                                predictive analytics—directly into your site or platform, giving you smarter user
-                                interactions and data insights.
-
-                            </p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Absolutely. We build <b>custom AI</b> solutions—chatbots, recommendation engines,
+                                    predictive analytics—directly into your site or platform, giving you smarter user
+                                    interactions and data insights.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>Which industries do you specialize in?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+
+                    <!-- Question 5 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>Which industries do you specialize in?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
                         </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                Our expertise spans<b> Healthcare, E-Commerce, SaaS, Retail, Restaurants, Real Estate,
-                                    Education, </b>and<b> Travel & Tourism.</b> We leverage deep sector knowledge to
-                                deliver solutions that hit the mark from day one.
-                            </p>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Our expertise spans <b>Healthcare, E-Commerce, SaaS, Retail, Restaurants, Real Estate,
+                                    Education, </b>and <b>Travel & Tourism.</b> We leverage deep sector knowledge to
+                                    deliver solutions that hit the mark from day one.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                 </div>
 
+                <!-- Column 2 -->
                 <div class="space-y-4">
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>How can I track the progress of my project?</span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                You’ll have access to our project portal with live task boards, milestone updates, and
-                                weekly video check-ins. Plus, our chatbot is on standby 24/7 for status queries and
-                                quick clarifications.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>Do you offer ongoing support after launch?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                Yes— <b>our Growth</b> & Support phase means we stay with you long after launch. We
-                                handle updates, A/B tests, performance tuning, and feature enhancements to keep your
-                                digital products evolving.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>How do you ensure website security and data privacy?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                Security is built in from day one. We use industry-standard encryption, conduct regular
-                                vulnerability scans, and follow GDPR/HIPAA compliance practices—so your data and your
-                                customers’ data always stay safe.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>What is the cost of custom software development?</span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                Every project is unique, so we provide a transparent, milestone-based quote after our
-                                Discovery & Research phase. Typical mid-range projects start around <b>PKR 300,000 </b>
-                                with flexible payment options to suit your budget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
-                        <button
-                            class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-[var(--body-bg)]">
-                            <span>How do I get started with Qonkar Technologies?
-                            </span>
-                            <div
-                                class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
-                                <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
-                            <p class="px-6 py-4 !text-white bg-[var(--body-bg)]">
-                                It’s easy: click <b>“Book Your Free Strategy Call”</b>, share your goals, and we’ll send
-                                over a tailored roadmap within 48 hours. No obligations—just a friendly conversation
-                                about your growth potential.
 
-                            </p>
+                    <!-- Question 6 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>How can I track the progress of my project?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    You’ll have access to our project portal with live task boards, milestone updates, and
+                                    weekly video check-ins. Plus, our chatbot is on standby 24/7 for status queries and
+                                    quick clarifications.
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Question 7 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>Do you offer ongoing support after launch?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Yes— <b>our Growth</b> & Support phase means we stay with you long after launch. We
+                                    handle updates, A/B tests, performance tuning, and feature enhancements to keep your
+                                    digital products evolving.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>How do you ensure website security and data privacy?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Security is built in from day one. We use industry-standard encryption, conduct regular
+                                    vulnerability scans, and follow GDPR/HIPAA compliance practices—so your data and your
+                                    customers’ data always stay safe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>What is the cost of custom software development?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    Every project is unique, so we provide a transparent, milestone-based quote after our
+                                    Discovery & Research phase. Typical mid-range projects start around <b>PKR 300,000 </b>
+                                    with flexible payment options to suit your budget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition shadow-[0_2px_8px_rgba(0,13,22,0.02)] hover:border-slate-300 duration-300">
+                        <button class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-white text-slate-800 hover:text-[#01a0d8] transition-colors duration-200">
+                            <span>How do I get started with Qonkar Technologies?</span>
+                            <div class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-slate-100 transition-all duration-300">
+                                <svg class="w-4 h-4 transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-white">
+                            <div class="px-6 pb-5 text-slate-600 font-light text-[14px] leading-relaxed bg-white">
+                                <p>
+                                    It’s easy: click <b>“Book Your Free Strategy Call”</b>, share your goals, and we’ll send
+                                    over a tailored roadmap within 48 hours. No obligations—just a friendly conversation
+                                    about your growth potential.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -1496,6 +1503,39 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="script/navbar.js"></script>
     <script src="script/FAQ.js"></script>
       
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 
 

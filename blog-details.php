@@ -230,6 +230,25 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
       }
 </style>
 
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body class="bg-[#000d16] text-white">
@@ -554,6 +573,39 @@ $escapedOgImage = htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8');
             msg.style.opacity = "1";
             setTimeout(() => { msg.style.opacity = "0"; }, 1500);
         });
+    </script>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
     </script>
 </body>
 </html>

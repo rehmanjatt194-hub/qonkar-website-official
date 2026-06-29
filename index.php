@@ -257,6 +257,25 @@ require_once ADMIN_URL.'/database_config.php';
   ]
 }
 </script>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -399,15 +418,18 @@ require_once ADMIN_URL.'/database_config.php';
                     One team to build, convert, and grow your digital presence. From scalable software to ROI-driven marketing, we deliver innovation that scales businesses faster.
                 </p>
 
-                <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn mt-2 inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#01a0d8] bg-transparent text-[#01a0d8] text-lg font-semibold 
-                hover:bg-[#01a0d8] hover:text-white transition-all duration-300">
-                    Get a Free Consultation
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
+                <div class="laser-border rounded-full mt-2 shadow-md">
+                    <div class="laser-background rounded-full">
+                        <a target="_blank" href="https://calendly.com/qonkartechnologiespvtltd" class="hero-btn inline-flex items-center gap-2 px-8 py-3 rounded-full text-[#01a0d8] text-lg font-semibold hover:bg-[#01a0d8] hover:text-white transition-all duration-300">
+                            Get a Free Consultation
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="w-full md:w-1/2 hero-img flex justify-center items-center overflow-hidden max-h-[40vh] md:max-h-[55vh]">
@@ -458,14 +480,14 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 </div>
 
-    <section class="bg-[#000d16] py-12 px-4 sm:px-6 lg:px-8 w-full">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+    <section class="bg-[#000d16] py-8 md:py-12 px-4 sm:px-6 lg:px-8 w-full">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6 md:gap-8">
 
             <div class="order-2 lg:order-1 flex justify-center">
                 <img src="/images/Successful-Business-Collaboration-And-Client-Meeting.webp" alt="Successful business collaboration shown by a professional shaking hands with a client during a team meeting." class="w-full max-w-xl h-auto rounded-2xl shadow-xl">
             </div>
 
-            <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
+            <div class="order-1 lg:order-2 text-center lg:text-left flex flex-col gap-4 md:gap-5">
 
                 <div class="glass-border w-[120px]  mx-auto lg:mx-0">
                     <div class="glass-background">
@@ -478,8 +500,8 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
 
 
-                <h2 class="text-3xl md:text-4xl text-white">
-                    Why <b>Qonkar</b> is the Best IT Services Agency?
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+                    Why <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Qonkar</span> is the Best IT Services Agency?
                 </h2>
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -502,16 +524,20 @@ require_once ADMIN_URL.'/database_config.php';
 
 
 <div class="bg-[#000d16] w-full">
-    <section class="py-8 md:py-10 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900">
+    <section class="py-8 md:py-12 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-2 border-b border-slate-200/50">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16]">
-                        IT <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Solutions</span>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-3 border-b border-slate-200/55">
+                <div class="flex flex-col items-start">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#000d16] border border-white/10 text-[11px] font-bold tracking-wider text-[#2BB5BC] uppercase mb-2 shadow-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#2BB5BC] to-[#95C951] animate-pulse"></span>
+                        Our Services
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16] tracking-tight">
+                        Innovative <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">IT Solutions</span>
                     </h2>
                 </div>
-                <p class="text-slate-500 font-light text-sm md:text-base max-w-md md:text-right">
+                <p class="text-slate-500 font-normal text-sm md:text-base max-w-md md:text-right leading-relaxed">
                     Tailored development and design services built to scale your digital presence.
                 </p>
             </div>
@@ -657,7 +683,7 @@ require_once ADMIN_URL.'/database_config.php';
         </section>
     </div>
     
-    <section id="process-section" class="relative pt-8 pb-16 md:pt-12 md:pb-20 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll">
+    <section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll">
         <style>
             /* Custom CSS for hidden scrollbar */
             .no-scrollbar::-webkit-scrollbar {
@@ -703,8 +729,8 @@ require_once ADMIN_URL.'/database_config.php';
         <div class="max-w-7xl mx-auto mb-6 lg:mb-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
                 <div class="lg:col-span-7 text-left relative -top-3 md:-top-5 lg:-top-6">
-                    <h2 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white leading-[1.15]">
-                        Our <span class="font-bold bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent">Process</span>
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                        Our <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Process</span>
                     </h2>
                     <p class="text-xl md:text-3xl text-slate-300 font-light mt-3 sm:mt-4 leading-relaxed">
                         Your Journey from Inquiry to Incorporation
@@ -873,34 +899,49 @@ require_once ADMIN_URL.'/database_config.php';
                     <div class="relative w-full max-w-[380px] lg:aspect-[3.6/5] flex items-center justify-center select-none" id="stacked-cards-deck">
                         
                         <!-- Layer 3 (Back-most) -->
-                        <div class="absolute inset-0 bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_10px_25px_rgba(0,0,0,0.15)] transform rotate-[-4deg] translate-x-[-10px] translate-y-3 border border-slate-200 scale-[0.96] transition-transform duration-500 pointer-events-none z-[1]" id="card-layer-3"></div>
+                        <div class="absolute inset-0 bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_10px_25px_rgba(0,0,0,0.15)] transform rotate-[-4deg] translate-x-[-10px] translate-y-3 border border-slate-200 scale-[0.96] transition-transform duration-500 pointer-events-none z-[1] opacity-35" id="card-layer-3"></div>
                         
                         <!-- Layer 2 (Middle) -->
-                        <div class="absolute inset-0 bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_15px_35px_rgba(0,0,0,0.18)] transform rotate-[3deg] translate-x-3 translate-y-[-5px] border border-slate-200 scale-[0.98] transition-transform duration-500 pointer-events-none z-[2]" id="card-layer-2"></div>
+                        <div class="absolute inset-0 bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_15px_35px_rgba(0,0,0,0.18)] transform rotate-[3deg] translate-x-3 translate-y-[-5px] border border-slate-200 scale-[0.98] transition-transform duration-500 pointer-events-none z-[2] opacity-65" id="card-layer-2"></div>
                         
                         <!-- Layer 1 (Front Active Card) -->
-                        <div class="relative lg:absolute lg:inset-0 w-full bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_30px_70px_rgba(0,0,0,0.22)] border border-slate-200 p-6 sm:py-8 sm:px-8 flex flex-col justify-between transition-all duration-500 z-10 hover:scale-[1.01]" id="card-layer-front">
+                        <div class="relative lg:absolute lg:inset-0 w-full min-h-[480px] sm:min-h-[510px] bg-white rounded-[28px] sm:rounded-[36px] shadow-[0_30px_70px_rgba(0,0,0,0.22)] border border-slate-200 p-6 sm:py-8 sm:px-8 flex flex-col justify-between transition-all duration-500 z-10 hover:scale-[1.01]" id="card-layer-front">
                             
                             <!-- Card Header -->
-                            <div class="w-full">
+                            <div class="w-full flex-1 flex flex-col justify-start">
                                 <h4 class="text-sm sm:text-base font-extrabold tracking-[0.25em] uppercase text-center mb-3 sm:mb-4 transition-all duration-300" id="card-heading">
                                     How it works
                                 </h4>
                                 
-                                <!-- Card Checklist Items -->
-                                <ul class="space-y-3.5 sm:space-y-4" id="card-checklist">
-                                    <!-- Dynamic list items injected via JavaScript -->
-                                </ul>
+                                <!-- Card Checklist Items Wrapper Box -->
+                                <div class="w-full min-h-[300px] sm:min-h-[330px] h-[300px] sm:h-[330px] overflow-y-auto no-scrollbar pr-1 flex flex-col justify-start">
+                                    <ul class="space-y-2 sm:space-y-2.5" id="card-checklist">
+                                        <!-- Dynamic list items injected via JavaScript -->
+                                    </ul>
+                                </div>
                             </div>
                             
                             <!-- Card Footer/Decoration -->
                             <div class="w-full flex items-center justify-between border-t border-slate-200 pt-4 sm:pt-6 mt-6">
                                 <span class="text-[10px] font-mono tracking-widest text-[#2BB5BC] uppercase font-bold" id="card-step-num">Step 1 of 4</span>
-                                <div class="flex gap-1.5">
-                                    <span class="w-2 h-2 rounded-full bg-[#2BB5BC] transition-all duration-300" id="dot-0"></span>
-                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-1"></span>
-                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-2"></span>
-                                    <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-3"></span>
+                                <div class="flex items-center gap-2.5">
+                                    <!-- Prev Arrow Button -->
+                                    <button id="card-prev-btn" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-100 hover:bg-[#2BB5BC] hover:text-white text-slate-600 transition-all duration-350 cursor-pointer active:scale-90" title="Previous Step">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                                    </button>
+                                    
+                                    <!-- Dots Indicators -->
+                                    <div class="flex gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-[#2BB5BC] transition-all duration-300" id="dot-0"></span>
+                                        <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-1"></span>
+                                        <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-2"></span>
+                                        <span class="w-2 h-2 rounded-full bg-slate-200 transition-all duration-300" id="dot-3"></span>
+                                    </div>
+                                    
+                                    <!-- Next Arrow Button -->
+                                    <button id="card-next-btn" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-100 hover:bg-[#2BB5BC] hover:text-white text-slate-600 transition-all duration-350 cursor-pointer active:scale-90" title="Next Step">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor"><path d="M384-240 328-296l184-184-184-184 56-56 240 240-240 240Z"/></svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1151,6 +1192,27 @@ require_once ADMIN_URL.'/database_config.php';
                 updateProcessSection(stepName);
             });
         });
+
+        // Add event listeners to card prev/next arrow buttons
+        const prevBtn = document.getElementById('card-prev-btn');
+        const nextBtn = document.getElementById('card-next-btn');
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                isAutoplayPaused = true;
+                clearInterval(autoplayInterval);
+                const currentIdx = stepKeys.indexOf(activeStep);
+                const prevIdx = (currentIdx - 1 + stepKeys.length) % stepKeys.length;
+                updateProcessSection(stepKeys[prevIdx]);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                isAutoplayPaused = true;
+                clearInterval(autoplayInterval);
+                const currentIdx = stepKeys.indexOf(activeStep);
+                const nextIdx = (currentIdx + 1) % stepKeys.length;
+                updateProcessSection(stepKeys[nextIdx]);
+            });
+        }
 
         // Autoplay logic
         function startAutoplay() {
@@ -1456,7 +1518,7 @@ require_once ADMIN_URL.'/database_config.php';
                             <!-- Left Column: Large rounded container with mockup -->
                             <a href="<?php echo $study['link'] !== '#' ? $study['link'] : '#'; ?>" 
                                target="_blank" 
-                               class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/10 bg-[#000d16] p-2 relative overflow-hidden shadow-[0_8px_30px_rgba(0,13,22,0.3)] min-h-[240px] sm:min-h-[300px] lg:min-h-0 group transition-all duration-500 hover:border-[#2BB5BC]/40 hover:shadow-[0_15px_45px_rgba(43,181,188,0.18)] cursor-pointer <?php echo $study['link'] === '#' ? 'pointer-events-none' : ''; ?>">
+                               class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/10 bg-[#000d16] p-2 relative overflow-hidden min-h-[240px] sm:min-h-[300px] lg:min-h-0 group transition-all duration-500 hover:border-[#2BB5BC]/40 hover:shadow-none cursor-pointer <?php echo $study['link'] === '#' ? 'pointer-events-none' : ''; ?>">
                                 
                                 <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-[#2BB5BC]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#2BB5BC]/20 group-hover:scale-125"></div>
                                 <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-[#95C951]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#95C951]/20 group-hover:scale-125"></div>
@@ -1479,7 +1541,7 @@ require_once ADMIN_URL.'/database_config.php';
                             <!-- Right Column: Split into 3 Cards -->
                             <div class="lg:col-span-7 flex flex-col gap-3">
                                 <!-- Top Card: Overview -->
-                                <div class="bg-white border border-slate-200 rounded-3xl p-4 md:p-5 relative hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] group/card">
+                                <div class="bg-white border border-slate-200 rounded-3xl p-4 md:p-5 relative hover:border-[#2BB5BC]/40 transition duration-300 group/card">
                                     <?php if ($study['link'] !== '#'): ?>
                                         <a href="<?php echo $study['link']; ?>" target="_blank" class="absolute top-5 right-5 text-slate-400 group-hover/section:text-[#2BB5BC] hover:text-[#2BB5BC] transition-colors duration-300 z-30">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
@@ -1500,7 +1562,7 @@ require_once ADMIN_URL.'/database_config.php';
                                 <!-- Bottom Two Cards Grid -->
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <!-- Bottom Left Card: Metrics & Analytics -->
-                                    <div class="bg-white border border-slate-200 rounded-3xl p-4 hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] flex flex-col justify-between gap-2">
+                                    <div class="bg-white border border-slate-200 rounded-3xl p-4 hover:border-[#2BB5BC]/40 transition duration-300 flex flex-col justify-between gap-2">
                                         <div class="flex items-center justify-between">
                                             <h4 class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Growth Analytics</h4>
                                             <span class="text-[10px] text-[#2BB5BC] px-2 py-0.5 bg-[#2BB5BC]/10 rounded-full border border-[#2BB5BC]/20">Live Sync</span>
@@ -1540,7 +1602,7 @@ require_once ADMIN_URL.'/database_config.php';
                                                 $arrowIcon = $isNegative ? '↓' : '↑';
                                                 $displayValue = $isNegative ? substr($value, 1) : $value;
                                             ?>
-                                                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 px-3 bg-slate-50 border border-slate-100 rounded-xl shadow-[0_2px_8px_rgba(0,13,22,0.02)]">
+                                                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 px-3 bg-slate-50 border border-slate-100 rounded-xl">
                                                     <span class="text-[#000d16] font-medium"><?php echo htmlspecialchars($label); ?></span>
                                                     <span class="text-[#5f872d] font-bold flex items-center gap-1">
                                                         <span class="text-xs font-bold"><?php echo $arrowIcon; ?></span>
@@ -1552,7 +1614,7 @@ require_once ADMIN_URL.'/database_config.php';
                                     </div>
 
                                     <!-- Bottom Right Card: Testimonial -->
-                                    <div class="bg-[#000d16] border border-white/10 rounded-3xl p-4 shadow-[0_8px_30px_rgba(0,13,22,0.3)] flex flex-col justify-between">
+                                    <div class="bg-[#000d16] border border-white/10 rounded-3xl p-4 flex flex-col justify-between">
                                         <!-- Rating Stars -->
                                         <div class="flex gap-1 text-amber-400 mb-1">
                                             <?php for ($s=0; $s<$study['testimonial']['stars']; $s++): ?>
@@ -1607,7 +1669,7 @@ require_once ADMIN_URL.'/database_config.php';
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-[320px] md:pb-20">
             <!-- Left Info Column -->
             <div class="flex flex-col items-start text-left gap-6 max-w-xl w-full md:w-[50%]">
-                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--primary-color)] leading-tight tracking-tight">
+                <h2 class="text-3xl md:text-5xl font-bold text-[var(--primary-color)] leading-tight tracking-tight">
                     Building Brands <br>
                     Worldwide
                 </h2>
@@ -1701,11 +1763,11 @@ require_once ADMIN_URL.'/database_config.php';
 
 <div class="bg-black w-full">
     <section
-        class="bg-black pt-6 pb-12 text-white relative bg-no-repeat bg-[length:50%] bg-[url('images/background_curve.svg')] bg-[center_top_30px]">
+        class="bg-black py-8 md:py-12 text-white relative bg-no-repeat bg-[length:50%] bg-[url('images/background_curve.svg')] bg-[center_top_30px]">
         <div class=" mx-auto px-4 sm:px-6 lg:px-0 text-center relative">
 
-            <h2 class="text-3xl md:text-4xl font-light mb-8">
-                <b>Client Testimonials & Success Stories</b>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-8">
+                Client Testimonials & Success Stories
             </h2>
         </div>
       <!-- Row 1-->
@@ -2623,7 +2685,7 @@ require_once ADMIN_URL.'/database_config.php';
         </section>
 </div>
 
-    <section class="w-full flex justify-center items-center py-10 mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="w-full flex justify-center items-center py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] " style="
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
@@ -2650,15 +2712,15 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-    <section class="py-16 bg-[var(--body-bg)] text-white">
+    <section class="py-8 md:py-12 bg-[var(--body-bg)] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header: 2-Column Responsive Layout -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-12 mb-10 text-left">
                 <!-- Left Column: Heading -->
                 <div class="w-full md:w-[45%]">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
-                        Why <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Qonkar?</span>
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+                        Why <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Qonkar?</span>
                     </h2>
                 </div>
                 <!-- Right Column: Paragraph -->
@@ -2670,7 +2732,7 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
 
             <!-- Cards Wrapper (Bento Grid) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left mt-6 items-stretch">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 text-left mt-4 items-stretch">
                 <!-- Card 1: Results-Driven Strategy (Tall: Spans 1 col, 2 rows) -->
                 <div class="md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2 bg-white rounded-[24px] border border-slate-200 p-5 md:p-6 shadow-sm flex flex-col justify-between min-h-[380px] hover:border-[#2BB5BC]/30 hover:shadow-md transition duration-300 group/bento overflow-hidden">
                     <div class="w-full h-full flex flex-col justify-between transition-transform duration-500 ease-out group-hover/bento:scale-[1.04] origin-center flex-1">
@@ -2825,7 +2887,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 
   <!-- OUR EXPERTS Section -->
-    <section class="py-12 mx-auto px-4 sm:px-6 lg:px-8 bg-white text-slate-900 relative">
+    <section class="py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8 bg-white text-slate-900 relative">
         <div class="max-w-7xl mx-auto 0 text-center">
 
             <!-- Badge -->
@@ -2837,8 +2899,8 @@ require_once ADMIN_URL.'/database_config.php';
             </div>
 
             <!-- Heading -->
-            <h2 class="text-3xl md:text-4xl font-light mb-4 text-[#000d16]">
-                Industry <b>Experts</b>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 text-[#000d16]">
+                Industry <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Experts</span>
             </h2>
 
             <!-- Paragraph -->
@@ -3251,7 +3313,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 
-    <section class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[var(--body-bg)] text-white relative">
+    <section class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-[var(--body-bg)] text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
 
             <div class="glass-border inline-block mb-4">
@@ -3262,7 +3324,7 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
                 Awards & <b>Industry Recognition</b>
             </h2>
 
@@ -3388,7 +3450,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 
 
-    <section class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] text-white ">
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] text-white ">
         <div class="max-w-7xl mx-auto  text-center">
             <div class="glass-border inline-block mb-4">
                 <div class="glass-background">
@@ -3398,9 +3460,8 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Meet Our
-                <b>Leadership Team</b>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
+                Meet Our <b>Leadership Team</b>
             </h2>
 
             <p class="max-w-3xl mx-auto  mb-12 text-sm sm:text-base">
@@ -3460,7 +3521,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 <!-- FAQ -->
-    <section class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-8 text-slate-900 rounded-[30px] shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-0 text-slate-900 rounded-t-[30px] rounded-b-none shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
         <div class="w-full mx-auto">
             <!-- Header -->
             <div class="text-center mb-10">
@@ -3473,8 +3534,8 @@ require_once ADMIN_URL.'/database_config.php';
                 </div>
 
                 <!-- Heading -->
-                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-[#000d16]">
-                    Frequently Asked <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold tracking-tight">Questions</span>
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 text-[#000d16]">
+                    Frequently Asked <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Questions</span>
                 </h2>
                 <p class="mt-2 text-slate-600 max-w-2xl mx-auto font-light">
                     Find quick, clear answers—or chat with our AI assistant for instant help.
@@ -3855,6 +3916,39 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="/script/home_GSAP.js"></script>
     <script src="/script/case_study_carousel.js"></script>
             
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 
 </html>

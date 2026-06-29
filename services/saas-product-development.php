@@ -134,6 +134,25 @@ require_once "../".ADMIN_URL.'/database_config.php';
           background-color: #3dbf8a;
       }
     </style>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -294,7 +313,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
             </div>
         </section>
         
-    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-5 md:mt-6 mb-5 md:mb-6">
+    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-2 md:mt-3 mb-5 md:mb-6">
 
         <div class="relative overflow-hidden w-full group">
             <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 group-hover:[animation-play-state:paused] cursor-pointer">
@@ -337,7 +356,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
 
             <div class="order-2 lg:order-1 flex justify-center">
-                <img src="/images/hero_image.webp" alt="Our Client" class="w-full max-w-md h-auto">
+                <img src="/images/hero-section/hero.webp" alt="Our Client" class="w-full max-w-md h-auto">
             </div>
 
             <div class="order-1 lg:order-2 text-center  gap:2  lg:text-left flex flex-col gap-6">
@@ -1788,6 +1807,39 @@ require_once "../".ADMIN_URL.'/database_config.php';
     </script>
     <script src="/script/FAQ.js"></script>
     <script src="/script/navbar.js"></script>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 
 </html>

@@ -257,6 +257,25 @@ require_once ADMIN_URL.'/database_config.php';
   ]
 }
 </script>
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -1499,7 +1518,7 @@ require_once ADMIN_URL.'/database_config.php';
                             <!-- Left Column: Large rounded container with mockup -->
                             <a href="<?php echo $study['link'] !== '#' ? $study['link'] : '#'; ?>" 
                                target="_blank" 
-                               class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/10 bg-[#000d16] p-2 relative overflow-hidden shadow-[0_8px_30px_rgba(0,13,22,0.3)] min-h-[240px] sm:min-h-[300px] lg:min-h-0 group transition-all duration-500 hover:border-[#2BB5BC]/40 hover:shadow-[0_15px_45px_rgba(43,181,188,0.18)] cursor-pointer <?php echo $study['link'] === '#' ? 'pointer-events-none' : ''; ?>">
+                               class="lg:col-span-5 flex items-center justify-center rounded-3xl border border-white/10 bg-[#000d16] p-2 relative overflow-hidden min-h-[240px] sm:min-h-[300px] lg:min-h-0 group transition-all duration-500 hover:border-[#2BB5BC]/40 hover:shadow-none cursor-pointer <?php echo $study['link'] === '#' ? 'pointer-events-none' : ''; ?>">
                                 
                                 <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-[#2BB5BC]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#2BB5BC]/20 group-hover:scale-125"></div>
                                 <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-[#95C951]/10 blur-[100px] pointer-events-none transition-all duration-500 group-hover:bg-[#95C951]/20 group-hover:scale-125"></div>
@@ -1522,7 +1541,7 @@ require_once ADMIN_URL.'/database_config.php';
                             <!-- Right Column: Split into 3 Cards -->
                             <div class="lg:col-span-7 flex flex-col gap-3">
                                 <!-- Top Card: Overview -->
-                                <div class="bg-white border border-slate-200 rounded-3xl p-4 md:p-5 relative hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] group/card">
+                                <div class="bg-white border border-slate-200 rounded-3xl p-4 md:p-5 relative hover:border-[#2BB5BC]/40 transition duration-300 group/card">
                                     <?php if ($study['link'] !== '#'): ?>
                                         <a href="<?php echo $study['link']; ?>" target="_blank" class="absolute top-5 right-5 text-slate-400 group-hover/section:text-[#2BB5BC] hover:text-[#2BB5BC] transition-colors duration-300 z-30">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h240v240h-80v-144L388-332Z"/></svg>
@@ -1543,7 +1562,7 @@ require_once ADMIN_URL.'/database_config.php';
                                 <!-- Bottom Two Cards Grid -->
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <!-- Bottom Left Card: Metrics & Analytics -->
-                                    <div class="bg-white border border-slate-200 rounded-3xl p-4 hover:border-[#2BB5BC]/40 transition duration-300 shadow-[0_8px_30px_rgba(0,13,22,0.05)] flex flex-col justify-between gap-2">
+                                    <div class="bg-white border border-slate-200 rounded-3xl p-4 hover:border-[#2BB5BC]/40 transition duration-300 flex flex-col justify-between gap-2">
                                         <div class="flex items-center justify-between">
                                             <h4 class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Growth Analytics</h4>
                                             <span class="text-[10px] text-[#2BB5BC] px-2 py-0.5 bg-[#2BB5BC]/10 rounded-full border border-[#2BB5BC]/20">Live Sync</span>
@@ -1583,7 +1602,7 @@ require_once ADMIN_URL.'/database_config.php';
                                                 $arrowIcon = $isNegative ? '↓' : '↑';
                                                 $displayValue = $isNegative ? substr($value, 1) : $value;
                                             ?>
-                                                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 px-3 bg-slate-50 border border-slate-100 rounded-xl shadow-[0_2px_8px_rgba(0,13,22,0.02)]">
+                                                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 px-3 bg-slate-50 border border-slate-100 rounded-xl">
                                                     <span class="text-[#000d16] font-medium"><?php echo htmlspecialchars($label); ?></span>
                                                     <span class="text-[#5f872d] font-bold flex items-center gap-1">
                                                         <span class="text-xs font-bold"><?php echo $arrowIcon; ?></span>
@@ -1595,7 +1614,7 @@ require_once ADMIN_URL.'/database_config.php';
                                     </div>
 
                                     <!-- Bottom Right Card: Testimonial -->
-                                    <div class="bg-[#000d16] border border-white/10 rounded-3xl p-4 shadow-[0_8px_30px_rgba(0,13,22,0.3)] flex flex-col justify-between">
+                                    <div class="bg-[#000d16] border border-white/10 rounded-3xl p-4 flex flex-col justify-between">
                                         <!-- Rating Stars -->
                                         <div class="flex gap-1 text-amber-400 mb-1">
                                             <?php for ($s=0; $s<$study['testimonial']['stars']; $s++): ?>
@@ -2881,7 +2900,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- Heading -->
             <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 text-[#000d16]">
-                Industry <b>Experts</b>
+                Industry <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">Experts</span>
             </h2>
 
             <!-- Paragraph -->
@@ -3502,7 +3521,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 <!-- FAQ -->
-    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-6 text-slate-900 rounded-[30px] shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-0 text-slate-900 rounded-t-[30px] rounded-b-none shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
         <div class="w-full mx-auto">
             <!-- Header -->
             <div class="text-center mb-10">
@@ -3897,6 +3916,39 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="/script/home_GSAP.js"></script>
     <script src="/script/case_study_carousel.js"></script>
             
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        if (typeof ScrollTrigger !== 'undefined') {
+            lenis.on('scroll', ScrollTrigger.update);
+        }
+
+        if (typeof gsap !== 'undefined') {
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    </script>
 </body>
 
 </html>

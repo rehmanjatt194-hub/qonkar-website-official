@@ -121,9 +121,37 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             color: var(--secondary-color) !important;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(47, 173, 195, 0.3);
         }
+        .node-icon {
+            transition: all 0.3s ease;
+        }
         .transformation-node:hover .node-icon {
             transform: rotate(15deg) scale(1.1);
             color: var(--secondary-color) !important;
+        }
+        
+        @keyframes wave-flow-forward {
+            from {
+                stroke-dashoffset: 60;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes wave-flow-backward {
+            from {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: 60;
+            }
+        }
+        .flow-line-1 {
+            stroke-dasharray: 15, 15;
+            animation: wave-flow-forward 4s linear infinite;
+        }
+        .flow-line-3 {
+            stroke-dasharray: 20, 15;
+            animation: wave-flow-backward 5s linear infinite;
         }
         
         .metric-card-premium {
@@ -647,13 +675,23 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <svg class="absolute inset-0 w-full h-full z-0" viewBox="0 0 1000 350" preserveAspectRatio="none">
             <!-- Path 1 (White Accent) -->
             <path d="M 0 175 C 125 175, 125 110, 250 110 C 375 110, 375 240, 500 240 C 625 240, 625 120, 750 120 C 875 120, 875 175, 1000 175" 
-                  fill="none" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5" />
+                  fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" />
             <!-- Path 2 (Main Cyan) -->
             <path d="M 0 179 C 125 179, 125 114, 250 114 C 375 114, 375 244, 500 244 C 625 244, 625 124, 750 124 C 875 124, 875 179, 1000 179" 
                   fill="none" stroke="var(--secondary-color)" stroke-width="2.5" />
             <!-- Path 3 (Primary Theme Blue) -->
             <path d="M 0 183 C 125 183, 125 118, 250 118 C 375 118, 375 248, 500 248 C 625 248, 625 128, 750 128 C 875 128, 875 183, 1000 183" 
                   fill="none" stroke="var(--primary-color)" stroke-width="1.8" />
+
+            <!-- Glowing Energy Particle 1 (Cyan) -->
+            <circle r="4.5" fill="var(--secondary-color)" style="filter: drop-shadow(0 0 5px var(--secondary-color)) drop-shadow(0 0 10px var(--secondary-color));">
+                <animateMotion dur="5.5s" repeatCount="indefinite" path="M 0 179 C 125 179, 125 114, 250 114 C 375 114, 375 244, 500 244 C 625 244, 625 124, 750 124 C 875 124, 875 179, 1000 179" />
+            </circle>
+
+            <!-- Glowing Energy Particle 2 (Green) -->
+            <circle r="4" fill="var(--tertiary-color)" style="filter: drop-shadow(0 0 5px var(--tertiary-color)) drop-shadow(0 0 10px var(--tertiary-color));">
+                <animateMotion dur="4.2s" repeatCount="indefinite" path="M 0 179 C 125 179, 125 114, 250 114 C 375 114, 375 244, 500 244 C 625 244, 625 124, 750 124 C 875 124, 875 179, 1000 179" />
+            </circle>
         </svg>
 
         <!-- Node 1 (Fragmented Data) -->
@@ -664,16 +702,16 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <p class="text-slate-300 text-xs font-light mt-0.5">Isolated legacy servers</p>
             </div>
             <!-- Dot on the curve -->
-            <div class="transformation-node w-8 h-8 rounded-full border-4 border-white bg-[var(--primary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(63,137,201,0.5)] cursor-pointer">
-                <span class="material-symbols-outlined text-white text-xs font-bold">cloud_off</span>
+            <div class="transformation-node w-9 h-9 rounded-full border-4 border-white bg-[var(--primary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(63,137,201,0.5)] cursor-pointer">
+                <span class="material-symbols-outlined node-icon text-white text-base font-bold">cloud_off</span>
             </div>
         </div>
 
         <!-- Node 2 (Homalix Core - Glowing Highlighted) -->
         <div class="absolute left-[50%] top-[244px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 group">
             <!-- Dot on the curve -->
-            <div class="transformation-node glowing-core-node w-10 h-10 rounded-full border-4 border-white bg-[var(--secondary-color)] flex items-center justify-center shadow-[0_0_25px_rgba(47,173,195,0.7)] cursor-pointer">
-                <span class="material-symbols-outlined text-white text-sm font-bold">hub</span>
+            <div class="transformation-node glowing-core-node w-12 h-12 rounded-full border-4 border-white bg-[var(--secondary-color)] flex items-center justify-center shadow-[0_0_20px_rgba(47,173,195,0.7)] cursor-pointer">
+                <span class="material-symbols-outlined node-icon text-white text-xl font-bold">hub</span>
             </div>
             <!-- Text/Badge Below -->
             <div class="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-[#00101a] border border-white/10 rounded-full px-5 py-2.5 text-center shadow-2xl transition-all duration-300 w-48 group-hover:border-[var(--secondary-color)]/40 group-hover:translate-y-1">
@@ -690,8 +728,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 <p class="text-slate-300 text-xs font-light mt-0.5">Real-time clinical insights</p>
             </div>
             <!-- Dot on the curve -->
-            <div class="transformation-node w-8 h-8 rounded-full border-4 border-white bg-[var(--tertiary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(133,213,92,0.5)] cursor-pointer">
-                <span class="material-symbols-outlined text-white text-xs font-bold">trending_up</span>
+            <div class="transformation-node w-9 h-9 rounded-full border-4 border-white bg-[var(--tertiary-color)] flex items-center justify-center shadow-[0_0_15px_rgba(133,213,92,0.5)] cursor-pointer">
+                <span class="material-symbols-outlined node-icon text-white text-base font-bold">trending_up</span>
             </div>
         </div>
     </div>

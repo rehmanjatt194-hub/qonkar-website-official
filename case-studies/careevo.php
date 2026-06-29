@@ -27,7 +27,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:description" content="Discover how Careevo revolutionized restaurant operations with smart order management, real-time kitchen displays, and powerful business analytics." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com/case-studies/careevo" />
-    <meta property="og:image" content="https://qonkar.com/images/case-studies/careevo_mockup.png" />
+    <meta property="og:image" content="https://qonkar.com/images/case-studies/craveeo_order_pic.webp" />
 
     <!-- Icons & Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -348,7 +348,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="relative">
             <div class="absolute -inset-4 bg-[#3f89c9]/5 rounded-[40px] blur-2xl"></div>
             <div class="relative bg-white/5 border border-white/10 rounded-3xl p-3 shadow-2xl backdrop-blur-sm">
-                <img src="/images/case-studies/careevo_mockup.png" alt="Careevo Dashboard" class="rounded-2xl w-full h-auto object-cover">
+                <img src="/images/case-studies/craveeo_order_pic.webp" alt="Careevo Dashboard" class="rounded-2xl w-full h-auto object-cover">
                 <!-- Live badge -->
                 <div class="absolute top-5 right-5 flex items-center gap-2 bg-[#000d16]/90 border border-[#95C951]/40 px-3 py-1.5 rounded-full backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-[#95C951] animate-pulse shadow-[0_0_8px_#95C951]"></span>
@@ -420,7 +420,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
                     <!-- Video Thumbnail -->
                     <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
-                        <img src="/images/case-studies/careevo_mockup.png" alt="Careevo System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        <img src="/images/case-studies/craveeo_order_pic.webp" alt="Careevo System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
 
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300"></div>

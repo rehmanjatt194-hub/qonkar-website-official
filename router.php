@@ -1,7 +1,7 @@
 <?php
 // router.php - Custom router for PHP built-in web server
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
 // If it's a physical file, serve it directly
 if (file_exists(__DIR__ . $uri) && !is_dir(__DIR__ . $uri)) {

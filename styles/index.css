@@ -73,7 +73,7 @@ html, body {
 }
 
 .background-backdrop {
-  background-image: url(images/card_back_drop.svg);
+  background-image: url(/images/card_back_drop.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ html, body {
 
 .background-backdrop-card {
   position: relative;
-  background-image: url(images/card_back_drop.svg);
+  background-image: url(/images/card_back_drop.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

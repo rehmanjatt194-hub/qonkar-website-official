@@ -63,7 +63,7 @@ $checkCareevo = $conn->query("SELECT id FROM case_studies WHERE brand_name = 'Ca
 if ($checkCareevo->num_rows == 0) {
     echo "Inserting Careevo...\n";
     $stmt = $conn->prepare("INSERT INTO case_studies (mockup_image, background_image, brand_name, short_description, status, link_of_case_study) VALUES (?, ?, ?, ?, ?, ?)");
-    $mockup = "images/case-studies/careevo_mockup.png";
+    $mockup = "images/case-studies/craveeo_order_pic.webp";
     $bg = "images/case-studies/careevo_bg.png";
     $brand = "Careevo";
     $desc = "An intelligent, high-performance Restaurant Management OS linking table QR ordering, real-time kitchen queues, inventory control, and multi-outlet analytics.";

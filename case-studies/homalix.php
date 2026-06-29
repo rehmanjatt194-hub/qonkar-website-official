@@ -26,8 +26,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:title" content="Homalix Case Study | Qonkar Technologies" />
     <meta property="og:description" content="Explore how Homalix streamlined operational workflows and automated medical tracking across multi-specialty healthcare networks." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/case-studies/homalix" />
-    <meta property="og:image" content="https://qonkar.com/images/case-studies/homalix_mockup.png" />
+    <meta property="og:url" content="/case-studies/homalix" />
+    <meta property="og:image" content="/images/case-studies/homalix_mockup.png" />
 
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -1123,12 +1123,12 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

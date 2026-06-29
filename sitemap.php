@@ -24,32 +24,32 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url><loc>https://qonkar.com/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
-    <url><loc>https://qonkar.com/about-us</loc><priority>0.8</priority></url>
-    <url><loc>https://qonkar.com/contact-us</loc><priority>0.8</priority></url>
-    <url><loc>https://qonkar.com/blogs</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/career</loc><priority>0.8</priority></url>
-    <url><loc>https://qonkar.com/portfolio</loc><priority>0.8</priority></url>
+    <url><loc>/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
+    <url><loc>/about-us</loc><priority>0.8</priority></url>
+    <url><loc>/contact-us</loc><priority>0.8</priority></url>
+    <url><loc>/blogs</loc><priority>0.9</priority></url>
+    <url><loc>/career</loc><priority>0.8</priority></url>
+    <url><loc>/portfolio</loc><priority>0.8</priority></url>
     
-    <url><loc>https://qonkar.com/privacy-policy</loc><priority>0.5</priority></url>
-    <url><loc>https://qonkar.com/terms-of-service</loc><priority>0.5</priority></url>
-    <url><loc>https://qonkar.com/help-and-support</loc><priority>0.5</priority></url>
+    <url><loc>/privacy-policy</loc><priority>0.5</priority></url>
+    <url><loc>/terms-of-service</loc><priority>0.5</priority></url>
+    <url><loc>/help-and-support</loc><priority>0.5</priority></url>
 
-    <url><loc>https://qonkar.com/services/shopify</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/software-development</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/branding-and-digital-marketing</loc><priority>0.9</priority></url>
+    <url><loc>/services/shopify</loc><priority>0.9</priority></url>
+    <url><loc>/services/software-development</loc><priority>0.9</priority></url>
+    <url><loc>/services/branding-and-digital-marketing</loc><priority>0.9</priority></url>
 
-    <url><loc>https://qonkar.com/services/shopify-development</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/shopify-theme-design</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/shopify-store-setup</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/speed-optimization</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/migration-services</loc><priority>0.9</priority></url>
+    <url><loc>/services/shopify-development</loc><priority>0.9</priority></url>
+    <url><loc>/services/shopify-theme-design</loc><priority>0.9</priority></url>
+    <url><loc>/services/shopify-store-setup</loc><priority>0.9</priority></url>
+    <url><loc>/services/speed-optimization</loc><priority>0.9</priority></url>
+    <url><loc>/services/migration-services</loc><priority>0.9</priority></url>
 
-    <url><loc>https://qonkar.com/services/web-design-and-development</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/landing-pages-design</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/saas-product-development</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/automative-app</loc><priority>0.9</priority></url>
-    <url><loc>https://qonkar.com/services/healthcare-and-hippa-apps</loc><priority>0.9</priority></url>
+    <url><loc>/services/web-design-and-development</loc><priority>0.9</priority></url>
+    <url><loc>/services/landing-pages-design</loc><priority>0.9</priority></url>
+    <url><loc>/services/saas-product-development</loc><priority>0.9</priority></url>
+    <url><loc>/services/automative-app</loc><priority>0.9</priority></url>
+    <url><loc>/services/healthcare-and-hippa-apps</loc><priority>0.9</priority></url>
     
     <?php
     // --- Dynamic Blogs ---
@@ -58,7 +58,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     
     if ($result_blogs) {
         while ($row = mysqli_fetch_assoc($result_blogs)) {
-            $url = "https://qonkar.com/blog/" . htmlspecialchars($row['slug'], ENT_XML1, 'UTF-8');
+            $url = "/blog/" . htmlspecialchars($row['slug'], ENT_XML1, 'UTF-8');
             $date = date('c', strtotime($row['updated_at'])); 
             echo "<url><loc>$url</loc><lastmod>$date</lastmod><priority>0.8</priority></url>\n";
         }
@@ -70,7 +70,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     
     if ($result_jobs) {
         while ($row = mysqli_fetch_assoc($result_jobs)) {
-            $url = "https://qonkar.com/apply/" . htmlspecialchars($row['slug'], ENT_XML1, 'UTF-8');
+            $url = "/apply/" . htmlspecialchars($row['slug'], ENT_XML1, 'UTF-8');
             $date = !empty($row['created_at']) ? date('c', strtotime($row['created_at'])) : date('c');
             echo "<url><loc>$url</loc><lastmod>$date</lastmod><priority>0.7</priority></url>\n";
         }

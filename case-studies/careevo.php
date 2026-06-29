@@ -26,8 +26,8 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:title" content="Careevo Case Study | Qonkar Technologies" />
     <meta property="og:description" content="Discover how Careevo revolutionized restaurant operations with smart order management, real-time kitchen displays, and powerful business analytics." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/case-studies/careevo" />
-    <meta property="og:image" content="https://qonkar.com/images/case-studies/craveeo_order_pic.webp" />
+    <meta property="og:url" content="/case-studies/careevo" />
+    <meta property="og:image" content="/images/case-studies/craveeo_order_pic.webp" />
 
     <!-- Icons & Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -1224,19 +1224,19 @@ counters.forEach(c => observer.observe(c));
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
+                                <a href="/career" class="hover:underline">Careers</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
+                                <a href="/blogs" class="hover:underline">Blogs and News</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
+                                <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
+                                <a href="/terms-of-service" class="hover:underline">Terms of Services</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
+                                <a href="/help-and-support" class="hover:underline">Help and Support</a>
                             </li>
                         </ul>
                     </div>

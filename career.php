@@ -476,12 +476,12 @@ require_once ADMIN_URL.'/database_config.php';
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

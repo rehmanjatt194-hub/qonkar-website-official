@@ -41,7 +41,7 @@ require_once ADMIN_URL.'/database_config.php';
     <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com" />
-    <meta property="og:image" content="https://qonkar.com/preview.webp" />
+    <meta property="og:image" content="/preview.webp" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -78,11 +78,11 @@ require_once ADMIN_URL.'/database_config.php';
   "@graph": [
     {
       "@type": "SoftwareBusiness",
-      "@id": "https://qonkar.com/#organization",
+      "@id": "/#organization",
       "name": "Qonkar Technologies",
-      "url": "https://qonkar.com/",
-      "logo": "https://qonkar.com/images/Logo_White_Color.webp",
-      "image": "https://qonkar.com/images/case-studies/background.webp",
+      "url": "/",
+      "logo": "/images/Logo_White_Color.webp",
+      "image": "/images/case-studies/background.webp",
       "description": "Qonkar Technologies is a full-service IT company specializing in Shopify development, custom software, web design, and performance marketing since 2018.",
       "foundingDate": "2018",
       "numberOfEmployees": {
@@ -1419,12 +1419,12 @@ require_once ADMIN_URL.'/database_config.php';
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

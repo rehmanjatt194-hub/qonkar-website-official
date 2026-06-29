@@ -18,7 +18,7 @@ if (isset($_GET['job_id']) && !isset($_GET['slug'])) {
 
     if ($row = $result->fetch_assoc()) {
         // Naya Clean URL banao
-        $cleanUrl = "https://qonkar.com/apply/" . $row['slug'];
+        $cleanUrl = "/apply/" . $row['slug'];
 
         // 301 Permanent Redirect
         header("Location: " . $cleanUrl, true, 301);
@@ -67,7 +67,7 @@ if (!empty($job_slug)) {
     <?php
     // Job Canonical Fix
     
-    $canonicalUrl = "https://qonkar.com/career"; // Default fallback
+    $canonicalUrl = "/career"; // Default fallback
     
     if (isset($_GET['job_id'])) {
         $jobId = intval($_GET['job_id']);
@@ -78,10 +78,10 @@ if (!empty($job_slug)) {
 
         if ($row = $result->fetch_assoc()) {
             // Asli Clean URL bana raha hai
-            $canonicalUrl = "https://qonkar.com/apply/" . htmlspecialchars($row['slug']);
+            $canonicalUrl = "/apply/" . htmlspecialchars($row['slug']);
         }
     } elseif (isset($_GET['slug'])) {
-        $canonicalUrl = "https://qonkar.com/apply/" . htmlspecialchars($_GET['slug']);
+        $canonicalUrl = "/apply/" . htmlspecialchars($_GET['slug']);
     }
     ?>
     <link rel="canonical" href="<?php echo $canonicalUrl; ?>" />
@@ -95,8 +95,8 @@ if (!empty($job_slug)) {
         content="<?php echo $selected_job_title ? 'Apply for ' . htmlspecialchars($selected_job_title) . ' | Qonkar Technologies' : 'Job Application | Qonkar Technologies'; ?>" />
     <meta property="og:description" content="Submit your application and join the Qonkar Technologies team." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/apply-job" />
-    <meta property="og:image" content="https://qonkar.com/preview" />
+    <meta property="og:url" content="/apply-job" />
+    <meta property="og:image" content="/preview" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -127,12 +127,12 @@ if (!empty($job_slug)) {
         gtag('config', 'G-HJ6VFPLL90');
     </script>
 
-    <link rel="canonical" href="https://qonkar.com/apply-job" />
+    <link rel="canonical" href="/apply-job" />
     <?php
     // Prepare dynamic data for Schema
     $schemaJobTitle = !empty($selected_job_title) ? 'Apply for ' . htmlspecialchars($selected_job_title) : 'Job Application Form';
     $schemaDescription = "Submit your application for " . (!empty($selected_job_title) ? htmlspecialchars($selected_job_title) : "career opportunities") . " at Qonkar Technologies.";
-    $currentUrl = "https://qonkar.com/apply-job" . ($selected_job_id > 0 ? "?job_id=" . $selected_job_id : "");
+    $currentUrl = "/apply-job" . ($selected_job_id > 0 ? "?job_id=" . $selected_job_id : "");
     ?>
     <script type="application/ld+json">
     {
@@ -145,9 +145,9 @@ if (!empty($job_slug)) {
           "name": "<?php echo $schemaJobTitle; ?>",
           "description": "<?php echo $schemaDescription; ?>",
           "isPartOf": {
-            "@id": "https://qonkar.com/#website"
+            "@id": "/#website"
           },
-          "image": "https://qonkar.com/images/qonkar_q.webp"
+          "image": "/images/qonkar_q.webp"
         },
         {
           "@type": "BreadcrumbList",
@@ -162,7 +162,7 @@ if (!empty($job_slug)) {
               "@type": "ListItem",
               "position": 2,
               "name": "Careers",
-              "item": "https://qonkar.com/career"
+              "item": "/career"
             },
             {
               "@type": "ListItem",
@@ -173,10 +173,10 @@ if (!empty($job_slug)) {
         },
         {
           "@type": "Organization",
-          "@id": "https://qonkar.com/#organization",
+          "@id": "/#organization",
           "name": "Qonkar Technologies",
           "url": "https://qonkar.com",
-          "logo": "https://qonkar.com/images/qonkar_logo.webp",
+          "logo": "/images/qonkar_logo.webp",
           "sameAs": [
             "https://www.linkedin.com/company/qonkar",
             "https://www.facebook.com/qonkar",
@@ -618,19 +618,19 @@ if (!empty($job_slug)) {
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
+                                <a href="/career" class="hover:underline">Careers</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
+                                <a href="/blogs" class="hover:underline">Blogs and News</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
+                                <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
+                                <a href="/terms-of-service" class="hover:underline">Terms of Services</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
+                                <a href="/help-and-support" class="hover:underline">Help and Support</a>
                             </li>
                         </ul>
                     </div>

@@ -43,13 +43,13 @@ require_once '../'.ADMIN_URL.'/database_config.php';
     <meta property="og:title" content="Enterprise Shopify Store Setup & Launch | Qonkar" />
     <meta property="og:description" content="Don't just launch. Dominate. We build scalable, high-performance Shopify stores architected for growth from Day 1." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/services/shopify-store-setup" />
-    <meta property="og:image" content="https://qonkar.com/images/shopify-setup-hero.webp" />
+    <meta property="og:url" content="/services/shopify-store-setup" />
+    <meta property="og:image" content="/images/shopify-setup-hero.webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Enterprise Shopify Store Setup & Launch | Qonkar" />
     <meta name="twitter:description" content="Don't just launch. Dominate. We build scalable, high-performance Shopify stores architected for growth from Day 1." />
-    <meta name="twitter:image" content="https://qonkar.com/images/shopify-setup-hero.webp" />
+    <meta name="twitter:image" content="/images/shopify-setup-hero.webp" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -967,7 +967,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   Starting an online business is exciting, but the technical setup can be overwhelming. As a premier provider of Shopify store setup services, Qonkar takes the stress out of launching your brand. We don't just create a page; we build a fully functional business environment. Our team ensures that your Shopify website setup services include everything from proper 
-                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
                     theme installation
                   </a> 
                   to the fine-tuning of your store’s internal logic, making sure you are ready for your first customer.
@@ -992,7 +992,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   A successful store needs more than just products; it needs a solid foundation. Our Shopify store setup and configuration service covers the essential "behind the scenes" work that many beginners overlook. We handle your tax settings, shipping zones, and legal policy pages to ensure your business stays compliant and professional. By trusting 
-                  <a href="https://qonkar.com/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/shopify-store-setup" class="underline hover:text-blue-500 transition-colors duration-300">
                     Shopify store setup experts
                   </a>, 
                   you avoid common mistakes that could lead to lost sales or payment processing issues down the road.
@@ -1024,7 +1024,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   Many people try to build their own stores but get stuck on the technical details. When you choose Qonkar for your Shopify ecommerce setup, you get a store that is optimized for performance. We focus on "Launch Readiness," which means we test every button, link, and checkout step before we hand over the keys. Our 
-                  <a href="https://qonkar.com/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/shopify-development" class="underline hover:text-blue-500 transition-colors duration-300">
                     Shopify store creation services
                   </a> 
                   are designed to give you a "Turnkey" solution, so you can focus on marketing and growth while we handle the technology.
@@ -1049,7 +1049,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   One of the most critical parts of Shopify website setup services is making sure you can actually get paid. We help you connect secure payment gateways like Shopify Payments, PayPal, or Stripe. Additionally, we configure your shipping rates, whether they are flat rates, free shipping tiers, or weight-based calculations. Our goal as 
-                  <a href="https://qonkar.com/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/shopify-theme-design" class="underline hover:text-blue-500 transition-colors duration-300">
                     Shopify store setup experts
                   </a> 
                   is to make the buying process as smooth as possible for your customers, which directly helps in increasing your sales.
@@ -1081,7 +1081,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   Your journey from an idea to a live store should be smooth and fast. Qonkar’s Shopify store creation services follow a proven roadmap to get you online quickly without sacrificing quality. We help with domain registration, email notification setup, and basic SEO settings so your store is visible to search engines from the moment it goes live. Investing in a professional 
-                  <a href="https://qonkar.com/services/migration-services" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/migration-services" class="underline hover:text-blue-500 transition-colors duration-300">
                     Shopify store setup and configuration service
                   </a> 
                   is the best way to ensure your brand starts on the right foot.
@@ -1106,9 +1106,9 @@ require_once '../'.ADMIN_URL.'/database_config.php';
 <div>
                 <p class="text-white font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   While many agencies focus solely on aesthetics, 
-                  <a href="https://qonkar.com/" class="underline hover:text-blue-500 transition-colors duration-300">Qonkar</a> 
+                  <a href="/" class="underline hover:text-blue-500 transition-colors duration-300">Qonkar</a> 
                   prioritizes 
-                  <a href="https://qonkar.com/services/speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
+                  <a href="/services/speed-optimization" class="underline hover:text-blue-500 transition-colors duration-300">
                     technical Shopify development services
                   </a>. 
                   Investing in high-end technical development offers several key advantages:
@@ -1541,7 +1541,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
                   linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+                  url('/images/unsplash/photo-1504384308090.jpg') lightgray 0px -374.163px / 100% 280.523% no-repeat;
       box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);">
             <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
                 Ready to <strong>Launch</strong> Your Empire?
@@ -1635,19 +1635,19 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
+                                <a href="/career" class="hover:underline">Careers</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
+                                <a href="/blogs" class="hover:underline">Blogs and News</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
+                                <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
+                                <a href="/terms-of-service" class="hover:underline">Terms of Services</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
+                                <a href="/help-and-support" class="hover:underline">Help and Support</a>
                             </li>
                         </ul>
                     </div>

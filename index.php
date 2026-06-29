@@ -19,14 +19,14 @@ require_once ADMIN_URL.'/database_config.php';
             </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://qonkar.com/" /> 
+    <link rel="canonical" href="/" /> 
   
     <meta name="author" content="Qonkar" />
     <meta name="msvalidate.01" content="C6540A73A08EF3FA143C9F0FEB785E5D" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com" />
-    <meta property="og:image" content="https://qonkar.com/images/qonkar_q.webp" />
+    <meta property="og:image" content="/images/qonkar_q.webp" />
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -138,12 +138,12 @@ require_once ADMIN_URL.'/database_config.php';
   "@graph": [
     {
       "@type": "SoftwareBusiness",
-      "@id": "https://qonkar.com/#organization",
+      "@id": "/#organization",
       "name": "Qonkar Technologies",
       "alternateName": "Qonkar",
-      "url": "https://qonkar.com/",
-      "logo": "https://qonkar.com/images/Logo_White_Color.webp",
-      "image": "https://qonkar.com/images/qonkar_q.webp",
+      "url": "/",
+      "logo": "/images/Logo_White_Color.webp",
+      "image": "/images/qonkar_q.webp",
       "description": "Qonkar is a premier Shopify Plus development agency & custom software development company. We deliver ROI-driven digital marketing and SaaS product development globally.",
       "priceRange": "$$",
       "telephone": "+447476451747",
@@ -205,7 +205,7 @@ require_once ADMIN_URL.'/database_config.php';
     {
       "@type": "Service",
       "name": "Qonkar Technologies Software & Digital Marketing",
-      "provider": { "@id": "https://qonkar.com/#organization" },
+      "provider": { "@id": "/#organization" },
       "description": "Top-tier Software and Digital Marketing solutions trusted by 100+ businesses globally.",
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -237,9 +237,9 @@ require_once ADMIN_URL.'/database_config.php';
       "@type": "ItemList",
       "name": "Qonkar Technologies Main Navigation Menu",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "url": "https://qonkar.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Shopify Development", "url": "https://qonkar.com/services/shopify-development" },
-        { "@type": "ListItem", "position": 16, "name": "Contact Us", "url": "https://qonkar.com/contact-us" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "url": "/" },
+        { "@type": "ListItem", "position": 2, "name": "Shopify Development", "url": "/services/shopify-development" },
+        { "@type": "ListItem", "position": 16, "name": "Contact Us", "url": "/contact-us" }
       ]
     },
     {
@@ -1497,7 +1497,7 @@ require_once ADMIN_URL.'/database_config.php';
     </style>
 
 <div class="bg-[#000d16] w-full">
-    <section class="w-full bg-[#ffffff] pt-6 pb-2 relative group/section game-cursor fade-in">
+    <section class="w-full bg-[#ffffff] pt-6 pb-2 relative group/section game-cursor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header: Title on Left, Navigation arrows on Right -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-3">
@@ -1667,7 +1667,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 <div class="bg-[#000d16] w-full">
     <!-- New Section: Building Brands Worldwide -->
-    <section class="w-full bg-[#000d16] text-white pt-20 pb-0 relative overflow-hidden fade-in">
+    <section class="w-full bg-[#000d16] text-white pt-20 pb-0 relative overflow-hidden">
         <!-- Dotted Map Background Overlay (Seamless & Proportional) -->
         <div class="absolute bottom-20 left-0 right-0 h-[260px] md:inset-0 md:h-auto z-0 opacity-80 pointer-events-none mix-blend-screen transform-gpu will-change-transform bg-no-repeat bg-center bg-[length:115%_auto] md:bg-right md:bg-[length:auto_100%]" 
              style="background-image: url('/images/orange_map_clean.png');"></div>
@@ -2656,7 +2656,7 @@ require_once ADMIN_URL.'/database_config.php';
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
                   linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+                  url('/images/unsplash/photo-1504384308090.jpg') lightgray 0px -374.163px / 100% 280.523% no-repeat;
       ">
             <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
                 Ready to <strong>Build</strong> Your Next Big<strong> Digital Product</strong>?
@@ -3795,12 +3795,12 @@ require_once ADMIN_URL.'/database_config.php';
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

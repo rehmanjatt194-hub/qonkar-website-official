@@ -27,8 +27,8 @@
     <meta property="og:title" content="404 Page Not Found | Qonkar Technologies" />
     <meta property="og:description" content="The page you are looking for does not exist. Visit Qonkar Technologies homepage." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/404" />
-    <meta property="og:image" content="https://qonkar.com/preview.webp" />
+    <meta property="og:url" content="/404" />
+    <meta property="og:image" content="/preview.webp" />
 
     <!-- Google ICONS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -262,7 +262,7 @@
                     </svg>
                 </a>
 
-                <a href="https://qonkar.com/contact-us"
+                <a href="/contact-us"
                    class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white font-semibold 
                           hover:bg-white/10 transition">
                     Contact Support
@@ -286,22 +286,22 @@
                 Here are a few useful pages that might help you find what you are looking for.
             </p>
             <div class="flex flex-wrap gap-3 text-sm">
-                <a href="https://qonkar.com/services/software-development" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/services/software-development" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Website Development
                 </a>
-                <a href="https://qonkar.com/services/shopify" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/services/shopify" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Shopify Development
                 </a>
-                <a href="https://qonkar.com/services/branding-and-performance-marketing" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/services/branding-and-performance-marketing" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Branding and Marketing
                 </a>
-                <a href="https://qonkar.com/portfolio" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/portfolio" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Our Portfolio
                 </a>
-                <a href="https://qonkar.com/blogs" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/blogs" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Blogs
                 </a>
-                <a href="https://qonkar.com/career" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
+                <a href="/career" class="px-4 py-2 rounded-full border border-white/20 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] transition">
                     Careers
                 </a>
             </div>
@@ -370,12 +370,12 @@
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

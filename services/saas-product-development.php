@@ -41,13 +41,13 @@ require_once "../".ADMIN_URL.'/database_config.php';
     <meta property="og:title" content="SaaS Product Development & Engineering | Qonkar" />
     <meta property="og:description" content="From MVP to IPO. We engineer cloud-native SaaS platforms that scale securely and drive recurring revenue." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/services/saas-product-development" />
-    <meta property="og:image" content="https://qonkar.com/images/saas-hero-mockup.webp" />
+    <meta property="og:url" content="/services/saas-product-development" />
+    <meta property="og:image" content="/images/saas-hero-mockup.webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SaaS Product Development & Engineering | Qonkar" />
     <meta name="twitter:description" content="From MVP to IPO. We engineer cloud-native SaaS platforms that scale securely and drive recurring revenue." />
-    <meta name="twitter:image" content="https://qonkar.com/images/saas-hero-mockup.webp" />
+    <meta name="twitter:image" content="/images/saas-hero-mockup.webp" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -1036,7 +1036,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 1: Bespoke Storefront Architecture -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1522071820081.jpg"
                             alt="Shopify Theme Development"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
@@ -1081,7 +1081,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 2: Shopify Plus (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1551288049.jpg"
                             alt="Shopify Plus Enterprise"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
@@ -1114,7 +1114,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 3: Custom App Development -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1460925895917.jpg"
                             alt="Custom Shopify Apps"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1143,7 +1143,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 4: Zero-Downtime Migrations (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1555066931.jpg"
                             alt="E-Commerce Migration"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
@@ -1176,7 +1176,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 5: Speed Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1551288049.jpg"
                             alt="Speed Optimization"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
@@ -1219,7 +1219,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 6: Headless Commerce (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1518770660439.jpg"
                             alt="Headless Commerce"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1598,7 +1598,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
                   linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+                  url('/images/unsplash/photo-1504384308090.jpg') lightgray 0px -374.163px / 100% 280.523% no-repeat;
       box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);">
             <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
                 Ready to <strong>Scale</strong> Your SaaS?
@@ -1689,12 +1689,12 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <h3 class="font-bold text-lg mb-4">About</h3>
                     <ul class="space-y-2 text-sm font-light">
                         <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="https://qonkar.com/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="https://qonkar.com/career" class="hover:underline">Careers</a></li>
-                        <li><a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a></li>
+                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
+                        <li><a href="/career" class="hover:underline">Careers</a></li>
+                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
+                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
+                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
                     </ul>
                 </div>
 

@@ -45,14 +45,14 @@ require_once "../" . ADMIN_URL . '/database_config.php';
     <meta property="og:description"
         content="Don't settle for templates. We build high-speed, custom Shopify stores engineered for sales. Serving brands in New York & London." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://qonkar.com/services/shopify" />
-    <meta property="og:image" content="https://qonkar.com/images/shopify-hero-mockup.webp" />
+    <meta property="og:url" content="/services/shopify" />
+    <meta property="og:image" content="/images/shopify-hero-mockup.webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Shopify Plus & Custom Development Agency | Qonkar" />
     <meta name="twitter:description"
         content="Scale your D2C brand with Qonkar. Experts in Custom Themes, Migration, and Speed Optimization." />
-    <meta name="twitter:image" content="https://qonkar.com/images/shopify-hero-mockup.webp" />
+    <meta name="twitter:image" content="/images/shopify-hero-mockup.webp" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -76,15 +76,15 @@ require_once "../" . ADMIN_URL . '/database_config.php';
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://qonkar.com/#organization",
+      "@id": "/#organization",
       "name": "Qonkar Technologies",
-      "url": "https://qonkar.com/",
-      "logo": "https://qonkar.com/images/qonkar-logo.png"
+      "url": "/",
+      "logo": "/images/qonkar-logo.png"
     },
     {
       "@type": "Service",
       "serviceType": "Shopify Development Services",
-      "provider": { "@id": "https://qonkar.com/#organization" },
+      "provider": { "@id": "/#organization" },
       "areaServed": "Worldwide",
       "description": "At Qonkar, we build custom Shopify stores that are fast, flexible, and built to grow. From setup and theme development to redesigns and backend enhancements.",
       "hasOfferCatalog": {
@@ -97,7 +97,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
               "@type": "Service",
               "name": "Shopify Store Setup & Customization",
               "description": "Custom Shopify store build focused on speed, flexibility, and growth engineering.",
-              "image": "https://qonkar.com/images/services_pictures/shopify_cutomization.webp"
+              "image": "/images/services_pictures/shopify_cutomization.webp"
             }
           },
           {
@@ -106,7 +106,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
               "@type": "Service",
               "name": "Shopify Store Redesign",
               "description": "Transforming outdated stores with modern design, mobile-first UX, and performance-driven upgrades.",
-              "image": "https://qonkar.com/images/services_pictures/shopify_redesign.webp"
+              "image": "/images/services_pictures/shopify_redesign.webp"
             }
           },
           {
@@ -115,7 +115,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
               "@type": "Service",
               "name": "Shopify Theme Development",
               "description": "Bespoke themes using clean Liquid and HTML5 for unique design and cross-device compatibility.",
-              "image": "https://qonkar.com/images/services_pictures/shopify_theme-developement.webp"
+              "image": "/images/services_pictures/shopify_theme-developement.webp"
             }
           },
           {
@@ -124,7 +124,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
               "@type": "Service",
               "name": "Shopify Management & Maintenance",
               "description": "Handling updates, security, bug fixes, and performance improvements for peak store condition.",
-              "image": "https://qonkar.com/images/services_pictures/shopify_maintanance.webp"
+              "image": "/images/services_pictures/shopify_maintanance.webp"
             }
           }
         ]
@@ -138,38 +138,38 @@ require_once "../" . ADMIN_URL . '/database_config.php';
       "step": [
         {
           "@type": "HowToStep",
-          "url": "https://qonkar.com/#step1",
+          "url": "/#step1",
           "name": "Discovery & Strategy",
           "itemListElement": [{ "@type": "HowToDirection", "text": "We explore your goals and challenges, then build a clear, data-backed roadmap." }],
-          "image": "https://qonkar.com/images/process-images/Discover_strategy.webp"
+          "image": "/images/process-images/Discover_strategy.webp"
         },
         {
           "@type": "HowToStep",
-          "url": "https://qonkar.com/#step2",
+          "url": "/#step2",
           "name": "Design & Experience",
           "itemListElement": [{ "@type": "HowToDirection", "text": "We create intuitive, brand-aligned prototypes focused on user experience." }],
-          "image": "https://qonkar.com/images/process-images/Design_expreience.webp"
+          "image": "/images/process-images/Design_expreience.webp"
         },
         {
           "@type": "HowToStep",
-          "url": "https://qonkar.com/#step3",
+          "url": "/#step3",
           "name": "Build & Integrate",
           "itemListElement": [{ "@type": "HowToDirection", "text": "Our developers build powerful, scalable solutions with smart tech integrations." }],
-          "image": "https://qonkar.com/images/process-images/Integration.webp"
+          "image": "/images/process-images/Integration.webp"
         },
         {
           "@type": "HowToStep",
-          "url": "https://qonkar.com/#step4",
+          "url": "/#step4",
           "name": "Testing & Launch",
           "itemListElement": [{ "@type": "HowToDirection", "text": "Every feature is tested and optimized for speed, performance, and reliability." }],
-          "image": "https://qonkar.com/images/process-images/testing.webp"
+          "image": "/images/process-images/testing.webp"
         },
         {
           "@type": "HowToStep",
-          "url": "https://qonkar.com/#step5",
+          "url": "/#step5",
           "name": "Support & Growth",
           "itemListElement": [{ "@type": "HowToDirection", "text": "Post-launch, we monitor, improve, and scale your product for long-term success." }],
-          "image": "https://qonkar.com/images/process-images/growth.webp"
+          "image": "/images/process-images/growth.webp"
         }
       ]
     },
@@ -1271,7 +1271,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 1: Bespoke Storefront Architecture -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1522071820081.jpg"
                             alt="Shopify Theme Development"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
@@ -1316,7 +1316,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 2: Shopify Plus (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1551288049.jpg"
                             alt="Shopify Plus Enterprise"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
@@ -1349,7 +1349,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 3: Custom App Development -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1460925895917.jpg"
                             alt="Custom Shopify Apps"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1378,7 +1378,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 4: Zero-Downtime Migrations (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1555066931.jpg"
                             alt="E-Commerce Migration"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
@@ -1411,7 +1411,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 5: Speed Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1551288049.jpg"
                             alt="Speed Optimization"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
@@ -1454,7 +1454,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 6: Headless Commerce (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="/images/unsplash/photo-1518770660439.jpg"
                             alt="Headless Commerce"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -2328,19 +2328,19 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                                 <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/career" class="hover:underline">Careers</a>
+                                <a href="/career" class="hover:underline">Careers</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/blogs" class="hover:underline">Blogs and News</a>
+                                <a href="/blogs" class="hover:underline">Blogs and News</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/privacy-policy" class="hover:underline">Privacy Policy</a>
+                                <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/terms-of-service" class="hover:underline">Terms of Services</a>
+                                <a href="/terms-of-service" class="hover:underline">Terms of Services</a>
                             </li>
                             <li>
-                                <a href="https://qonkar.com/help-and-support" class="hover:underline">Help and Support</a>
+                                <a href="/help-and-support" class="hover:underline">Help and Support</a>
                             </li>
                         </ul>
                     </div>

@@ -97,6 +97,15 @@ require_once ADMIN_URL.'/database_config.php';
       html {
         scroll-behavior: smooth;
       }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity .7s ease, transform .7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
 
     <meta charset="UTF-8">
@@ -396,7 +405,7 @@ require_once ADMIN_URL.'/database_config.php';
 </header>
 
     <section id="hero"
-        class="relative flex-1 flex items-center mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden w-full">
+        class="relative flex-1 flex items-center mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden w-full fade-in">
 
 
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-8 max-w-7xl mx-auto w-full">
@@ -441,7 +450,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 
-    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-5 md:mt-6 mb-5 md:mb-6">
+    <section class="bg-gradient-to-r from-[#000d16] via-[#001c30] to-[#000d16] border-y border-[#01a0d8]/20 flex flex-col items-center justify-center py-4 md:py-5 overflow-hidden relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] w-full mt-5 md:mt-6 mb-5 md:mb-6 fade-in">
 
         <div class="relative overflow-hidden w-full group">
             <div class="flex items-center animate-scroll-horizontal space-x-18 gap-20 group-hover:[animation-play-state:paused] cursor-pointer">
@@ -480,7 +489,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 </div>
 
-    <section class="bg-[#000d16] py-8 md:py-12 px-4 sm:px-6 lg:px-8 w-full">
+    <section class="bg-[#000d16] py-8 md:py-12 px-4 sm:px-6 lg:px-8 w-full fade-in">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6 md:gap-8">
 
             <div class="order-2 lg:order-1 flex justify-center">
@@ -524,7 +533,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 
 <div class="bg-[#000d16] w-full">
-    <section class="py-8 md:py-12 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900">
+    <section class="py-8 md:py-12 w-full px-4 sm:px-6 lg:px-8 bg-[#f8fafc] text-slate-900 fade-in">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-3 border-b border-slate-200/55">
@@ -683,7 +692,7 @@ require_once ADMIN_URL.'/database_config.php';
         </section>
     </div>
     
-    <section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll">
+    <section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll fade-in">
         <style>
             /* Custom CSS for hidden scrollbar */
             .no-scrollbar::-webkit-scrollbar {
@@ -1488,7 +1497,7 @@ require_once ADMIN_URL.'/database_config.php';
     </style>
 
 <div class="bg-[#000d16] w-full">
-    <section class="w-full bg-[#ffffff] pt-6 pb-2 relative group/section game-cursor">
+    <section class="w-full bg-[#ffffff] pt-6 pb-2 relative group/section game-cursor fade-in">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header: Title on Left, Navigation arrows on Right -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-3">
@@ -1658,9 +1667,9 @@ require_once ADMIN_URL.'/database_config.php';
 
 <div class="bg-[#000d16] w-full">
     <!-- New Section: Building Brands Worldwide -->
-    <section class="w-full bg-[#000d16] text-white pt-20 pb-0 relative overflow-hidden">
+    <section class="w-full bg-[#000d16] text-white pt-20 pb-0 relative overflow-hidden fade-in">
         <!-- Dotted Map Background Overlay (Seamless & Proportional) -->
-        <div class="absolute bottom-20 left-0 right-0 h-[260px] md:inset-0 md:h-auto z-0 opacity-80 pointer-events-none mix-blend-screen bg-no-repeat bg-center bg-[length:115%_auto] md:bg-right md:bg-[length:auto_100%]" 
+        <div class="absolute bottom-20 left-0 right-0 h-[260px] md:inset-0 md:h-auto z-0 opacity-80 pointer-events-none mix-blend-screen transform-gpu will-change-transform bg-no-repeat bg-center bg-[length:115%_auto] md:bg-right md:bg-[length:auto_100%]" 
              style="background-image: url('/images/orange_map_clean.png');"></div>
         
         <!-- Subtle Ambient Glows matching Orange/Dark Theme -->
@@ -1688,82 +1697,39 @@ require_once ADMIN_URL.'/database_config.php';
                 <div class="flex items-center justify-between w-full">
                     <!-- Stat 1 -->
                     <div class="flex flex-col items-center text-center flex-1">
-                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="25" data-suffix="+">0+</span>
+                        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]">25+</span>
                         <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Team Members</span>
                     </div>
                     <!-- Divider -->
                     <div class="w-[1px] h-8 bg-white/10 self-center"></div>
                     <!-- Stat 2 -->
                     <div class="flex flex-col items-center text-center flex-1">
-                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="2" data-suffix="">0</span>
+                        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]">2</span>
                         <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Locations</span>
                     </div>
                     <!-- Divider -->
                     <div class="w-[1px] h-8 bg-white/10 self-center"></div>
                     <!-- Stat 3 -->
                     <div class="flex flex-col items-center text-center flex-1">
-                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="7" data-suffix="+">0+</span>
+                        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]">7+</span>
                         <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Years Experience</span>
                     </div>
                     <!-- Divider -->
                     <div class="w-[1px] h-8 bg-white/10 self-center"></div>
                     <!-- Stat 4 -->
                     <div class="flex flex-col items-center text-center flex-1">
-                        <span class="stat-counter text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]" data-target="500" data-suffix="+">0+</span>
+                        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--primary-color)]">500+</span>
                         <span class="text-[9px] sm:text-xs text-gray-400 font-light tracking-wide uppercase mt-0.5">Clients</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const counters = document.querySelectorAll(".stat-counter");
-                const observerOptions = {
-                    root: null,
-                    rootMargin: "0px",
-                    threshold: 0.5
-                };
-
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const target = entry.target;
-                            const targetNumber = parseInt(target.getAttribute("data-target"));
-                            const suffix = target.getAttribute("data-suffix") || "";
-                            let current = 0;
-                            // Ensure smaller numbers don't take forever but large numbers zip by quickly
-                            const duration = 2000; // ms
-                            const stepTime = Math.abs(Math.floor(duration / targetNumber));
-                            const increment = Math.max(1, Math.ceil(targetNumber / (duration / 16))); // assuming 60fps
-                            
-                            const updateCounter = () => {
-                                current += increment;
-                                if (current < targetNumber) {
-                                    target.innerText = Math.ceil(current).toLocaleString() + suffix;
-                                    requestAnimationFrame(updateCounter);
-                                } else {
-                                    target.innerText = targetNumber.toLocaleString() + suffix;
-                                }
-                            };
-                            
-                            requestAnimationFrame(updateCounter);
-                            observer.unobserve(target); // Only animate once
-                        }
-                    });
-                }, observerOptions);
-
-                counters.forEach(counter => {
-                    observer.observe(counter);
-                });
-            });
-        </script>
     </section>
 </div>
 
 <div class="bg-black w-full">
     <section
-        class="bg-black py-8 md:py-12 text-white relative bg-no-repeat bg-[length:50%] bg-[url('images/background_curve.svg')] bg-[center_top_30px]">
+        class="bg-black py-8 md:py-12 text-white relative bg-no-repeat bg-[length:50%] bg-[url('images/background_curve.svg')] bg-[center_top_30px] fade-in">
         <div class=" mx-auto px-4 sm:px-6 lg:px-0 text-center relative">
 
             <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-8">
@@ -2685,7 +2651,7 @@ require_once ADMIN_URL.'/database_config.php';
         </section>
 </div>
 
-    <section class="w-full flex justify-center items-center py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="w-full flex justify-center items-center py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8 fade-in">
         <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] " style="
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
@@ -2712,7 +2678,7 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-    <section class="py-8 md:py-12 bg-[var(--body-bg)] text-white">
+    <section class="py-8 md:py-12 bg-[var(--body-bg)] text-white fade-in">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header: 2-Column Responsive Layout -->
@@ -2887,7 +2853,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 
   <!-- OUR EXPERTS Section -->
-    <section class="py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8 bg-white text-slate-900 relative">
+    <section class="py-8 md:py-12 mx-auto px-4 sm:px-6 lg:px-8 bg-white text-slate-900 relative fade-in">
         <div class="max-w-7xl mx-auto 0 text-center">
 
             <!-- Badge -->
@@ -3313,7 +3279,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 
-    <section class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-[var(--body-bg)] text-white relative">
+    <section class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-[var(--body-bg)] text-white relative fade-in">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
 
             <div class="glass-border inline-block mb-4">
@@ -3450,7 +3416,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 
 
-    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] text-white ">
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[var(--body-bg)] text-white  fade-in">
         <div class="max-w-7xl mx-auto  text-center">
             <div class="glass-border inline-block mb-4">
                 <div class="glass-background">
@@ -3521,7 +3487,7 @@ require_once ADMIN_URL.'/database_config.php';
     </section>
 
 <!-- FAQ -->
-    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-0 text-slate-900 rounded-t-[30px] rounded-b-none shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50">
+    <section class="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] mb-0 text-slate-900 rounded-t-[30px] rounded-b-none shadow-[0_4px_20px_rgba(0,13,22,0.02)] border border-slate-100/50 fade-in">
         <div class="w-full mx-auto">
             <!-- Header -->
             <div class="text-center mb-10">
@@ -3917,6 +3883,25 @@ require_once ADMIN_URL.'/database_config.php';
     <script src="/script/case_study_carousel.js"></script>
             
 
+    <!-- Fade-In Observer Script (Homalix-style) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.08
+            });
+
+            document.querySelectorAll('.fade-in').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
     <!-- Lenis Smooth Scroll Script -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
     <script>
@@ -3932,22 +3917,12 @@ require_once ADMIN_URL.'/database_config.php';
             infinite: false,
         });
 
-        if (typeof ScrollTrigger !== 'undefined') {
-            lenis.on('scroll', ScrollTrigger.update);
-        }
-
-        if (typeof gsap !== 'undefined') {
-            gsap.ticker.add((time) => {
-                lenis.raf(time * 1000);
-            });
-            gsap.ticker.lagSmoothing(0);
-        } else {
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
+        function raf(time) {
+            lenis.raf(time);
             requestAnimationFrame(raf);
         }
+
+        requestAnimationFrame(raf);
     </script>
 </body>
 

@@ -1826,22 +1826,12 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
             infinite: false,
         });
 
-        if (typeof ScrollTrigger !== 'undefined') {
-            lenis.on('scroll', ScrollTrigger.update);
-        }
-
-        if (typeof gsap !== 'undefined') {
-            gsap.ticker.add((time) => {
-                lenis.raf(time * 1000);
-            });
-            gsap.ticker.lagSmoothing(0);
-        } else {
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
+        function raf(time) {
+            lenis.raf(time);
             requestAnimationFrame(raf);
         }
+
+        requestAnimationFrame(raf);
     </script>
 </body>
 

@@ -74,7 +74,7 @@ if (!isset($_SESSION['user_id'])) {
  <aside id="sidebar" class="sidebar w-64 h-screen fixed bg-[#202020] text-white flex flex-col transition-all border-r border-[#595959]">
         <!-- Logo -->
         <div class="flex items-center justify-center h-20 border-b border-[#595959] px-4">
-            <img id="sidebarLogo" src="../images/qonkar_logo.png" alt="Logo" class="w-32 transition-all duration-300">
+            <img id="sidebarLogo" src="../images/qonkar_logo.webp" alt="Logo" class="w-32 transition-all duration-300">
         </div>
         <!-- Toggle Button (Middle Arrow) -->
         <button id="sidebarToggle"
@@ -160,7 +160,7 @@ if (!isset($_SESSION['user_id'])) {
                 $stmt->bind_param("i", $user_id);
                 $stmt->execute();
                 $user = $stmt->get_result()->fetch_assoc();
-                $picture = !empty($user['picture']) ? $user['picture'] : '../images/default_avatar.png';
+                $picture = !empty($user['picture']) ? $user['picture'] : '../images/default_avatar.webp';
                 ?>
                 <span class="font-semibold"><?php echo htmlspecialchars($user['username']); ?></span>
                 <img src="<?php echo $picture; ?>" class="w-10 h-10 rounded-full border-2 border-[var(--secondary-color)]">
@@ -189,7 +189,7 @@ if (!isset($_SESSION['user_id'])) {
                         <?php
                         $result = $conn->query("SELECT * FROM blogs ORDER BY id DESC");
                         while ($row = $result->fetch_assoc()) {
-                            $imgSrc = !empty($row['blog_image']) ? $row['blog_image'] : '../images/default_blog.png';
+                            $imgSrc = !empty($row['blog_image']) ? $row['blog_image'] : '../images/default_blog.webp';
                             $statusClass = $row['status'] === 'active' ? 'bg-green-600' : 'bg-red-600';
                             echo "<tr>
                                 <td>{$row['id']}</td>

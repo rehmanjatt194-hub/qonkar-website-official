@@ -38,7 +38,7 @@
     <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com" />
-    <meta property="og:image" content="/preview.png" />
+    <meta property="og:image" content="/preview.webp" />
 
 
 
@@ -264,7 +264,7 @@
         <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
 
         <!-- Background Image -->
-        <div class="absolute inset-0 bg-[url('images/hero-section/contact.jpg')] bg-center bg-cover opacity-40"></div>
+        <div class="absolute inset-0 bg-[url('images/hero-section/contact.webp')] bg-center bg-cover opacity-40"></div>
 
         <!-- Pattern Overlay (single SVG, no repeat) -->
         <div class="absolute inset-0 hero-pattern"></div>

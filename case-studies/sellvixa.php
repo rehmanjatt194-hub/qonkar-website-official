@@ -27,7 +27,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:description" content="Explore Sellvixa - next-generation Retail ERP with live checkouts, multi-branch control, and visual analytics." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/case-studies/sellvixa" />
-    <meta property="og:image" content="/images/case-studies/sellvixa_dashboard.png" />
+    <meta property="og:image" content="/images/case-studies/sellvixa_dashboard.webp" />
 
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -323,7 +323,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="relative w-full mt-0 mb-16 rounded-t-[30px] overflow-hidden bg-[#00101a] border-b border-white/5 flex flex-col justify-between animate-fade-in">
     <!-- Background Image with Linear Gradient Overlay -->
-    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-90" style="background-image: linear-gradient(to right, rgba(0, 13, 22, 0.8) 10%, rgba(0, 13, 22, 0.4) 50%, rgba(0, 13, 22, 0.1) 100%), url('/images/case-studies/background/sellvixa_bg.png'); mix-blend-mode: normal;"></div>
+    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-90" style="background-image: linear-gradient(to right, rgba(0, 13, 22, 0.8) 10%, rgba(0, 13, 22, 0.4) 50%, rgba(0, 13, 22, 0.1) 100%), url('/images/case-studies/background/sellvixa_bg.webp'); mix-blend-mode: normal;"></div>
     <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-[var(--primary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] bg-[var(--secondary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -359,7 +359,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Right Column: Mockup Frame -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0 relative z-10 lg:-translate-y-2">
             <div class="relative w-full max-w-[390px] select-none">
-                <img src="/images/case-studies/sellvixa_dashboard.png" alt="Sellvixa POS Preview" class="w-full h-auto object-contain rounded-xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
+                <img src="/images/case-studies/sellvixa_dashboard.webp" alt="Sellvixa POS Preview" class="w-full h-auto object-contain rounded-xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>
@@ -498,7 +498,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     
                     <!-- Video Thumbnail / Poster Image -->
                     <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
-                        <img src="/images/case-studies/background/sellvixa_bg.png" alt="Sellvixa System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        <img src="/images/case-studies/background/sellvixa_bg.webp" alt="Sellvixa System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
                         
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
@@ -901,7 +901,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Author Profile -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
             <div class="w-12 h-12 rounded-full border border-white/10 p-0.5 overflow-hidden bg-[#000d16]">
-                <img src="/images/case-studies/ahmed_raza.png" alt="Ahmed Raza" class="w-full h-full rounded-full object-cover">
+                <img src="/images/case-studies/ahmed_raza.webp" alt="Ahmed Raza" class="w-full h-full rounded-full object-cover">
             </div>
             <div class="text-left">
                 <h4 class="text-sm font-bold text-white leading-none">Ahmed Raza</h4>
@@ -916,7 +916,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="relative w-full py-20 mt-16 mb-16 overflow-hidden bg-[#00101a] border-t border-b border-white/10 text-left animate-fade-in">
     <!-- Background Image with Linear Gradient Overlay -->
-    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-55 mix-blend-luminosity" style="background-image: linear-gradient(to right, rgba(0, 13, 22, 0.9) 20%, rgba(0, 13, 22, 0.5) 70%, rgba(0, 13, 22, 0.8) 100%), url('/images/case-studies/background/stock_room.png');"></div>
+    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-55 mix-blend-luminosity" style="background-image: linear-gradient(to right, rgba(0, 13, 22, 0.9) 20%, rgba(0, 13, 22, 0.5) 70%, rgba(0, 13, 22, 0.8) 100%), url('/images/case-studies/background/stock_room.webp');"></div>
     <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-[var(--primary-color)]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

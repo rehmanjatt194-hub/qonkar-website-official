@@ -27,7 +27,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:description" content="Discover how Schoolian automated school administrative operations, attendance workflows, and grading systems across school networks." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/case-studies/schoolian" />
-    <meta property="og:image" content="/images/case-studies/schoolian_dashboard.png" />
+    <meta property="og:image" content="/images/case-studies/schoolian_dashboard.webp" />
 
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -240,7 +240,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      1. HERO SECTION (4-Portal Switcher Layout)
      ========================================== -->
 <section class="relative w-full mt-0 mb-16 rounded-t-[30px] rounded-b-none overflow-hidden flex items-center bg-[#00101a] border-b border-white/5 min-h-[70vh] animate-fade-in">
-    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-80" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.4) 10%, rgba(8, 8, 10, 0.7) 50%, rgba(8, 8, 10, 0.95) 90%), url('/images/case-studies/schoolian_bg.png'); mix-blend-mode: normal;"></div>
+    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-80" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.4) 10%, rgba(8, 8, 10, 0.7) 50%, rgba(8, 8, 10, 0.95) 90%), url('/images/case-studies/schoolian_bg.webp'); mix-blend-mode: normal;"></div>
     <div class="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] bg-[var(--primary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] bg-[var(--secondary-color)]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -289,7 +289,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Right Column: Card Mockup -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div class="relative max-w-md w-full bg-white/5 rounded-2xl border border-white/10 shadow-2xl p-2 backdrop-blur-md">
-                <img src="/images/case-studies/schoolian_dashboard.png" alt="Schoolian Dashboard Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+                <img src="/images/case-studies/schoolian_dashboard.webp" alt="Schoolian Dashboard Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>
@@ -400,7 +400,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     
                     <!-- Video Thumbnail / Poster Image -->
                     <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
-                        <img src="/images/case-studies/schoolian_bg.png" alt="Schoolian System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        <img src="/images/case-studies/schoolian_bg.webp" alt="Schoolian System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
                         
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
@@ -698,7 +698,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="md:row-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-center hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.webp');">
                 </div>
 
                 <div class="relative z-10 space-y-4 text-left">
@@ -719,7 +719,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="md:col-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/attendance_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/attendance_bento_bg.webp');">
                 </div>
 
                 <div class="flex justify-between items-start relative z-10">
@@ -736,7 +736,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.webp');">
                 </div>
 
                 <div class="flex justify-between items-start relative z-10">
@@ -753,7 +753,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.webp');">
                 </div>
 
                 <div class="flex justify-between items-start relative z-10">
@@ -770,7 +770,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="md:col-span-2 bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/finance_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/finance_bento_bg.webp');">
                 </div>
 
                 <div class="flex justify-between items-start relative z-10">
@@ -787,7 +787,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="bg-[#00101a] border border-white/10 rounded-xl p-6 flex flex-col justify-start gap-3 hover:border-[var(--secondary-color)] hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300 relative overflow-hidden group">
                 <!-- Background Image layer with hover zoom -->
                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
-                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.png');">
+                     style="background-image: linear-gradient(to bottom, rgba(0, 16, 26, 0.65), rgba(0, 16, 26, 0.80)), url('/images/case-studies/edtech_bento_bg.webp');">
                 </div>
 
                 <div class="flex justify-between items-start relative z-10">

@@ -258,7 +258,7 @@ require_once ADMIN_URL.'/database_config.php';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <!-- Card 1 -->
             <div class="relative group rounded-3xl overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 lg:p-10 hover:border-[#01a0d8]/30 transition-all duration-500 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/flexible_work_1780906445855.png')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/flexible_work_1780906445855.webp')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-[#000d16] via-[#000d16]/90 to-transparent"></div>
                 
                 <div class="relative z-10">
@@ -274,7 +274,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- Card 2 -->
             <div class="relative group rounded-3xl overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 lg:p-10 hover:border-[#01a0d8]/30 transition-all duration-500 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/accelerated_growth_1780906471375.png')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/accelerated_growth_1780906471375.webp')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-[#000d16] via-[#000d16]/90 to-transparent"></div>
                 
                 <div class="relative z-10">
@@ -290,7 +290,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- Card 3 -->
             <div class="relative group rounded-3xl overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 lg:p-10 hover:border-[#01a0d8]/30 transition-all duration-500 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/dynamic_culture_1780906510449.png')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/dynamic_culture_1780906510449.webp')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-[#000d16] via-[#000d16]/90 to-transparent"></div>
                 
                 <div class="relative z-10">
@@ -306,7 +306,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- Card 4 -->
             <div class="relative group rounded-3xl overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 lg:p-10 hover:border-[#01a0d8]/30 transition-all duration-500 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/health_wellness_1780906541952.png')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-500 bg-[url('/images/career-benefits/health_wellness_1780906541952.webp')] bg-cover bg-center"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-[#000d16] via-[#000d16]/90 to-transparent"></div>
                 
                 <div class="relative z-10">

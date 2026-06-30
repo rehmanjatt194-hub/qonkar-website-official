@@ -28,7 +28,7 @@
 
             <!-- Logo -->
             <div class="flex items-center justify-center w-full mb-6">
-                <img src="../images/qonkar_logo.png" alt="Logo" class="w-40">
+                <img src="../images/qonkar_logo.webp" alt="Logo" class="w-40">
             </div>
 
             <!-- User Message -->

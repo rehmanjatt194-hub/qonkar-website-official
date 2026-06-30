@@ -682,7 +682,7 @@ require_once ADMIN_URL.'/database_config.php';
                                 </ul>
                             </div>
                             <div class="w-full mt-2 overflow-hidden rounded-xl border border-white/5 bg-black/20 p-1">
-                                <img src="/images/future_enterprise_dashboard.png" alt="Enterprise Software mockup" class="w-full h-auto object-cover shadow-md">
+                                <img src="/images/future_enterprise_dashboard.webp" alt="Enterprise Software mockup" class="w-full h-auto object-cover shadow-md">
                             </div>
                         </div>
                     </div>
@@ -796,7 +796,7 @@ require_once ADMIN_URL.'/database_config.php';
                             <path id="arrow-path-3" class="arrow-line" stroke="#95C951" marker-end="url(#arrow-3)" d="M 27 87 Q 0 160 -20 200" />
                         </svg>
 
-                        <img src="/images/qonkar_robot_guide.png" alt="Qonkar 3D Robot Guide" class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.22)]">
+                        <img src="/images/qonkar_robot_guide.webp" alt="Qonkar 3D Robot Guide" class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.22)]">
                     </div>
                 </div>
             </div>
@@ -2656,7 +2656,7 @@ require_once ADMIN_URL.'/database_config.php';
       border: 2px solid rgba(56, 228, 174, 0.53);
       background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
                   linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('/images/unsplash/photo-1504384308090.jpg') lightgray 0px -374.163px / 100% 280.523% no-repeat;
+                  url('/images/unsplash/photo-1504384308090.webp') lightgray 0px -374.163px / 100% 280.523% no-repeat;
       ">
             <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
                 Ready to <strong>Build</strong> Your Next Big<strong> Digital Product</strong>?

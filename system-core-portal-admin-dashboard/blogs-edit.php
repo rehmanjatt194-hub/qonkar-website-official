@@ -75,7 +75,7 @@ while($c = $cat_res->fetch_assoc()) { $assigned_cats[] = $c['category_id']; }
             <div class="mb-4 flex items-center gap-4">
                 <div class="w-1/3">
                     <p class="text-xs text-gray-400 mb-2">Current Image:</p>
-                    <img src="<?php echo !empty($blog['blog_image']) ? $blog['blog_image'] : '../images/default_blog.png'; ?>" 
+                    <img src="<?php echo !empty($blog['blog_image']) ? $blog['blog_image'] : '../images/default_blog.webp'; ?>" 
                          class="w-full h-24 object-cover rounded border border-gray-700">
                 </div>
                 <div class="w-2/3">

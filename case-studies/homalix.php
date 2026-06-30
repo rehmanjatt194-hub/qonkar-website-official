@@ -27,7 +27,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:description" content="Explore how Homalix streamlined operational workflows and automated medical tracking across multi-specialty healthcare networks." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/case-studies/homalix" />
-    <meta property="og:image" content="/images/case-studies/homalix_mockup.png" />
+    <meta property="og:image" content="/images/case-studies/homalix_mockup.webp" />
 
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -301,7 +301,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
      ========================================== -->
 <section class="relative w-full mt-0 mb-0 rounded-t-[30px] rounded-b-none overflow-hidden flex items-center background-backdrop-card min-h-[60vh] animate-fade-in">
     <!-- Darkened Hospital/Clinic Overlay Background -->
-    <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-right" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.95) 30%, rgba(8, 8, 10, 0.75) 55%, rgba(8, 8, 10, 0.2) 100%), url('/images/case-studies/background/homalix_bg.png'); filter: contrast(1.05); mix-blend-mode: normal;"></div>
+    <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-right" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.95) 30%, rgba(8, 8, 10, 0.75) 55%, rgba(8, 8, 10, 0.2) 100%), url('/images/case-studies/background/homalix_bg.webp'); filter: contrast(1.05); mix-blend-mode: normal;"></div>
 
     <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full py-12 px-4 sm:px-8">
         
@@ -348,7 +348,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Right Column: Card Mockup -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div class="relative max-w-md w-full bg-white/5 rounded-2xl border border-white/10 shadow-2xl p-2 backdrop-blur-md">
-                <img src="/images/case-studies/homalix_mockup.png" alt="Homalix System Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+                <img src="/images/case-studies/homalix_mockup.webp" alt="Homalix System Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>
@@ -437,7 +437,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     
                     <!-- Video Thumbnail / Poster Image -->
                     <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
-                        <img src="/images/case-studies/background/homalix_bg.png" alt="Homalix System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        <img src="/images/case-studies/background/homalix_bg.webp" alt="Homalix System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
                         
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
@@ -606,7 +606,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </div>
                 <!-- Dynamic graphical asset inside card -->
                 <div class="w-full md:w-56 shrink-0 bg-black/40 border border-white/5 rounded-xl p-2 relative overflow-hidden">
-                    <img src="/images/case-studies/homalix_mockup.png" alt="Patient Flow Visual" class="w-full h-auto object-cover rounded-lg">
+                    <img src="/images/case-studies/homalix_mockup.webp" alt="Patient Flow Visual" class="w-full h-auto object-cover rounded-lg">
                 </div>
             </div>
 
@@ -839,7 +839,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="lg:col-span-6 flex justify-center lg:justify-end">
                 <!-- Framed Premium Container -->
                 <div class="relative w-full max-w-lg bg-[#00101a] border border-white/5 rounded-3xl p-3 shadow-2xl transition-all duration-500 hover:border-[var(--secondary-color)]/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.55),0_0_30px_rgba(47,173,195,0.15)]">
-                    <img src="/images/case-studies/homalix_mobile_mockup.png" alt="Homalix Mobile Interface Mockup" class="rounded-[22px] w-full h-auto object-cover">
+                    <img src="/images/case-studies/homalix_mobile_mockup.webp" alt="Homalix Mobile Interface Mockup" class="rounded-[22px] w-full h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -1034,7 +1034,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Left Side Avatar -->
             <div class="md:col-span-3 flex justify-center md:justify-start">
                 <div class="w-36 h-36 rounded-full border-2 border-[var(--secondary-color)] bg-[#000d16]/80 p-1 flex items-center justify-center overflow-hidden shadow-2xl transition-all duration-500 hover:scale-105">
-                    <img src="/images/case-studies/elena_rodriguez.png" alt="Dr. Elena Rodriguez" class="w-full h-full rounded-full object-cover">
+                    <img src="/images/case-studies/elena_rodriguez.webp" alt="Dr. Elena Rodriguez" class="w-full h-full rounded-full object-cover">
                 </div>
             </div>
             

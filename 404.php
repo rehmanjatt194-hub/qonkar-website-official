@@ -226,7 +226,7 @@
         <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
 
         <!-- Background Image -->
-        <div class="absolute inset-0 bg-[url('images/hero-section/contact.jpg')] bg-center bg-cover opacity-40"></div>
+        <div class="absolute inset-0 bg-[url('images/hero-section/contact.webp')] bg-center bg-cover opacity-40"></div>
 
         <!-- Pattern Overlay -->
         <div class="absolute inset-0 hero-pattern"></div>

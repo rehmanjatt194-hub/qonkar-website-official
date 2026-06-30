@@ -79,7 +79,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
       "@id": "/#organization",
       "name": "Qonkar Technologies",
       "url": "/",
-      "logo": "/images/qonkar-logo.png"
+      "logo": "/images/qonkar-logo.webp"
     },
     {
       "@type": "Service",
@@ -513,7 +513,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Left: Image with floating stat cards -->
                 <div class="relative flex justify-center order-2 lg:order-1">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="background: linear-gradient(135deg,#eaf5fb,#f0faf5);">
-                        <img src="/images/shopify development.png" alt="Shopify Development" class="w-full h-auto relative z-10 rounded-3xl">
+                        <img src="/images/shopify development.webp" alt="Shopify Development" class="w-full h-auto relative z-10 rounded-3xl">
                     </div>
 
                     <!-- Floating stat card 1 -->
@@ -725,7 +725,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                             <path id="arrow-path-3" class="arrow-line" stroke="#95C951" marker-end="url(#arrow-3)" d="M 27 87 Q 0 160 -20 200" />
                         </svg>
 
-                        <img src="/images/qonkar_robot_guide.png" alt="Qonkar 3D Robot Guide" class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.22)]">
+                        <img src="/images/qonkar_robot_guide.webp" alt="Qonkar 3D Robot Guide" class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.22)]">
                     </div>
                 </div>
             </div>
@@ -1271,7 +1271,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 1: Bespoke Storefront Architecture -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1522071820081.jpg"
+                        <img src="/images/unsplash/photo-1522071820081.webp"
                             alt="Shopify Theme Development"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
@@ -1316,7 +1316,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 2: Shopify Plus (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.jpg"
+                        <img src="/images/unsplash/photo-1551288049.webp"
                             alt="Shopify Plus Enterprise"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
@@ -1349,7 +1349,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 3: Custom App Development -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1460925895917.jpg"
+                        <img src="/images/unsplash/photo-1460925895917.webp"
                             alt="Custom Shopify Apps"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1378,7 +1378,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 4: Zero-Downtime Migrations (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1555066931.jpg"
+                        <img src="/images/unsplash/photo-1555066931.webp"
                             alt="E-Commerce Migration"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
@@ -1411,7 +1411,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 5: Speed Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.jpg"
+                        <img src="/images/unsplash/photo-1551288049.webp"
                             alt="Speed Optimization"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
@@ -1454,7 +1454,7 @@ require_once "../" . ADMIN_URL . '/database_config.php';
                 <!-- Card 6: Headless Commerce (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1518770660439.jpg"
+                        <img src="/images/unsplash/photo-1518770660439.webp"
                             alt="Headless Commerce"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>

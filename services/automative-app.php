@@ -1019,25 +1019,25 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
             <div class="text-center mb-16">
                 <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
                     style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
-                    &#9679; &nbsp;Qonkar E-Commerce Excellence
+                    &#9679; &nbsp;Qonkar Automotive Solutions
                 </span>
                 <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
-                    End-to-End <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Solutions</span>
+                    Smart <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Automotive Software</span>
                 </h2>
                 <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
-                    From custom theme architecture to complex headless integrations, we build e-commerce ecosystems that dominate the market.
+                    We engineer advanced telemetry dashboards, connected vehicle portals, fleet logistics platforms, and custom IVI systems.
                 </p>
             </div>
 
             <!-- Service Cards Grid -->
             <div class="flex flex-col gap-8">
 
-                <!-- Card 1: Bespoke Storefront Architecture -->
+                <!-- Card 1: Telemetry & IoT Diagnostics -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Shopify Theme Development"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="Telemetry IoT"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
@@ -1047,42 +1047,40 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Bespoke <b>Storefront Architecture</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Telemetry &amp; <b>IoT Diagnostics</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
-                            <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">Shopify development partner</a>,
-                            we translate your brand identity into a high-converting digital experience.
+                            Monitor real-time engine health, GPS coordinates, and vehicle faults. As your dedicated <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">automotive development partner</a>, we build high-frequency data pipelines.
                         </p>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Pixel-Perfect Figma to Liquid
+                                Real-Time OBD-II / CAN Bus Tracking
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Mobile-First Responsive Design
+                                Instant Driver Alert Notifications
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Advanced Filtering &amp; Search Setup
+                                Custom Geospatial Fencing Setup
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Card 2: Shopify Plus (reversed) -->
+                <!-- Card 2: Connected Vehicle API (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Shopify Plus Enterprise"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="Connected Vehicle API"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
@@ -1092,30 +1090,30 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Enterprise <b>Shopify Plus</b> Experts</h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Connected Vehicle <b>API</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Scale without limits. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">Enterprise developers</a> leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout extensibility.
+                            Scale connected networks without delay. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">telematics experts</a> build secure APIs for remote lock/unlock, climate pre-conditioning, and vehicle sync.
                         </p>
                         <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
                             <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">10k+</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Orders Per Minute</p>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">&lt;80ms</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">API Response Time</p>
                             </div>
                             <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">99.9%</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Server Uptime</p>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">100%</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Active Sim Sync</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: Custom App Development -->
+                <!-- Card 3: Embedded IVI stack -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Custom Shopify Apps"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="Embedded IVI Stack"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
@@ -1125,26 +1123,26 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Private &amp; <b>Custom App</b> Development</h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Embedded <b>IVI Stack</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Bridge functionality gaps with custom-coded apps. Whether it's complex ERP syncing, specialized product builders, or unique loyalty programs, our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">engineering team</a> has you covered.
+                            Design intuitive on-screen environments. We program fluid interfaces, connect media modules, and write drivers for <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">next-generation dashboards</a>.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Node.js</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">React / Polaris</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">GraphQL API</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Laravel</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">C++ / Qt / QML</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">Android Automotive</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">CAN bus</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Yocto Linux</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4: Zero-Downtime Migrations (reversed) -->
+                <!-- Card 4: Fleet Management Hub (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="E-Commerce Migration"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="Fleet Management"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
@@ -1154,30 +1152,30 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Zero-Downtime <b>Migrations</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Fleet <b>Management Hub</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so you don't lose a single customer or ranking during the transition.
+                            Bring complete visibility to operations. We centralize dispatching, monitor driver behavior, and replace slow admin tasks.
                         </p>
                         <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
-                            <span class="font-semibold text-sm" style="color:#374151;">Magento / Woo</span>
+                            <span class="font-semibold text-sm" style="color:#374151;">Manual Logging</span>
                             <div class="flex-1 flex items-center justify-center">
                                 <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
                                 <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
                                 </svg>
                             </div>
-                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Shopify Plus</span>
+                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Automated Fleet Portal</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5: Speed Optimization -->
+                <!-- Card 5: Smart Route Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Speed Optimization"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="Route Optimization"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
@@ -1187,40 +1185,40 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>Optimization &amp; CRO</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Smart <b>Route Optimization</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and restructure Liquid logic to deliver blazing-fast loading speeds.
+                            Minimize transit times and fuel costs. We write routing algorithms that calculate optimal paths based on vehicle size, live traffic conditions, and drop-off windows.
                         </p>
                         <div class="space-y-4">
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Performance Score</span>
-                                    <span style="color:#2fadc3; font-weight:700;">98/100</span>
+                                    <span style="color:#374151;">Traffic Delay Reductions</span>
+                                    <span style="color:#2fadc3; font-weight:700;">-25%</span>
                                 </div>
                                 <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:98%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                    <div class="h-2 rounded-full" style="width:75%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Conversion Rate Uplift</span>
-                                    <span style="color:#3f89c9; font-weight:700;">+35%</span>
+                                    <span style="color:#374151;">Fuel Savings</span>
+                                    <span style="color:#3f89c9; font-weight:700;">18%</span>
                                 </div>
                                 <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:85%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
+                                    <div class="h-2 rounded-full" style="width:72%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 6: Headless Commerce (reversed) -->
+                <!-- Card 6: Custom EV Charge Tracking (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="Headless Commerce"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                            alt="EV Charge Tracking"
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
@@ -1230,23 +1228,23 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Future-Proof <b>Headless Commerce</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Custom <b>EV Charge Tracking</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Decouple your front-end from the backend. We build lightning-fast, highly customizable headless experiences using <span style="color:#0a1628; font-weight:600;">Hydrogen &amp; Next.js</span> while keeping Shopify as your powerful engine.
+                            Design custom monitors for electric fleets. We build tools to track battery health, predict range, and schedule charging sessions using <span style="color:#0a1628; font-weight:600;">Hydrogen &amp; Next.js</span> templates.
                         </p>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </span>
-                                Omnichannel Selling Power
+                                State-of-Charge (SoC) monitors
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </span>
-                                Complete Design Freedom
+                                Smart Battery Health Metrics
                             </li>
                         </ul>
                     </div>

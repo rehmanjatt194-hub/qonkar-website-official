@@ -1,17 +1,21 @@
 <?php
-// Enable strict error reporting for debugging
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-echo "<h2>Qonkar Live Server Debugging Tool</h2>";
+echo "<h1>Qonkar Comprehensive Live Server Diagnostic Tool</h1>";
 
-// 1. Check PHP Version
-echo "<b>PHP Version:</b> " . phpversion() . "<br><hr>";
+// --- 1. System & Environment ---
+echo "<h2>1. System Environment</h2>";
+echo "<b>PHP Version:</b> " . phpversion() . "<br>";
+echo "<b>Server Software:</b> " . ($_SERVER['SERVER_SOFTWARE'] ?? 'Unknown') . "<br>";
+echo "<b>Document Root:</b> " . $_SERVER['DOCUMENT_ROOT'] . "<br>";
+echo "<b>Script Path:</b> " . __DIR__ . "<br><hr>";
 
-// 2. Check Database Connection
-echo "<h3>1. Database Connection Check</h3>";
+// --- 2. Database Connection ---
+echo "<h2>2. Database Diagnostics</h2>";
 $configPath = __DIR__ . '/system-core-portal-admin-dashboard/database_config.php';
+$dbConnected = false;
 if (file_exists($configPath)) {
     require_once $configPath;
     if (isset($conn) && $conn instanceof mysqli) {
@@ -20,6 +24,7 @@ if (file_exists($configPath)) {
         } else {
             echo "<span style='color:green;'>Database Connected Successfully!</span><br>";
             echo "Connected to Database: <b>" . $conn->query("SELECT DATABASE()")->fetch_row()[0] . "</b><br>";
+            $dbConnected = true;
         }
     } else {
         echo "<span style='color:red;'>Database variable \$conn not found or invalid.</span><br>";
@@ -27,78 +32,91 @@ if (file_exists($configPath)) {
 } else {
     echo "<span style='color:red;'>Database config file not found at: $configPath</span><br>";
 }
+
+// --- 3. Database Tables Check ---
+if ($dbConnected) {
+    echo "<h3>Tables Status</h3>";
+    $tablesToCheck = [
+        'case_studies', 'case_study_categories', 'case_study_category_bridge',
+        'blogs', 'blogs_category', 'blog_category_map',
+        'jobs', 'job_applications',
+        'messages', 'users'
+    ];
+    
+    echo "<table border='1' cellpadding='5' style='border-collapse:collapse; width:50%;'>";
+    echo "<tr><th style='text-align:left;'>Table Name</th><th>Status</th><th>Record Count</th></tr>";
+    
+    foreach ($tablesToCheck as $tbl) {
+        $res = $conn->query("SELECT COUNT(*) as c FROM `$tbl`");
+        if ($res) {
+            $count = $res->fetch_assoc()['c'];
+            echo "<tr><td>$tbl</td><td style='color:green;'>Exists</td><td style='text-align:center;'>$count</td></tr>";
+        } else {
+            echo "<tr><td>$tbl</td><td style='color:red;'>Missing / Error</td><td>" . $conn->error . "</td></tr>";
+        }
+    }
+    echo "</table>";
+}
 echo "<hr>";
 
-// 3. Check Case Studies Table & Data
-echo "<h3>2. Database Tables Check (Case Studies)</h3>";
-if (isset($conn) && !$conn->connect_error) {
-    // Check case_studies
-    $result = $conn->query("SELECT COUNT(*) as count FROM case_studies");
-    if ($result) {
-        $row = $result->fetch_assoc();
-        echo "<b>case_studies</b> table exists. Total records: " . $row['count'] . "<br>";
-    } else {
-        echo "<span style='color:red;'>Error reading case_studies: " . $conn->error . "</span><br>";
-    }
+// --- 4. Directory & Permissions ---
+echo "<h2>3. Directories & Permissions</h2>";
+$directories = ['images', 'css', 'js', 'fonts', 'system-core-portal-admin-dashboard'];
 
-    // Check case_study_category_bridge
-    $result2 = $conn->query("SELECT COUNT(*) as count FROM case_study_category_bridge");
-    if ($result2) {
-        $row2 = $result2->fetch_assoc();
-        echo "<b>case_study_category_bridge</b> table exists. Total records: " . $row2['count'] . "<br>";
+foreach ($directories as $dir) {
+    $path = __DIR__ . '/' . $dir;
+    if (is_dir($path)) {
+        $perms = substr(sprintf('%o', fileperms($path)), -4);
+        echo "Directory <b>$dir</b>: <span style='color:green;'>Exists</span> (Permissions: $perms)<br>";
     } else {
-        echo "<span style='color:red;'>Error reading case_study_category_bridge: " . $conn->error . "</span><br>";
-    }
-
-    // Check case_study_categories
-    $result3 = $conn->query("SELECT COUNT(*) as count FROM case_study_categories");
-    if ($result3) {
-        $row3 = $result3->fetch_assoc();
-        echo "<b>case_study_categories</b> table exists. Total records: " . $row3['count'] . "<br>";
-    } else {
-        echo "<span style='color:red;'>Error reading case_study_categories: " . $conn->error . "</span><br>";
-    }
-
-    // Check the latest case studies query (like in portfolio.php)
-    echo "<h4>Testing Portfolio Query:</h4>";
-    $sql = "SELECT cs.id, cs.brand_name, csc.category_name 
-            FROM case_studies cs
-            LEFT JOIN case_study_category_bridge bridge ON cs.id = bridge.case_study_id
-            LEFT JOIN case_study_categories csc ON bridge.category_id = csc.id
-            WHERE cs.status = 'active'
-            ORDER BY cs.created_at DESC LIMIT 5";
-    $qResult = $conn->query($sql);
-    if ($qResult) {
-        echo "<table border='1' cellpadding='5' style='border-collapse:collapse;'>";
-        echo "<tr><th>ID</th><th>Brand Name</th><th>Category</th></tr>";
-        while($r = $qResult->fetch_assoc()){
-            echo "<tr><td>{$r['id']}</td><td>{$r['brand_name']}</td><td>" . ($r['category_name'] ?? "<span style='color:red;'>NULL (Missing Category!)</span>") . "</td></tr>";
-        }
-        echo "</table>";
-    } else {
-         echo "<span style='color:red;'>Portfolio Query Failed: " . $conn->error . "</span><br>";
+        echo "Directory <b>$dir</b>: <span style='color:red;'>Missing</span><br>";
     }
 }
 echo "<hr>";
 
-// 4. Check File & Image Existence
-echo "<h3>3. File System & Image Checks</h3>";
-$imagesToCheck = [
-    'images/case-studies/homalix_mockup.png',
-    'images/case-studies/schoolian_dashboard.png',
-    'images/case-studies/sellvixa_dashboard.png',
-    'images/case-studies/craveeo_order_pic.webp'
+// --- 5. Critical Files ---
+echo "<h2>4. Critical Files</h2>";
+$criticalFiles = [
+    'index.php',
+    'portfolio.php',
+    'db-path.php',
+    'images/orange_map_clean.png',
+    'images/qonkar_robot_guide.webp'
 ];
 
-foreach ($imagesToCheck as $img) {
-    $path = __DIR__ . '/' . $img;
+foreach ($criticalFiles as $file) {
+    $path = __DIR__ . '/' . $file;
     if (file_exists($path)) {
-        echo "Image <b style='color:green;'>Exists</b>: $img<br>";
+        echo "File <b>$file</b>: <span style='color:green;'>Exists</span><br>";
     } else {
-        echo "Image <b style='color:red;'>Missing</b>: $img <small>(Looked at: $path)</small><br>";
+        echo "File <b>$file</b>: <span style='color:red;'>Missing</span><br>";
     }
 }
 echo "<hr>";
 
-echo "<h3>End of Debugging</h3>";
+// --- 6. PHP Error Logs ---
+echo "<h2>5. Recent PHP Error Logs</h2>";
+$logFile = ini_get('error_log');
+if ($logFile && file_exists($logFile)) {
+    echo "Log file found: <b>$logFile</b><br>";
+    $logs = shell_exec("tail -n 15 " . escapeshellarg($logFile));
+    if ($logs) {
+        echo "<pre style='background:#f4f4f4; padding:10px; border:1px solid #ddd; overflow:auto; max-height:200px;'>" . htmlspecialchars($logs) . "</pre>";
+    } else {
+        echo "Could not read log file or it's empty.<br>";
+    }
+} else {
+    // Check common cPanel location
+    $cpanelLog = __DIR__ . '/error_log';
+    if (file_exists($cpanelLog)) {
+        echo "cPanel error_log found in root folder.<br>";
+        $lines = array_slice(file($cpanelLog), -15);
+        echo "<pre style='background:#f4f4f4; padding:10px; border:1px solid #ddd; overflow:auto; max-height:200px;'>" . htmlspecialchars(implode("", $lines)) . "</pre>";
+    } else {
+        echo "No error_log file found in the root directory.<br>";
+    }
+}
+echo "<hr>";
+
+echo "<h3>Diagnostic Complete</h3>";
 ?>

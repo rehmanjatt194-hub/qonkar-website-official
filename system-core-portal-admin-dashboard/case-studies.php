@@ -117,7 +117,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <!-- Logo -->
         <div class="flex items-center justify-center h-20 border-b border-[#595959] px-4">
-            <img id="sidebarLogo" src="../images/qonkar_logo.png" alt="Logo" class="w-32 transition-all duration-300">
+            <img id="sidebarLogo" src="../images/qonkar_logo.webp" alt="Logo" class="w-32 transition-all duration-300">
         </div>
 
         <!-- Toggle Button (Middle Arrow) -->
@@ -212,7 +212,7 @@ if (!isset($_SESSION['user_id'])) {
                 $user = $result->fetch_assoc();
 
                 $username = $user['username'];
-                $picture = !empty($user['picture']) ? $user['picture'] : '../images/default_avatar.png';
+                $picture = !empty($user['picture']) ? $user['picture'] : '../images/default_avatar.webp';
                 ?>
                 <span class="font-semibold text-lg"><?php echo htmlspecialchars($username); ?></span>
                 <img src="<?php echo $picture; ?>" class="w-12 h-12 rounded-full object-cover border-2 border-[var(--secondary-color)]">
@@ -402,7 +402,7 @@ if (!isset($_SESSION['user_id'])) {
                 mainContent.classList.remove('ml-64');
                 mainContent.classList.add('ml-20');
 
-                sidebarLogo.src = "../images/qonkar_q.png";
+                sidebarLogo.src = "../images/qonkar_q.webp";
                 sidebarLogo.classList.remove('w-32');
                 sidebarLogo.classList.add('w-10');
 
@@ -413,7 +413,7 @@ if (!isset($_SESSION['user_id'])) {
                 mainContent.classList.remove('ml-20');
                 mainContent.classList.add('ml-64');
 
-                sidebarLogo.src = "../images/qonkar_logo.png";
+                sidebarLogo.src = "../images/qonkar_logo.webp";
                 sidebarLogo.classList.remove('w-10');
                 sidebarLogo.classList.add('w-32');
 

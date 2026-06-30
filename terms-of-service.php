@@ -27,7 +27,7 @@
     <meta property="og:description" content="We build modern IT solutions with creativity and technology." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qonkar.com" />
-    <meta property="og:image" content="/preview.png" />
+    <meta property="og:image" content="/preview.webp" />
 
 
 
@@ -200,7 +200,7 @@
     <section
         class="mt-4 relative max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] rounded-lg overflow-hidden flex items-center justify-center">
         <div class="absolute inset-0 bg-[linear-gradient(135deg,#067888_0%,#12778C_50%,#42F8BF_100%)]"></div>
-        <div class="absolute inset-0 bg-[url('images/hero-section/privacy‑bg.jpg')] bg-center bg-cover opacity-40">
+        <div class="absolute inset-0 bg-[url('images/hero-section/privacy‑bg.webp')] bg-center bg-cover opacity-40">
         </div>
         <div class="absolute inset-0 hero-pattern"></div>
 

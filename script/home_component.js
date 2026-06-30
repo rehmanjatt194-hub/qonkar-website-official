@@ -269,10 +269,10 @@ function tabsComponent() {
         isAccordion: false,
         checkScreen() { this.isAccordion = window.innerWidth < 1250; },
         tabs: [
-            { label: "Mr.Food", brand: "Mr.Food", work: "Restaurant Digital Revamp", challenges: "The client struggled with low.", solution: "We developed a comprehensive digital.", outcome: "Increased online orders by 156%.", image: "https://cdn-icons-png.flaticon.com/512/3448/3448630.png" },
-            { label: "TechNova", brand: "TechNova", work: "SaaS Platform Development", challenges: "The company needed a scalable", solution: "Designed and built a cloud-native SaaS.", outcome: "Reduced operational costs by 35%.", image: "https://cdn-icons-png.flaticon.com/512/1006/1006555.png" },
-            { label: "StyleHub", brand: "StyleHub", work: "E-commerce Mobile App", challenges: "Fashion retailer high abandonment.", solution: "Created native mobile shopping app.", outcome: "Conversions increased by 210%.", image: "https://cdn-icons-png.flaticon.com/512/3144/3144456.png" },
-            { label: "HealthPlus", brand: "HealthPlus", work: "Telemedicine Platform", challenges: "Provider needed HIPAA platform.", solution: "Developed compliant telemedicine.", outcome: "15,000+ consultations.", image: "https://cdn-icons-png.flaticon.com/512/2964/2964301.png" },
+            { label: "Mr.Food", brand: "Mr.Food", work: "Restaurant Digital Revamp", challenges: "The client struggled with low.", solution: "We developed a comprehensive digital.", outcome: "Increased online orders by 156%.", image: "https://cdn-icons-png.flaticon.com/512/3448/3448630.webp" },
+            { label: "TechNova", brand: "TechNova", work: "SaaS Platform Development", challenges: "The company needed a scalable", solution: "Designed and built a cloud-native SaaS.", outcome: "Reduced operational costs by 35%.", image: "https://cdn-icons-png.flaticon.com/512/1006/1006555.webp" },
+            { label: "StyleHub", brand: "StyleHub", work: "E-commerce Mobile App", challenges: "Fashion retailer high abandonment.", solution: "Created native mobile shopping app.", outcome: "Conversions increased by 210%.", image: "https://cdn-icons-png.flaticon.com/512/3144/3144456.webp" },
+            { label: "HealthPlus", brand: "HealthPlus", work: "Telemedicine Platform", challenges: "Provider needed HIPAA platform.", solution: "Developed compliant telemedicine.", outcome: "15,000+ consultations.", image: "https://cdn-icons-png.flaticon.com/512/2964/2964301.webp" },
         ]
     };
 }

@@ -184,7 +184,7 @@
         move_uploaded_file($_FILES['mockup_image']['tmp_name'], "../" . $mockup_target);
 
         // Upload background image (optional)
-        $background_target = "images/case-studies/background.png"; // default
+        $background_target = "images/case-studies/background.webp"; // default
         if (!empty($_FILES['background_image']['name'])) {
             $background_target = "images/case-studies/background/" . basename($_FILES['background_image']['name']);
             move_uploaded_file($_FILES['background_image']['tmp_name'], "../" . $background_target);
@@ -240,7 +240,7 @@
 
         if ($background_image) {
             $bg_path = "../" . $background_image;
-            if (file_exists($bg_path) && $background_image !== "images/case-studies/background.png") {
+            if (file_exists($bg_path) && $background_image !== "images/case-studies/background.webp") {
                 unlink($bg_path); // 🗑️ delete background image (if not default)
             }
         }

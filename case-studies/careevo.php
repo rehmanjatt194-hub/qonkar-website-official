@@ -195,7 +195,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="relative w-[95%] mx-auto mt-6 mb-0 rounded-[28px] overflow-hidden min-h-[80vh] flex items-center">
 
     <!-- Restaurant Atmosphere Background -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/case-studies/careevo_bg.png');"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/case-studies/careevo_bg.webp');"></div>
     <!-- Strong left-to-right gradient so left is readable and right shows image -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#000d16] via-[#000d16]/85 to-[#000d16]/30"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-[#000d16]/70 via-transparent to-[#000d16]/30"></div>

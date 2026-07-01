@@ -1051,8 +1051,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 1: Bespoke UX/UI Design -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="UX UI Design"
+                        <img src="/images/services-images-webp/web-design-and-development/Bespoke-UXUI-Design.webp"
+                            alt="Bespoke UX/UI Design"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1094,8 +1094,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 2: Modern Full-Stack Development (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Full Stack Development"
+                        <img src="/images/services-images-webp/web-design-and-development/Modern-Full-Stack-Development.webp"
+                            alt="Modern Full-Stack Development"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
@@ -1127,8 +1127,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 3: High-Performance Tech Stack -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Tech Stack"
+                        <img src="/images/services-images-webp/web-design-and-development/High-Performance-Tech-Stack.webp"
+                            alt="High-Performance Tech Stack"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
@@ -1156,8 +1156,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 4: Legacy Site to Headless Web (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="Legacy to Headless"
+                        <img src="/images/services-images-webp/web-design-and-development/Legacy-Site-to-Headless-Web.webp"
+                            alt="Legacy Site to Headless Web"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
@@ -1189,8 +1189,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 5: Performance & Search Engine Rank -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Performance optimization"
+                        <img src="/images/services-images-webp/web-design-and-development/Performance-&-Search-Engine-Rank.webp"
+                            alt="Performance & Search Engine Rank"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1232,8 +1232,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 6: Flexible CMS & Admin Panel (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="CMS Admin"
+                        <img src="/images/services-images-webp/web-design-and-development/Flexible-CMS-&-Admin-Panel.webp"
+                            alt="Flexible CMS & Admin Panel"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>

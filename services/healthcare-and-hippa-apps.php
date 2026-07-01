@@ -1039,8 +1039,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 1: HIPAA & SOC2 Compliance -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="HIPAA Compliance"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/HIPAA-&-SOC2-Compliance.webp"
+                            alt="HIPAA & SOC2 Compliance"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1082,7 +1082,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 2: Secure PHI Storage (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/Secure-PHI-Storage.webp"
                             alt="Secure PHI Storage"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
@@ -1115,7 +1115,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 3: Interoperability Stack -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/Interoperability-Stack.webp"
                             alt="Interoperability Stack"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1144,7 +1144,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 4: Telehealth Portal (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/Telehealth-Portal.webp"
                             alt="Telehealth Portal"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
@@ -1177,8 +1177,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 5: Real-Time Patient Monitoring -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Patient Monitoring"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/Real-Time-Patient-Monitoring.webp"
+                            alt="Real-Time Patient Monitoring"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1220,7 +1220,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 6: Medical Analytics Dashboard (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
+                        <img src="/images/services-images-webp/healthcare-and-hippa-apps/Medical-Analytics-Dashboard.webp"
                             alt="Medical Analytics Dashboard"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>

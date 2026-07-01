@@ -1035,8 +1035,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 1: Telemetry & IoT Diagnostics -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Telemetry IoT"
+                        <img src="/images/services-images-webp/automative-app/Telemetry-&-IoT-Diagnostics.webp"
+                            alt="Telemetry & IoT Diagnostics"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1078,7 +1078,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 2: Connected Vehicle API (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
+                        <img src="/images/services-images-webp/automative-app/Connected-Vehicle-API.webp"
                             alt="Connected Vehicle API"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
@@ -1111,7 +1111,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 3: Embedded IVI stack -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
+                        <img src="/images/services-images-webp/automative-app/Embedded-IVI-Stack.webp"
                             alt="Embedded IVI Stack"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
@@ -1140,8 +1140,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 4: Fleet Management Hub (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="Fleet Management"
+                        <img src="/images/services-images-webp/automative-app/Fleet-Management-Hub.webp"
+                            alt="Fleet Management Hub"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
@@ -1173,8 +1173,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 5: Smart Route Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Route Optimization"
+                        <img src="/images/services-images-webp/automative-app/Smart-Route-Optimization.webp"
+                            alt="Smart Route Optimization"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1216,8 +1216,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 6: Custom EV Charge Tracking (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="EV Charge Tracking"
+                        <img src="/images/services-images-webp/automative-app/Custom-EV-Charge-Tracking.webp"
+                            alt="Custom EV Charge Tracking"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>

@@ -1030,8 +1030,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 1: Core Web Vitals Remediation -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/Core-Web-Vitals-Remediation.webp"
-                            alt="Core Web Vitals"
+                        <img src="/images/services-images-webp/Speed-optimization/Core-Web-Vitals-Remediation.webp"
+                            alt="Core Web Vitals Remediation"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1073,8 +1073,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 2: Advanced CDN & Cache Setup -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/Advanced-CDN-&-Cache-Setup.webp"
-                            alt="CDN and Caching"
+                        <img src="/images/services-images-webp/Speed-optimization/Advanced-CDN-&-Cache-Setup.webp"
+                            alt="Advanced CDN & Cache Setup"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
@@ -1106,8 +1106,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 3: Code Minification & Asset Tuning -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/Code-Minification-&-Asset-Tuning.webp"
-                            alt="Code Optimization"
+                        <img src="/images/services-images-webp/Speed-optimization/Code-Minification-&-Asset-Tuning.webp"
+                            alt="Code Minification & Asset Tuning"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
@@ -1135,8 +1135,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 4: Slow Legacy to High-Performance -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="Legacy Refactoring"
+                        <img src="/images/services-images-webp/Speed-optimization/Slow-Legacy-to-High-Performance.webp"
+                            alt="Slow Legacy to High-Performance"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
@@ -1168,8 +1168,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 5: Speed to Conversion Uplift -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Conversion Optimization"
+                        <img src="/images/services-images-webp/Speed-optimization/Speed-to-Conversion-Uplift.webp"
+                            alt="Speed to Conversion Uplift"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1211,8 +1211,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 6: Database & Third-Party App Audit -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/Database-&-Third-Party-App-Audit.webp"
-                            alt="Audit"
+                        <img src="/images/services-images-webp/Speed-optimization/Database-&-Third-Party-App-Audit.webp"
+                            alt="Database & Third-Party App Audit"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>

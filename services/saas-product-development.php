@@ -1036,8 +1036,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 1: Multi-Tenant Architecture -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Multi Tenant Architecture"
+                        <img src="/images/services-images-webp/saas-product-development/Multi-Tenant-Architecture.webp"
+                            alt="Multi-Tenant Architecture"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1079,8 +1079,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 2: Enterprise-Grade Security (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Enterprise Grade Security"
+                        <img src="/images/services-images-webp/saas-product-development/Enterprise-Grade-Security.webp"
+                            alt="Enterprise-Grade Security"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
@@ -1112,8 +1112,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 3: Cloud & DevOps Stack -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Cloud and DevOps Stack"
+                        <img src="/images/services-images-webp/saas-product-development/Cloud-&-DevOps-Stack.webp"
+                            alt="Cloud & DevOps Stack"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
@@ -1141,8 +1141,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 4: Subscription & Billing Integration (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="Subscription Billing"
+                        <img src="/images/services-images-webp/saas-product-development/Subscription-&-Billing-Integration.webp"
+                            alt="Subscription & Billing Integration"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
@@ -1174,8 +1174,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 5: High Availability & Auto-Scaling -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Auto Scaling"
+                        <img src="/images/services-images-webp/saas-product-development/High-Availability-&-Auto-Scaling.webp"
+                            alt="High Availability & Auto-Scaling"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1217,8 +1217,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 <!-- Card 6: Custom APIs & Integrations (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="Custom APIs"
+                        <img src="/images/services-images-webp/saas-product-development/Custom-APIs-&-Integrations.webp"
+                            alt="Custom APIs & Integrations"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>

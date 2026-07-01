@@ -1037,8 +1037,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 1: Secure Database Transfer -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Database Migration"
+                        <img src="/images/services-images-webp/migration-services/Secure-Database-Transfer.webp"
+                            alt="Secure Database Transfer"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
@@ -1080,8 +1080,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 2: SEO & Link Equity Preservation (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="SEO Preservation"
+                        <img src="/images/services-images-webp/migration-services/SEO-&-Link-Equity-Preservation.webp"
+                            alt="SEO & Link Equity Preservation"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
@@ -1113,8 +1113,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 3: ERP & Operations Integration -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Custom Shopify Apps"
+                        <img src="/images/services-images-webp/migration-services/ERP-&-Operations-Integration.webp"
+                            alt="ERP & Operations Integration"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
@@ -1142,8 +1142,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 4: Legacy Platform to Modern Ecosystem (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="E-Commerce Migration"
+                        <img src="/images/services-images-webp/migration-services/Legacy-Platform-to-Modern-Ecosystem.webp"
+                            alt="Legacy Platform to Modern Ecosystem"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
@@ -1175,8 +1175,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 5: Post-Migration Success & Verification -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Speed Optimization"
+                        <img src="/images/services-images-webp/migration-services/Post-Migration-Success-&-Verification.webp"
+                            alt="Post-Migration Success & Verification"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
@@ -1218,8 +1218,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 <!-- Card 6: Design Adaptation & UI Rebuild (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="Headless Commerce"
+                        <img src="/images/services-images-webp/migration-services/Design-Adaptation-&-UI-Rebuild.webp"
+                            alt="Design Adaptation & UI Rebuild"
                             class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>

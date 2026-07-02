@@ -1255,13 +1255,13 @@ require_once "../" . ADMIN_URL . '/database_config.php';
             <div class="text-center mb-16">
                 <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
                     style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
-                    &#9679; &nbsp;Qonkar E-Commerce Excellence
+                    &#9679; &nbsp;Qonkar Shopify Development
                 </span>
                 <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
-                    End-to-End <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Solutions</span>
+                    End-to-End <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Development</span>
                 </h2>
                 <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
-                    From custom theme architecture to complex headless integrations, we build e-commerce ecosystems that dominate the market.
+                    From custom storefront architecture to complex backend app integrations, we build high-converting Shopify stores that scale.
                 </p>
             </div>
 
@@ -1270,10 +1270,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 1: Bespoke Storefront Architecture -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Shopify Theme Development"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Bespoke-Storefront-Architecture.webp"
+                            alt="Bespoke Storefront Architecture"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
@@ -1315,10 +1315,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 2: Shopify Plus (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Shopify Plus Enterprise"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Enterprise-Shopify-Plus-Experts.webp"
+                            alt="Enterprise Shopify Plus Experts"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
@@ -1348,10 +1348,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 3: Custom App Development -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Custom Shopify Apps"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Private-&-Custom-App-Development.webp"
+                            alt="Private & Custom App Development"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
@@ -1377,10 +1377,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 4: Zero-Downtime Migrations (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="E-Commerce Migration"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Zero-Downtime-Migrations.webp"
+                            alt="Zero-Downtime Migrations"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
@@ -1410,10 +1410,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 5: Speed Optimization -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Speed Optimization"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Speed-Optimization-&-CRO.webp"
+                            alt="Speed Optimization & CRO"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
@@ -1453,10 +1453,10 @@ require_once "../" . ADMIN_URL . '/database_config.php';
 
                 <!-- Card 6: Headless Commerce (reversed) -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="Headless Commerce"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Shopify-development/Future-Proof-Headless-Commerce.webp"
+                            alt="Future-Proof Headless Commerce"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">

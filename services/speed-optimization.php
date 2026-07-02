@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -1007,35 +1007,32 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-    
-    
-    
-      <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
         <div class="max-w-7xl mx-auto">
 
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
                     style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
-                    &#9679; &nbsp;Qonkar E-Commerce Excellence
+                    &#9679; &nbsp;Qonkar Speed Optimization
                 </span>
                 <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
-                    End-to-End <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Solutions</span>
+                    Blazing-Fast <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Speed Optimization</span>
                 </h2>
                 <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
-                    From custom theme architecture to complex headless integrations, we build e-commerce ecosystems that dominate the market.
+                    Don't let slow loading times kill your sales. We optimize Core Web Vitals to improve search rankings and maximize conversion rates.
                 </p>
             </div>
 
             <!-- Service Cards Grid -->
             <div class="flex flex-col gap-8">
 
-                <!-- Card 1: Bespoke Storefront Architecture -->
+                <!-- Card 1: Core Web Vitals Remediation -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1522071820081.webp"
-                            alt="Shopify Theme Development"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Core-Web-Vitals-Remediation.webp"
+                            alt="Core Web Vitals Remediation"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
@@ -1045,42 +1042,40 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Bespoke <b>Storefront Architecture</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Core Web <b>Vitals Remediation</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Stand out from the crowd with pixel-perfect, custom-coded themes. As your dedicated
-                            <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">Shopify development partner</a>,
-                            we translate your brand identity into a high-converting digital experience.
+                            Fix critical metrics like LCP, FID, and CLS. As your <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">speed engineering experts</a>, we eliminate render-blocking resources for instant page loads.
                         </p>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Pixel-Perfect Figma to Liquid
+                                LCP &amp; CLS Score Improvement
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Mobile-First Responsive Design
+                                Elimination of Render-Blocking CSS/JS
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                                 </span>
-                                Advanced Filtering &amp; Search Setup
+                                Font &amp; Asset Delivery Optimization
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Card 2: Shopify Plus (reversed) -->
+                <!-- Card 2: Advanced CDN & Cache Setup -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Shopify Plus Enterprise"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Advanced-CDN-&-Cache-Setup.webp"
+                            alt="Advanced CDN & Cache Setup"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
@@ -1090,30 +1085,30 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Enterprise <b>Shopify Plus</b> Experts</h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Advanced <b>CDN &amp; Cache</b> Setup</h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Scale without limits. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">Enterprise developers</a> leverage exclusive Shopify Plus features like B2B wholesale portals, Launchpad, and custom checkout extensibility.
+                            Serve content instantly to global customers. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">infrastructure team</a> tunes CDN caching policies and optimizes server responses.
                         </p>
                         <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
                             <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">10k+</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Orders Per Minute</p>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">1.2s</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Average Page Load</p>
                             </div>
                             <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">99.9%</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Server Uptime</p>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">90+</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Mobile Speed Score</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: Custom App Development -->
+                <!-- Card 3: Code Minification & Asset Tuning -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1460925895917.webp"
-                            alt="Custom Shopify Apps"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Code-Minification-&-Asset-Tuning.webp"
+                            alt="Code Minification & Asset Tuning"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
@@ -1123,26 +1118,26 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Private &amp; <b>Custom App</b> Development</h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Code <b>Minification &amp; Asset</b> Tuning</h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Bridge functionality gaps with custom-coded apps. Whether it's complex ERP syncing, specialized product builders, or unique loyalty programs, our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">engineering team</a> has you covered.
+                            We clean up messy scripts and optimize codebases. Our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">developers</a> minify JS/CSS, lazy load images, and clean app remnants.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Node.js</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">React / Polaris</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">GraphQL API</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Laravel</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Lazy Loading</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">JS Minification</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">Next-Gen WebP</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Critical CSS</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4: Zero-Downtime Migrations (reversed) -->
+                <!-- Card 4: Slow Legacy to High-Performance -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1555066931.webp"
-                            alt="E-Commerce Migration"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Slow-Legacy-to-High-Performance.webp"
+                            alt="Slow Legacy to High-Performance"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
@@ -1152,30 +1147,30 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Zero-Downtime <b>Migrations</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Slow Legacy <b>to High-Performance</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Moving to Shopify? We ensure secure data transfer, SEO preservation, and seamless 301 redirects so you don't lose a single customer or ranking during the transition.
+                            We refactor outdated, slow websites and applications, replacing heavy scripts and code with modern frameworks that load in milliseconds.
                         </p>
                         <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
-                            <span class="font-semibold text-sm" style="color:#374151;">Magento / Woo</span>
+                            <span class="font-semibold text-sm" style="color:#374151;">Legacy Bloat (6.5s)</span>
                             <div class="flex-1 flex items-center justify-center">
                                 <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
                                 <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
                                 </svg>
                             </div>
-                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Shopify Plus</span>
+                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Optimized Speed (1.5s)</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5: Speed Optimization -->
+                <!-- Card 5: Speed to Conversion Uplift -->
                 <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1551288049.webp"
-                            alt="Speed Optimization"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Speed-to-Conversion-Uplift.webp"
+                            alt="Speed to Conversion Uplift"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
@@ -1185,40 +1180,40 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>Optimization &amp; CRO</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>to Conversion Uplift</b></h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            A 1-second delay costs you 7% in conversions. We optimize Core Web Vitals, compress code, and restructure Liquid logic to deliver blazing-fast loading speeds.
+                            Every millisecond saved increases conversion. We target performance bottlenecks to keep bounce rates low and average order value high.
                         </p>
                         <div class="space-y-4">
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Performance Score</span>
-                                    <span style="color:#2fadc3; font-weight:700;">98/100</span>
+                                    <span style="color:#374151;">Mobile Speed Score</span>
+                                    <span style="color:#2fadc3; font-weight:700;">97/100</span>
                                 </div>
                                 <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:98%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                    <div class="h-2 rounded-full" style="width:97%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Conversion Rate Uplift</span>
-                                    <span style="color:#3f89c9; font-weight:700;">+35%</span>
+                                    <span style="color:#374151;">Bounce Rate Reduction</span>
+                                    <span style="color:#3f89c9; font-weight:700;">-40%</span>
                                 </div>
                                 <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:85%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
+                                    <div class="h-2 rounded-full" style="width:80%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 6: Headless Commerce (reversed) -->
+                <!-- Card 6: Database & Third-Party App Audit -->
                 <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:320px;">
-                        <img src="/images/unsplash/photo-1518770660439.webp"
-                            alt="Headless Commerce"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:320px;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Database-&-Third-Party-App-Audit.webp"
+                            alt="Database & Third-Party App Audit"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
@@ -1228,23 +1223,23 @@ require_once "../".ADMIN_URL.'/database_config.php';
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Future-Proof <b>Headless Commerce</b></h3>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Database <b>&amp; Third-Party App</b> Audit</h3>
                         </div>
                         <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Decouple your front-end from the backend. We build lightning-fast, highly customizable headless experiences using <span style="color:#0a1628; font-weight:600;">Hydrogen &amp; Next.js</span> while keeping Shopify as your powerful engine.
+                            Too many tracking scripts? We audit your tags, defer non-essential scripts, and organize database queries to keep backend operations lightweight.
                         </p>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </span>
-                                Omnichannel Selling Power
+                                Third-Party Tag Deferral
                             </li>
                             <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
                                 <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
                                     <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </span>
-                                Complete Design Freedom
+                                Database Queries Optimization
                             </li>
                         </ul>
                     </div>
@@ -1761,28 +1756,29 @@ require_once "../".ADMIN_URL.'/database_config.php';
 
 
 
-    <section class="w-full flex justify-center items-center py-4  mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="w-full max-w-7xl p-6 md:p-12 text-center text-white rounded-[30px] border-[4px] shadow-lg" style="
-      border: 2px solid rgba(56, 228, 174, 0.53);
-      background: linear-gradient(90deg, rgba(56, 228, 174, 0.61) 0%, rgba(7, 152, 173, 0.75) 100%),
-                  linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.58) 100%),
-                  url('/images/unsplash/photo-1504384308090.webp') lightgray 0px -374.163px / 100% 280.523% no-repeat;
-      box-shadow: 0 15px 15px 3px rgba(56, 228, 174, 0.12);">
-            <h1 class="text-2xl sm:text-3xl md:text-3xl font-light mb-3">
-                Ready to <strong>Accelerate</strong> Your Sales?
-            </h1>
+    <section class="w-full flex justify-center items-center py-12 mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-7xl p-8 md:p-16 text-center text-white rounded-[24px] border" style="background-color: #071824; border-color: rgba(26, 58, 74, 0.8);">
+            <!-- Small icon box centered above the heading -->
+            <div class="flex justify-center mb-6">
+                <div class="w-14 h-14 rounded-2xl border border-[#01a0d8]/30 bg-[#01a0d8]/10 flex items-center justify-center">
+                    <i class="fa-solid fa-rocket text-[#01a0d8] text-2xl"></i>
+                </div>
+            </div>
 
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-white font-light">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-4">
+                Ready to <span class="text-[#01a0d8] font-semibold">Accelerate</span> Your Sales?
+            </h2>
+
+            <p class="text-sm sm:text-base text-white/60 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
                 Don't let a slow site cost you another customer. Get instant speed today.
             </p>
 
             <a href="/contact-us"
-                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                class="inline-flex rounded-full items-center gap-2 px-6 py-3 border border-[#01a0d8] text-[#01a0d8] font-semibold bg-transparent transition-all duration-300 hover:bg-[#01a0d8] hover:text-white">
                 Optimize Now
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
         </div>

@@ -1037,7 +1037,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Telemetry-&-IoT-Diagnostics.webp"
                             alt="Telemetry & IoT Diagnostics"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
@@ -1080,7 +1080,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Connected-Vehicle-API.webp"
                             alt="Connected Vehicle API"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
@@ -1113,7 +1113,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Embedded-IVI-Stack.webp"
                             alt="Embedded IVI Stack"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
@@ -1142,7 +1142,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Fleet-Management-Hub.webp"
                             alt="Fleet Management Hub"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
@@ -1175,7 +1175,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Smart-Route-Optimization.webp"
                             alt="Smart Route Optimization"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
@@ -1218,7 +1218,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/automative-app/Custom-EV-Charge-Tracking.webp"
                             alt="Custom EV Charge Tracking"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">

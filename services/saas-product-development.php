@@ -1038,7 +1038,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/Multi-Tenant-Architecture.webp"
                             alt="Multi-Tenant Architecture"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
@@ -1081,7 +1081,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/Enterprise-Grade-Security.webp"
                             alt="Enterprise-Grade Security"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
@@ -1114,7 +1114,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/Cloud-&-DevOps-Stack.webp"
                             alt="Cloud & DevOps Stack"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
@@ -1143,7 +1143,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/Subscription-&-Billing-Integration.webp"
                             alt="Subscription & Billing Integration"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
@@ -1176,7 +1176,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/High-Availability-&-Auto-Scaling.webp"
                             alt="High Availability & Auto-Scaling"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
@@ -1219,7 +1219,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
                         <img src="/images/services-images-webp/saas-product-development/Custom-APIs-&-Integrations.webp"
                             alt="Custom APIs & Integrations"
-                            class="w-full h-full object-cover transition duration-700 hover:scale-105" style="min-height:380px;">
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
                         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">

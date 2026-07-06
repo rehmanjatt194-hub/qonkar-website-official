@@ -8,20 +8,14 @@ require_once ADMIN_URL.'/database_config.php';
 <html lang="en">
 
 <head>
-     <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ6XTSKG0W"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NZ6XTSKG0W');
-            </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+     
+    
+    
     <link rel="canonical" href="/" /> 
   
-    <meta name="author" content="Qonkar" />
+    
     <meta name="msvalidate.01" content="C6540A73A08EF3FA143C9F0FEB785E5D" />
 
     <meta property="og:type" content="website" />
@@ -29,18 +23,17 @@ require_once ADMIN_URL.'/database_config.php';
     <meta property="og:image" content="/images/qonkar_q.webp" />
 
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
 
     <title>Expert Shopify Development & Custom Software Agency | Qonkar Technologies</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="/styles/index.css">
+    
+    
     <style>
         @keyframes infinite-scroll {
             0% {
@@ -108,7 +101,7 @@ require_once ADMIN_URL.'/database_config.php';
       }
     </style>
 
-    <meta charset="UTF-8">
+    
     
     <title>Expert Shopify Development & Custom Software Agency | Qonkar Technologies</title>
     
@@ -291,118 +284,7 @@ require_once ADMIN_URL.'/database_config.php';
     
 <div class="bg-[#000d16] flex flex-col" style="background-color: #000d16; width: 100%; min-height: 100vh; overflow-x: hidden; margin: 0; padding: 0;">
     
-<header class="sticky top-5 z-50 mx-auto sm:px-4 w-full">
-    <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
-        <div class="flex items-center">
-            <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
-        </div>
-        
-        <ul class="flex gap-8 text-white font-medium items-center">
-            <li><a href="/" class="text-[var(--primary-color)]">Home</a></li>
-
-            <li class="group py-2">
-                <button class="flex items-center gap-1 hover:text-[var(--primary-color)] focus:outline-none transition-colors">
-                    Services
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
-                </button>
-                
-                <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[70vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10" 
-                     style="background: rgba(15, 15, 15, 0.98); backdrop-filter: blur(25px);">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10">
-                        
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#2BB5BC] border-b border-white/10 pb-2 mb-2 whitespace-nowrap">Shopify</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/shopify_header.webp" alt="Shopify" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/shopify-development" class="hover:text-[#2BB5BC] transition">Shopify Development</a></li>
-                                    <li><a href="/services/shopify-theme-design" class="hover:text-[#2BB5BC] transition">Shopify Theme Design</a></li>
-                                    <li><a href="/services/shopify-store-setup" class="hover:text-[#2BB5BC] transition">Shopify Store Setup</a></li>
-                                    <li><a href="/services/speed-optimization" class="hover:text-[#2BB5BC] transition">Speed optimization</a></li>
-                                    <li><a href="/services/migration-services" class="hover:text-[#2BB5BC] transition">Migration Services</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#95C951] border-b border-white/10 pb-2 mb-2 whitespace-nowrap">Software</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/software_header.webp" alt="Software" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
-                                    <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
-                                    <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps </a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </li>
-
-            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-            <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
-            <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
-            <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
-        </ul>
-
-        <a href="/contact-us" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white hover:opacity-90 transition font-medium">Contact Us</a>
-    </nav>
-
-    <nav class="glass flex lg:hidden items-center justify-between w-[92%] mx-auto px-5 py-2 rounded-full mt-2 relative">
-        <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-8 w-auto"></a>
-        <button id="menu-btn" class="text-white focus:outline-none text-3xl">☰</button>
-        
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50 bg-[rgba(10,10,10,0.98)] backdrop-blur-xl flex-col transform scale-y-0 origin-top transition-all duration-300 rounded-2xl overflow-y-auto max-h-[85vh] border border-white/10">
-            <a href="/" class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-            
-            <div class="border-b border-white/10">
-                <button id="mobile-services-btn" class="w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold flex justify-center items-center gap-1">
-                    Services
-                    <span id="mobile-arrow" class="material-symbols-outlined text-sm transition-transform text-lg font-bold"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
-                </button>
-                <div id="mobile-services-menu" class="hidden flex-col bg-white/5 pb-4">
-                    <div class="py-2 border-b border-white/10">
-                        <p class="text-[#2BB5BC] text-[11px] font-bold uppercase tracking-widest py-2 text-center">Shopify</p>
-                        <a href="/services/shopify-development" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Development</a>
-                        <a href="/services/shopify-theme-design" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Theme Design</a>
-                        <a href="/services/shopify-store-setup" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Store Setup</a>
-                        <a href="/services/speed-optimization" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Speed optimization</a>
-                        <a href="/services/migration-services" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Migration Services</a>                        
-
-                    </div>
-                    <div class="py-2">
-                        <p class="text-[#95C951] text-[11px] font-bold uppercase tracking-widest py-2 text-center">Software</p>
-                        <a href="/services/web-design-and-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Web Design & Development</a>
-                        <a href="/services/landing-pages-design" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Landing Pages Design</a>
-                        <a href="/services/saas-product-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Saas Product Development</a>
-                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automotive App </a>
-                        <a href="/services/healthcare-and-hippa-apps" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Healthcare & HIPPA App </a>                        
-
-                    </div>
-                    
-                </div>
-            </div>
-
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-            <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
-            <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
-            <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
-            <a href="/contact-us" class="block w-full text-center py-5 bg-[var(--primary-color)] text-white font-bold transition">Contact Us</a>
-        </div>
-    </nav>
-    <div style="float: right; margin-top: 10px; margin-right: 10px;">
-        <div id="google_translate_element"></div>
-    </div>
-</header>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php'; ?>
 
     <section id="hero"
         class="relative flex-1 flex items-center mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden w-full fade-in">
@@ -538,9 +420,8 @@ require_once ADMIN_URL.'/database_config.php';
             <!-- Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-3 border-b border-slate-200/55">
                 <div class="flex flex-col items-start">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#000d16] border border-white/10 text-[11px] font-bold tracking-wider text-[#2BB5BC] uppercase mb-2 shadow-sm">
-                        <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#2BB5BC] to-[#95C951] animate-pulse"></span>
-                        Our Services
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4" style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                        &#9679; &nbsp;Our Services
                     </span>
                     <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16] tracking-tight">
                         Innovative <span class="bg-gradient-to-r from-[#2BB5BC] to-[#95C951] bg-clip-text text-transparent font-bold">IT Solutions</span>
@@ -1655,9 +1536,9 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- View All Link -->
             <a href="/portfolio"
-                class="mt-4 w-fit py-2.5 px-6 rounded-full bg-[#000d16] text-white font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[#01a0d8] transition shadow-[0_4px_20px_rgba(0,13,22,0.15)]">
+                class="mt-4 w-fit py-3 px-8 rounded-full bg-[#01a0d8] text-white font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[#95C951] hover:text-white transition shadow-md">
                 View More Case Studies
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
             </a>
@@ -2857,12 +2738,9 @@ require_once ADMIN_URL.'/database_config.php';
         <div class="max-w-7xl mx-auto 0 text-center">
 
             <!-- Badge -->
-            <div class="inline-block mb-4 bg-[#01a0d8]/10 border border-[#01a0d8]/20 rounded-full px-4 py-1.5">
-                <p class="text-xs font-bold text-[#01a0d8] tracking-wider uppercase flex items-center justify-center gap-1.5">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#01a0d8] animate-pulse"></span>
-                    OUR EXPERTS
-                </p>
-            </div>
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4" style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                &#9679; &nbsp;OUR EXPERTS
+            </span>
 
             <!-- Heading -->
             <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 text-[#000d16]">
@@ -3726,161 +3604,15 @@ require_once ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
-<footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
-        <div class="max-w-7xl mx-auto">
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
 
-            <div class="flex flex-col gap-0">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="flex items-center gap-2 text-white px-4 ">
-                        <a href="/">
-                            <img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48">
-                        </a>
-                    </div>
-
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-white/30 my-8"></div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
-                
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Shopify</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/shopify-development" class="hover:underline">Shopify Development</a></li>
-                        <li><a href="/services/shopify-theme-design" class="hover:underline">Shopify Theme Design</a></li>
-                        <li><a href="/services/shopify-store-setup" class="hover:underline">Shopify Store Setup</a></li>
-                        <li><a href="/services/speed-optimization" class="hover:underline">Speed Optimization</a></li>
-                        <li><a href="/services/migration-services" class="hover:underline">Migration Services</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Software</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
-                        <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
-                        <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Branding & Performance</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/branding-and-digital-marketing" class="hover:underline">Branding And Digital Marketing</a></li>
-                        <li><a href="/services/seo-services" class="hover:underline">Seo Services</a></li>
-                        <li><a href="/services/ppc-and-paid-advertising" class="hover:underline">PPC & Paid Advertising</a></li>
-                        <li><a href="/services/organic-content-strategy" class="hover:underline">Organic Content Strategy</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">About</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="/career" class="hover:underline">Careers</a></li>
-                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="https://www.microsoft.com/en-us" class="hover:underline" target="_blank">Microsoft</a></li>
-                        <li><a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a></li>
-                        <li><a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a></li>
-                        <li><a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a></li>
-                        <li><a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a></li>
-                        <li><a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a></li>
-                        <li><a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                
-                <div class="flex flex-col md:items-start md:text-left mb-8">
-                    <h2 class="text-xl font-bold mb-2">Location</h2>
-                    <div class="flex flex-wrap justify-start gap-4 font-light">
-                        <p>UK</p>
-                        <p class="text-white/30">|</p>
-                        <p>Pakistan</p>
-                    </div>
-                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
-                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                        <p>(+92) 305 8214945</p>
-                        <p class="text-white/30 sm:block">|</p>
-                        <p>(+44) 7476451747</p>
-                        <p class="text-white/30 hidden sm:block">|</p>
-                        <p class="break-all">info@qonkar.com</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                        <div class="flex items-center gap-10 h-20">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
-                            </a>
-                            
-                            <a href="https://www.secp.gov.pk/" target="_blank">
-                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:items-start md:text-left mb-8">
-                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                    <div class="flex items-center h-20">
-                        <a href="https://techdestination.com/" target="_blank">
-                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
-                        </a>
-                    </div>
-                </div>
-            
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
-                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
-                    <a href="/contact-us" class="hover:underline">Contact Us</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
-
-</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="/script/home_component.js"></script>
     <script src="/script/home_GSAP.js"></script>
     <script src="/script/case_study_carousel.js"></script>
+    <script src="/script/laser-border.js"></script>
             
 
     <!-- Fade-In Observer Script (Homalix-style) -->

@@ -30,7 +30,9 @@ $dbOk = false;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+
 <title>Qonkar – Full Site Diagnostic</title>
 <style>
  body{font-family:Arial,sans-serif;background:#f5f5f5;padding:20px;color:#333;}

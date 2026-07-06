@@ -2,7 +2,6 @@ document.querySelectorAll(".faq-header").forEach(header => {
     header.addEventListener("click", () => {
         const faqItem = header.parentElement;
         const content = faqItem.querySelector(".faq-content");
-        const icon = header.querySelector(".faq-icon");
         const svg = header.querySelector("svg");
 
         // Close others
@@ -15,20 +14,7 @@ document.querySelectorAll(".faq-header").forEach(header => {
                 const itemSvg = item.querySelector("svg");
                 if (itemSvg) {
                     itemSvg.classList.remove("rotate-180");
-                    itemSvg.style.color = "#64748b"; // text-slate-500
                 }
-
-                item.style.backgroundColor = "#ffffff";
-                item.style.borderColor = "#e2e8f0"; // border-slate-200
-
-                const itemHeaderSpan = item.querySelector("span");
-                if (itemHeaderSpan) itemHeaderSpan.style.color = "#000d16"; // text-[#000d16]
-
-                const itemContentP = item.querySelector(".faq-content p");
-                if (itemContentP) itemContentP.style.color = "#475569"; // text-slate-600
-
-                const itemIcon = item.querySelector(".faq-icon");
-                if (itemIcon) itemIcon.style.background = "#f1f5f9"; // bg-slate-100
             }
         });
 
@@ -39,34 +25,12 @@ document.querySelectorAll(".faq-header").forEach(header => {
             if (content) content.style.maxHeight = content.scrollHeight + "px";
             if (svg) {
                 svg.classList.add("rotate-180");
-                svg.style.color = "#ffffff";
             }
-            faqItem.style.backgroundColor = "#ffffff";
-            faqItem.style.borderColor = "var(--primary-color)";
-
-            const headerSpan = header.querySelector("span");
-            if (headerSpan) headerSpan.style.color = "var(--primary-color)";
-
-            const contentP = content ? content.querySelector("p") : null;
-            if (contentP) contentP.style.color = "#475569";
-
-            if (icon) icon.style.background = "linear-gradient(138deg,var(--primary-color),var(--secondary-color))";
         } else {
             if (content) content.style.maxHeight = null;
             if (svg) {
                 svg.classList.remove("rotate-180");
-                svg.style.color = "#64748b";
             }
-            faqItem.style.backgroundColor = "#ffffff";
-            faqItem.style.borderColor = "#e2e8f0";
-
-            const headerSpan = header.querySelector("span");
-            if (headerSpan) headerSpan.style.color = "#000d16";
-
-            const contentP = content ? content.querySelector("p") : null;
-            if (contentP) contentP.style.color = "#475569";
-
-            if (icon) icon.style.background = "#f1f5f9";
         }
     });
 });

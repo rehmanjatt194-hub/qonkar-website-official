@@ -24,10 +24,12 @@ while($c = $cat_res->fetch_assoc()) { $assigned_cats[] = $c['category_id']; }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+    
+    
     <title>Edit Blog - <?php echo htmlspecialchars($blog['blog_title']); ?></title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script src="https://cdn.tiny.cloud/1/betkqvu1btuzlsz0q2cd5l1xwj4mgrj85fameut2juha0j4n/tinymce/6/tinymce.min.js"></script>
 </head>
 <body class="bg-[#080808] text-white p-10">

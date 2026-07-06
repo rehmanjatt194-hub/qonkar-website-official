@@ -4,10 +4,7 @@
   --primary-color: #3f89c9;
   --secondary-color: #2fadc3;
   --tertiary-color: #85d55c;
-  --gradient: linear-gradient(135deg,
-      var(--primary-color),
-      var(--secondary-color),
-      var(--tertiary-color));
+  --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
   --body-bg: #000d16;
 }
 
@@ -280,6 +277,7 @@ html, body {
 .svc-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
 
 /* ---- Futuristic Border Beam (Laser) Animation ---- */
+/* @property for Chrome/Edge/Safari — JS fallback handles Firefox */
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -287,17 +285,15 @@ html, body {
 }
 
 @keyframes border-beam {
-  to {
-    --angle: 360deg;
-  }
+  to { --angle: 360deg; }
 }
 
 .laser-border {
   position: relative;
   display: inline-flex;
-  border-radius: 40px; /* Default rounded corners for badges */
-  padding: 1.5px; /* Border thickness */
-  background: rgba(1, 160, 216, 0.15); /* Default subtle border track */
+  border-radius: 40px;
+  padding: 1.5px;
+  background: rgba(1, 160, 216, 0.15);
   z-index: 1;
 }
 
@@ -315,8 +311,8 @@ html, body {
     #2fadc3 99%,
     transparent 100%
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -336,3 +332,17 @@ html, body {
 }
 
 
+
+/* ---- FAQ Active States ---- */
+.faq-item.active {
+    border-color: var(--primary-color) !important;
+}
+.faq-item.active .faq-header span {
+    color: var(--primary-color) !important;
+}
+.faq-item.active .faq-icon {
+    background: linear-gradient(138deg, var(--primary-color), var(--secondary-color)) !important;
+}
+.faq-item.active .faq-icon svg {
+    color: #ffffff !important;
+}

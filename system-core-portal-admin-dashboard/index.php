@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+    
+    
     <title>Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         :root {
             --primary-color: #3F89C9;

@@ -6,21 +6,16 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ6XTSKG0W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NZ6XTSKG0W');
-    </script>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+    
 
     <!-- Basic SEO Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
     <meta name="description" content="Careevo Case Study - All-in-One Restaurant Management Software built by Qonkar Technologies. POS, Kitchen Display, Inventory & Analytics in one platform." />
     <meta name="keywords" content="Careevo, Restaurant Management System, POS, Kitchen Display System, Food Tech, Qonkar, Restaurant Software, Inventory Management" />
-    <meta name="author" content="Qonkar" />
+    
 
     <!-- Open Graph -->
     <meta property="og:title" content="Careevo Case Study | Qonkar Technologies" />
@@ -30,14 +25,14 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <meta property="og:image" content="/images/case-studies/craveeo_order_pic.webp" />
 
     <!-- Icons & Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
+    
+    
+    
     <title>Careevo Case Study | Qonkar Technologies</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/styles/index.css">
+    
+    
 
     <style>
         html { scroll-behavior: smooth; }
@@ -117,76 +112,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <body class="bg-[#000d16] text-white">
 
 <!-- ========== NAVIGATION ========== -->
-<header class="sticky top-5 z-50 mx-auto sm:px-4">
-    <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
-        <div class="flex items-center">
-            <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
-        </div>
-        <ul class="flex gap-8 text-white font-medium items-center">
-            <li><a href="/" class="hover:text-[var(--primary-color)]">Home</a></li>
-            <li class="group py-2">
-                <button class="flex items-center gap-1 hover:text-[var(--primary-color)] focus:outline-none transition-colors">
-                    Services
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
-                </button>
-                <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[70vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10"
-                     style="background: rgba(15, 15, 15, 0.98); backdrop-filter: blur(25px);">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10">
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#2BB5BC] border-b border-white/10 pb-2 mb-2">Shopify</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/shopify_header.webp" alt="Shopify" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/shopify-development" class="hover:text-[#2BB5BC] transition">Shopify Development</a></li>
-                                    <li><a href="/services/shopify-theme-design" class="hover:text-[#2BB5BC] transition">Shopify Theme Design</a></li>
-                                    <li><a href="/services/shopify-store-setup" class="hover:text-[#2BB5BC] transition">Shopify Store Setup</a></li>
-                                    <li><a href="/services/speed-optimization" class="hover:text-[#2BB5BC] transition">Speed optimization</a></li>
-                                    <li><a href="/services/migration-services" class="hover:text-[#2BB5BC] transition">Migration Services</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#95C951] border-b border-white/10 pb-2 mb-2">Software</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/software_header.webp" alt="Software" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
-                                    <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
-                                    <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps</a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="/portfolio" class="text-[var(--primary-color)]">Portfolio</a></li>
-            <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
-            <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
-            <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
-        </ul>
-        <a href="/contact-us" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white hover:opacity-90 transition font-medium">Contact Us</a>
-    </nav>
-
-    <!-- Mobile Nav -->
-    <nav class="glass flex lg:hidden items-center justify-between w-[92%] mx-auto px-5 py-2 rounded-full mt-2 relative">
-        <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-8 w-auto"></a>
-        <button id="menu-btn" class="text-white focus:outline-none text-3xl">☰</button>
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50 bg-[rgba(10,10,10,0.98)] backdrop-blur-xl flex-col transform scale-y-0 origin-top transition-all duration-300 rounded-2xl overflow-y-auto max-h-[85vh] border border-white/10">
-            <a href="/" class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-            <a href="/portfolio" class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-            <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
-            <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
-            <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
-            <a href="/contact-us" class="block w-full text-center py-5 bg-[var(--primary-color)] text-white font-bold transition">Contact Us</a>
-        </div>
-    </nav>
-</header>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php'; ?>
 
 
 <!-- ==========================================
@@ -195,7 +121,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <section class="relative w-[95%] mx-auto mt-6 mb-0 rounded-[28px] overflow-hidden min-h-[80vh] flex items-center">
 
     <!-- Restaurant Atmosphere Background -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/case-studies/careevo_bg.webp');"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/case-studies/careevo_bg.png');"></div>
     <!-- Strong left-to-right gradient so left is readable and right shows image -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#000d16] via-[#000d16]/85 to-[#000d16]/30"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-[#000d16]/70 via-transparent to-[#000d16]/30"></div>
@@ -207,10 +133,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <div class="space-y-6">
             <!-- Badge perfectly aligned with text -->
             <div class="mb-2">
-                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3f89c9]/20 border border-[#3f89c9]/40 backdrop-blur-md text-[#3f89c9] text-xs font-bold tracking-widest uppercase">
-                    <i class="fa-solid fa-utensils text-[10px]"></i>
-                    Restaurant Technology
-                </span>
+                <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; Restaurant Technology
+        </div>
+    </div>
+</div>
             </div>
             
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
@@ -224,7 +153,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
             <!-- CTA buttons -->
             <div class="flex flex-wrap gap-4 pt-2">
-                <a href="/contact-us" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#3f89c9] text-[#000d16] font-bold hover:bg-[#2fadc3] transition-all duration-300 shadow-[0_0_20px_rgba(63,137,201,0.35)] hover:scale-105 group">
+                <a href="/contact-us" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#01a0d8] text-white font-semibold hover:bg-[#95C951] hover:text-white transition shadow-md hover:scale-105 group">
                     Get a Demo
                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </a>
@@ -324,9 +253,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
         <!-- Left: Brand Story -->
         <div class="space-y-6">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#3f89c9]/10 border border-[#3f89c9]/25 text-[#3f89c9] text-[10px] font-bold tracking-widest uppercase">
-                About Careevo
-            </span>
+            <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; About Careevo
+        </div>
+    </div>
+</div>
             <h2 class="text-3xl sm:text-4xl font-light text-white leading-snug">
                 Where every order is <br><span class="font-bold text-[#3f89c9]">perfectly orchestrated.</span>
             </h2>
@@ -369,9 +302,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
             <!-- Left Column: Copy & Details -->
             <div class="lg:col-span-4 space-y-5">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3f89c9]/10 text-[#3f89c9] text-[10px] font-bold tracking-widest uppercase border border-[#3f89c9]/25">
-                    Product Walkthrough
-                </span>
+                <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center text-white px-6">
+                            &#9679; Product Walkthrough
+                        </div>
+                    </div>
+                </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
                     Inside the <br>
                     <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[#3f89c9] to-[#2fadc3]">Restaurant Hub.</span>
@@ -494,7 +431,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-14">
-            <span class="bg-[#3f89c9]/10 border border-[#3f89c9]/25 text-[#3f89c9] text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">The Problem</span>
+            <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; The Problem
+        </div>
+    </div>
+</div>
             <h2 class="text-3xl sm:text-4xl font-light text-white mt-4 leading-tight">
                 Restaurants running on <span class="text-[#2fadc3] font-bold">chaos.</span>
             </h2>
@@ -567,7 +510,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
     <!-- Section Header with workflow strip -->
     <div class="text-center space-y-4 mb-6">
-        <span class="bg-[#3f89c9]/10 border border-[#3f89c9]/30 text-[#3f89c9] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Our Solution</span>
+        <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; Our Solution
+        </div>
+    </div>
+</div>
         <h2 class="text-3xl md:text-4xl font-light text-white">4 Modules. <b>One Unified Restaurant OS.</b></h2>
         <p class="text-gray-400 font-light max-w-xl mx-auto text-sm sm:text-base leading-relaxed">Careevo connects every part of your restaurant into one intelligent operating system — from the first order to the final report.</p>
     </div>
@@ -696,7 +645,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-16 space-y-3">
-            <span class="bg-[#95C951]/10 border border-[#95C951]/30 text-[#95C951] text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Impact Metrics</span>
+            <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; Impact Metrics
+        </div>
+    </div>
+</div>
             <h2 class="text-3xl md:text-4xl font-light text-white">The numbers <b>speak for themselves.</b></h2>
             <p class="text-gray-400 font-light text-sm max-w-lg mx-auto">Real results delivered within the first 6 months of Careevo going live.</p>
         </div>
@@ -856,7 +811,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-12 space-y-3">
-            <span class="bg-white/5 border border-white/10 text-gray-300 text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">Built With</span>
+            <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; Built With
+        </div>
+    </div>
+</div>
             <h2 class="text-3xl sm:text-4xl font-light text-white leading-snug">
                 Enterprise-grade <span class="font-bold text-[#3f89c9]">tech stack.</span>
             </h2>
@@ -966,10 +927,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     </div>
 
     <div class="relative z-10 text-center space-y-6 max-w-2xl mx-auto px-6 py-20">
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#3f89c9]/15 border border-[#3f89c9]/30 text-[#3f89c9] text-xs font-bold tracking-widest uppercase">
-            <i class="fa-solid fa-utensils text-[10px]"></i>
-            Ready to Transform Your Restaurant?
-        </span>
+        <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+    <div class="glass-background">
+        <div class="glass text-sm font-light text-center text-white px-6">
+            &#9679; Ready to Transform Your Restaurant?
+        </div>
+    </div>
+</div>
         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
             Let's build your <br>
             <span class="bg-gradient-to-r from-[#3f89c9] via-[#2fadc3] to-[#3f89c9] text-transparent bg-clip-text">Careevo.</span>
@@ -978,7 +942,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             Whether you're running a single café or a 20-branch chain — Qonkar will design, build, and deploy a custom Careevo system tailored to your exact workflow. From POS to analytics — fully yours.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="/contact-us" class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#3f89c9] to-[#2fadc3] text-[#000d16] font-bold text-base hover:opacity-90 transition-all duration-300 shadow-[0_0_30px_rgba(245,158,11,0.35)] hover:shadow-[0_0_45px_rgba(234,88,12,0.5)] hover:scale-105 group">
+            <a href="/contact-us" class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-[#01a0d8] text-white font-semibold text-base hover:bg-[#95C951] hover:text-white transition shadow-md hover:scale-105 group">
                 Start Your Project
                 <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
             </a>
@@ -1019,7 +983,7 @@ counters.forEach(c => observer.observe(c));
      ========================================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
     <div class="text-center mb-12 bg-no-repeat bg-[length:40%] bg-[url('/images/background_curve.svg')] bg-[center_top_60px]">
-        <div class="section-pill">GOT QUESTIONS?</div>
+        <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; GOT QUESTIONS?</div></div></div>
         <h2 class="text-3xl md:text-4xl font-light mt-4 mb-3">
             Frequently Asked <b>Questions</b>
         </h2>
@@ -1132,10 +1096,9 @@ counters.forEach(c => observer.observe(c));
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Still have questions?</h3>
                     <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Our restaurant technology experts are ready to walk you through Careevo and answer any specific questions about your setup.</p>
-                    <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
-                       style="background: linear-gradient(135deg, #3f89c9, #2fadc3, #85d55c);">
+                    <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#01a0d8] text-white font-semibold text-sm transition-all duration-300 hover:bg-[#95C951] hover:text-white shadow-md hover:scale-105 group">
                         Talk to an Expert
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                     </a>
                     <!-- Trust badges -->
                     <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-4">
@@ -1160,177 +1123,10 @@ counters.forEach(c => observer.observe(c));
 </section>
 
 <!-- ========== FOOTER ========== -->
-<footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
-        <div class="max-w-7xl mx-auto">
-
-            <div class="flex flex-col gap-0">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="flex items-center gap-2 text-white px-4 ">
-                        <a href="/">
-                            <img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48">
-                        </a>
-                    </div>
-
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-white/30 my-8"></div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-4">
-                
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Shopify</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/shopify-development" class="hover:underline">Shopify Development</a></li>
-                        <li><a href="/services/shopify-theme-design" class="hover:underline">Shopify Theme Design</a></li>
-                        <li><a href="/services/shopify-store-setup" class="hover:underline">Shopify Store Setup</a></li>
-                        <li><a href="/services/speed-optimization" class="hover:underline">Speed Optimization</a></li>
-                        <li><a href="/services/migration-services" class="hover:underline">Migration Services</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Software</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
-                        <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
-                        <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And Hippa Apps</a></li>
-                    </ul>
-                </div>
-
-
-
-                <div>
-                        <h3 class="font-bold text-lg mb-4">About</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a>
-                            </li>
-                            <li>
-                                <a href="/career" class="hover:underline">Careers</a>
-                            </li>
-                            <li>
-                                <a href="/blogs" class="hover:underline">Blogs and News</a>
-                            </li>
-                            <li>
-                                <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="/terms-of-service" class="hover:underline">Terms of Services</a>
-                            </li>
-                            <li>
-                                <a href="/help-and-support" class="hover:underline">Help and Support</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div>
-                        <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                        <ul class="space-y-2 text-sm font-light">
-                            <li>
-                                <a href="https://www.microsoft.com/en-us" class="hover:underline"
-                                    target="_blank">Microsoft</a>
-                            </li>
-                            <li>
-                                <a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a>
-                            </li>
-                            <li>
-                                <a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a>
-                            </li>
-                            <li>
-                                <a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a>
-                            </li>
-                            <li>
-                                <a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a>
-                            </li>
-                            <li>
-                                <a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a>
-                            </li>
-                            <li>
-                                <a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a>
-                            </li>
-                        </ul>
-                    </div>
-
-            </div>
-
-
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
-                
-                <div class="flex flex-col md:items-start md:text-left mb-8">
-                    <h2 class="text-xl font-bold mb-2">Location</h2>
-                    <div class="flex flex-wrap justify-start gap-4 font-light">
-                        <p>UK</p>
-                        <p class="text-white/30">|</p>
-                        <p>Pakistan</p>
-                    </div>
-                    <div class="border-t border-white/30 my-4 w-full md:w-[40vw]"></div>
-                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                        <p>(+92) 305 8214945</p>
-                        <p class="text-white/30 sm:block">|</p>
-                        <p>(+44) 7476451747</p>
-                        <p class="text-white/30 hidden sm:block">|</p>
-                        <p class="break-all">info@qonkar.com</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                        <div class="flex items-center gap-10 h-20">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
-                            </a>
-                            
-                            <a href="https://www.secp.gov.pk/" target="_blank">
-                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                        <div class="flex items-center h-20">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">© Qonkar 2026. All rights reserved</p>
-                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
-                    <a href="/contact-us" class="hover:underline">Contact Us</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
 
 <script src="/script/navbar.js"></script>
-<script src="/script/FAQ.js"></script>
+<script src="/script/FAQ.js?v=2"></script>
 </body>
 </html>
+

@@ -6,45 +6,40 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ6XTSKG0W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NZ6XTSKG0W');
-    </script>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/head.php'; ?>
+
+    
 
     <!-- Basic SEO Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
     <meta name="description" content="Homalix Case Study - Unified Hospital Management and Clinical Automation Solutions by Qonkar Technologies." />
     <meta name="keywords" content="Homalix, Hospital Management System, HMS, Qonkar, Clinical Automation, EMR" />
-    <meta name="author" content="Qonkar" />
+    
 
     <!-- Open Graph (Social Media Preview) -->
     <meta property="og:title" content="Homalix Case Study | Qonkar Technologies" />
     <meta property="og:description" content="Explore how Homalix streamlined operational workflows and automated medical tracking across multi-specialty healthcare networks." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/case-studies/homalix" />
-    <meta property="og:image" content="/images/case-studies/homalix_mockup.webp" />
+    <meta property="og:image" content="/images/case-studies/homalix_mockup.png" />
 
     <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    
     
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
 
     <!-- Title -->
     <title>Homalix Case Study | Qonkar Technologies</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- Theme & Reusable Styles -->
-    <link rel="stylesheet" href="/styles/index.css">
+    
     <style>
         select option {
             background-color: #000;
@@ -192,116 +187,14 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
 <body class="bg-[#000d16] text-white">
 
-<header class="sticky top-5 z-50 mx-auto sm:px-4">
-    <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
-        <div class="flex items-center">
-            <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-9 w-auto"></a>
-        </div>
-        
-        <ul class="flex gap-8 text-white font-medium items-center">
-            <li><a href="/" class="hover:text-[var(--primary-color)]">Home</a></li>
-
-            <li class="group py-2">
-                <button class="flex items-center gap-1 hover:text-[var(--primary-color)] focus:outline-none transition-colors">
-                    Services
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
-                </button>
-                
-                <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[70vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10" 
-                     style="background: rgba(15, 15, 15, 0.98); backdrop-filter: blur(25px);">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10">
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#2BB5BC] border-b border-white/10 pb-2 mb-2 whitespace-nowrap">Shopify</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/shopify_header.webp" alt="Shopify" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/shopify-development" class="hover:text-[#2BB5BC] transition">Shopify Development</a></li>
-                                    <li><a href="/services/shopify-theme-design" class="hover:text-[#2BB5BC] transition">Shopify Theme Design</a></li>
-                                    <li><a href="/services/shopify-store-setup" class="hover:text-[#2BB5BC] transition">Shopify Store Setup</a></li>
-                                    <li><a href="/services/speed-optimization" class="hover:text-[#2BB5BC] transition">Speed optimization</a></li>
-                                    <li><a href="/services/migration-services" class="hover:text-[#2BB5BC] transition">Migration Services</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-3">
-                            <h4 class="font-bold text-base xl:text-lg text-[#95C951] border-b border-white/10 pb-2 mb-2 whitespace-nowrap">Software</h4>
-                            <div class="flex gap-4">
-                                <div class="w-24 xl:w-32 shrink-0 overflow-hidden rounded-xl border border-white/10 h-24 xl:h-28">
-                                    <img src="/images/software_header.webp" alt="Software" class="h-full w-full object-cover">
-                                </div>
-                                <ul class="flex flex-col gap-2 text-[12px] xl:text-[14px] text-gray-300 whitespace-nowrap leading-snug pr-4">
-                                    <li><a href="/services/web-design-and-development" class="hover:text-[#95C951] transition">Web Design & Development</a></li>
-                                    <li><a href="/services/landing-pages-design" class="hover:text-[#95C951] transition">Landing Pages Design</a></li>
-                                    <li><a href="/services/saas-product-development" class="hover:text-[#95C951] transition">SaaS product development</a></li>
-                                    <li><a href="/services/automative-app" class="hover:text-[#95C951] transition">Automotive Apps </a></li>
-                                    <li><a href="/services/healthcare-and-hippa-apps" class="hover:text-[#95C951] transition">Healthcare And HIPAA Apps </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li><a href="/portfolio" class="text-[var(--primary-color)]">Portfolio</a></li>
-            <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
-            <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
-            <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
-        </ul>
-
-        <a href="/contact-us" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white hover:opacity-90 transition font-medium">Contact Us</a>
-    </nav>
-
-    <nav class="glass flex lg:hidden items-center justify-between w-[92%] mx-auto px-5 py-2 rounded-full mt-2 relative">
-        <a href="/"><img src="/images/qonkar_logo.webp" alt="Qonkar Logo" class="h-8 w-auto"></a>
-        <button id="menu-btn" class="text-white focus:outline-none text-3xl">☰</button>
-        
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50 bg-[rgba(10,10,10,0.98)] backdrop-blur-xl flex-col transform scale-y-0 origin-top transition-all duration-300 rounded-2xl overflow-y-auto max-h-[85vh] border border-white/10">
-            <a href="/" class="block w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
-            
-            <div class="border-b border-white/10">
-                <button id="mobile-services-btn" class="w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold flex justify-center items-center gap-1">
-                    Services
-                    <span id="mobile-arrow" class="material-symbols-outlined text-sm transition-transform text-lg font-bold"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
-                </button>
-                <div id="mobile-services-menu" class="hidden flex-col bg-white/5 pb-4">
-                    <div class="py-2 border-b border-white/10">
-                        <p class="text-[#2BB5BC] text-[11px] font-bold uppercase tracking-widest py-2 text-center">Shopify</p>
-                        <a href="/services/shopify-development" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Development</a>
-                        <a href="/services/shopify-theme-design" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Theme Design</a>
-                        <a href="/services/shopify-store-setup" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Shopify Store Setup</a>
-                        <a href="/services/speed-optimization" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Speed optimization</a>
-                        <a href="/services/migration-services" class="block py-2 hover:text-[#2BB5BC] text-center text-sm text-gray-300 px-4">Migration Services</a>                        
-                    </div>
-                    <div class="py-2">
-                        <p class="text-[#95C951] text-[11px] font-bold uppercase tracking-widest py-2 text-center">Software</p>
-                        <a href="/services/web-design-and-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Web Design & Development</a>
-                        <a href="/services/landing-pages-design" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Landing Pages Design</a>
-                        <a href="/services/saas-product-development" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Saas Product Development</a>
-                        <a href="/services/automative-app" class="block py-2 text-center hover:text-[#95C951] text-sm text-gray-300 px-4">Automotive App </a>
-                        <a href="/services/healthcare-and-hippa-apps" class="block py-2 hover:text-[#95C951] text-center text-sm text-gray-300 px-4">Healthcare & HIPPA App </a>                        
-                    </div>
-                </div>
-            </div>
-
-            <a href="/portfolio" class="block w-full text-center py-4 text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-            <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
-            <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
-            <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
-            <a href="/contact-us" class="block w-full text-center py-5 bg-[var(--primary-color)] text-white font-bold transition">Contact Us</a>
-        </div>
-    </nav>
-</header>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php'; ?>
 
 <!-- ==========================================
      HERO SECTION
      ========================================== -->
 <section class="relative w-full mt-0 mb-0 rounded-t-[30px] rounded-b-none overflow-hidden flex items-center background-backdrop-card min-h-[60vh] animate-fade-in">
     <!-- Darkened Hospital/Clinic Overlay Background -->
-    <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-right" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.95) 30%, rgba(8, 8, 10, 0.75) 55%, rgba(8, 8, 10, 0.2) 100%), url('/images/case-studies/background/homalix_bg.webp'); filter: contrast(1.05); mix-blend-mode: normal;"></div>
+    <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-right" style="background-image: linear-gradient(to right, rgba(8, 8, 10, 0.95) 30%, rgba(8, 8, 10, 0.75) 55%, rgba(8, 8, 10, 0.2) 100%), url('/images/case-studies/background/homalix_bg.png'); filter: contrast(1.05); mix-blend-mode: normal;"></div>
 
     <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full py-12 px-4 sm:px-8">
         
@@ -348,7 +241,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Right Column: Card Mockup -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div class="relative max-w-md w-full bg-white/5 rounded-2xl border border-white/10 shadow-2xl p-2 backdrop-blur-md">
-                <img src="/images/case-studies/homalix_mockup.webp" alt="Homalix System Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+                <img src="/images/case-studies/homalix_mockup.png" alt="Homalix System Interface" class="rounded-xl w-full h-auto object-cover drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             </div>
         </div>
     </div>
@@ -386,9 +279,13 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             
             <!-- Left Column: Copy & Details -->
             <div class="lg:col-span-4 space-y-5">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] text-[10px] font-bold tracking-widest uppercase border border-[var(--secondary-color)]/25">
-                    Product Walkthrough
-                </span>
+                <div class="glass-border w-max mx-auto lg:mx-0 mb-4">
+                    <div class="glass-background">
+                        <div class="glass text-sm font-light text-center text-white px-6">
+                            &#9679; Product Walkthrough
+                        </div>
+                    </div>
+                </div>
                 <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
                     Inside the <br>
                     <span class="bg-clip-text text-transparent font-bold bg-gradient-to-r from-[var(--secondary-color)] to-[var(--tertiary-color)]">Clinical Hub.</span>
@@ -437,7 +334,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                     
                     <!-- Video Thumbnail / Poster Image -->
                     <div class="relative rounded-[24px] overflow-hidden aspect-[16/10]">
-                        <img src="/images/case-studies/background/homalix_bg.webp" alt="Homalix System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
+                        <img src="/images/case-studies/background/homalix_bg.png" alt="Homalix System Tour Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[2px]">
                         
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
@@ -497,9 +394,9 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 Transitioning from fragmented legacy silos to a unified clinical nervous system. Observe the impact of Homalix enterprise integration across clinical ecosystems.
             </p>
             <div class="pt-2">
-                <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[var(--primary-color)] text-white text-sm font-semibold hover:bg-[var(--secondary-color)] transition-all shadow-[0_0_15px_rgba(63,137,201,0.2)]">
+                <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#01a0d8] text-white text-sm font-semibold hover:bg-[#95C951] transition shadow-md hover:scale-105 group">
                     Request Impact Report
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
         </div>
@@ -606,7 +503,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </div>
                 <!-- Dynamic graphical asset inside card -->
                 <div class="w-full md:w-56 shrink-0 bg-black/40 border border-white/5 rounded-xl p-2 relative overflow-hidden">
-                    <img src="/images/case-studies/homalix_mockup.webp" alt="Patient Flow Visual" class="w-full h-auto object-cover rounded-lg">
+                    <img src="/images/case-studies/homalix_mockup.png" alt="Patient Flow Visual" class="w-full h-auto object-cover rounded-lg">
                 </div>
             </div>
 
@@ -839,7 +736,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <div class="lg:col-span-6 flex justify-center lg:justify-end">
                 <!-- Framed Premium Container -->
                 <div class="relative w-full max-w-lg bg-[#00101a] border border-white/5 rounded-3xl p-3 shadow-2xl transition-all duration-500 hover:border-[var(--secondary-color)]/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.55),0_0_30px_rgba(47,173,195,0.15)]">
-                    <img src="/images/case-studies/homalix_mobile_mockup.webp" alt="Homalix Mobile Interface Mockup" class="rounded-[22px] w-full h-auto object-cover">
+                    <img src="/images/case-studies/homalix_mobile_mockup.png" alt="Homalix Mobile Interface Mockup" class="rounded-[22px] w-full h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -1034,7 +931,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Left Side Avatar -->
             <div class="md:col-span-3 flex justify-center md:justify-start">
                 <div class="w-36 h-36 rounded-full border-2 border-[var(--secondary-color)] bg-[#000d16]/80 p-1 flex items-center justify-center overflow-hidden shadow-2xl transition-all duration-500 hover:scale-105">
-                    <img src="/images/case-studies/elena_rodriguez.webp" alt="Dr. Elena Rodriguez" class="w-full h-full rounded-full object-cover">
+                    <img src="/images/case-studies/elena_rodriguez.png" alt="Dr. Elena Rodriguez" class="w-full h-full rounded-full object-cover">
                 </div>
             </div>
             
@@ -1054,153 +951,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 </section>
 
 <!-- Standard Footer -->
-<footer>
-    <div class="w-full mx-auto bg-gradient-to-r from-[#348bcf] to-[#7dd569] text-white px-10 sm:px-14 py-8 ">
-        <div class="max-w-7xl mx-auto">
-
-            <div class="flex flex-col gap-0">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="flex items-center gap-2 text-white px-4 ">
-                        <a href="/">
-                            <img src="/images/Logo_White_Color.webp" alt="Qonkar Logo" class="w-48">
-                        </a>
-                    </div>
-
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/qonkar" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/qonkartechnologies" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@QonkarTechnologiesPvtLtd" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-white/30 my-8"></div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-4">
-                
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Shopify</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/shopify-development" class="hover:underline">Shopify Development</a></li>
-                        <li><a href="/services/shopify-theme-design" class="hover:underline">Shopify Theme Design</a></li>
-                        <li><a href="/services/shopify-store-setup" class="hover:underline">Shopify Store Setup</a></li>
-                        <li><a href="/services/speed-optimization" class="hover:underline">Speed Optimization</a></li>
-                        <li><a href="/services/migration-services" class="hover:underline">Migration Services</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Software</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/web-design-and-development" class="hover:underline">Web Design And Development</a></li>
-                        <li><a href="/services/landing-pages-design" class="hover:underline">Landing Pages Design</a></li>
-                        <li><a href="/services/saas-product-development" class="hover:underline">Saas Product Development</a></li>
-                        <li><a href="/services/automative-app" class="hover:underline">Automotive App</a></li>
-                        <li><a href="/services/healthcare-and-hippa-apps" class="hover:underline">Healthcare And HIPAA Apps</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Branding & Performance</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="/services/branding-and-digital-marketing" class="hover:underline">Branding And Digital Marketing</a></li>
-                        <li><a href="/services/seo-services" class="hover:underline">Seo Services</a></li>
-                        <li><a href="/services/ppc-and-paid-advertising" class="hover:underline">PPC & Paid Advertising</a></li>
-                        <li><a href="/services/organic-content-strategy" class="hover:underline">Organic Content Strategy</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">About</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="https://qonkar.com" class="hover:underline">Qonkar Technologies (PVT) Ltd.</a></li>
-                        <li><a href="/portfolio" class="hover:underline">Portfolio</a></li>
-                        <li><a href="/career" class="hover:underline">Careers</a></li>
-                        <li><a href="/blogs" class="hover:underline">Blogs and News</a></li>
-                        <li><a href="/privacy-policy" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service" class="hover:underline">Terms of Services</a></li>
-                        <li><a href="/help-and-support" class="hover:underline">Help and Support</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Trusted by</h3>
-                    <ul class="space-y-2 text-sm font-light">
-                        <li><a href="https://www.microsoft.com/en-us" class="hover:underline" target="_blank">Microsoft</a></li>
-                        <li><a href="https://www.shopify.com/" class="hover:underline" target="_blank">Shopify</a></li>
-                        <li><a href="https://www.upwork.com/" class="hover:underline" target="_blank">Upwork</a></li>
-                        <li><a href="https://www.fiverr.com/" class="hover:underline" target="_blank">Fiverr</a></li>
-                        <li><a href="https://mailchimp.com/" class="hover:underline" target="_blank">Mailchimp</a></li>
-                        <li><a href="https://www.hubspot.com/" class="hover:underline" target="_blank">HubSpot</a></li>
-                        <li><a href="https://ads.google.com/" class="hover:underline" target="_blank">Google Ads</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                
-                <div class="flex flex-col md:items-start md:text-left mb-8">
-                    <h2 class="text-xl font-bold mb-2">Location</h2>
-                    <div class="flex flex-wrap justify-start gap-4 font-light">
-                        <p>UK</p>
-                        <p class="text-white/30">|</p>
-                        <p>Pakistan</p>
-                    </div>
-                    <div class="border-t border-white/30 my-4 w-full md:w-[25vw]"></div>
-                    <div class="flex flex-wrap justify-start gap-4 font-light text-sm sm:text-base">
-                        <p>(+92) 305 8214945</p>
-                        <p class="text-white/30 sm:block">|</p>
-                        <p>(+44) 7476451747</p>
-                        <p class="text-white/30 hidden sm:block">|</p>
-                        <p class="break-all">info@qonkar.com</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-start gap-10 md:gap-12">
-                    <div class="flex flex-col md:items-start md:text-left mb-8">
-                        <h2 class="text-xl font-bold mb-2">Registered By</h2>
-                        <div class="flex items-center gap-10 h-20">
-                            <a href="https://techdestination.com/" target="_blank">
-                                <img src="/images/company-logos/PSEB_black.webp" alt="Pakistan software Export Board" class="w-14 object-contain" />
-                            </a>
-                            
-                            <a href="https://www.secp.gov.pk/" target="_blank">
-                                <img src="/images/company-logos/SECP.webp" alt="Securities & Exchange Commission of Pakistan" class="w-16 object-contain" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:items-start md:text-left mb-8">
-                    <h2 class="text-xl font-bold mb-2">Trusted By</h2>
-                    <div class="flex items-center h-20">
-                        <a href="https://techdestination.com/" target="_blank">
-                            <img src="/images/company-logos/Tech-Desti-New-logo.webp" alt="Tech Destination" class="w-32 object-contain" />
-                        </a>
-                    </div>
-                </div>
-            
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 border-t border-white/20 pt-4">
-                <p class="text-sm">&copy; Qonkar 2025. All rights reserved</p>
-                <div class="hidden sm:flex flex-wrap justify-center gap-4 text-sm ">
-                    <a href="/contact-us" class="hover:underline">Contact Us</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
 
 <script src="/script/navbar.js"></script>
 <script>
@@ -1318,3 +1069,4 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 </script>
 </body>
 </html>
+

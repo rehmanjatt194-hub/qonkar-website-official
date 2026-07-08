@@ -165,8 +165,8 @@
             </p>
 
             <!-- CTA Button -->
-            <a href="#contact" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
-        hover:bg-[var(--secondary-color)] hover:text-white transition">
+            <a href="#contact" class="hero-btn mt-4 
+ btn-light-theme">
                 Get in Touch Today!
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">

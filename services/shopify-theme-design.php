@@ -296,7 +296,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     </p>
 
                     <div class="flex items-center gap-4 mt-4">
-                        <a href="/contact-us" class="hero-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] hover:text-white transition">
+                        <a href="/contact-us" class="hero-btn btn-light-theme">
                             Design Your Store
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -459,15 +459,15 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <!-- CTA -->
                     <div class="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
                         <a href="/contact-us"
-                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                            style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                            class="btn-dark-theme"
+                            >
                             Start Your Project
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                         </a>
                         <a href="#design-expertise"
-                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105"
+                            class="btn-dark-theme"
                             style="background:#f3f4f6; color:#0a1628; border: 1.5px solid #e5e7eb;">
                             Explore Services
                         </a>
@@ -1354,8 +1354,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
             <!-- Bottom CTA -->
             <div class="text-center mt-14">
                 <a href="/contact-us"
-                    class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c);">
+                    class="btn-light-theme"
+                    >
                     Discuss Your Project With Us
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -1775,7 +1775,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
             </p>
 
             <a href="/contact-us"
-                class="inline-flex rounded-full items-center gap-2 px-6 py-3 border border-[#01a0d8] text-[#01a0d8] font-semibold bg-transparent transition-all duration-300 hover:bg-[#01a0d8] hover:text-white">
+                class="btn-dark-theme">
                 Start Your Design
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">

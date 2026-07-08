@@ -205,7 +205,7 @@ require_once ADMIN_URL.'/database_config.php';
             </p>
 
             <a href="/career"
-                class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--secondary-color)] font-semibold  hover:bg-[var(--secondary-color)] hover:text-white transition">
+                class="hero-btn mt-4 btn-light-theme">
                 Join Our Team
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -371,7 +371,7 @@ require_once ADMIN_URL.'/database_config.php';
                     </p>
 
                     <a href="/contact-us"
-                        class="inline-flex items-center gap-2 px-8 py-3 bg-[var(--primary-color)] text-white font-semibold rounded-full hover:bg-white hover:text-[var(--primary-color)] transition">
+                        class="btn-dark-theme">
                         Get Started
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">

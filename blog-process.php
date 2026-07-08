@@ -142,7 +142,7 @@ if ($result->num_rows > 0) {
     if ($page < $total_pages) {
         $next_page = $page + 1;
         echo '<div class="flex justify-center mt-12 mb-8 load-more-container w-full">
-                <button class="load-more-btn px-8 py-3 rounded-full border border-[#01a0d8] text-[#01a0d8] bg-transparent font-medium hover:bg-[#01a0d8] hover:text-[#000d16] transition-all duration-300 shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)]" data-next="' . $next_page . '">
+                <button class="load-more-btn btn-dark-theme" data-next="' . $next_page . '">
                     Load More Articles
                 </button>
               </div>';

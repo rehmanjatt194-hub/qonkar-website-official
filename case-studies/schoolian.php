@@ -863,11 +863,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="/contact-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#01a0d8] text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:bg-[#95C951] hover:scale-105 shadow-md group">
+            <a href="/contact-us" class="sm:text-base group btn-dark-theme">
                 Start Your Project
                 <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
             </a>
-            <a href="/portfolio" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/20 text-white text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300">
+            <a href="/portfolio" class="sm:text-base btn-light-theme">
                 View More Case Studies
             </a>
         </div>

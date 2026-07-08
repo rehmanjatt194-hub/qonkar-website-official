@@ -400,8 +400,8 @@ require_once ADMIN_URL.'/database_config.php';
 
                 </p>
 
-                <a href="/about-us" class="z-99 mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#01a0d8] bg-transparent text-[#01a0d8] font-semibold 
-                hover:bg-[#01a0d8] hover:text-white transition-all duration-300 w-fit mx-auto lg:mx-0">
+                <a href="/about-us" class="z-99 mt-4 
+ w-fit mx-auto lg:mx-0 btn-dark-theme">
                     Know More About us
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -1536,7 +1536,7 @@ require_once ADMIN_URL.'/database_config.php';
 
             <!-- View All Link -->
             <a href="/portfolio"
-                class="mt-4 w-fit py-3 px-8 rounded-full bg-[#01a0d8] text-white font-semibold flex items-center justify-center mx-auto gap-2 cursor-pointer hover:bg-[#95C951] hover:text-white transition shadow-md">
+                class="mt-4 w-fit flex mx-auto cursor-pointer btn-light-theme">
                 View More Case Studies
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -1566,7 +1566,7 @@ require_once ADMIN_URL.'/database_config.php';
                 <p class="text-[#b5b5b5] font-light text-sm sm:text-base md:text-lg leading-relaxed max-w-lg">
                     We deliver custom software, Shopify development, and digital marketing solutions that help businesses grow and scale globally. Our expert team works with brands worldwide to build high-performance products and result-driven campaigns.
                 </p>
-                <a href="/about-us" class="inline-flex items-center gap-2 px-9 py-4 rounded-full font-semibold text-white bg-[var(--secondary-color)] transition hover:bg-white hover:text-[var(--secondary-color)] text-sm md:text-base shadow-lg hover:scale-105 duration-300">
+                <a href="/about-us" class="md:text-base btn-dark-theme">
                     About Us
                 </a>
             </div>
@@ -2548,7 +2548,7 @@ require_once ADMIN_URL.'/database_config.php';
             </p>
 
             <a href="/contact-us"
-                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                class="sm:px-6 sm:py-3 btn-light-theme">
                 Get Your Free Proposal
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -3351,8 +3351,8 @@ require_once ADMIN_URL.'/database_config.php';
 
                 </div>
             <div class="text-center">
-                <a href="/about-us" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white 
-           bg-[var(--secondary-color)] transition hover:bg-white hover:text-[var(--secondary-color)]">
+                <a href="/about-us" class="
+ btn-dark-theme">
                     View all Members
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">

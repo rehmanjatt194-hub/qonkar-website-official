@@ -116,8 +116,8 @@
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
                 <a href="https://qonkar.com"
-                   class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold 
-                          hover:bg-[var(--secondary-color)] hover:text-white transition">
+                   class="
+ btn-dark-theme">
                     Back to Home
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -127,8 +127,8 @@
                 </a>
 
                 <a href="/contact-us"
-                   class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white font-semibold 
-                          hover:bg-white/10 transition">
+                   class="
+ btn-light-theme">
                     Contact Support
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">

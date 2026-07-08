@@ -94,7 +94,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
                     </p>
 
                     <div class="flex items-center gap-4 mt-4">
-                        <a href="/contact-us" class="hero-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] hover:text-white transition">
+                        <a href="/contact-us" class="hero-btn btn-light-theme">
                             Start Your Launch
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -1432,7 +1432,7 @@ require_once '../'.ADMIN_URL.'/database_config.php';
             </p>
 
             <a href="/contact-us"
-                class="inline-flex rounded-full items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-[var(--secondary-color)] font-semibold border border-white transition-all duration-300 hover:bg-[var(--secondary-color)] hover:text-white">
+                class="sm:px-6 sm:py-3 btn-dark-theme">
                 Start Your Launch
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">

@@ -254,8 +254,8 @@ if (!empty($job_slug)) {
                 step in your career.
             </p>
 
-            <a href="#contact" class="hero-btn mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[var(--secondary-color)] font-semibold 
-        hover:bg-[var(--secondary-color)] hover:text-white transition">
+            <a href="#contact" class="hero-btn mt-4 
+ btn-light-theme">
                 Join Our Team
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -365,7 +365,7 @@ if (!empty($job_slug)) {
 
                     <div class="flex justify-center mt-6">
                         <button type="submit"
-                            class="px-8 py-3 rounded-full border border-[#01a0d8] bg-transparent text-[#01a0d8] font-semibold transition hover:bg-[#01a0d8] hover:text-[#000d16]">
+                            class="btn-dark-theme">
                             Submit Application
                         </button>
                     </div>

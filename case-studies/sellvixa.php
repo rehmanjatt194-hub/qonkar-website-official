@@ -951,7 +951,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             Connect with Qonkar Technologies today to configure a high-speed POS and Multi-Branch ERP custom tailored for your business.
         </p>
         <div class="pt-4">
-            <a href="/contact-us" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#01a0d8] text-white font-semibold hover:bg-[#95C951] transition-all duration-300 hover:scale-105 shadow-md group">
+            <a href="/contact-us" class="group btn-dark-theme">
                 Book a Free Consult
                 <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
             </a>

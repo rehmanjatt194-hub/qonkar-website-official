@@ -451,10 +451,10 @@ require_once ADMIN_URL.'/database_config.php';
     <!-- -----------------------------------------------
          PORTFOLIO HERO SECTION — Redesigned
     ------------------------------------------------ -->
-    <section class="relative w-[95%] mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-8 flex items-center">
+    <section class="relative w-full mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-8 flex items-center">
 
         <!-- Hero Content -->
-        <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center justify-start w-full px-4 sm:px-10 lg:px-9 pt-4 pb-10 sm:pt-6 sm:pb-14">
+        <div class="max-w-7xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center justify-start w-full pt-4 pb-10 sm:pt-6 sm:pb-14">
 
             <!-- Left Side: Text Content -->
             <div class="text-left text-white space-y-8 order-1 mt-6 lg:mt-0">
@@ -472,12 +472,12 @@ require_once ADMIN_URL.'/database_config.php';
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row items-center gap-4 pt-2 hero-btns">
-                    <a href="#case-studies" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-transparent border border-[#01a0d8] text-[#01a0d8] font-medium hover:bg-[#01a0d8] hover:text-white transition-all shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)]">
+                    <a href="#case-studies" class="w-full sm:w-auto btn-dark-theme">
                         Explore All Projects
                         <i class="fa-solid fa-arrow-right text-sm"></i>
                     </a>
                     
-                    <a href="/contact-us" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+                    <a href="/contact-us" class="w-full sm:w-auto backdrop-blur-sm btn-dark-theme">
                         Contact Us
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
@@ -661,7 +661,7 @@ require_once ADMIN_URL.'/database_config.php';
                 <span class="text-[#01a0d8]">let's get started.</span>
             </h2>
             
-            <a href="/contact-us" class="inline-flex justify-center items-center gap-2 px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-transparent border border-[#01a0d8] text-[#01a0d8] font-medium hover:bg-[#01a0d8] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(1,160,216,0.1)] hover:shadow-[0_0_25px_rgba(1,160,216,0.4)] text-base sm:text-lg shrink-0 group">
+            <a href="/contact-us" class="sm:px-10 sm:py-5 sm:text-lg shrink-0 group btn-dark-theme">
                 Let's get Started
                 <i class="fa-solid fa-arrow-right text-sm transform transition-transform group-hover:translate-x-1"></i>
             </a>

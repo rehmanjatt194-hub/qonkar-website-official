@@ -441,7 +441,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 </h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     <!-- Product 1 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#01a0d8] hover:bg-[#f0f9ff] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Fresh Apples" data-price="450">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#01a0d8] hover:bg-[#f0f9ff] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Fresh Apples" data-price="450">
                         <div class="w-12 h-12 rounded-xl bg-[#01a0d8] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(1,160,216,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-apple-whole"></i>
                         </div>
@@ -451,7 +451,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                     </button>
                     <!-- Product 2 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2fadc3] hover:bg-[#f0fdfa] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Organic Milk" data-price="280">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#2fadc3] hover:bg-[#f0fdfa] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Organic Milk" data-price="280">
                         <div class="w-12 h-12 rounded-xl bg-[#2fadc3] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(47,173,195,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-glass-water"></i>
                         </div>
@@ -461,7 +461,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                     </button>
                     <!-- Product 3 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#85d55c] hover:bg-[#f0fdf4] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Whole Grain Bread" data-price="150">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#85d55c] hover:bg-[#f0fdf4] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Whole Grain Bread" data-price="150">
                         <div class="w-12 h-12 rounded-xl bg-[#85d55c] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(133,213,92,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-bread-slice"></i>
                         </div>
@@ -471,7 +471,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                     </button>
                     <!-- Product 4 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#01a0d8] hover:bg-[#f0f9ff] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Greek Yogurt" data-price="350">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#01a0d8] hover:bg-[#f0f9ff] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Greek Yogurt" data-price="350">
                         <div class="w-12 h-12 rounded-xl bg-[#01a0d8] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(1,160,216,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-bowl-food"></i>
                         </div>
@@ -481,7 +481,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                     </button>
                     <!-- Product 5 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2fadc3] hover:bg-[#f0fdfa] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Choc Cookies" data-price="250">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#2fadc3] hover:bg-[#f0fdfa] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Choc Cookies" data-price="250">
                         <div class="w-12 h-12 rounded-xl bg-[#2fadc3] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(47,173,195,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-cookie"></i>
                         </div>
@@ -491,7 +491,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                         </div>
                     </button>
                     <!-- Product 6 -->
-                    <button class="btn-product group p-4 rounded-xl bg-white border border-slate-200 hover:border-[#85d55c] hover:bg-[#f0fdf4] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Orange Juice" data-price="400">
+                    <button class="btn-product group p-4 rounded-xl bg-sky-50 border border-slate-200 hover:border-[#85d55c] hover:bg-[#f0fdf4] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center gap-2.5 text-slate-800 shadow-sm" data-name="Orange Juice" data-price="400">
                         <div class="w-12 h-12 rounded-xl bg-[#85d55c] text-white flex items-center justify-center text-xl transition-all duration-300 shadow-[0_4px_12px_rgba(133,213,92,0.25)] group-hover:scale-110">
                             <i class="fa-solid fa-jar"></i>
                         </div>
@@ -621,7 +621,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         <!-- Comparison Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <!-- Left Column: Old Way -->
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 flex flex-col justify-between shadow-sm transition-all duration-300 hover:shadow-md hover:border-rose-300 group">
+            <div class="bg-sky-50 border border-slate-200 rounded-2xl p-8 space-y-6 flex flex-col justify-between shadow-sm transition-all duration-300 hover:shadow-md hover:border-rose-300 group">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-rose-600 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">Before Sellvixa</span>
@@ -670,7 +670,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             </div>
 
             <!-- Right Column: New Way -->
-            <div class="bg-white border-2 border-[var(--secondary-color)] rounded-2xl p-8 space-y-6 flex flex-col justify-between shadow-md transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
+            <div class="bg-sky-50 border-2 border-[var(--secondary-color)] rounded-2xl p-8 space-y-6 flex flex-col justify-between shadow-md transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
                 <!-- Ambient Glow Background -->
                 <div class="absolute top-0 right-0 w-24 h-24 bg-[var(--secondary-color)]/5 rounded-full blur-2xl pointer-events-none"></div>
                 

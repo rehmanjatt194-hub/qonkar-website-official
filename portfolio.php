@@ -327,6 +327,11 @@ require_once ADMIN_URL.'/database_config.php';
             box-shadow: 0 0 0 1px rgba(149,201,81,0.4), 0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(149,201,81,0.08);
             border-color: rgba(149,201,81,0.4);
         }
+
+        .bg-sky-50 { background-color: #f0f9ff !important; }
+        .bg-emerald-50 { background-color: #ecfdf5 !important; }
+        .bg-purple-50 { background-color: #faf5ff !important; }
+        .bg-orange-50 { background-color: #fff7ed !important; }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -442,6 +447,11 @@ require_once ADMIN_URL.'/database_config.php';
         .lenis-scrolling iframe {
             pointer-events: none;
         }
+
+        .bg-sky-50 { background-color: #f0f9ff !important; }
+        .bg-emerald-50 { background-color: #ecfdf5 !important; }
+        .bg-purple-50 { background-color: #faf5ff !important; }
+        .bg-orange-50 { background-color: #fff7ed !important; }
     </style>
 </head>
 

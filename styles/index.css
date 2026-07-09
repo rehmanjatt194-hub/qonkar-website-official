@@ -307,7 +307,7 @@ html, body {
     from var(--angle),
     transparent 80%,
     #01a0d8 92%,
-    #ffffff 96%,
+    #01a0d8 96%,
     #2fadc3 99%,
     transparent 100%
   );
@@ -345,4 +345,42 @@ html, body {
 }
 .faq-item.active .faq-icon svg {
     color: #ffffff !important;
+}
+
+/* Global Button Themes */
+.btn-dark-theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    border: 1px solid #01a0d8;
+    color: #01a0d8;
+    background-color: transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(1,160,216,0.1);
+}
+.btn-dark-theme:hover {
+    background-color: #01a0d8;
+    color: #000d16;
+    box-shadow: 0 0 25px rgba(1,160,216,0.4);
+}
+
+.btn-light-theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3f89c9, #2fadc3, #85d55c);
+    transition: all 0.3s ease;
+}
+.btn-light-theme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

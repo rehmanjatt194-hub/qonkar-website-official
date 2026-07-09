@@ -364,7 +364,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
 
                 <!-- Attractive Stat Card -->
                 <div class="pt-2 border-t border-slate-200 mt-1">
-                    <div class="bg-white border border-slate-400 p-4 rounded-[30px] flex items-center gap-4 shadow-[0_10px_25px_rgba(15,23,42,0.02)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300 relative overflow-hidden">
+                    <div class="bg-sky-50 border border-slate-400 p-4 rounded-[30px] flex items-center gap-4 shadow-[0_10px_25px_rgba(15,23,42,0.02)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300 relative overflow-hidden">
                         <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-teal-500/5 rounded-full blur-xl pointer-events-none"></div>
                         
                         <!-- Circular Gauge -->
@@ -411,28 +411,28 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             <!-- Challenges Grid -->
             <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
                 <!-- Card 1 -->
-                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                <div class="bg-sky-50 border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
                     <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-clock"></i></div>
                     <h4 class="text-slate-900 font-bold text-base">The 45-Minute Daily Attendance Drain</h4>
                     <p class="text-slate-700 text-sm font-light leading-relaxed">Teachers wasted 20 minutes daily on paper attendance, which staff had to manually re-enter into spreadsheets.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                <div class="bg-sky-50 border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
                     <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-receipt"></i></div>
                     <h4 class="text-slate-900 font-bold text-base">Friction-Ridden Fee Collection</h4>
                     <p class="text-slate-700 text-sm font-light leading-relaxed">Manual invoicing and chasing late payments over calls caused significant collection delays and reconciliation errors.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                <div class="bg-sky-50 border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
                     <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-file-signature"></i></div>
                     <h4 class="text-slate-900 font-bold text-base">End-of-Term Grading Bottlenecks</h4>
                     <p class="text-slate-700 text-sm font-light leading-relaxed">Calculating GPA averages manually and printing report cards delayed final grade distribution by days.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
+                <div class="bg-sky-50 border border-slate-400 p-6 rounded-[24px] space-y-4 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:border-teal-500/40 hover:shadow-[0_15px_30px_rgba(43,181,188,0.06)] transition-all duration-300">
                     <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-[#2BB5BC] flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-comment-slash"></i></div>
                     <h4 class="text-slate-900 font-bold text-base">The Parent-Teacher Blindspot</h4>
                     <p class="text-slate-700 text-sm font-light leading-relaxed">Parents lacked real-time visibility into child attendance and exams, creating communication gaps.</p>
@@ -824,7 +824,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
     </div>
 
     <!-- Narrative Impact Bullet Points -->
-    <div class="max-w-4xl mx-auto bg-white border border-slate-200 rounded-3xl p-8 md:p-12 space-y-8 shadow-md">
+    <div class="max-w-4xl mx-auto bg-sky-50 border border-slate-200 rounded-3xl p-8 md:p-12 space-y-8 shadow-md">
         <h2 class="text-2xl md:text-3xl font-bold text-[#000d16] leading-tight">Key <span class="font-bold bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent">Achievements</span> & Operational Impact</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div class="space-y-2">
@@ -863,11 +863,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="/contact-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#01a0d8] text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:bg-[#95C951] hover:scale-105 shadow-md group">
+            <a href="/contact-us" class="sm:text-base group btn-dark-theme">
                 Start Your Project
                 <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
             </a>
-            <a href="/portfolio" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-white/20 text-white text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300">
+            <a href="/portfolio" class="sm:text-base btn-light-theme">
                 View More Case Studies
             </a>
         </div>

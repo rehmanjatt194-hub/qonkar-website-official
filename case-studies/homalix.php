@@ -262,7 +262,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
         
         <!-- Centered Pill Button -->
         <div class="pt-4">
-            <a href="#" target="_blank" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#080808] text-white text-sm sm:text-base font-medium transition-all duration-300 hover:bg-[#1a1a1a] hover:scale-105 shadow-xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] group">
+            <a href="#" target="_blank" class="sm:text-base group btn-light-theme">
                 View Live Website
                 <span class="text-[#ffd700] text-lg transition-transform duration-300 group-hover:translate-x-1.5">➔</span>
             </a>
@@ -394,7 +394,7 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
                 Transitioning from fragmented legacy silos to a unified clinical nervous system. Observe the impact of Homalix enterprise integration across clinical ecosystems.
             </p>
             <div class="pt-2">
-                <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#01a0d8] text-white text-sm font-semibold hover:bg-[#95C951] transition shadow-md hover:scale-105 group">
+                <a href="/contact-us" class="group btn-dark-theme">
                     Request Impact Report
                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </a>

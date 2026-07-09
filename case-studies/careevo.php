@@ -942,11 +942,11 @@ require_once dirname(__DIR__) . '/' . ADMIN_URL . '/database_config.php';
             Whether you're running a single café or a 20-branch chain — Qonkar will design, build, and deploy a custom Careevo system tailored to your exact workflow. From POS to analytics — fully yours.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="/contact-us" class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-[#01a0d8] text-white font-semibold text-base hover:bg-[#95C951] hover:text-white transition shadow-md hover:scale-105 group">
+            <a href="/contact-us" class="group btn-dark-theme">
                 Start Your Project
                 <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
             </a>
-            <a href="/portfolio" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/5 border border-white/15 text-white font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
+            <a href="/portfolio" class="backdrop-blur-sm btn-dark-theme">
                 <i class="fa-solid fa-briefcase text-sm"></i>
                 View More Work
             </a>
@@ -1096,7 +1096,7 @@ counters.forEach(c => observer.observe(c));
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Still have questions?</h3>
                     <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Our restaurant technology experts are ready to walk you through Careevo and answer any specific questions about your setup.</p>
-                    <a href="/contact-us" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#01a0d8] text-white font-semibold text-sm transition-all duration-300 hover:bg-[#95C951] hover:text-white shadow-md hover:scale-105 group">
+                    <a href="/contact-us" class="group btn-dark-theme">
                         Talk to an Expert
                         <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                     </a>

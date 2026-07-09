@@ -116,7 +116,7 @@ require_once ADMIN_URL.'/database_config.php';
                     At Qonkar, we don't just write code; we architect solutions. We are looking for passionate individuals ready to build the future of technology in an agile, innovative environment.
                 </p>
                 
-                <a href="#openings" class="mt-4 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#01a0d8] text-[#000d16] border border-[#01a0d8] font-bold hover:bg-transparent hover:text-[#01a0d8] transition-all duration-300 shadow-[0_0_20px_rgba(1,160,216,0.3)] hover:shadow-[0_0_30px_rgba(1,160,216,0.5)] group">
+                <a href="#openings" class="mt-4 group btn-dark-theme">
                     View Openings 
                     <i class="fa-solid fa-arrow-down text-sm group-hover:translate-y-1 transition-transform"></i>
                 </a>

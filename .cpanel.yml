@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DIRPATH=/home/qonkarco/public_html
-    - /bin/cp -R * $DIRPATH
+    - export DEPLOYPATH=/home/qonkarco/public_html/
+    - /bin/cp -R * $DEPLOYPATH

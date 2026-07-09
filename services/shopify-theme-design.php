@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -232,10 +232,10 @@ require_once "../".ADMIN_URL.'/database_config.php';
         },
         {
           "@type": "Question",
-          "name": "Does custom theme design affect my store’s loading speed?",
+          "name": "Does custom theme design affect my storeï¿½s loading speed?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "When done correctly, it improves speed by using lightweight, optimized code that passes Google’s Core Web Vitals."
+            "text": "When done correctly, it improves speed by using lightweight, optimized code that passes Googleï¿½s Core Web Vitals."
           }
         }
       ]
@@ -375,8 +375,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     </div>
 
                     <!-- Floating stat card 1 -->
-                    <div class="absolute -bottom-4 -left-4 sm:left-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3"
-                        style="background:#fff; border-left: 4px solid #3f89c9; min-width:160px;">
+                    <div class="absolute -bottom-4 -left-4 sm:left-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3 animate-float-badge-1"
+                        style="background:#f0f9ff; border-left: 4px solid #3f89c9; min-width:160px;">
                         <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
                             style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
@@ -390,8 +390,8 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     </div>
 
                     <!-- Floating stat card 2 -->
-                    <div class="absolute -top-4 -right-4 sm:right-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3"
-                        style="background:#fff; border-left: 4px solid #85d55c; min-width:160px;">
+                    <div class="absolute -top-4 -right-4 sm:right-4 z-20 rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3 animate-float-badge-2"
+                        style="background:#f0fdf4; border-left: 4px solid #85d55c; min-width:160px;">
                         <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
                             style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
@@ -458,9 +458,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
 
                     <!-- CTA -->
                     <div class="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
-                        <a href="/contact-us"
-                            class="btn-dark-theme"
-                            >
+                        <a href="/contact-us" class="btn-light-theme">
                             Start Your Project
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -483,6 +481,266 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
+    <section id="design-expertise" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
+        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
+                bg-[url('/images/background_curve.svg')] 
+                bg-[center_top_60px]">
+            <h2 class="text-sm uppercase font-light text-white mb-6">
+                Our Design Expertise:
+            </h2>
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;CORE CAPABILITIES</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                Crafting <b>World-Class</b> Storefronts
+            </h2>
+            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
+                We combine aesthetic excellence with technical precision. Every pixel is placed with a purpose: to guide your customer to the checkout button.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/01_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/01_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Custom UI/UX Design
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        We don't do "cookie-cutter." We design bespoke user interfaces tailored to your brand guidelines. From typography to color psychology, every element creates a premium feel that builds trust instantly.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/02_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/02_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Mobile-First Architecture
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        With 80% of traffic on mobile, we design for the smallest screen first. Thumb-friendly navigation, sticky ATCs, and optimized touch targets ensure you never miss a mobile sale.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/03_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/03_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Interaction & Motion Design
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Engage customers with subtle micro-interactions, scroll animations, and hover effects. We use modern CSS/JS to add "delight" without compromising site speed.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/04_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/04_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Conversion-Centered Design (CCD)
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Pretty isn't enough. We apply behavioral psychology principlesï¿½scarcity, urgency, and social proofï¿½directly into the design layout to maximize Average Order Value (AOV).</p>
+                </div>
+        </div>
+
+    </section>
+
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2 space-y-4">
+                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; CORE WEB VITALS</div></div></div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        Speed by <b>Design</b>
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                       Heavy designs usually mean slow sites. Not with us. We optimize assets, use modern image formats (WebP), and write clean Liquid code to ensure your visually stunning site still loads in under 2 seconds.
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-3">
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Optimized Asset Loading</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                We prevent "layout shifts" (CLS) and ensure visual stability, so your design looks crisp instantly without jarring movements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Smart Accessibility</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                Inclusive design isn't just ethical; it's profitable. We ensure your theme is ADA/WCAG compliant, accessible to all users.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2 flex flex-col gap-3 order-2 md:order-1">
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_strategy.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Modular Architecture</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                Built on Shopify 2.0. Drag-and-drop sections allow your marketing team to launch landing pages in minutes, not days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_marketing.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/06_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Design Systems</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                We create a consistent Design System (Colors, Typography, Components) ensuring your brand looks perfect across every page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 space-y-4 order-1 md:order-2">
+                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; FUTURE PROOF</div></div></div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        <b>Scalable</b> Design Systems
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                        Consistency builds trust. We deliver a comprehensive Design System along with your theme, ensuring that as you add products and pages, your brand aesthetic remains flawless and premium.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
         <div class="max-w-7xl mx-auto">
 
@@ -738,269 +996,6 @@ require_once "../".ADMIN_URL.'/database_config.php';
             </div>
         </div>
     </section>
-    
-    
-    
-
-    <section id="design-expertise" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
-        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
-                bg-[url('/images/background_curve.svg')] 
-                bg-[center_top_60px]">
-            <h2 class="text-sm uppercase font-light text-white mb-6">
-                Our Design Expertise:
-            </h2>
-            <div class="glass-border inline-block mb-4">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;CORE CAPABILITIES</p>
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                Crafting <b>World-Class</b> Storefronts
-            </h2>
-            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
-                We combine aesthetic excellence with technical precision. Every pixel is placed with a purpose: to guide your customer to the checkout button.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/01_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/01_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Custom UI/UX Design
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        We don't do "cookie-cutter." We design bespoke user interfaces tailored to your brand guidelines. From typography to color psychology, every element creates a premium feel that builds trust instantly.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/02_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/02_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Mobile-First Architecture
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        With 80% of traffic on mobile, we design for the smallest screen first. Thumb-friendly navigation, sticky ATCs, and optimized touch targets ensure you never miss a mobile sale.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/03_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/03_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Interaction & Motion Design
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Engage customers with subtle micro-interactions, scroll animations, and hover effects. We use modern CSS/JS to add "delight" without compromising site speed.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/04_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/04_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Conversion-Centered Design (CCD)
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Pretty isn't enough. We apply behavioral psychology principles—scarcity, urgency, and social proof—directly into the design layout to maximize Average Order Value (AOV).</p>
-                </div>
-        </div>
-
-    </section>
-
-    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/2 space-y-4">
-                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; CORE WEB VITALS</div></div></div>
-                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                        Speed by <b>Design</b>
-                    </h2>
-                    <p class=" font-light leading-relaxed text-white ">
-                       Heavy designs usually mean slow sites. Not with us. We optimize assets, use modern image formats (WebP), and write clean Liquid code to ensure your visually stunning site still loads in under 2 seconds.
-                    </p>
-                </div>
-
-                <div class="md:w-1/2 flex flex-col gap-3">
-                    <!-- Card 1 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Optimized Asset Loading</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                We prevent "layout shifts" (CLS) and ensure visual stability, so your design looks crisp instantly without jarring movements.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Smart Accessibility</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                Inclusive design isn't just ethical; it's profitable. We ensure your theme is ADA/WCAG compliant, accessible to all users.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/2 flex flex-col gap-3 order-2 md:order-1">
-                    <!-- Card 1 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_strategy.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Modular Architecture</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                Built on Shopify 2.0. Drag-and-drop sections allow your marketing team to launch landing pages in minutes, not days.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_marketing.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/06_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Design Systems</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                We create a consistent Design System (Colors, Typography, Components) ensuring your brand looks perfect across every page.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:w-1/2 space-y-4 order-1 md:order-2">
-                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; FUTURE PROOF</div></div></div>
-                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                        <b>Scalable</b> Design Systems
-                    </h2>
-                    <p class=" font-light leading-relaxed text-white ">
-                        Consistency builds trust. We deliver a comprehensive Design System along with your theme, ensuring that as you add products and pages, your brand aesthetic remains flawless and premium.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
         <div class="w-full mx-auto ">
@@ -1011,7 +1006,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     What makes Qonkar <b>Different</b>
                 </h2>
                 <p class="mt-2 text-white">
-                    We don’t just launch. We build. We scale. We convert. We retain.
+                    We donï¿½t just launch. We build. We scale. We convert. We retain.
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -1099,7 +1094,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                     <div class="faq-item border border-gray-600 rounded-lg overflow-hidden transition">
                         <button
                             class="faq-header w-full flex justify-between items-center px-6 py-4 text-left font-semibold">
-                            <span class="text-white">Does custom theme design affect my store’s loading speed?</span>
+                            <span class="text-white">Does custom theme design affect my storeï¿½s loading speed?</span>
                             <div
                                 class="faq-icon min-w-8 min-h-8 w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-700 transition-all duration-300">
                                 <svg class="w-4 h-4 transition-transform duration-300 text-white" fill="none" stroke="currentColor"
@@ -1110,7 +1105,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 bg-transparent">
                             <p class="px-6 py-4 text-white !text-white">
-                                When done correctly, <b>Shopify custom theme development</b> actually improves speed. Generic themes often have "heavy" features you don't need. We write lightweight, optimized code that ensures your Shopify website design services result in a store that passes Google’s Core Web Vitals and provides a lightning-fast experience for your customers.
+                                When done correctly, <b>Shopify custom theme development</b> actually improves speed. Generic themes often have "heavy" features you don't need. We write lightweight, optimized code that ensures your Shopify website design services result in a store that passes Googleï¿½s Core Web Vitals and provides a lightning-fast experience for your customers.
                             </p>
                         </div>
                     </div>
@@ -1148,8 +1143,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 Let's build a store that looks stunning and sells effortlessly.
             </p>
 
-            <a href="/contact-us"
-                class="btn-dark-theme">
+            <a href="/contact-us" class="btn-light-theme">
                 Start Your Design
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">
@@ -1226,4 +1220,9 @@ require_once "../".ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
+
+
+
+
+
 

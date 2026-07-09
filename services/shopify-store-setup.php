@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -250,270 +250,6 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
-        <div class="max-w-7xl mx-auto">
-
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
-                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
-                    &#9679; &nbsp;Qonkar Shopify Setup
-                </span>
-                <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
-                    Seamless <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Store Setup</span>
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
-                    Launch your e-commerce journey with a fully configured, professionally optimized Shopify store built for immediate sales.
-                </p>
-            </div>
-
-            <!-- Service Cards Grid -->
-            <div class="flex flex-col gap-8">
-
-                <!-- Card 1: Bespoke Storefront Architecture -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/Full-Suite-Store-Initialization.webp"
-                            alt="Full-Suite Store Initialization"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Full-Suite <b>Store Initialization</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            We handle the heavy lifting. From setting up payment gateways to configuring shipping zones, our
-                            <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">launch team</a> delivers a turnkey Shopify storefront ready for business.
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                Domain &amp; Payment Gateway Setup
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                Shipping &amp; Tax Calculations
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                Security &amp; Policy Pages
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 2: Shopify Plus (reversed) -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/Product-Catalog-&-Inventory.webp"
-                            alt="Product Catalog & Inventory"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Product <b>Catalog &amp; Inventory</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Organize your inventory for maximum searchability. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">e-commerce coordinators</a> structure collections, tag variables, and organize multi-option variants.
-                        </p>
-                        <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
-                            <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">0 to 10k+</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Products Handled</p>
-                            </div>
-                            <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">100%</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Launch Readiness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Custom App Development -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/Essential-App-&-Integration-Setup.webp"
-                            alt="Essential App & Integration Setup"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Essential <b>App &amp; Integration</b> Setup</h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Equip your store with critical growth features. We install and configure top-tier apps for marketing, customer support, SEO, and analytics, ensuring they <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">integrate seamlessly</a>.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Klaviyo</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">Judge.me</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">Matrixify</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Google Analytics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Zero-Downtime Migrations (reversed) -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/Offline-to-Online-Store-Launch.webp"
-                            alt="Offline to Online Store Launch"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Offline to <b>Online Store Launch</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Transition your brick-and-mortar business to a global online store. We map your offline operations into a highly functional, user-friendly digital catalog.
-                        </p>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
-                            <span class="font-semibold text-sm" style="color:#374151;">Physical Retail</span>
-                            <div class="flex-1 flex items-center justify-center">
-                                <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
-                                <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
-                                </svg>
-                            </div>
-                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Shopify Commerce</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Speed Optimization -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/SEO-&-Marketing-Foundations.webp"
-                            alt="SEO & Marketing Foundations"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">SEO <b>&amp; Marketing Foundations</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Start off visible. We configure schema markup, optimize meta titles, and set up tracking pixels so you are ready to launch search ads and rank on Google.
-                        </p>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">SEO Setup Health</span>
-                                    <span style="color:#2fadc3; font-weight:700;">95/100</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:95%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Tracking Accuracy</span>
-                                    <span style="color:#3f89c9; font-weight:700;">100%</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:100%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6: Headless Commerce (reversed) -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/shopify-store-setup/Post-Launch-Staff-Training.webp"
-                            alt="Post-Launch Staff Training"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Post-Launch <b>Staff Training</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            We don't just build and leave. We provide customized video walkthroughs and guides so your team can confidently manage products, orders, and promotions.
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                </span>
-                                Admin &amp; Order Dashboard Training
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                </span>
-                                Inventory Management Guides
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Bottom CTA -->
-            <div class="text-center mt-14">
-                <a href="/contact-us"
-                    class="btn-light-theme"
-                    >
-                    Discuss Your Project With Us
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
         <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
                 bg-[url('/images/background_curve.svg')] 
@@ -774,6 +510,261 @@ require_once "../".ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
+                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                    &#9679; &nbsp;Qonkar Shopify Setup
+                </span>
+                <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
+                    Seamless <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Shopify Store Setup</span>
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
+                    Launch your e-commerce journey with a fully configured, professionally optimized Shopify store built for immediate sales.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="flex flex-col gap-8">
+
+                <!-- Card 1: Bespoke Storefront Architecture -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/Full-Suite-Store-Initialization.webp"
+                            alt="Full-Suite Store Initialization"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Full-Suite <b>Store Initialization</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            We handle the heavy lifting. From setting up payment gateways to configuring shipping zones, our
+                            <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">launch team</a> delivers a turnkey Shopify storefront ready for business.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Domain &amp; Payment Gateway Setup
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Shipping &amp; Tax Calculations
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Security &amp; Policy Pages
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Shopify Plus (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/Product-Catalog-&-Inventory.webp"
+                            alt="Product Catalog & Inventory"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Product <b>Catalog &amp; Inventory</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Organize your inventory for maximum searchability. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">e-commerce coordinators</a> structure collections, tag variables, and organize multi-option variants.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">0 to 10k+</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Products Handled</p>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">100%</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Launch Readiness</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Custom App Development -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/Essential-App-&-Integration-Setup.webp"
+                            alt="Essential App & Integration Setup"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Essential <b>App &amp; Integration</b> Setup</h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Equip your store with critical growth features. We install and configure top-tier apps for marketing, customer support, SEO, and analytics, ensuring they <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">integrate seamlessly</a>.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Klaviyo</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">Judge.me</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">Matrixify</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Zero-Downtime Migrations (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/Offline-to-Online-Store-Launch.webp"
+                            alt="Offline to Online Store Launch"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Offline to <b>Online Store Launch</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Transition your brick-and-mortar business to a global online store. We map your offline operations into a highly functional, user-friendly digital catalog.
+                        </p>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
+                            <span class="font-semibold text-sm" style="color:#374151;">Physical Retail</span>
+                            <div class="flex-1 flex items-center justify-center">
+                                <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Shopify Commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Speed Optimization -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/SEO-&-Marketing-Foundations.webp"
+                            alt="SEO & Marketing Foundations"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">SEO <b>&amp; Marketing Foundations</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Start off visible. We configure schema markup, optimize meta titles, and set up tracking pixels so you are ready to launch search ads and rank on Google.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">SEO Setup Health</span>
+                                    <span style="color:#2fadc3; font-weight:700;">95/100</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:95%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">Tracking Accuracy</span>
+                                    <span style="color:#3f89c9; font-weight:700;">100%</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:100%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Headless Commerce (reversed) -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/shopify-store-setup/Post-Launch-Staff-Training.webp"
+                            alt="Post-Launch Staff Training"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Post-Launch <b>Staff Training</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            We don't just build and leave. We provide customized video walkthroughs and guides so your team can confidently manage products, orders, and promotions.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Admin &amp; Order Dashboard Training
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Inventory Management Guides
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-14">
+                <a href="/contact-us"
+                    class="btn-light-theme"
+                    >
+                    Discuss Your Project With Us
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
         <div class="w-full mx-auto ">
             <div class="text-center mb-10">
@@ -920,8 +911,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 Let's build a store that's ready to scale from day one.
             </p>
 
-            <a href="/contact-us"
-                class="btn-dark-theme">
+            <a href="/contact-us" class="btn-light-theme">
                 Start Your Launch
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">
@@ -998,4 +988,5 @@ require_once "../".ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
+
 

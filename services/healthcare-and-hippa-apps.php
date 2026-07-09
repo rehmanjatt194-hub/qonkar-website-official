@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ? FIX 1: PHP Logic Moved to Top
 require_once '../db-path.php'; // path relative to current file
 
@@ -246,7 +246,199 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
     
     
     
-    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
+        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
+                bg-[url('/images/background_curve.svg')] 
+                bg-[center_top_60px]">
+            <h2 class="text-sm uppercase font-light text-white mb-6">
+                Our Healthcare Solutions:
+            </h2>
+            <div class="glass-border inline-block mb-4">
+                <div class="glass-background">
+                    <div class="glass text-sm font-light">
+                        <p>&#9679; &nbsp;CORE CAPABILITIES</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                Digital Health <b>Ecosystems</b>
+            </h2>
+            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
+                We build the technology that powers modern patient care.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/01_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/01_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Telemedicine Platforms
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Secure video consultation apps with integrated scheduling, e-prescriptions, and payment processing for virtual care.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/02_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/02_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        EMR/EHR Integration
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Seamlessly connect your app with Epic, Cerner, DrChrono, or AthenaHealth using HL7 and FHIR standards.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/03_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/03_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        mHealth & Wearables (IoT)
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Apps that sync with Apple HealthKit, Google Fit, and medical devices to track patient vitals in real-time.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/04_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/04_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Patient Portals
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Secure web portals for appointment booking, lab results access, bill payment, and secure messaging with providers.
+                    </p>
+                </div>
+        </div>
+
+    </section>
+
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2 space-y-4">
+                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; SECURITY STACK</div></div></div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        Bank-Grade <b>Security</b>
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                       We use the same encryption standards as financial institutions to ensure PHI remains confidential and secure against cyber threats.
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-3">
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Data Encryption</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                AES-256 encryption for data at rest and TLS 1.3 for data in transit. Your patient data is unreadable to hackers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Interoperability Standards</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                Full compliance with HL7 and FHIR standards to ensure seamless data exchange between your app and hospital systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+<section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
         <div class="max-w-7xl mx-auto">
 
             <!-- Section Header -->
@@ -499,208 +691,8 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
             </div>
         </div>
     </section>
-    
-    
-    
-    
-    
-    
-    
-    
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
-        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
-                bg-[url('/images/background_curve.svg')] 
-                bg-[center_top_60px]">
-            <h2 class="text-sm uppercase font-light text-white mb-6">
-                Our Healthcare Solutions:
-            </h2>
-            <div class="glass-border inline-block mb-4">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;CORE CAPABILITIES</p>
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                Digital Health <b>Ecosystems</b>
-            </h2>
-            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
-                We build the technology that powers modern patient care.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/01_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/01_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Telemedicine Platforms
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Secure video consultation apps with integrated scheduling, e-prescriptions, and payment processing for virtual care.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/02_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/02_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        EMR/EHR Integration
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Seamlessly connect your app with Epic, Cerner, DrChrono, or AthenaHealth using HL7 and FHIR standards.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/03_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/03_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        mHealth & Wearables (IoT)
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Apps that sync with Apple HealthKit, Google Fit, and medical devices to track patient vitals in real-time.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/04_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/04_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Patient Portals
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Secure web portals for appointment booking, lab results access, bill payment, and secure messaging with providers.
-                    </p>
-                </div>
-        </div>
-
-    </section>
-
-    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/2 space-y-4">
-                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; SECURITY STACK</div></div></div>
-                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                        Bank-Grade <b>Security</b>
-                    </h2>
-                    <p class=" font-light leading-relaxed text-white ">
-                       We use the same encryption standards as financial institutions to ensure PHI remains confidential and secure against cyber threats.
-                    </p>
-                </div>
-
-                <div class="md:w-1/2 flex flex-col gap-3">
-                    <!-- Card 1 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Data Encryption</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                AES-256 encryption for data at rest and TLS 1.3 for data in transit. Your patient data is unreadable to hackers.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Interoperability Standards</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                Full compliance with HL7 and FHIR standards to ensure seamless data exchange between your app and hospital systems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
         <div class="w-full mx-auto ">
             <div class="text-center mb-10">
                 <div class="glass-border inline-block mb-4">
@@ -847,8 +839,7 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
                 Let's build a secure, compliant solution that saves lives.
             </p>
 
-            <a href="/contact-us"
-                class="btn-dark-theme">
+            <a href="/contact-us" class="btn-light-theme">
                 Start Development
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">
@@ -925,4 +916,5 @@ $finalCanonical = "https://qonkar.com" . $request_uri;
 </body>
 
 </html>
+
 

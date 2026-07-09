@@ -248,18 +248,194 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     <div class="container mx-auto flex flex-col items-center gap-3">
-    <div class="glass-border inline-block mb-2">
-                <div class="glass-background">
-                    <div class="glass text-sm font-light">
-                        <p>&#9679; &nbsp;OUR Services</p>
+
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
+        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
+                bg-[url('/images/background_curve.svg')] 
+                bg-[center_top_60px]">
+                Our Development Services:
+            </h2>
+            <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; CORE CAPABILITIES</div></div></div>
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                Custom Web <b>Services</b>
+            </h2>
+            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
+                We build more than just websites. We build platforms that run businesses.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/01_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/01_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Custom Web Applications
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Bespoke SaaS products, client portals, and internal tools built with React, Node.js, and PHP. We solve problems that off-the-shelf software can't.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/02_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/02_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Enterprise Corporate Sites
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        High-performance, secure, and SEO-optimized websites for global brands. We ensure your digital presence reflects your market authority.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/03_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/03_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        API Development & Integration
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        We connect your disparate systems. From payment gateways (Stripe) to CRMs (HubSpot) and ERPs, we build the bridges that automate your business.
+                    </p>
+                </div>
+
+                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
+                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-[#046362]/60"></div>
+                    </div>
+
+                    <img src="/images/icons/services/04_color.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
+                    <img src="/images/icons/services/04_white.svg"
+                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
+                        alt="">
+
+                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
+                        Progressive Web Apps (PWA)
+                    </h3>
+
+                    <p class="leading-relaxed text-white font-light text-left relative z-10">
+                        Get the power of a mobile app on the web. We build PWAs that offer offline capabilities, push notifications, and app-like speeds without the app store.
+                    </p>
+                </div>
+        </div>
+
+    </section>
+
+    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2 space-y-4">
+                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; OUR TOOLKIT</div></div></div>
+                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
+                        Modern <b>Tech Stack</b> Mastery
+                    </h2>
+                    <p class=" font-light leading-relaxed text-white ">
+                       We don't use outdated tools. We build on the same modern infrastructure used by Netflix, Uber, and Facebook to ensure your product is future-proof, secure, and blazing fast.
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-3">
+                    <!-- Card 1 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Frontend Engineering</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                React.js, Next.js, Vue.js, Tailwind CSS. We create responsive, interactive UIs that feel like magic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
+                        <!-- Backdrop image on hover (subtle) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
+                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
+                            <div class="absolute inset-0 bg-[#000d16]"></div>
+                        </div>
+
+                        <!-- Subtle arrow indicator -->
+                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
+                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+
+                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
+                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
+                        </div>
+
+                        <div class="relative z-10 flex-grow">
+                            <h3 class="text-2xl font-light mb-2 text-white">Backend & Cloud</h3>
+                            <p class="text-sm font-light leading-relaxed text-slate-400">
+                                Node.js, Python (Django/FastAPI), PHP (Laravel), AWS, Docker. Robust backends that can scale to millions of requests.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-light mb-4">
-                Web Design and <b>Development Services</b>
-            </h2>
-                <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
         <div class="max-w-7xl mx-auto">
 
             <!-- Section Header -->
@@ -512,196 +688,6 @@ require_once "../".ADMIN_URL.'/database_config.php';
             </div>
         </div>
     </section>
-    
-    
-    
-
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
-        <div class="text-center mb-12   bg-no-repeat bg-[length:40%] 
-                bg-[url('/images/background_curve.svg')] 
-                bg-[center_top_60px]">
-            <h2 class="text-sm uppercase font-light text-white mb-6">
-                Our Development Services:
-            </h2>
-            <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; CORE CAPABILITIES</div></div></div>
-            <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                Custom Web <b>Services</b>
-            </h2>
-            <p class=" font-light leading-relaxed text-white w-[75%] mx-auto">
-                We build more than just websites. We build platforms that run businesses.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_cutomization.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/01_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/01_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Custom Web Applications
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Bespoke SaaS products, client portals, and internal tools built with React, Node.js, and PHP. We solve problems that off-the-shelf software can't.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_redesign.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/02_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/02_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Enterprise Corporate Sites
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        High-performance, secure, and SEO-optimized websites for global brands. We ensure your digital presence reflects your market authority.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                     bg-white/5 backdrop-blur-[100px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_theme-developement.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/03_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/03_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        API Development & Integration
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        We connect your disparate systems. From payment gateways (Stripe) to CRMs (HubSpot) and ERPs, we build the bridges that automate your business.
-                    </p>
-                </div>
-
-                <div class="group background-backdrop relative rounded-[5px] border border-[1.087px] border-[#2F2F2F]/50
-                        bg-white/5 backdrop-blur-[200px] p-6 text-left shadow-lg flex flex-col items-start overflow-hidden">
-
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <img src="/images/services_pictures/shopify_maintanance.webp" class="w-full h-full object-cover" alt="">
-                        <div class="absolute inset-0 bg-[#046362]/60"></div>
-                    </div>
-
-                    <img src="/images/icons/services/04_color.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 group-hover:hidden relative z-10" alt="">
-                    <img src="/images/icons/services/04_white.svg"
-                        class="mt-5 mb-10 w-[50px] transition-all duration-500 hidden group-hover:block relative z-10"
-                        alt="">
-
-                    <h3 class="text-3xl font-light mb-3 text-left relative z-10">
-                        Progressive Web Apps (PWA)
-                    </h3>
-
-                    <p class="leading-relaxed text-white font-light text-left relative z-10">
-                        Get the power of a mobile app on the web. We build PWAs that offer offline capabilities, push notifications, and app-like speeds without the app store.
-                    </p>
-                </div>
-        </div>
-
-    </section>
-
-    <section class="w-full py-16 bg-[var(--body-bg)] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/2 space-y-4">
-                    <div class="glass-border w-max mb-4 inline-block" style="display: inline-block;"><div class="glass-background"><div class="glass text-sm font-light text-center text-white px-6">&#9679; OUR TOOLKIT</div></div></div>
-                    <h2 class="text-3xl md:text-4xl font-light text-white mb-2">
-                        Modern <b>Tech Stack</b> Mastery
-                    </h2>
-                    <p class=" font-light leading-relaxed text-white ">
-                       We don't use outdated tools. We build on the same modern infrastructure used by Netflix, Uber, and Facebook to ensure your product is future-proof, secure, and blazing fast.
-                    </p>
-                </div>
-
-                <div class="md:w-1/2 flex flex-col gap-3">
-                    <!-- Card 1 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 0ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_optimize.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/05_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Frontend Engineering</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                React.js, Next.js, Vue.js, Tailwind CSS. We create responsive, interactive UIs that feel like magic.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group relative flex gap-7 items-center p-6 mouse-hover-card scroll-reveal-card" style="transition-delay: 150ms;">
-                        <!-- Backdrop image on hover (subtle) -->
-                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none z-[1]">
-                            <img src="/images/services_pictures/shopify_CRO.webp" class="w-full h-full object-cover" alt="">
-                            <div class="absolute inset-0 bg-[#000d16]"></div>
-                        </div>
-
-                        <!-- Subtle arrow indicator -->
-                        <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none z-10">
-                            <svg class="w-4 h-4 text-[#01a0d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </div>
-
-                        <div class="icon-circle w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 z-10 relative bg-black/20">
-                            <img src="/images/icons/services/07_white.svg" class="w-6 h-6 transition-all duration-300 icon-tint" alt="">
-                        </div>
-
-                        <div class="relative z-10 flex-grow">
-                            <h3 class="text-2xl font-light mb-2 text-white">Backend & Cloud</h3>
-                            <p class="text-sm font-light leading-relaxed text-slate-400">
-                                Node.js, Python (Django/FastAPI), PHP (Laravel), AWS, Docker. Robust backends that can scale to millions of requests.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
         <div class="w-full mx-auto ">
@@ -848,8 +834,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 Let's engineer a platform that scales with your ambition.
             </p>
 
-            <a href="/contact-us"
-                class="btn-dark-theme">
+            <a href="/contact-us" class="btn-light-theme">
                 Start Development
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">
@@ -926,4 +911,5 @@ require_once "../".ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
+
 

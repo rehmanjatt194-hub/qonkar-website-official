@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Note: Backend include ke liye ../ theek hai agar file structure same rahe.
 require_once '../db-path.php'; // path relative to current file
 
@@ -238,267 +238,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
     
     
     
-        <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
-        <div class="max-w-7xl mx-auto">
-
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
-                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
-                    &#9679; &nbsp;Qonkar Speed Optimization
-                </span>
-                <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
-                    Blazing-Fast <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Speed Optimization</span>
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
-                    Don't let slow loading times kill your sales. We optimize Core Web Vitals to improve search rankings and maximize conversion rates.
-                </p>
-            </div>
-
-            <!-- Service Cards Grid -->
-            <div class="flex flex-col gap-8">
-
-                <!-- Card 1: Core Web Vitals Remediation -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Core-Web-Vitals-Remediation.webp"
-                            alt="Core Web Vitals Remediation"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Core Web <b>Vitals Remediation</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Fix critical metrics like LCP, FID, and CLS. As your <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">speed engineering experts</a>, we eliminate render-blocking resources for instant page loads.
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                LCP &amp; CLS Score Improvement
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                Elimination of Render-Blocking CSS/JS
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                                </span>
-                                Font &amp; Asset Delivery Optimization
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 2: Advanced CDN & Cache Setup -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Advanced-CDN-&-Cache-Setup.webp"
-                            alt="Advanced CDN & Cache Setup"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Advanced <b>CDN &amp; Cache</b> Setup</h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Serve content instantly to global customers. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">infrastructure team</a> tunes CDN caching policies and optimizes server responses.
-                        </p>
-                        <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
-                            <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">1.2s</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Average Page Load</p>
-                            </div>
-                            <div>
-                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">90+</h4>
-                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Mobile Speed Score</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Code Minification & Asset Tuning -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Code-Minification-&-Asset-Tuning.webp"
-                            alt="Code Minification & Asset Tuning"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Code <b>Minification &amp; Asset</b> Tuning</h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            We clean up messy scripts and optimize codebases. Our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">developers</a> minify JS/CSS, lazy load images, and clean app remnants.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Lazy Loading</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">JS Minification</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">Next-Gen WebP</span>
-                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Critical CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Slow Legacy to High-Performance -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Slow-Legacy-to-High-Performance.webp"
-                            alt="Slow Legacy to High-Performance"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Slow Legacy <b>to High-Performance</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            We refactor outdated, slow websites and applications, replacing heavy scripts and code with modern frameworks that load in milliseconds.
-                        </p>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
-                            <span class="font-semibold text-sm" style="color:#374151;">Legacy Bloat (6.5s)</span>
-                            <div class="flex-1 flex items-center justify-center">
-                                <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
-                                <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
-                                </svg>
-                            </div>
-                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Optimized Speed (1.5s)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Speed to Conversion Uplift -->
-                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Speed-to-Conversion-Uplift.webp"
-                            alt="Speed to Conversion Uplift"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>to Conversion Uplift</b></h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Every millisecond saved increases conversion. We target performance bottlenecks to keep bounce rates low and average order value high.
-                        </p>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Mobile Speed Score</span>
-                                    <span style="color:#2fadc3; font-weight:700;">97/100</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:97%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-2">
-                                    <span style="color:#374151;">Bounce Rate Reduction</span>
-                                    <span style="color:#3f89c9; font-weight:700;">-40%</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
-                                    <div class="h-2 rounded-full" style="width:80%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6: Database & Third-Party App Audit -->
-                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
-                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
-                        <img src="/images/services-images-webp/Speed-optimization/Database-&-Third-Party-App-Audit.webp"
-                            alt="Database & Third-Party App Audit"
-                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
-                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
-                    </div>
-                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-light" style="color:#0a1628;">Database <b>&amp; Third-Party App</b> Audit</h3>
-                        </div>
-                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
-                            Too many tracking scripts? We audit your tags, defer non-essential scripts, and organize database queries to keep backend operations lightweight.
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                </span>
-                                Third-Party Tag Deferral
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
-                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
-                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                </span>
-                                Database Queries Optimization
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Bottom CTA -->
-            <div class="text-center mt-14">
-                <a href="/contact-us"
-                    class="btn-light-theme"
-                    >
-                    Discuss Your Project With Us
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
-    
-    
-
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
         <div class="text-center mb-12 bg-no-repeat bg-[length:40%] 
                 bg-[url('/images/background_curve.svg')] 
                 bg-[center_top_60px]">
@@ -858,6 +598,260 @@ require_once "../".ADMIN_URL.'/database_config.php';
         </div>
     </section>
 
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: #f8fafc;">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
+                    style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                    &#9679; &nbsp;Qonkar Speed Optimization
+                </span>
+                <h2 class="text-3xl md:text-5xl font-light mt-3" style="color: #0a1628; line-height:1.15;">
+                    Blazing-Fast <span style="font-weight:800; background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Speed Optimization</span>
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg font-light" style="color:#4b5563;">
+                    Don't let slow loading times kill your sales. We optimize Core Web Vitals to improve search rankings and maximize conversion rates.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="flex flex-col gap-8">
+
+                <!-- Card 1: Core Web Vitals Remediation -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Core-Web-Vitals-Remediation.webp"
+                            alt="Core Web Vitals Remediation"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.15), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Core Web <b>Vitals Remediation</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Fix critical metrics like LCP, FID, and CLS. As your <a href="/contact-us" style="color:#3f89c9; font-weight:600; border-bottom:1px solid #3f89c9;">speed engineering experts</a>, we eliminate render-blocking resources for instant page loads.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                LCP &amp; CLS Score Improvement
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Elimination of Render-Blocking CSS/JS
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                Font &amp; Asset Delivery Optimization
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Advanced CDN & Cache Setup -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Advanced-CDN-&-Cache-Setup.webp"
+                            alt="Advanced CDN & Cache Setup"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.15), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Advanced <b>CDN &amp; Cache</b> Setup</h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Serve content instantly to global customers. Our <a href="/contact-us" style="color:#2fadc3; font-weight:600; border-bottom:1px solid #2fadc3;">infrastructure team</a> tunes CDN caching policies and optimizes server responses.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-5" style="border-top: 1px solid #f0f9ff;">
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">1.2s</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Average Page Load</p>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-bold mb-1" style="background: linear-gradient(135deg,#3f89c9,#2fadc3); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">90+</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider" style="color:#6b7280;">Mobile Speed Score</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Code Minification & Asset Tuning -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Code-Minification-&-Asset-Tuning.webp"
+                            alt="Code Minification & Asset Tuning"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Code <b>Minification &amp; Asset</b> Tuning</h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            We clean up messy scripts and optimize codebases. Our <a href="/contact-us" style="color:#85d55c; font-weight:600; border-bottom:1px solid #85d55c;">developers</a> minify JS/CSS, lazy load images, and clean app remnants.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0f9ff; color:#3f89c9; border:1px solid #bae6fd;">Lazy Loading</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">JS Minification</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#faf5ff; color:#7c3aed; border:1px solid #e9d5ff;">Next-Gen WebP</span>
+                            <span class="px-4 py-1.5 rounded-xl text-sm font-semibold" style="background:#fff7ed; color:#c2410c; border:1px solid #fed7aa;">Critical CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Slow Legacy to High-Performance -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Slow-Legacy-to-High-Performance.webp"
+                            alt="Slow Legacy to High-Performance"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(63,137,201,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #3f89c9;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#3f89c9);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Slow Legacy <b>to High-Performance</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            We refactor outdated, slow websites and applications, replacing heavy scripts and code with modern frameworks that load in milliseconds.
+                        </p>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl" style="background:#f0f9ff; border:1px solid #bae6fd;">
+                            <span class="font-semibold text-sm" style="color:#374151;">Legacy Bloat (6.5s)</span>
+                            <div class="flex-1 flex items-center justify-center">
+                                <div class="h-0.5 flex-1 rounded-full" style="background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                <svg class="w-5 h-5 mx-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#2fadc3" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-lg font-bold text-sm text-white" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">Optimized Speed (1.5s)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Speed to Conversion Uplift -->
+                <div class="flex flex-col md:flex-row items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Speed-to-Conversion-Uplift.webp"
+                            alt="Speed to Conversion Uplift"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(47,173,195,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-left: 4px solid #2fadc3;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#3f89c9,#2fadc3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Speed <b>to Conversion Uplift</b></h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Every millisecond saved increases conversion. We target performance bottlenecks to keep bounce rates low and average order value high.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">Mobile Speed Score</span>
+                                    <span style="color:#2fadc3; font-weight:700;">97/100</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:97%; background: linear-gradient(90deg,#3f89c9,#2fadc3);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span style="color:#374151;">Bounce Rate Reduction</span>
+                                    <span style="color:#3f89c9; font-weight:700;">-40%</span>
+                                </div>
+                                <div class="w-full rounded-full h-2" style="background:#e5e7eb;">
+                                    <div class="h-2 rounded-full" style="width:80%; background: linear-gradient(90deg,#3f89c9,#85d55c);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Database & Third-Party App Audit -->
+                <div class="flex flex-col md:flex-row-reverse items-stretch gap-0 rounded-3xl overflow-hidden shadow-lg" style="background:#fff; border:1px solid #e5e7eb;">
+                    <div class="w-full md:w-5/12 relative overflow-hidden" style="min-height:380px;">
+                        <img src="/images/services-images-webp/Speed-optimization/Database-&-Third-Party-App-Audit.webp"
+                            alt="Database & Third-Party App Audit"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(133,213,92,0.12), transparent);"></div>
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 md:p-10 flex flex-col justify-center" style="border-right: 4px solid #85d55c;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-light" style="color:#0a1628;">Database <b>&amp; Third-Party App</b> Audit</h3>
+                        </div>
+                        <p class="text-base leading-relaxed mb-5 font-light" style="color:#4b5563;">
+                            Too many tracking scripts? We audit your tags, defer non-essential scripts, and organize database queries to keep backend operations lightweight.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Third-Party Tag Deferral
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium" style="color:#374151;">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#2fadc3,#85d55c);">
+                                    <svg class="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </span>
+                                Database Queries Optimization
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-14">
+                <a href="/contact-us"
+                    class="btn-light-theme"
+                    >
+                    Discuss Your Project With Us
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[var(--body-bg)] mb-2 text-white ">
         <div class="w-full mx-auto ">
             <div class="text-center mb-10">
@@ -1004,8 +998,7 @@ require_once "../".ADMIN_URL.'/database_config.php';
                 Don't let a slow site cost you another customer. Get instant speed today.
             </p>
 
-            <a href="/contact-us"
-                class="btn-dark-theme">
+            <a href="/contact-us" class="btn-light-theme">
                 Optimize Now
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2.5">
@@ -1082,4 +1075,5 @@ require_once "../".ADMIN_URL.'/database_config.php';
 </body>
 
 </html>
+
 

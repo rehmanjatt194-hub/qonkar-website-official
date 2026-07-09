@@ -1,40 +1,5 @@
-<section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll fade-in">
-        <style>
-            /* Custom CSS for hidden scrollbar */
-            .no-scrollbar::-webkit-scrollbar {
-                display: none;
-            }
-            .no-scrollbar {
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
-            }
-            @keyframes float-robot {
-                0%, 100% {
-                    transform: translateY(0px) rotate(0deg);
-                }
-                50% {
-                    transform: translateY(-12px) rotate(2deg);
-                }
-            }
-            .animate-float {
-                animation: float-robot 4s ease-in-out infinite;
-            }
-            .arrow-line {
-                fill: none;
-                stroke-width: 2.5;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-dasharray: 1000;
-                stroke-dashoffset: 1000;
-                transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            #arrow-path-0, #arrow-path-2 {
-                filter: drop-shadow(0 0 3px rgba(43, 181, 188, 0.6)) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
-            }
-            #arrow-path-1, #arrow-path-3 {
-                filter: drop-shadow(0 0 3px rgba(149, 201, 81, 0.6)) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
-            }
-        </style>
+﻿<section id="process-section" class="relative py-8 md:py-12 w-full bg-[#000d16] px-4 sm:px-6 lg:px-8 overflow-hidden animate-on-scroll fade-in">
+        
 
         <!-- Background decorative glows (Qonkar theme) -->
         <div class="absolute top-1/4 left-10 w-[250px] h-[250px] rounded-full bg-[#2BB5BC]/5 blur-[100px] pointer-events-none -z-10"></div>
@@ -53,54 +18,7 @@
                 </div>
                 <div class="lg:col-span-5 flex justify-center lg:justify-end items-center relative min-h-[220px] lg:min-h-0 w-full mt-4 lg:mt-0">
                     <div class="relative mx-auto lg:relative lg:right-auto lg:top-[16px] w-56 z-25 pointer-events-auto cursor-pointer transition-transform duration-500 transform scale-[0.78] sm:scale-[0.90] lg:scale-[1.12] translate-x-[55px] sm:translate-x-[25px] lg:translate-x-0 origin-center lg:origin-right mt-14 lg:mt-0" id="robot-guide-container">
-                        <!-- Speech Bubble (Single active step text) -->
-                        <div class="absolute left-[-110px] sm:left-[-130px] top-[-10px] sm:top-[-20px] bg-white text-slate-800 border border-slate-200 shadow-[0_8px_20px_rgba(0,0,0,0.12)] rounded-2xl px-3 py-1.5 text-[9px] sm:text-[10px] font-bold whitespace-nowrap transition-all duration-300 transform scale-100 origin-bottom-right" id="robot-speech-bubble">
-                            Let's start!
-                            <!-- Arrow -->
-                            <div class="absolute bottom-[10px] right-[-5px] w-2.5 h-2.5 bg-white border-t border-r border-slate-200 transform rotate-45"></div>
-                        </div>
-
-                        <!-- 4 Staggered Step Bubbles in front of the robot (to the left) -->
-                        <div id="robot-steps-bubbles" class="absolute left-[-220px] top-0 bottom-0 w-[200px] flex flex-col justify-between pointer-events-none z-30 flex py-2">
-                            <!-- Step Bubble 1 -->
-                            <div class="step-bubble bg-white text-slate-800 border border-slate-200 shadow-md rounded-xl px-3 py-1.5 text-[11px] font-bold transition-all duration-300 transform scale-0 opacity-0 origin-right flex items-center gap-1.5" id="step-bubble-0" style="height: 32px;">
-                                <span class="text-[#2BB5BC] font-mono font-black">01</span> Onboarding & Setup
-                            </div>
-                            <!-- Step Bubble 2 -->
-                            <div class="step-bubble bg-white text-slate-800 border border-slate-200 shadow-md rounded-xl px-3 py-1.5 text-[11px] font-bold transition-all duration-300 transform scale-0 opacity-0 origin-right flex items-center gap-1.5" id="step-bubble-1" style="height: 32px;">
-                                <span class="text-[#95C951] font-mono font-black">02</span> Strategy & Plan
-                            </div>
-                            <!-- Step Bubble 3 -->
-                            <div class="step-bubble bg-white text-slate-800 border border-slate-200 shadow-md rounded-xl px-3 py-1.5 text-[11px] font-bold transition-all duration-300 transform scale-0 opacity-0 origin-right flex items-center gap-1.5" id="step-bubble-2" style="height: 32px;">
-                                <span class="text-[#2BB5BC] font-mono font-black">03</span> Document Filing
-                            </div>
-                            <!-- Step Bubble 4 -->
-                            <div class="step-bubble bg-white text-slate-800 border border-slate-200 shadow-md rounded-xl px-3 py-1.5 text-[11px] font-bold transition-all duration-300 transform scale-0 opacity-0 origin-right flex items-center gap-1.5" id="step-bubble-3" style="height: 32px;">
-                                <span class="text-[#95C951] font-mono font-black">04</span> Compliance Support
-                            </div>
-                        </div>
-
-                        <!-- SVG Container for connecting lines/arrows (local to robot, relative to robot-guide-container) -->
-                        <svg id="process-arrows-svg" class="absolute pointer-events-none z-20 block" style="left: -240px; top: 0; width: 464px; height: 224px; opacity: 0; transition: opacity 0.3s ease;" viewBox="-240 0 464 224">
-                            <defs>
-                                <marker id="arrow-0" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#2BB5BC" />
-                                </marker>
-                                <marker id="arrow-1" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#95C951" />
-                                </marker>
-                                <marker id="arrow-2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#2BB5BC" />
-                                </marker>
-                                <marker id="arrow-3" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#95C951" />
-                                </marker>
-                            </defs>
-                            <path id="arrow-path-0" class="arrow-line" stroke="#2BB5BC" marker-end="url(#arrow-0)" d="M 27 87 Q 0 45 -20 24" />
-                            <path id="arrow-path-1" class="arrow-line" stroke="#95C951" marker-end="url(#arrow-1)" d="M 27 87 Q 5 85 -20 83" />
-                            <path id="arrow-path-2" class="arrow-line" stroke="#2BB5BC" marker-end="url(#arrow-2)" d="M 27 87 Q 5 110 -20 141" />
-                            <path id="arrow-path-3" class="arrow-line" stroke="#95C951" marker-end="url(#arrow-3)" d="M 27 87 Q 0 160 -20 200" />
-                        </svg>
+                        
 
                         <img src="/images/qonkar_robot_guide.webp" alt="Qonkar 3D Robot Guide" class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.22)]">
                     </div>

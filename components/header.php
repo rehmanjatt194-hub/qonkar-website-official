@@ -1,3 +1,26 @@
+<?php
+$current_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$current_uri = rtrim($current_uri, '/');
+if (empty($current_uri) || $current_uri === '/index.php') {
+    $current_uri = '/';
+}
+
+function isActiveLink($path, $current_uri) {
+    if ($path === '/') {
+        return ($current_uri === '/') ? 'text-[var(--primary-color)]' : 'hover:text-[var(--primary-color)]';
+    }
+    if ($path === '/blogs' && strpos($current_uri, '/blog') === 0) {
+        return 'text-[var(--primary-color)]';
+    }
+    if ($path === '/career' && (strpos($current_uri, '/career') === 0 || strpos($current_uri, '/apply') === 0)) {
+        return 'text-[var(--primary-color)]';
+    }
+    if (strpos($current_uri, $path) === 0) {
+        return 'text-[var(--primary-color)]';
+    }
+    return 'hover:text-[var(--primary-color)]';
+}
+?>
 <header class="sticky top-5 z-50 mx-auto sm:px-4 w-full">
     <nav class="glass hidden lg:flex max-w-7xl mx-auto items-center justify-between px-6 py-2 rounded-full mt-4 relative">
         <div class="flex items-center">
@@ -5,10 +28,10 @@
         </div>
         
         <ul class="flex gap-8 text-white font-medium items-center">
-            <li><a href="/" class="text-[var(--primary-color)]">Home</a></li>
+            <li><a href="/" class="<?= isActiveLink('/', $current_uri) ?>">Home</a></li>
 
             <li class="group py-2">
-                <button class="flex items-center gap-1 hover:text-[var(--primary-color)] focus:outline-none transition-colors">
+                <button class="flex items-center gap-1 <?= isActiveLink('/services', $current_uri) ?> focus:outline-none transition-colors">
                     Services
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
                 </button>
@@ -55,10 +78,10 @@
                 </div>
             </li>
 
-            <li><a href="/portfolio" class="hover:text-[var(--primary-color)]">Portfolio</a></li>
-            <li><a href="/blogs" class="hover:text-[var(--primary-color)]">Blogs</a></li>
-            <li><a href="/career" class="hover:text-[var(--primary-color)]">Career</a></li>
-            <li><a href="/about-us" class="hover:text-[var(--primary-color)]">About Us</a></li>
+            <li><a href="/portfolio" class="<?= isActiveLink('/portfolio', $current_uri) ?>">Portfolio</a></li>
+            <li><a href="/blogs" class="<?= isActiveLink('/blogs', $current_uri) ?>">Blogs</a></li>
+            <li><a href="/career" class="<?= isActiveLink('/career', $current_uri) ?>">Career</a></li>
+            <li><a href="/about-us" class="<?= isActiveLink('/about-us', $current_uri) ?>">About Us</a></li>
         </ul>
 
         <a href="/contact-us" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-white hover:opacity-90 transition font-medium">Contact Us</a>
@@ -69,10 +92,10 @@
         <button id="menu-btn" class="text-white focus:outline-none text-3xl">☰</button>
         
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-2 z-50 bg-[rgba(10,10,10,0.98)] backdrop-blur-xl flex-col transform scale-y-0 origin-top transition-all duration-300 rounded-2xl overflow-y-auto max-h-[85vh] border border-white/10">
-            <a href="/" class="block w-full text-center py-4 text-[var(--primary-color)] font-semibold border-b border-white/10">Home</a>
+            <a href="/" class="block w-full text-center py-4 <?= isActiveLink('/', $current_uri) ?> font-semibold border-b border-white/10">Home</a>
             
             <div class="border-b border-white/10">
-                <button id="mobile-services-btn" class="w-full text-center py-4 hover:text-[var(--primary-color)] font-semibold flex justify-center items-center gap-1">
+                <button id="mobile-services-btn" class="w-full text-center py-4 <?= isActiveLink('/services', $current_uri) ?> font-semibold flex justify-center items-center gap-1">
                     Services
                     <span id="mobile-arrow" class="material-symbols-outlined text-sm transition-transform text-lg font-bold"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
                 </button>
@@ -99,10 +122,10 @@
                 </div>
             </div>
 
-            <a href="/portfolio" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Portfolio</a>
-            <a href="/blogs" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Blogs</a>
-            <a href="/career" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">Career</a>
-            <a href="/about-us" class="block w-full text-center py-4 hover:text-[var(--primary-color)] border-b border-white/10">About Us</a>
+            <a href="/portfolio" class="block w-full text-center py-4 <?= isActiveLink('/portfolio', $current_uri) ?> border-b border-white/10">Portfolio</a>
+            <a href="/blogs" class="block w-full text-center py-4 <?= isActiveLink('/blogs', $current_uri) ?> border-b border-white/10">Blogs</a>
+            <a href="/career" class="block w-full text-center py-4 <?= isActiveLink('/career', $current_uri) ?> border-b border-white/10">Career</a>
+            <a href="/about-us" class="block w-full text-center py-4 <?= isActiveLink('/about-us', $current_uri) ?> border-b border-white/10">About Us</a>
             <a href="/contact-us" class="block w-full text-center py-5 bg-[var(--primary-color)] text-white font-bold transition">Contact Us</a>
         </div>
     </nav>

@@ -36,8 +36,7 @@ function isActiveLink($path, $current_uri) {
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
                 </button>
                 
-                <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[70vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10" 
-                     style="background: rgba(15, 15, 15, 0.98); backdrop-filter: blur(25px);">
+                <div class="absolute top-full left-0 right-0 mx-auto mt-4 w-[70vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 md:p-10 rounded-[15px] shadow-2xl border border-white/10 header-dropdown-bg">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10">
                         
@@ -129,7 +128,7 @@ function isActiveLink($path, $current_uri) {
             <a href="/contact-us" class="block w-full text-center py-5 bg-[var(--primary-color)] text-white font-bold transition">Contact Us</a>
         </div>
     </nav>
-    <div style="float: right; margin-top: 10px; margin-right: 10px;">
+    <div class="float-right-box">
         <div id="google_translate_element"></div>
     </div>
 </header>

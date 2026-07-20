@@ -31,6 +31,16 @@ if ($normalizedUri === '/portfolio') {
 }
 
 
+// 2. Handlers routing rule
+if (preg_match('#^/handlers/([^/]+)$#', $normalizedUri, $matches)) {
+    $handlerFile = __DIR__ . '/handlers/' . $matches[1] . (str_ends_with($matches[1], '.php') ? '' : '.php');
+    if (file_exists($handlerFile)) {
+        chdir(dirname($handlerFile));
+        include $handlerFile;
+        return;
+    }
+}
+
 // 3. Specific rule for Services subpages
 if (preg_match('#^/services/([^/]+)$#', $normalizedUri, $matches)) {
     $serviceFile = __DIR__ . '/services/' . $matches[1] . '.php';

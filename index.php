@@ -282,7 +282,7 @@ require_once ADMIN_URL.'/database_config.php';
 
 <body>
     
-<div class="bg-[#000d16] flex flex-col" style="background-color: #000d16; width: 100%; min-height: 100vh; overflow-x: hidden; margin: 0; padding: 0;">
+<div class="bg-[#000d16] flex flex-col min-h-screen w-full overflow-x-hidden m-0 p-0">
     
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php'; ?>
 
@@ -420,7 +420,7 @@ require_once ADMIN_URL.'/database_config.php';
             <!-- Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5 pb-3 border-b border-slate-200/55">
                 <div class="flex flex-col items-start">
-                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4" style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4 badge-gradient-pill">
                         &#9679; &nbsp;Our Services
                     </span>
                     <h2 class="text-3xl md:text-5xl font-bold leading-tight text-[#000d16] tracking-tight">
@@ -2095,7 +2095,7 @@ require_once ADMIN_URL.'/database_config.php';
         <div class="max-w-7xl mx-auto 0 text-center">
 
             <!-- Badge -->
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4" style="background: linear-gradient(135deg,#3f89c9,#2fadc3,#85d55c); color: #fff;">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4 badge-gradient-pill">
                 &#9679; &nbsp;OUR EXPERTS
             </span>
 
